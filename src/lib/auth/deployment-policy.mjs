@@ -42,11 +42,19 @@ export function validateDeployedAuthConfig(environment = {}) {
   if (new TextEncoder().encode(secret).length < 32) {
     throw new Error("BETTER_AUTH_SECRET must contain at least 32 bytes for a deployed app.");
   }
-  if (!clientId || !clientSecret) {
-    throw new Error("A dedicated GROK_AUTH_CLIENT_ID and GROK_AUTH_CLIENT_SECRET are required for deployment.");
-  }
+  // Vercel does not receive Grok App Builder's per-app broker credentials.
+  // This game can instead use its own owner-only Better Auth email/password
+  // account, backed by the configured Postgres database and signing secret.
+  const ownerPasswordMode =
+    environment.EGUNSENTIA_AUTH_MODE?.trim() === "owner-password";
+
   if (clientId === "grok_preview") {
     throw new Error("The shared preview OAuth client cannot be used by a deployed EGUNSENTIA app.");
+  }
+  if ((!clientId || !clientSecret) && !ownerPasswordMode) {
+    throw new Error(
+      "Configure dedicated GROK_AUTH_CLIENT_ID/GROK_AUTH_CLIENT_SECRET or set EGUNSENTIA_AUTH_MODE=owner-password for a self-hosted owner login.",
+    );
   }
 
   return { deployed: true, baseURL: parsed.origin };

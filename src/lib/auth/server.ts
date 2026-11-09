@@ -81,12 +81,21 @@ const authDisabled = env("VITE_AUTH_ENABLED") === "false";
 // for any `*.grok-sandbox.com` callback (see `./preview`).
 const deployedAuthConfig = validateDeployedAuthConfig(process.env);
 const grokIssuer = env("GROK_AUTH_ISSUER") ?? GROK_ISSUER_DEFAULT;
-const grokClientId = env("GROK_AUTH_CLIENT_ID") ?? PREVIEW_CLIENT_ID;
-const grokClientSecret = env("GROK_AUTH_CLIENT_SECRET") ?? PREVIEW_CLIENT_SECRET;
+const isVercelDeployment = env("VERCEL") === "1";
 
-/** True when federated sign-in is active (real auth is enforced). */
+// The shared preview client is valid only for *.grok-sandbox.com callbacks.
+// Never silently reuse it on a self-hosted Vercel deployment.
+const grokClientId =
+  env("GROK_AUTH_CLIENT_ID") ??
+  (isVercelDeployment ? undefined : PREVIEW_CLIENT_ID);
+const grokClientSecret =
+  env("GROK_AUTH_CLIENT_SECRET") ??
+  (isVercelDeployment ? undefined : PREVIEW_CLIENT_SECRET);
+const brokerAuthConfigured = Boolean(grokClientId && grokClientSecret);
+
+/** Auth is live when either the broker or local email/password is configured. */
 export const authConfigured =
-  !authDisabled && Boolean(grokClientId && grokClientSecret);
+  !authDisabled && (emailAndPasswordEnabled || brokerAuthConfigured);
 
 // This app's own Better Auth origin. When deployed the deployer injects the
 // public URL. In the sandbox live preview there's no fixed URL (each preview gets
@@ -153,7 +162,7 @@ export const SESSION_TOKEN_COOKIE = "__Host-grok-auth.session_token";
 
 // Built separately so the `betterAuth({...})` call stays easy to edit without
 // breaking brackets (models often trip on the conditional plugin spread).
-const grokOAuthPlugin = authConfigured
+const grokOAuthPlugin = !authDisabled && brokerAuthConfigured
   ? genericOAuth({
       config: GROK_PROVIDERS.map(({ providerId, idp }) => ({
         providerId,
