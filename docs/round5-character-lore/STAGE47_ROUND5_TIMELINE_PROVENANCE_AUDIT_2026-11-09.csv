@@ -1,0 +1,14 @@
+event_or_person,date_or_age,classification,source,limitation
+Current campaign date,20 Ironmonth 105 AW,CANON DATE,red-claw-household.json campaignDate; v41 day-one game data,This is the audit reference date; not a birth date.
+27 audited canonical female character cards,Age labels present in card titles,CARD AGE LABEL; DOB UNKNOWN,cards.json / previous profile audit,No exact date of birth independently verifies current age for these 27.
+Dagmar / Konrad / Liese,Dagmar 37; Konrad 15; Liese 11,CANON CARD AGES,"DAGMAR, KONRAD and LIESE cards; v41-household",Exact birth dates and marriage date not provided.
+Adelheid / Emil,Adelheid 24; Emil 3,CANON CARD AGES,ADELHEID and EMIL cards; v41-household,Exact birth date and wedding date not provided.
+Vera Grotsen,19,CANON CARD AGE,VERA GROTSEN card,"No exact DOB; no child is listed in the supplied day-one record, which does not prove no pregnancy or child ever."
+Elara / Luka,Elara 34; Luka 18,CANON CARD AGES,ELARA and LUKA cards; v41-household,Exact DOB and event dates for former relationship/acknowledged paternity are not supplied.
+Wilhelmina / Katharina / Christian IV,Wilhelmina 68; other exact ages/dates unresolved,CANON RELATIONSHIPS; TIMING INCOMPLETE,Wilhelmina card; kinship §3.28; v41-household,Exact births/deaths and branch genealogy require Floor 7 Family Ledger.
+Christian Red III,Age label 58 in registry; birth/death dates UNKNOWN,CANON IDENTITY / PROPOSED BIOGRAPHY,red-claw-household.json,Do not infer exact death date or marriage chronology.
+Katharina Red,Exact dates UNKNOWN,CANON RECORD / DECEASED,red-claw-household.json; kinship; v41-household,Motherhood confirmed; formal marriage edge with Christian III not independently evidenced by cited sources.
+Mirelda Grotsen,Age label 61 in registry; exact event dates UNKNOWN,CANON STEPMOTHER IDENTITY / PROPOSED BIOGRAPHY AND MARRIAGE CHRONOLOGY,atlas N-CHRISTIAN; v41-household; proposal dossier,Stepmother status confirmed; formal marriage and exact timing remain proposed / unverified.
+12 proposed former-partner histories,Proposed dates around 88–89 AW; first marriage left undated,PROPOSED_EXPANSION,docs/red-claw-household-expansion/04_TWELVE_FORMER_PARTNERS.md; private-relations.ts,Do not use proposed dates as Canon timeline.
+Helena Red-Grotsen,25 in proposal registry; birth year not independently verified,PROPOSED_EXPANSION,03_HALFSISTER_HELENA_DOSSIER.md; mixed registry,"Identity, parentage, age and timeline need approval; not Canon."
+Eight father-generation personnel,All exact ages / dates UNKNOWN,PROPOSED_EXPANSION,red-claw-historical-household.json,All personnel and transition sequence are proposals; historical roles must not transfer to current household.

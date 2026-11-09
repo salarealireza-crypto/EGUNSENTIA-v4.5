@@ -1,0 +1,11 @@
+item,manifest_declaration,lock_version_or_value,local_install_state,verification,status,evidence
+zod,dependencies:^4.4.0,4.6.5,absent,ESM import and test:game ERR_MODULE_NOT_FOUND,Blocked by registry DNS,package.json;package-lock.json;src/lib/game/delta.ts
+vite,dependencies:^8.2.0,lock entry present,absent,build spawn vite ENOENT,Blocked,package.json;package-lock.json
+@types/node,devDependencies:^22.16.5,lock entry present,absent,typecheck TS2688,Blocked,package.json;package-lock.json;tsconfig.json
+eslint,devDependencies:^9.20.0,lock entry present,absent,eslint not found,Blocked,package.json;package-lock.json
+@tanstack/react-start,dependencies:^1.168.60,lock entry present,absent,separate app-data/auth tests previously failed import,Blocked,package.json;package-lock.json
+jose,dependencies:6.2.9,lock entry present,absent,separate app-data/auth tests previously failed import,Blocked,package.json;package-lock.json
+pg,dependencies:^8.16.3,lock entry present,absent,no PostgreSQL runtime configured,Not installed,package.json;package-lock.json
+@electric-sql/pglite,dependencies:^0.5.4,lock entry present,absent,no PGlite package/runtime; not acceptable as durable persistence proof,Not installed,package.json;package-lock.json
+playwright,devDependencies:^1.62.0,lock entry present,absent,no browser run,Not installed,package.json;package-lock.json
+root direct dependency set,57 dependencies + 14 devDependencies,71 lock entries,not installed,71/71 declarations and entries match,Source-audited,package.json;package-lock.json

@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 1,
+  "sourceStatus": "PROPOSED_EXPANSION — historical reconstruction, not CP9 Canon",
+  "scope": "Father-generation Red Claw household, several decades before campaign date 20 Ironmonth 105 AW.",
+  "knownCanonAnchors": [
+    "Christian Red III is Christian Red IV’s father; his exact dates and detailed profile are not supplied in CP9.",
+    "Mirelda Grotsen is Christian IV’s stepmother and originates from House Grotsen.",
+    "The requested historical staffing includes three male domestic servants and five female Iron Guard members.",
+    "The current five female household attendants and Elara’s current five-woman Iron Guard detail are distinct populations and must not be reused as historical identities."
+  ],
+  "proposedTimeline": {
+    "period": "Approx. 76–98 AW. The frame is proposed; exact opening and closing dates are UNKNOWN.",
+    "father": "Christian Red III; proposed birth 6 First Light 40 AW and proposed death 19 Ironmonth 98 AW. Neither date is established by CP9.",
+    "stepmother": "Mirelda Grotsen; proposed birth 8 First Light 44 AW. Her Grotsen origin and stepmother status are Canon; age, marriage date and arrival date are proposed.",
+    "player": "Christian Red IV; age 6–28 during 76–98 AW, conditional on proposed DOB 15 First Light 70 AW.",
+    "halfSister": "Helena Red-Grotsen; proposed birth 2 First Light 80 AW; age 0–18 during the remainder of the period.",
+    "departure": "Proposed in 98 AW after Christian III’s death: Mirelda and Helena depart for the Grotsen Dominion. Exact departure date and status of the eight staff remain UNKNOWN."
+  },
+  "compositionRules": {
+    "adultCore": "10 persons: father (1), stepmother (1), male servants (3), female Iron Guard (5).",
+    "76to79": "11-person named snapshot: 10 adult core + Christian IV as a dependent.",
+    "80to97": "12-person named snapshot: 10 adult core + Christian IV + Helena.",
+    "after98": "No complete count: father deceased; Mirelda and Helena proposed to depart; Christian IV remains linked to the household. Staff disposition UNKNOWN.",
+    "exclusions": "No temporary visitors, staff dependants, off-site guards, guests, or medical referrals counted. This is not a complete floor census."
+  },
+  "authorityModel": {
+    "householdHead": "Christian Red III holds final domestic authority in this proposed reconstruction, subject to Red Claw law and higher political authority.",
+    "stepmother": "Mirelda holds senior family standing through marriage and motherhood; she is not automatically Iron Guard commander or household steward.",
+    "steward": "Arno Bittner administers staff, accounts, duties and domestic services under the household head.",
+    "guardCommand": "Ragna Stahl commands the five-woman detail. Guard orders remain professional security orders, not domestic-service instructions.",
+    "servants": "Markus Fenn and Pavel Kessler report through domestic administration; neither commands guards."
+  },
+  "historicalArchitecture": {
+    "status": "PROPOSED layout framework only. CP9 does not establish a room-by-room historic residential plan. Do not assume the current Floor 6 Dome is identical to this earlier configuration.",
+    "zones": [
+      {
+        "id": "H1",
+        "name": "Reception vestibule",
+        "purpose": "Guest arrival, identity checks and waiting before admission to family rooms.",
+        "access": "Invited guests; movement coordinated with Guard."
+      },
+      {
+        "id": "H2",
+        "name": "Family apartments",
+        "purpose": "Separate chambers for head of household, Mirelda and children.",
+        "access": "Residents and invited attendants."
+      },
+      {
+        "id": "H3",
+        "name": "Steward office and ledger desk",
+        "purpose": "Duty rosters, expense ledger, maintenance requests and authorised records.",
+        "access": "Arno and household head; limited staff access."
+      },
+      {
+        "id": "H4",
+        "name": "Servants’ quarters",
+        "purpose": "Rest and personal storage for the three domestic servants.",
+        "access": "Assigned servants; no public traffic."
+      },
+      {
+        "id": "H5",
+        "name": "Guard post and equipment room",
+        "purpose": "Shift handover, access register and readiness for the five-person detail.",
+        "access": "Iron Guard detail; steward receives reports, not unrestricted entry."
+      },
+      {
+        "id": "H6",
+        "name": "Kitchen, pantry and dining room",
+        "purpose": "Food preparation, storage, meal service and family dining.",
+        "access": "Markus, assigned kitchen workers, family and approved guests."
+      },
+      {
+        "id": "H7",
+        "name": "Study and instruction room",
+        "purpose": "Age-appropriate literacy, history, household learning and supervised instruction.",
+        "access": "Learners and authorised tutors."
+      },
+      {
+        "id": "H8",
+        "name": "First-aid / recovery room",
+        "purpose": "Proposed basic treatment and temporary recovery; no specialised diagnosis or equipment assumed.",
+        "access": "Medical personnel and patient; Guard only on legitimate security need."
+      },
+      {
+        "id": "H9",
+        "name": "Stores and service passage",
+        "purpose": "Household supplies, cleaning tools, deliveries and waste handling.",
+        "access": "Assigned staff; inspected access."
+      }
+    ]
+  },
+  "personnel": [
+    {
+      "id": "hist-arno-bittner",
+      "name": "Arno Bittner",
+      "sex": "male",
+      "role": "Senior household steward",
+      "rank": "Not applicable",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Square-set, neat hair kept close, work coat with a narrow key ring. No height or exact measurements assigned.",
+      "personality": "Exacting, calm and procedural; prefers written orders to verbal promises.",
+      "duties": [
+        "Daily ledger and expense reconciliation",
+        "Staff duty roster and leave register",
+        "Domestic dispute escalation",
+        "Maintenance requests and supply authorisations"
+      ],
+      "routine": "First ledger check before breakfast; assignments after the morning report; accounts in the afternoon; roster confirmation before evening watch.",
+      "knowledgeBoundary": "Household finances and authorised staff movements only.",
+      "eventHooks": [
+        "An old ledger conflicts with a family recollection",
+        "a missing supply receipt forces an audit."
+      ]
+    },
+    {
+      "id": "hist-markus-fenn",
+      "name": "Markus Fenn",
+      "sex": "male",
+      "role": "Stores and kitchen steward",
+      "rank": "Not applicable",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Broad hands, flour or chalk often on his sleeves, hair tied back while working. No height or exact measurements assigned.",
+      "personality": "Methodical, practical and plain-spoken; dislikes waste and last-minute changes.",
+      "duties": [
+        "Food stores and dry-goods rotation",
+        "Kitchen procurement and ration records",
+        "Meal service coordination",
+        "Waste and spoilage reporting"
+      ],
+      "routine": "Inspects stores early; coordinates preparation before meals; counts deliveries after midday; closes the food ledger at day end.",
+      "knowledgeBoundary": "Food orders and household quantities only; no medical or private relationship records.",
+      "eventHooks": [
+        "A delivery arrives short",
+        "an old ration book reveals an unusual household gathering."
+      ]
+    },
+    {
+      "id": "hist-pavel-kessler",
+      "name": "Pavel Kessler",
+      "sex": "male",
+      "role": "Household courier and archive-hand",
+      "rank": "Not applicable",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Lean, quick-footed, ink on one thumb; dresses plainly. No height or exact measurements assigned.",
+      "personality": "Discreet, observant and cautious with gossip; remembers names and dates.",
+      "duties": [
+        "Internal and authorised external correspondence",
+        "Guest arrival/departure register",
+        "Appointment slips and sealed-message custody",
+        "Retrieval of non-restricted records"
+      ],
+      "routine": "Collects letters at first bell; carries authorised notices; updates visitor book; sorts routine archive material late afternoon.",
+      "knowledgeBoundary": "Only messages he is authorised to deliver or record; sealed messages remain sealed.",
+      "eventHooks": [
+        "A misdirected letter arrives under an obsolete title",
+        "a visitor claims an appointment absent from the register."
+      ]
+    },
+    {
+      "id": "hist-ragna-stahl",
+      "name": "Ragna Stahl",
+      "sex": "female",
+      "role": "Iron Guard captain / senior shield",
+      "rank": "PROPOSED — not a CP9 rank record",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Compact, strong posture, dark hair secured beneath duty gear. No height or exact measurements assigned.",
+      "personality": "Direct, disciplined and protective without confusing security authority with domestic authority.",
+      "duties": [
+        "Command of the five-woman residential detail",
+        "Duty rotation and patrol approval",
+        "Security liaison with household steward",
+        "Incident review and emergency readiness"
+      ],
+      "routine": "Inspects posts at shift changes; receives security requests; leads route inspection; closes watch report.",
+      "knowledgeBoundary": "Security matters and direct observations; no private family access without a legitimate security basis.",
+      "eventHooks": [
+        "A later service record disputes a watch commander",
+        "an access rule is challenged at a reception."
+      ]
+    },
+    {
+      "id": "hist-anette-kelm",
+      "name": "Anette Kelm",
+      "sex": "female",
+      "role": "Iron Guard sergeant / inner-door watch",
+      "rank": "PROPOSED — not a CP9 rank record",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Short-cropped hair, measured stance, gloves clipped to belt. No height or exact measurements assigned.",
+      "personality": "Patient with routine, firm with unauthorised access, dislikes public confrontation.",
+      "duties": [
+        "Inner-door access checks",
+        "Visitor identity confirmation",
+        "Shift briefing",
+        "Escalation to Ragna Stahl"
+      ],
+      "routine": "Morning access handover; inner-door duty; midday break; evening guest/staff movement check.",
+      "knowledgeBoundary": "Names and permissions on the active duty sheet; not household secrets.",
+      "eventHooks": [
+        "A trusted guest arrives without the expected escort",
+        "an old access seal is found in a keepsake box."
+      ]
+    },
+    {
+      "id": "hist-isolde-dorn",
+      "name": "Isolde Dorn",
+      "sex": "female",
+      "role": "Iron Guard / route and perimeter inspector",
+      "rank": "PROPOSED — not a CP9 rank record",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Weathered hands, hair braided close; posture gives an impression of height without an assigned measurement. No height or exact measurements assigned.",
+      "personality": "Quiet, independent and detail-focused; notices changes before others mention them.",
+      "duties": [
+        "Routine route inspections",
+        "Lighting, latch and barrier reports",
+        "Movement escort when ordered",
+        "Incident location notes"
+      ],
+      "routine": "Early route walk; checks service access and internal doors; records faults; rotates to escort duty.",
+      "knowledgeBoundary": "Physical conditions and observed movement; no presumed knowledge of conversations.",
+      "eventHooks": [
+        "She identifies a route change before a guest arrival",
+        "old patrol notes reveal a maintenance issue."
+      ]
+    },
+    {
+      "id": "hist-nadine-vey",
+      "name": "Nadine Vey",
+      "sex": "female",
+      "role": "Iron Guard / visitor and family-corridor security",
+      "rank": "PROPOSED — not a CP9 rank record",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Attentive eyes, hair tied back, immaculate uniform. No height or exact measurements assigned.",
+      "personality": "Courteous, socially perceptive and protective of residents’ privacy.",
+      "duties": [
+        "Guest escort and route confirmation",
+        "Family-corridor patrol",
+        "Visitor-book cross-check",
+        "Unusual movement reports"
+      ],
+      "routine": "Checks scheduled visitors; patrols the family corridor; escorts approved guests; files an evening report.",
+      "knowledgeBoundary": "Guest identity and authorised movement; not private family correspondence.",
+      "eventHooks": [
+        "A visitor requests access to someone who has not agreed to meet",
+        "guest list and guard report disagree."
+      ]
+    },
+    {
+      "id": "hist-selma-holt",
+      "name": "Selma Holt",
+      "sex": "female",
+      "role": "Iron Guard / night watch and incident recorder",
+      "rank": "PROPOSED — not a CP9 rank record",
+      "age": "UNKNOWN — not assigned",
+      "sourceStatus": "PROPOSED_EXPANSION",
+      "background": "Newly proposed historical household personnel; no Red Claw blood relation is asserted.",
+      "appearance": "Steady gaze, hair beneath a dark cap during duty. No height or exact measurements assigned.",
+      "personality": "Reserved, thorough and steady; separates observation from inference.",
+      "duties": [
+        "Night-watch rotation",
+        "Incident log and handover notes",
+        "Emergency signal check",
+        "Unresolved security/maintenance reporting"
+      ],
+      "routine": "Takes evening handover; patrols assigned routes; logs incidents as observed; provides written dawn handover.",
+      "knowledgeBoundary": "What occurred on her watch and what is in the log; rumours remain rumours.",
+      "eventHooks": [
+        "A night log contains a gap needing corroboration",
+        "a harmless sound is misreported as an incident."
+      ]
+    }
+  ],
+  "postDeathTransition": [
+    "Record Christian Red III as deceased only after the proposed date is accepted by the canon authority.",
+    "Mirelda and Helena may receive a departure event to the Grotsen Dominion, subject to event confirmation and date validation.",
+    "Do not automatically transfer, dismiss or kill any of the eight historical personnel. Their post-death status remains UNKNOWN until an authored transition event assigns it.",
+    "Christian IV’s household authority, residence and inheritance follow the existing succession system; this file grants no new legal rights.",
+    "Preserve historical staff as archived personnel, not current active CAST entries."
+  ],
+  "validationWarnings": [
+    "All eight staff names, roles, personalities and assignments are proposals, not CP9 identities.",
+    "Exact dates for Katharina’s death, Christian III’s remarriage, Mirelda’s arrival, Helena’s birth and the father’s death are not canonically supplied.",
+    "The father’s motive for promoting Christian IV’s first marriage is not Canon. Any private warning or marriage-arrangement dialogue is proposal-only.",
+    "The historical five Guard members are not Elara’s current Guard team. No identity reuse is allowed.",
+    "No exact floor number, chamber adjacency or architectural footprint is asserted for this historical period."
+  ]
+}

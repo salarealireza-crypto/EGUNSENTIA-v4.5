@@ -1,0 +1,77 @@
+{
+  "round": "Round 2 — Workstream B character/family Canon audit only",
+  "date": "2026-11-09",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP9-PRIVATE-RELATIONS-ROUND1-PARTIAL-CP10-2026-11-09.zip",
+  "parent_sha256": "b0b533f03ead7ec0e6637b9a067ccfe22e8aa80749f6b9dec67b5cde9d2ca6d4",
+  "source_counts": {
+    "compiled_character_cards": 55,
+    "atlas_entries": 26,
+    "canon_excerpts": 28,
+    "red_claw_registry_cards": 100,
+    "private_relations_rows_total": 37,
+    "private_relations_core": 25,
+    "private_relations_proposed": 12,
+    "female_adult_cards_in_audit_scope": 27
+  },
+  "profile_coverage_15_fields": {
+    "complete": 19,
+    "partial": 8,
+    "body_present": 21,
+    "body_absent": 6,
+    "present_by_field": {
+      "LOOK": 27,
+      "VOICE": 27,
+      "TELLS": 27,
+      "HANDLE": 25,
+      "WANTS": 27,
+      "FEARS": 27,
+      "DAY": 25,
+      "NEVER": 27,
+      "SECRET": 27,
+      "KNOWS": 25,
+      "HOOKS": 27,
+      "BODY": 21,
+      "IN CRISIS": 19,
+      "SAMPLE LINES": 19,
+      "RELATIONS": 19
+    }
+  },
+  "registry_source_status_counts": {
+    "CANON": 11,
+    "CANON_IDENTITY_WITH_PROPOSED_BIOGRAPHY": 2,
+    "PROPOSED_EXPANSION": 79,
+    "CANON_RECORD_WITH_UNRESOLVED_GENEALOGY": 8
+  },
+  "registry_integrity": {
+    "unique_ids": 100,
+    "unique_names": 100,
+    "dangling_refs": 0,
+    "reciprocity_mismatches": 0,
+    "note": "Structural validity is not Canon verification; edge provenance gaps are separately reported.",
+    "method": "parents -> childIds; childIds -> parents; spouseIds reciprocal; siblings reciprocal."
+  },
+  "missing_authoritative_sources": {
+    "v41_master": "Only 331-byte pointer/notice; full manuscript absent.",
+    "v45_update_prompt": "Complete file absent; 13 session prompt fragments are not equivalent.",
+    "floor7_ledger": "Referenced by Kinship excerpt; actual content not supplied."
+  },
+  "verification": {
+    "node scripts/verify-canon.mjs": "PASS",
+    "npm run verify:red-claw": "PASS with warnings; floor ledger / kinship / chronology not certified",
+    "python scripts/stage47-round2-audit.py": "PASS — 55 cards; 25 core + 12 proposed PR entries; 27 audited adult women; 19/27 full on 15 fields; BODY 21/27; 100-card registry; 0 dangling references; 0 reciprocity mismatches. Structural check only.",
+    "build": "NOT RUN — audit-only round",
+    "typecheck": "NOT RUN — audit-only round; previous environment blockers documented",
+    "lint": "NOT RUN — audit-only round",
+    "browser": "NOT RUN",
+    "persistent_database": "NOT RUN",
+    "transcript": "STAGE47_ROUND2_VERIFICATION_LOG_2026-11-09.txt",
+    "node scripts/stage47-round2-audit.py": "PASS — 55 cards, 25 core + 12 proposed PR entries, 100-card registry, 0 dangling references, 0 reciprocity mismatches; structural only."
+  },
+  "changes": {
+    "game_source_files_modified": 0,
+    "canon_data_files_modified": 0,
+    "save_data_modified": 0,
+    "audit_artifacts_added": true
+  },
+  "canon_disposition": "No proposal promoted; no character, parentage, marriage, age, date, child or event invented."
+}

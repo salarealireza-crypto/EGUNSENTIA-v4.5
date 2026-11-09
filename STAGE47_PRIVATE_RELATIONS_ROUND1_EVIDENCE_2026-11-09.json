@@ -1,0 +1,138 @@
+{
+  "checkpoint": "CP9 — Private Relations & Dynastic Round 1",
+  "date": "2026-11-09",
+  "base_archive": "EGUNSENTIA-STAGE47-GATE2-ROUND4-CP8-2026-11-09.zip",
+  "base_archive_files": 633,
+  "immutable_base_preserved": true,
+  "feature_status": "implemented at source and focused-test level; browser/production unverified",
+  "content_designation": "PRIVATE / NON-GRAPHIC",
+  "nsfw_designation_added": false,
+  "explicit_scene_generation_added": false,
+  "profile_coverage": {
+    "total": 25,
+    "all_15_fields": 17,
+    "partial": 8,
+    "body_field_present": 19,
+    "body_unknown": [
+      "Dagmar Red",
+      "Adelheid von Moren",
+      "Vera Grotsen",
+      "Elara Red",
+      "Wilhelmina Red",
+      "Hanne Brauer"
+    ],
+    "other_missing_fields": {
+      "Ilse Wern": [
+        "IN CRISIS",
+        "HANDLE",
+        "DAY",
+        "SAMPLE LINES",
+        "KNOWS",
+        "RELATIONS"
+      ],
+      "Leni Bauer": [
+        "IN CRISIS",
+        "HANDLE",
+        "DAY",
+        "SAMPLE LINES",
+        "KNOWS",
+        "RELATIONS"
+      ]
+    }
+  },
+  "canon_gaps": [
+    "Full V4.1 master manuscript absent from CP8.",
+    "V4.5 update prompt absent from CP8.",
+    "Canon states five permanent Iron Guard women but only four permanent-member cards are present; fifth remains UNKNOWN."
+  ],
+  "implemented_capabilities": [
+    "Versioned privateRelations snapshot state and legacy defaults",
+    "NPC-led request and outcome workflow",
+    "Decline/withdrawal without penalty or relationship change",
+    "Free-to-decline evidence and independent safeguards for command/staff dependency roles",
+    "Proposal to engagement-pending and separately evidenced marriage formalization",
+    "Evidence-backed household/public disclosure with non-rollback visibility",
+    "Boundary breach review and audience-specific reputation consequences",
+    "Pregnancy suspicion only through AL; confirmation and later states require owner-facing medical evidence; completed status requires a recorded child/birth",
+    "Dynastic consequence register, Event Ledger, Chronicle and AL Delta integration"
+  ],
+  "tests": {
+    "private_relations_targeted": {
+      "passed": 15,
+      "total": 15,
+      "status": "PASS"
+    },
+    "save_validation": {
+      "passed": 18,
+      "total": 18,
+      "status": "PASS"
+    },
+    "runnable_script_suite_excluding_game_test": {
+      "passed": 421,
+      "total": 424,
+      "failed": 3,
+      "status": "PARTIAL",
+      "known_failures": "Three with-app-env tests expect local-only .grok/app-env.json with VITE_AUTH_ENABLED=true; file intentionally excluded."
+    },
+    "game_test": {
+      "status": "BLOCKED",
+      "reason": "Zod package absent; suite cannot load."
+    },
+    "canon_verifier": {
+      "status": "PASS",
+      "detail": "65 panels, 167 registered assets and catalog invariants."
+    },
+    "changed_ts_tsx_transpile": {
+      "passed": 7,
+      "total": 7,
+      "diagnostics": 0,
+      "status": "PASS"
+    },
+    "mjs_syntax": {
+      "passed": 89,
+      "total": 89,
+      "status": "PASS"
+    },
+    "full_typecheck": {
+      "status": "BLOCKED",
+      "reason": "Missing @types/node and vite/client type definitions."
+    },
+    "build": {
+      "status": "BLOCKED",
+      "reason": "Vite executable absent (spawn vite ENOENT)."
+    },
+    "browser_qa": {
+      "status": "NOT RUN"
+    },
+    "database_auth_al_live_production": {
+      "status": "NOT RUN"
+    },
+    "art_verifier": {
+      "status": "FAIL",
+      "detail": "167 registered assets, 0 generated raster assets, and multiple incomplete art groups; existing baseline gap, not addressed in this feature round."
+    }
+  },
+  "source_changes": {
+    "modified_existing_files": [
+      "src/components/game/V45PanelBody.tsx",
+      "src/lib/game/delta.ts",
+      "src/lib/game/play.ts",
+      "src/lib/game/retrieve.ts",
+      "src/lib/game/save-validation.mjs",
+      "src/lib/game/store.ts",
+      "src/lib/game/types.ts",
+      "scripts/save-validation.test.mjs",
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+    ],
+    "added_project_files": [
+      "src/lib/game/sim/private-relations.ts",
+      "scripts/private-relations.test.mjs",
+      "STAGE47_PRIVATE_RELATIONS_ROUND1_REPORT_2026-11-09.md",
+      "STAGE47_PRIVATE_RELATIONS_ROUND1_HANDOFF_2026-11-09.md",
+      "WORKLOG-55.md",
+      "STAGE47_PRIVATE_RELATIONS_ROUND1_EVIDENCE_2026-11-09.json",
+      "STAGE47_PRIVATE_RELATIONS_ROUND1_FILE_INVENTORY_2026-11-09.csv"
+    ]
+  },
+  "release_decision": "SOURCE CHECKPOINT ONLY; NOT A RELEASE CANDIDATE. Gate 2 remains PARTIAL."
+}

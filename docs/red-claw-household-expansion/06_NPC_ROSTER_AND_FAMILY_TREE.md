@@ -1,0 +1,1879 @@
+# Red Claw 100-Card Roster and Family Tree
+
+**Registry:** `src/lib/canon/red-claw-household.json` · **Total:** 100 unique cards · **Tier distribution:** A20 / B30 / C50.  
+**Provenance:** 11 CP9 Canon cards, 2 Canon identities with proposed biographies, 8 existing Canon records with unresolved genealogy, and 79 proposed expansions.
+
+## Identity validation rules
+
+No duplicate IDs or display names; all in-registry parent/sibling/spouse/child references resolve; spouse and parent-child links are reciprocal; all 12 proposed former partners have a valid current spouse, current children, no child/pregnancy by Christian and no current relationship eligibility. Age unknowns are retained. Family branches for existing identities stay UNKNOWN when CP9 does not prove them. This validation is structural, not a substitute for the sealed kinship ledger.
+
+## Family tree
+
+### Main Red line and direct household
+- Wilhelmina Red → Katharina Red (mother–daughter link is Canon, but Katharina is listed in the card roster only as a node; Wilhelmina's childId is not fully exposed in the compact card graph).
+- Christian Red III + Katharina Red → Christian Red IV.
+- Christian Red III + Mirelda Grotsen → Helena Red-Grotsen (proposal; family relation not canonized).
+- Christian Red IV + Dagmar Red → Konrad Red, Liese Red (Canon).
+- Christian Red IV + Adelheid von Moren → Emil Red (Canon).
+- Christian Red IV + Elara Red → Luka Vahl (Canon acknowledged parentage; no succession title; Elara is not a wife).
+
+### Twelve proposed branch families
+- Steward Line: Lenna Falkner + Oskar Brand → Edda Brand, Rolf Brand. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Gate Branch: Mara Venn + Jost Kessel → Marta Kessel, Arvid Kessel. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Wilhelmina Branch: Sanna Kroll + Leif Hesse → Greta Hesse, Tomas Hesse. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Main Red Line: Rika Dorn + Ulric Brandt → Hanne Brandt, Emil Brandt. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Steward Line: Ilva Brandt + Pavel Thorne → Kira Thorne, Darek Thorne. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Ash-Hand Branch: Hilda Mertens + Konrad Weiss → Ilse Weiss, Nils Weiss. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Hammer Branch: Freya Stahl + Rainer Holt → Else Holt, Jann Holt. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Gate Branch: Alrike Sattler + Martin Voss → Oda Voss, Hendrik Voss. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Karl Line: Klara Hesse + Erwin Kroll → Tessa Kroll, Moritz Kroll. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Ash-Hand Branch: Nora Weiss + Johan Falk → Maja Falk, Soren Falk. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Wilhelmina Branch: Greta Falk + Armin Dorn → Lotte Dorn, Klemens Dorn. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+- Hammer Branch: Tilda Rehn + Dieter Hesse → Anika Hesse, Otto Hesse. All relationship/child links in this branch are PROPOSED; the spouse is marriage-kin, not proof of blood kinship.
+
+### Unresolved existing Red Claw identities
+- Ansgar Red, Ilka Red, Tobiah Red, Maren Red, Matthias Red, Greta Red, Hedda Red and Ewald Red retain their existing names/ages (where known); their branch/degree relationships remain UNKNOWN until the Floor 7 ledger is verified.
+- Six proposed branch elders are attached to branch labels only; parent-child links are not fabricated.
+
+
+## Full NPC cards
+
+Every card has a stable ID and source provenance. The JSON registry is authoritative for runtime display; the following is a readable dossier rendering.
+
+## Tier A — 20 major family NPCs
+
+### Christian Red IV — `rc-christian-iv`
+- **id:** rc-christian-iv
+- **name:** Christian Red IV
+- **ageLabel:** 35
+- **birthDate:** UNKNOWN — canonical age 35; exact birth date not supplied
+- **gender:** male
+- **familyBranch:** Main Red Line
+- **generation:** IV
+- **parents:** rc-christian-iii, rc-katharina-red
+- **siblings:** rc-helena-grotsen
+- **spouseIds:** rc-dagmar-red, rc-adelheid-von-moren, rc-vera-grotsen
+- **childIds:** rc-konrad-red, rc-liese-red, rc-emil-red, rc-luka-vahl
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; exact chamber varies by scene
+- **occupation:** Fist of the Red Claws
+- **appearance:** Canon gives no complete physical description in the current authoritative cards.
+- **voice:** Player-controlled; the simulation must not author his speech.
+- **temperament:** Player-controlled; no fixed emotional response may be inferred.
+- **habits:** Current routine is defined in the daily-routine excerpt; any deviation follows player action or a valid event.
+- **ambitions:** Player-controlled.
+- **fears:** Player-controlled.
+- **education:** UNKNOWN — not established in CP9.
+- **dailyRoutine:** Canonical daily routine; the player chooses actions and relationships.
+- **attitudeToPlayer:** Self-reference; never infer the player’s feelings or consent.
+- **relationships:** Son of Christian III and Katharina; stepmother Mirelda. Exactly three official wives: Dagmar, Adelheid, Vera. Acknowledged father of Luka with Elara; father of Konrad, Liese and Emil.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A routine household contact can reveal a current priority without forcing a plot outcome.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon atlas N-CHRISTIAN; V4.1 household excerpt; day-one household and child state.
+- **timelineNotes:** Age 35 at 20 Ironmonth 105 AW. Exact birth date not given.
+### Christian Red III — `rc-christian-iii`
+- **id:** rc-christian-iii
+- **name:** Christian Red III
+- **ageLabel:** 58 at death
+- **birthDate:** PROPOSED: 6 First Light 40 AW
+- **gender:** male
+- **familyBranch:** Main Red Line
+- **generation:** III
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-katharina-red, rc-mirelda-grotsen
+- **childIds:** rc-christian-iv, rc-helena-grotsen
+- **status:** deceased
+- **residenceStatus:** deceased
+- **currentLocation:** Deceased; historical household period
+- **occupation:** Former head of the Red Claw household; father of Christian IV
+- **appearance:** Proposed: broad-shouldered, weathered face, short iron-grey hair by his later years; no exact measurements assigned.
+- **voice:** Measured, low-volume speech; prefers short instructions and asks for a report before judging.
+- **temperament:** Patient in administration, severe on breaches of trust, privately attentive to household routine.
+- **habits:** Reviewed the household ledger before the morning watch; walked the inner passage after evening meal.
+- **ambitions:** Keep the Red Claw household administratively stable and politically independent.
+- **fears:** Factional capture of the household through marriage, debt or staff loyalty; fear is proposed, not canon.
+- **education:** Proposed: officer training and practical household-accounting apprenticeship.
+- **dailyRoutine:** Proposed historical routine: first ledger review, staff assignment, security report, family meal when available.
+- **attitudeToPlayer:** Father of Christian IV; the exact warmth or conflict between them is UNKNOWN.
+- **relationships:** Husband of Katharina Red, later husband of Mirelda Grotsen. Father of Christian IV and proposed half-sister Helena.
+- **knowledgeBoundaries:** His recorded thoughts and private motives are not canon. Only dated correspondence, testimony or ledger entries can establish them.
+- **eventHooks:** A sealed household expense book surfaces in the Floor 7 ledger archive., A retired servant disputes the date of his final appointment.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_IDENTITY_WITH_PROPOSED_BIOGRAPHY
+- **sourceEvidence:** Canon atlas N-CHRISTIAN establishes his paternity; all other profile details and dates are proposed.
+- **timelineNotes:** Proposed death in 98 AW at age 58. Candidate birth 40 AW; these dates are not CP9 canon.
+### Katharina Red — `rc-katharina-red`
+- **id:** rc-katharina-red
+- **name:** Katharina Red
+- **ageLabel:** UNKNOWN
+- **birthDate:** UNKNOWN — not supplied
+- **gender:** female
+- **familyBranch:** Main Red Line
+- **generation:** III
+- **parents:** rc-wilhelmina-red
+- **siblings:** None recorded
+- **spouseIds:** rc-christian-iii
+- **childIds:** rc-christian-iv
+- **status:** deceased
+- **residenceStatus:** deceased
+- **currentLocation:** Deceased; burial location UNKNOWN
+- **occupation:** Christian IV’s biological mother; deceased
+- **appearance:** UNKNOWN — no complete CP9 appearance card.
+- **voice:** UNKNOWN.
+- **temperament:** UNKNOWN.
+- **habits:** UNKNOWN.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** UNKNOWN.
+- **dailyRoutine:** UNKNOWN.
+- **attitudeToPlayer:** Biological mother; the player’s memories and emotional response remain player-controlled.
+- **relationships:** Daughter of Wilhelmina Red; wife of Christian III; mother of Christian IV.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Wilhelmina may identify a sealed family letter, if one is introduced through a valid event.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon atlas N-CHRISTIAN and H-WIVES identify Katharina as Christian IV’s mother; no further biography is included.
+- **timelineNotes:** Death date and Christian IV’s age at her death are UNKNOWN.
+### Mirelda Grotsen — `rc-mirelda-grotsen`
+- **id:** rc-mirelda-grotsen
+- **name:** Mirelda Grotsen
+- **ageLabel:** 61
+- **birthDate:** PROPOSED: 8 First Light 44 AW
+- **gender:** female
+- **familyBranch:** House Grotsen → Red Claw marriage household
+- **generation:** III
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-christian-iii
+- **childIds:** rc-helena-grotsen
+- **status:** alive
+- **residenceStatus:** departed
+- **currentLocation:** Grotsen Dominion; exact residence UNKNOWN
+- **occupation:** Christian IV’s stepmother; later returns to Grotsen with her daughter
+- **appearance:** Proposed: spare, upright posture; dark hair worn in a practical low knot, with a pale streak at the right temple; composed face and watchful eyes. No height or measurements assigned.
+- **voice:** Quiet alto; careful with names and titles; uses a deliberate pause rather than raising her voice.
+- **temperament:** Socially observant, disciplined, protective of her daughter, and politically cautious without being passive.
+- **habits:** Keeps two appointment books: one for formal obligations and one for personal promises; straightens objects when thinking.
+- **ambitions:** Preserve her daughter’s place in Grotsen society while preventing her Red Claw years from being rewritten by either faction.
+- **fears:** That either household will treat her daughter as a bargaining token; that the truth of the old household will be simplified into faction propaganda.
+- **education:** Proposed: Grotsen household schooling in correspondence, etiquette, accounts and factional history.
+- **dailyRoutine:** Proposed: morning correspondence and household accounts; midday family/ward visits; evening reading and private letters.
+- **attitudeToPlayer:** She helped raise Christian after Katharina’s death. The exact quality of their bond is not canon; proposed as affectionate but occasionally strained by her divided loyalties.
+- **relationships:** Canon confirms she is Christian IV’s stepmother and originates in House Grotsen. Proposed: daughter of a lesser Grotsen cadet branch; wife of Christian III; mother of Helena.
+- **knowledgeBoundaries:** She knows her own history and daughter’s parentage. She does not automatically know Christian’s private choices, Elara’s black-layer operations or sealed investigations.
+- **eventHooks:** A Grotsen letter asks her to correct a disputed family date., A visit to the Red Claw Dome tests whether old household courtesies still hold., Her daughter requests a meeting with Christian without factional witnesses.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_IDENTITY_WITH_PROPOSED_BIOGRAPHY
+- **sourceEvidence:** Canon atlas N-CHRISTIAN names Mirelda Grotsen as stepmother; daughter, dates, detailed character traits and departure are proposals based on the task brief.
+- **timelineNotes:** Proposed birth 44 AW; marries Christian III after Katharina’s death; proposed daughter born 80 AW; departs with daughter in 98 AW.
+### Helena Red-Grotsen — `rc-helena-grotsen`
+- **id:** rc-helena-grotsen
+- **name:** Helena Red-Grotsen
+- **ageLabel:** 25
+- **birthDate:** PROPOSED: 2 First Light 80 AW
+- **gender:** female
+- **familyBranch:** House Grotsen maternal line / Red Claw paternal line
+- **generation:** V
+- **parents:** rc-christian-iii, rc-mirelda-grotsen
+- **siblings:** rc-christian-iv
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** departed
+- **currentLocation:** Grotsen Dominion; exact residence UNKNOWN
+- **occupation:** Proposed daughter of Christian III and Mirelda; Christian IV’s paternal half-sister
+- **appearance:** Proposed: resembles Mirelda in dark hair, attentive eyes and controlled posture; a small pale birthmark near the left ear distinguishes her.
+- **voice:** Clear mid-range voice; asks direct questions, then listens before answering.
+- **temperament:** Independent, curious about both sides of her family, slow to trust factional narratives.
+- **habits:** Keeps a small collection of repaired objects from the Dome; sketches doors and stairwells from memory.
+- **ambitions:** Build a profession and social standing that are not dependent on either Christian IV or her mother.
+- **fears:** Being treated as a diplomatic bridge rather than a person; being asked to choose a family side in public.
+- **education:** Proposed: Grotsen literacy, history, bookkeeping, and practical administration; later self-study of Red Claw military history.
+- **dailyRoutine:** Proposed: lessons/office work in the morning, errands and correspondence in the afternoon, private reading in the evening.
+- **attitudeToPlayer:** Proposed: generally warm childhood familiarity with her older half-brother; current attitude curious but wary of political expectations.
+- **relationships:** Biological daughter of Christian III and Mirelda; paternal half-sister of Christian IV. No other siblings proposed.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** She asks for a childhood object to be returned from the Dome., She challenges a rumour about her father’s last years., A Grotsen visit collides with a Red Claw ceremony.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** The task brief establishes the intended half-sister relationship and departure; name, birth date, ages, personality and education are newly proposed.
+- **timelineNotes:** Proposed birth 2 First Light 80 AW; age 0 in the player’s tenth year, age 8 when Christian IV reaches 18 in 88 AW, age 18 at the proposed father-death/departure point in 98 AW, and age 25 at campaign date 20 Ironmonth 105 AW. Exact DOB and departure date are not canonical.
+- **adultRelationshipSystems:** DISABLED for all private/dynastic romance systems; family and conversation interactions only.
+### Dagmar Red — `rc-dagmar-red`
+- **id:** rc-dagmar-red
+- **name:** Dagmar Red
+- **ageLabel:** 37
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** female
+- **familyBranch:** Karl Line (paternal branch)
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-christian-iv
+- **childIds:** rc-konrad-red, rc-liese-red
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; private chamber and command duties
+- **occupation:** First Wife; Frontier and Border Guard commander
+- **appearance:** Canon: scar through left eyebrow; black leather clothing and duty braid in the opening scene. Other anatomical details remain unrecorded.
+- **voice:** Low, level and economical; speaks as if stating a decision already tested.
+- **temperament:** Watchful, disciplined, protective, exacting; warmth is expressed through practical attention.
+- **habits:** Checks reports twice; watches the eastern approaches; notices omissions in people’s lists.
+- **ambitions:** Keep the eastern frontier secure and her children capable without forcing them into her shadow.
+- **fears:** A compromised watch and threats that arrive through trusted access.
+- **education:** Military command and House upbringing; precise formal schooling UNKNOWN.
+- **dailyRoutine:** Command briefings, patrol lists, family time, reports; the precise day is state-sensitive.
+- **attitudeToPlayer:** Current feelings are dynamic and player/NPC-state dependent; no affection is inferred from marriage.
+- **relationships:** Canon: First Wife, mother of Konrad and Liese, Karl paternal branch.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically. Her parents’ identities are not in this roster.
+- **eventHooks:** A watch captain’s report does not match her list., Konrad asks to ride a patrol early., A Grotsen courier crosses a gate she did not authorize.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card DAGMAR RED,37; V4.1 household excerpt; kinship excerpt identifies Karl line.
+- **timelineNotes:** Current age 37; exact birth and marriage dates not included in CP9.
+### Adelheid von Moren — `rc-adelheid-von-moren`
+- **id:** rc-adelheid-von-moren
+- **name:** Adelheid von Moren
+- **ageLabel:** 24
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** female
+- **familyBranch:** Marriage Kin — House von Moren
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-christian-iv
+- **childIds:** rc-emil-red
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; diplomatic reception rooms
+- **occupation:** Second Wife; Monarchian diplomatic bridge
+- **appearance:** Canon profile is present; exact physical detail retained only in compiled card fields. See existing source card; no measurements added.
+- **voice:** Controlled courtly diction, precise titles and soft emphasis.
+- **temperament:** Diplomatic, observant, proud, measured under pressure.
+- **habits:** Reviews correspondence before meetings; remembers who was omitted from invitations.
+- **ambitions:** Maintain a credible Monarchian bridge without becoming a passive envoy.
+- **fears:** Being reduced to a treaty clause or dismissed as too young to understand the stakes.
+- **education:** Monarchian household education; exact curriculum UNKNOWN.
+- **dailyRoutine:** Correspondence, formal audiences, family time, diplomatic meetings.
+- **attitudeToPlayer:** Current state depends on play; marriage does not prove consent or affection.
+- **relationships:** Second Wife; diplomatic bridge to Monarchia; mother of Emil.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically. Her parents’ identities are not in this roster.
+- **eventHooks:** A sealed letter from Lord Rainer arrives through an irregular channel., Seraphine requests a private audience., Emil develops a fever and the household schedule changes.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card ADELHEID VON MOREN,24 and V4.1 household excerpt.
+- **timelineNotes:** Current age 24; exact dates UNKNOWN.
+### Vera Grotsen — `rc-vera-grotsen`
+- **id:** rc-vera-grotsen
+- **name:** Vera Grotsen
+- **ageLabel:** 19
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** female
+- **familyBranch:** House Grotsen / Marriage Kin
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-christian-iv
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; Grotsen-facing guest suite
+- **occupation:** Third Wife; Grotsen political bride
+- **appearance:** Canon details exist in compiled card; this expansion does not add measurements or invented physical specifics.
+- **voice:** Measured, careful with dialect shifts; becomes more direct in private political discussions.
+- **temperament:** Politically alert, young but not naïve; curious and cautious.
+- **habits:** Translates phrases silently before answering; keeps notes on who speaks for whom.
+- **ambitions:** Define her role beyond being a Grotsen bridge.
+- **fears:** That older relatives will use her marriage to settle disputes she did not create.
+- **education:** Grotsen family instruction and diplomatic etiquette; exact curriculum UNKNOWN.
+- **dailyRoutine:** Household obligations, language work, formal visits and personal study.
+- **attitudeToPlayer:** Dynamic; no automatic trust or romantic willingness is assumed.
+- **relationships:** Third Wife and Grotsen political bridge.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Dreyer asks to speak with her alone., She offers to translate a Grotsen document., She and Adelheid disagree for the first time.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card VERA GROTSEN,19; V4.1 household excerpt.
+- **timelineNotes:** Current age 19; no pregnancy/child is established in CP9.
+### Elara Red — `rc-elara-red`
+- **id:** rc-elara-red
+- **name:** Elara Red
+- **ageLabel:** 34
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** female
+- **familyBranch:** Red Claw; distant kin relationship degree UNKNOWN
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** rc-luka-vahl
+- **status:** alive
+- **residenceStatus:** duty-based
+- **currentLocation:** Iron Guard command post / Floor 6 duty access; private residence UNKNOWN
+- **occupation:** Iron Guard commander; former partner; mother of Luka
+- **appearance:** Canon establishes identity and command; body/appearance field is incomplete. Not filled with invented anatomy.
+- **voice:** Concise command cadence; operational vocabulary; distinguishes order from request.
+- **temperament:** Independent, disciplined, politically perceptive, protective of her command.
+- **habits:** Inspects locks and routes; counts exits; keeps separate operational and personal records.
+- **ambitions:** Keep the five-woman Iron Guard operationally independent and protect its remit.
+- **fears:** Command compromised by private history; Luka used as a political lever.
+- **education:** Military / security training; exact history UNKNOWN.
+- **dailyRoutine:** Guard command, inspections, reports, black-layer intelligence work; schedule depends on campaign state.
+- **attitudeToPlayer:** Former relationship is canon; current trust, affection and willingness are not assumed.
+- **relationships:** Former partner of Christian IV; mother of Luka Vahl; commander of the five-woman Iron Guard. Not a wife.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A routine inspection finds a changed lock., Luka asks to join surface training., She requests permission to replace a guard.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card ELARA RED,34; V4.1 household and intelligence excerpts.
+- **timelineNotes:** Current age 34; exact birth and relationship dates UNKNOWN. Parent-age chronology requires reconciliation with Luka’s age.
+### Luka Vahl — `rc-luka-vahl`
+- **id:** rc-luka-vahl
+- **name:** Luka Vahl
+- **ageLabel:** 18
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** male
+- **familyBranch:** Vahl / Red Claw acknowledged filial tie
+- **generation:** V
+- **parents:** rc-christian-iv, rc-elara-red
+- **siblings:** rc-konrad-red, rc-liese-red, rc-emil-red
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; training and communications areas
+- **occupation:** Elara’s son; Christian’s acknowledged son without succession title
+- **appearance:** Canon card gives current youth profile; non-sexual description only. Exact measurements not added.
+- **voice:** Quick and direct; sometimes turns technical observations into dry jokes.
+- **temperament:** Curious, capable, ambitious; sensitive to the limits attached to his status.
+- **habits:** Tests relays; notices inconsistencies in equipment; competes with Konrad in harmless challenges.
+- **ambitions:** Earn a meaningful technical or military role without demanding a title that Canon denies him.
+- **fears:** Being permanently defined by parentage or excluded from his own achievements.
+- **education:** Current training and practical technical learning; exact course record UNKNOWN.
+- **dailyRoutine:** Training, communications study, supervised duties and peer time.
+- **attitudeToPlayer:** Child/son relationship; current views are state-driven.
+- **relationships:** Biological son of Elara and Christian IV; Konrad’s half-brother; acknowledged but without succession title.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** He finds a fault in the communications relay., Konrad and he plan a prank that goes wrong., He asks how to earn a title he cannot hold.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card LUKA VAHL,18; V4.1 household excerpt.
+- **timelineNotes:** Current age 18. Exact birth date unavailable; relationship chronology not validated against parental ages.
+### Konrad Red — `rc-konrad-red`
+- **id:** rc-konrad-red
+- **name:** Konrad Red
+- **ageLabel:** 15
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** male
+- **familyBranch:** Main Red Line
+- **generation:** VI
+- **parents:** rc-christian-iv, rc-dagmar-red
+- **siblings:** rc-liese-red, rc-emil-red, rc-luka-vahl
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; cadet rooms / training spaces
+- **occupation:** Cadet; son of Christian and Dagmar
+- **appearance:** Canon child profile; age-appropriate and non-sexual. No additional body details invented.
+- **voice:** Direct, eager to sound older; sometimes speaks before weighing the risk.
+- **temperament:** Competitive, earnest, proud and still learning restraint.
+- **habits:** Volunteers early; copies senior patrol routines; tries to hide disappointment.
+- **ambitions:** Earn a place in the House and be trusted with responsibilities appropriate to his age.
+- **fears:** Being treated as a child after he has shown capability; letting his family down.
+- **education:** Cadet education; history and practical training.
+- **dailyRoutine:** Lessons, supervised drills, family time and rest.
+- **attitudeToPlayer:** Son; feelings and choices must be generated through age-appropriate family scenes.
+- **relationships:** Son of Dagmar and Christian; brother of Liese; half-brother of Luka.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** He volunteers for something above his rank., A cadet rival provokes him., He asks his father a difficult question about war.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card KONRAD RED,15; V4.1 household excerpt.
+- **timelineNotes:** Current age 15. Adult private/romance systems must remain unavailable.
+### Liese Red — `rc-liese-red`
+- **id:** rc-liese-red
+- **name:** Liese Red
+- **ageLabel:** 11
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** female
+- **familyBranch:** Main Red Line
+- **generation:** VI
+- **parents:** rc-christian-iv, rc-dagmar-red
+- **siblings:** rc-konrad-red, rc-emil-red, rc-luka-vahl
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; nursery/learning wing
+- **occupation:** Daughter of Christian and Dagmar
+- **appearance:** Canon: black-haired, curious, bookish and mischievous. No additional anatomical details.
+- **voice:** Asks clear questions; playful when she trusts the room.
+- **temperament:** Curious, observant, inventive and affectionate in familiar settings.
+- **habits:** Leaves books in unusual places; opens questions that adults avoid.
+- **ambitions:** Learn how the Dome works and be taken seriously when she notices something.
+- **fears:** Being dismissed; being kept away from things without an explanation.
+- **education:** Age-appropriate literacy, history and guided practical learning.
+- **dailyRoutine:** Lessons, reading, supervised play and family meals.
+- **attitudeToPlayer:** Daughter; never infer her private feelings beyond the scene.
+- **relationships:** Daughter of Dagmar and Christian; sister of Konrad; half-sister of Luka.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** She finds a stairwell door nobody has opened., She asks a question nobody can answer., She brings Christian a book she thinks he should read.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** V4.1 Hotset and household excerpt.
+- **timelineNotes:** Current age 11. Adult private/romance systems must remain unavailable.
+### Emil Red — `rc-emil-red`
+- **id:** rc-emil-red
+- **name:** Emil Red
+- **ageLabel:** 3
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** male
+- **familyBranch:** Main Red Line
+- **generation:** VI
+- **parents:** rc-christian-iv, rc-adelheid-von-moren
+- **siblings:** rc-konrad-red, rc-liese-red, rc-luka-vahl
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; nursery wing
+- **occupation:** Young son of Christian and Adelheid
+- **appearance:** Age-appropriate toddler description only; detailed appearance UNKNOWN.
+- **voice:** Age-appropriate speech; vocabulary and pronunciation evolve with time.
+- **temperament:** Young child; behaviour must be age-consistent and state-dependent.
+- **habits:** Routine-dependent; no fixed traits beyond documented scenes.
+- **ambitions:** UNKNOWN — do not assign adult ambitions.
+- **fears:** Age-appropriate, scene-dependent.
+- **education:** Early childhood care and language development.
+- **dailyRoutine:** Caregiver-led sleep, meals, play and supervised time.
+- **attitudeToPlayer:** Young son; age-appropriate family interaction only.
+- **relationships:** Son of Adelheid and Christian.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A change in routine brings a caregiver request., A new word becomes a family moment.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** V4.1 household excerpt; day-one child state.
+- **timelineNotes:** Current age 3. Adult private/romance systems must remain unavailable.
+### Wilhelmina Red — `rc-wilhelmina-red`
+- **id:** rc-wilhelmina-red
+- **name:** Wilhelmina Red
+- **ageLabel:** 68
+- **birthDate:** UNKNOWN — exact birth date not supplied
+- **gender:** female
+- **familyBranch:** Wilhelmina Branch
+- **generation:** II
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** rc-katharina-red
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — Dome; House Representative’s rooms
+- **occupation:** House Representative; Christian IV’s maternal grandmother
+- **appearance:** Canon identifies her as an elder; complete anatomical description is not supplied.
+- **voice:** Formal, authoritative, concise; uses family titles with deliberate precision.
+- **temperament:** Institutional, exacting, protective of the ledger and House standing.
+- **habits:** Checks kinship records; summons relatives to answer for omissions.
+- **ambitions:** Preserve a traceable House genealogy and the legitimacy of its procedures.
+- **fears:** A disputed lineage becoming a political weapon; decisions made without ledger evidence.
+- **education:** House governance and kinship record tradition; exact training UNKNOWN.
+- **dailyRoutine:** House representation, genealogy, rites and family complaints.
+- **attitudeToPlayer:** Grandmother; the exact relationship dynamic is played, not presumed.
+- **relationships:** Mother of Katharina; maternal grandmother of Christian IV; presides over Kin/Ash Council per kinship excerpt.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A genealogy discrepancy., She summons Christian to hear a complaint., She asks to attend Ewald’s hearing.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON
+- **sourceEvidence:** Canon card GRANDMOTHER WILHELMINA RED,68; kinship excerpt.
+- **timelineNotes:** Current age 68. Residence on Floor 6 is proposed pending household residence record.
+### Lenna Falkner — `rc-lenna-falkner`
+- **id:** rc-lenna-falkner
+- **name:** Lenna Falkner
+- **ageLabel:** 36
+- **birthDate:** 4 First Light 69 AW
+- **gender:** female
+- **familyBranch:** Steward Line
+- **generation:** V
+- **parents:** rc-parent-lenna-a, rc-parent-lenna-b
+- **siblings:** None recorded
+- **spouseIds:** rc-oskar-brand
+- **childIds:** rc-edda-brand, rc-rolf-brand
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Dark chestnut hair in a practical braid; attentive grey eyes; deliberate, balanced movement.
+- **voice:** Clear, measured contralto; tends to ask one precise question at a time.
+- **temperament:** Organised, warm with children, firm about appointments and boundaries.
+- **habits:** Keeps a household ledger in a stitched blue cover; aligns cups before a meeting.
+- **ambitions:** Run a fair family-service schedule and preserve staff rest days.
+- **fears:** That a crisis will make the household normalise unpaid or invisible labour.
+- **education:** Proposed literacy, accounts, correspondence and branch administration.
+- **dailyRoutine:** Morning roster review; midday family meal; afternoon staff coordination; evening with children.
+- **attitudeToPlayer:** Cordial but self-possessed. She values the old friendship but has no stated wish to resume the relationship.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 88 AW–15 Endmonth 88 AW; age 19). Current spouse: Oskar Brand. Children: Edda Brand, Rolf Brand. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Publicly acknowledged courtship within the young-adult circle; no pregnancy or child with Christian. Current spouse knowledge: Oskar knows the history as an old, openly discussed courtship. Proposed attitude: secure, mildly protective of family privacy, not hostile. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A rota error reveals that one attendant has been working double shifts., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 4 First Light 69 AW; proposed adult historical relationship 20 First Light 88 AW through 15 Endmonth 88 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-oskar-brand
+- **spouseAttitude:** Oskar knows the history as an old, openly discussed courtship. Proposed attitude: secure, mildly protective of family privacy, not hostile.
+- **currentFamilyPriorities:** Run a fair family-service schedule and preserve staff rest days.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 88 AW – 15 Endmonth 88 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: public / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Dark chestnut hair in a practical braid; attentive grey eyes; deliberate, balanced movement. Movement: Keeps a household ledger in a stitched blue cover; aligns cups before a meeting.
+- **crisisResponse:** Sets a task list, then asks which part can reasonably wait.
+- **interactionStyle:** Approach with a clear purpose and respect for the work schedule.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “The rota is not a suggestion. It is how people get to rest.”
+- **secrets:** A sealed box of old correspondence is private; no contents are available by default.
+- **knownInformation:** She knows the old relationship herself; Oskar knows it as an acknowledged courtship. Children do not know private details.
+### Mara Venn — `rc-mara-venn`
+- **id:** rc-mara-venn
+- **name:** Mara Venn
+- **ageLabel:** 35
+- **birthDate:** 9 First Light 70 AW
+- **gender:** female
+- **familyBranch:** Gate Branch
+- **generation:** V
+- **parents:** rc-parent-mara-a, rc-parent-mara-b
+- **siblings:** None recorded
+- **spouseIds:** rc-jost-kessel
+- **childIds:** rc-marta-kessel, rc-arvid-kessel
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Straight dark hair cut at jaw length; brown eyes; economical movements and a habit of watching thresholds.
+- **voice:** Low, practical, with clipped gate-watch phrasing.
+- **temperament:** Self-reliant, vigilant, private, fair when given reliable evidence.
+- **habits:** Checks door latches twice; carries a small route slate.
+- **ambitions:** Improve safe visitor flow at the Gate without weakening controls.
+- **fears:** An old private matter becoming a pretext for public pressure.
+- **education:** Proposed gate logistics, signals, literacy and route accounting.
+- **dailyRoutine:** Dawn gate inspection; midday dispatch; afternoon family time on off-watch days.
+- **attitudeToPlayer:** Polite, guarded, and intent on keeping present family life separate from old private history.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 19). Current spouse: Jost Kessel. Children: Marta Kessel, Arvid Kessel. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Secret adult relationship known only to the two participants in the proposed history. Current spouse knowledge: Jost is not recorded as knowing the private history. No suspicion is assumed. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** An entry ledger lists a visitor who never passed the gate., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 9 First Light 70 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-jost-kessel
+- **spouseAttitude:** Jost is not recorded as knowing the private history. No suspicion is assumed.
+- **currentFamilyPriorities:** Improve safe visitor flow at the Gate without weakening controls.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: private / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Straight dark hair cut at jaw length; brown eyes; economical movements and a habit of watching thresholds. Movement: Checks door latches twice; carries a small route slate.
+- **crisisResponse:** Checks exits and visitor permissions before answering a difficult question.
+- **interactionStyle:** Do not corner her in a gate corridor; request a scheduled conversation.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “A gate log records passage, not motive.”
+- **secrets:** The former relationship remains private; no disclosure without her choice.
+- **knownInformation:** Only Mara and Christian are established as knowing the secret in this proposal.
+### Sanna Kroll — `rc-sanna-kroll`
+- **id:** rc-sanna-kroll
+- **name:** Sanna Kroll
+- **ageLabel:** 35
+- **birthDate:** 2 First Light 70 AW
+- **gender:** female
+- **familyBranch:** Wilhelmina Branch
+- **generation:** V
+- **parents:** rc-parent-sanna-a, rc-parent-sanna-b
+- **siblings:** None recorded
+- **spouseIds:** rc-leif-hesse
+- **childIds:** rc-greta-hesse, rc-tomas-hesse
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Copper-brown hair usually pinned back; green-grey eyes; animated hands when explaining a point.
+- **voice:** Expressive and quick, with a dry laugh when a claim is poorly supported.
+- **temperament:** Sociable, sceptical, generous with practical help.
+- **habits:** Collects old household sayings and asks elders where they originated.
+- **ambitions:** Document branch customs before the older generation’s memories disappear.
+- **fears:** That oral history will be polished into convenient faction myths.
+- **education:** Proposed family history, letters, oral testimony and archive practice.
+- **dailyRoutine:** Morning interviews; afternoon transcription; evenings with family or elder visits.
+- **attitudeToPlayer:** Friendly in public, but she expects Christian to treat the past as settled rather than a standing invitation.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 19). Current spouse: Leif Hesse. Children: Greta Hesse, Tomas Hesse. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: A brief, mutually acknowledged adult courtship; close friends knew, wider household knowledge is partial. Current spouse knowledge: Leif knows a partial account from before their marriage. Proposed attitude: calm, wants honesty rather than gossip. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** Two witnesses give different accounts of a ceremony date., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 2 First Light 70 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-leif-hesse
+- **spouseAttitude:** Leif knows a partial account from before their marriage. Proposed attitude: calm, wants honesty rather than gossip.
+- **currentFamilyPriorities:** Document branch customs before the older generation’s memories disappear.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: known / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Copper-brown hair usually pinned back; green-grey eyes; animated hands when explaining a point. Movement: Collects old household sayings and asks elders where they originated.
+- **crisisResponse:** Asks for the date and source behind a confident story.
+- **interactionStyle:** Bring records or identify the witness; avoid presenting rumour as fact.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “That is the version people repeat. Show me the first record.”
+- **secrets:** An unfinished oral-history notebook contains conflicting testimony.
+- **knownInformation:** Close friends knew a relationship existed; details remain restricted.
+### Rika Dorn — `rc-rika-dorn`
+- **id:** rc-rika-dorn
+- **name:** Rika Dorn
+- **ageLabel:** 37
+- **birthDate:** 16 First Light 68 AW
+- **gender:** female
+- **familyBranch:** Main Red Line
+- **generation:** V
+- **parents:** rc-parent-rika-a, rc-parent-rika-b
+- **siblings:** None recorded
+- **spouseIds:** rc-ulric-brandt
+- **childIds:** rc-hanne-brandt, rc-emil-brandt
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Ash-blonde hair, dark eyes, strong upright posture, practical clothing with a single family pin.
+- **voice:** Firm mid-range voice; plain language; little patience for evasive answers.
+- **temperament:** Decisive, loyal to obligations, dislikes emotional triangulation.
+- **habits:** Folds documents into exact thirds; taps the table once before making a final point.
+- **ambitions:** Keep the family’s residential allocations fair between main and cadet lines.
+- **fears:** That favouritism will create a quiet branch feud.
+- **education:** Proposed domestic accounts, property law custom and household mediation.
+- **dailyRoutine:** Property review; family meal; branch consultations; evening quiet.
+- **attitudeToPlayer:** Direct and civil. She supports his public duties but does not romanticise their past.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 88 AW–15 Endmonth 88 AW; age 20). Current spouse: Ulric Brandt. Children: Hanne Brandt, Emil Brandt. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Publicly known adult relationship in their social circle; its details were never a household entitlement. Current spouse knowledge: Ulric knew before marriage. Proposed attitude: matter-of-fact; values clear boundaries and does not wish to be made a rival. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A room transfer request exposes an old branch preference., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 16 First Light 68 AW; proposed adult historical relationship 20 First Light 88 AW through 15 Endmonth 88 AW at age 20. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-ulric-brandt
+- **spouseAttitude:** Ulric knew before marriage. Proposed attitude: matter-of-fact; values clear boundaries and does not wish to be made a rival.
+- **currentFamilyPriorities:** Keep the family’s residential allocations fair between main and cadet lines.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 88 AW – 15 Endmonth 88 AW; age at start: 20 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: public / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Ash-blonde hair, dark eyes, strong upright posture, practical clothing with a single family pin. Movement: Folds documents into exact thirds; taps the table once before making a final point.
+- **crisisResponse:** States the boundary once, then returns to the practical issue.
+- **interactionStyle:** Speak plainly and do not use family status as leverage.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “We chose our lives. Let the choice stand.”
+- **secrets:** Her disagreement about room-allocation custom is private.
+- **knownInformation:** Her former courtship was publicly known; its details were not public property.
+### Ilva Brandt — `rc-ilva-brandt`
+- **id:** rc-ilva-brandt
+- **name:** Ilva Brandt
+- **ageLabel:** 36
+- **birthDate:** 11 First Light 69 AW
+- **gender:** female
+- **familyBranch:** Steward Line
+- **generation:** V
+- **parents:** rc-parent-ilva-a, rc-parent-ilva-b
+- **siblings:** None recorded
+- **spouseIds:** rc-pavel-thorne
+- **childIds:** rc-kira-thorne, rc-darek-thorne
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Dark blond hair in a low knot; pale brown eyes; compact, purposeful movements.
+- **voice:** Soft, exact diction; repeats a number before approving it.
+- **temperament:** Conscientious, cautious, quietly stubborn.
+- **habits:** Marks supply crates with a small diagonal pencil stroke when audited.
+- **ambitions:** Make the household supply system auditable and reduce waste.
+- **fears:** Being blamed for shortages caused by missing records.
+- **education:** Proposed accounts, procurement, weights and measures, basic logistics.
+- **dailyRoutine:** Morning stores check; midday deliveries; afternoon ledger and children.
+- **attitudeToPlayer:** Reserved and professional. She prefers conversations with a clear purpose.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 20). Current spouse: Pavel Thorne. Children: Kira Thorne, Darek Thorne. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Secret adult relationship; one trusted confidante knew that Ilva was seeing someone, but not the identity. Current spouse knowledge: Pavel has no confirmed knowledge in this proposal; do not treat rumour as evidence. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A shortage report and the original delivery count do not match., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 11 First Light 69 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 20. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-pavel-thorne
+- **spouseAttitude:** Pavel has no confirmed knowledge in this proposal; do not treat rumour as evidence.
+- **currentFamilyPriorities:** Make the household supply system auditable and reduce waste.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 20 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: private / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Dark blond hair in a low knot; pale brown eyes; compact, purposeful movements. Movement: Marks supply crates with a small diagonal pencil stroke when audited.
+- **crisisResponse:** Checks a figure and pauses when the total fails.
+- **interactionStyle:** Use the audited supply channel; do not demand access to personal papers.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “The ledger can prove a shortage. It cannot name a culprit by itself.”
+- **secrets:** A copy of a disputed order is kept as insurance.
+- **knownInformation:** One confidante knew Ilva was seeing someone, not whom.
+### Hilda Mertens — `rc-hilda-mertens`
+- **id:** rc-hilda-mertens
+- **name:** Hilda Mertens
+- **ageLabel:** 36
+- **birthDate:** 3 First Light 69 AW
+- **gender:** female
+- **familyBranch:** Ash-Hand Branch
+- **generation:** V
+- **parents:** rc-parent-hilda-a, rc-parent-hilda-b
+- **siblings:** None recorded
+- **spouseIds:** rc-konrad-weiss
+- **childIds:** rc-ilse-weiss, rc-nils-weiss
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Dark auburn hair; hazel eyes; steady hands with fine tool marks from work.
+- **voice:** Warm, low voice; explains technical matters patiently.
+- **temperament:** Practical, patient, quietly humorous, protective of apprentices.
+- **habits:** Keeps a pocket notebook of repairs and lessons learned.
+- **ambitions:** Establish a safe repair apprenticeship for younger household members.
+- **fears:** A preventable accident caused by rushed work.
+- **education:** Proposed technical literacy, tool safety, basic machine maintenance.
+- **dailyRoutine:** Morning workshop supervision; midday family meal; afternoon lessons; evening repair notes.
+- **attitudeToPlayer:** Warm but busy; values their surviving friendship more than nostalgia.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 88 AW–15 Endmonth 88 AW; age 19). Current spouse: Konrad Weiss. Children: Ilse Weiss, Nils Weiss. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: A close friendship that developed into a short adult relationship; known to a small circle, never treated as a public scandal. Current spouse knowledge: Konrad knows the broad history. Proposed attitude: respectful, expects the past not to intrude on their marriage. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A training session is suspended until missing safety equipment is accounted for., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 3 First Light 69 AW; proposed adult historical relationship 20 First Light 88 AW through 15 Endmonth 88 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-konrad-weiss
+- **spouseAttitude:** Konrad knows the broad history. Proposed attitude: respectful, expects the past not to intrude on their marriage.
+- **currentFamilyPriorities:** Establish a safe repair apprenticeship for younger household members.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 88 AW – 15 Endmonth 88 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: known / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Dark auburn hair; hazel eyes; steady hands with fine tool marks from work. Movement: Keeps a pocket notebook of repairs and lessons learned.
+- **crisisResponse:** Offers a safer method before criticising a rushed job.
+- **interactionStyle:** Discuss the workbench or apprenticeship directly; allow time to demonstrate.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “Show me the clamp before you show me the result.”
+- **secrets:** She has not entered missing safety clamps into the official list yet.
+- **knownInformation:** A small circle knew of the courtship; Konrad Weiss knows the broad history.
+## Tier B — 30 secondary NPCs
+
+### Ansgar Red — `rc-ansgar-red`
+- **id:** rc-ansgar-red
+- **name:** Ansgar Red
+- **ageLabel:** 41
+- **birthDate:** UNKNOWN
+- **gender:** male
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Commander; Red Claw officer
+- **appearance:** Weathered, purposeful posture; no detailed canonical appearance beyond card context.
+- **voice:** Blunt military voice; speaks in actionable reports.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Protective of Ilka; friendly rivalry with Rask.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Fresh tracks; sortie request; private map clue.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Ilka Red — `rc-ilka-red`
+- **id:** rc-ilka-red
+- **name:** Ilka Red
+- **ageLabel:** 29
+- **birthDate:** UNKNOWN
+- **gender:** female
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Scout and cartographer
+- **appearance:** Practical field clothing; keeps maps close and fingers often ink-marked.
+- **voice:** Fast, precise, sometimes impatient with delays.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Wary of Ansgar as mentor; collaborates with Ulrich Venn.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A discovery; she overruns time; a map fragment.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Tobiah Red — `rc-tobiah-red`
+- **id:** rc-tobiah-red
+- **name:** Tobiah Red
+- **ageLabel:** 33
+- **birthDate:** UNKNOWN
+- **gender:** male
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Relic-hunter and engineer
+- **appearance:** Workshop-worn sleeves, careful hands, attentive gaze.
+- **voice:** Technical, associative, often explains by analogy.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Affectionate friction with Emmerich; respects Maren.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A humming relic; a broken device; a hidden cache.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Maren Red — `rc-maren-red`
+- **id:** rc-maren-red
+- **name:** Maren Red
+- **ageLabel:** 27
+- **birthDate:** UNKNOWN
+- **gender:** female
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Cleanser and radiation medic
+- **appearance:** Practical protective clothing; alert, steady movement.
+- **voice:** Calm clinical shorthand; avoids speculation.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Respects Tobiah; trusts Ansgar.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A hot find; a stalker overdose; a cleansing failure.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Matthias Red — `rc-matthias-red`
+- **id:** rc-matthias-red
+- **name:** Matthias Red
+- **ageLabel:** 28
+- **birthDate:** UNKNOWN
+- **gender:** male
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Armored vanguard
+- **appearance:** Athletic working build; field-ready armour; no further measurements.
+- **voice:** Confident, direct, competitive.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Cousin of Greta Red; idolises Konrad (which must remain age-appropriate).
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A brawl; a boast; a rescue.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Greta Red — `rc-greta-red`
+- **id:** rc-greta-red
+- **name:** Greta Red
+- **ageLabel:** 26
+- **birthDate:** UNKNOWN
+- **gender:** female
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Armored sharpshooter
+- **appearance:** Steady stance, disciplined hands, practical sharpshooter kit.
+- **voice:** Dry, concise, precise.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Cousin of Matthias; mutual respect with Mira Voss.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A range challenge; a scouting job; a duel.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Hedda Red — `rc-hedda-red`
+- **id:** rc-hedda-red
+- **name:** Hedda Red
+- **ageLabel:** 25
+- **birthDate:** UNKNOWN
+- **gender:** female
+- **familyBranch:** UNKNOWN — Red Claw branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Cousin married into Grotsen
+- **appearance:** Appearance UNKNOWN beyond compiled card.
+- **voice:** Socially careful; exact voice UNKNOWN.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Canon card identifies Ivo Grotsen as husband and Rolf Kessel as link.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A visit; a letter; a request.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Ewald Red — `rc-ewald-red`
+- **id:** rc-ewald-red
+- **name:** Ewald Red
+- **ageLabel:** UNKNOWN
+- **birthDate:** UNKNOWN
+- **gender:** male
+- **familyBranch:** UNKNOWN — Red Claw cousin branch not confirmed
+- **generation:** UNKNOWN
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** None recorded
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Duty station or residence UNKNOWN
+- **occupation:** Cousin under investigation in Case 105-042
+- **appearance:** UNKNOWN — no full profile.
+- **voice:** UNKNOWN.
+- **temperament:** Use only behaviour supported by the compiled Canon card; additional temperament UNKNOWN.
+- **habits:** UNKNOWN — avoid filling gaps.
+- **ambitions:** UNKNOWN.
+- **fears:** UNKNOWN.
+- **education:** Role-based training presumed only; formal education UNKNOWN.
+- **dailyRoutine:** The compiled day schedule is the only authority; residence is not established.
+- **attitudeToPlayer:** UNKNOWN — determined by current state and direct events.
+- **relationships:** Wilhelmina must be present at any hearing.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Evidence review; hearing; witness.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** CANON_RECORD_WITH_UNRESOLVED_GENEALOGY
+- **sourceEvidence:** Existing compiled CP9 character card; branch and household residence are not established.
+- **timelineNotes:** Existing card age retained; dates and family branch remain UNKNOWN.
+### Oskar Brand — `rc-oskar-brand`
+- **id:** rc-oskar-brand
+- **name:** Oskar Brand
+- **ageLabel:** 44
+- **birthDate:** 6 First Light 61 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Steward Line
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-lenna-falkner
+- **childIds:** rc-edda-brand, rc-rolf-brand
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: slender, neat posture and greying temples; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Lenna Falkner; parent of Edda Brand, Rolf Brand. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 61 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Jost Kessel — `rc-jost-kessel`
+- **id:** rc-jost-kessel
+- **name:** Jost Kessel
+- **ageLabel:** 43
+- **birthDate:** 6 First Light 62 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Gate Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-mara-venn
+- **childIds:** rc-marta-kessel, rc-arvid-kessel
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: slender, neat posture and greying temples; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Mara Venn; parent of Marta Kessel, Arvid Kessel. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 62 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Leif Hesse — `rc-leif-hesse`
+- **id:** rc-leif-hesse
+- **name:** Leif Hesse
+- **ageLabel:** 45
+- **birthDate:** 6 First Light 60 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Wilhelmina Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-sanna-kroll
+- **childIds:** rc-greta-hesse, rc-tomas-hesse
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: broad-shouldered with close-cropped dark hair; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Sanna Kroll; parent of Greta Hesse, Tomas Hesse. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 60 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Ulric Brandt — `rc-ulric-brandt`
+- **id:** rc-ulric-brandt
+- **name:** Ulric Brandt
+- **ageLabel:** 48
+- **birthDate:** 6 First Light 57 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Main Red Line
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-rika-dorn
+- **childIds:** rc-hanne-brandt, rc-emil-brandt
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: slender, neat posture and greying temples; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Rika Dorn; parent of Hanne Brandt, Emil Brandt. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 57 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Pavel Thorne — `rc-pavel-thorne`
+- **id:** rc-pavel-thorne
+- **name:** Pavel Thorne
+- **ageLabel:** 46
+- **birthDate:** 6 First Light 59 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Steward Line
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-ilva-brandt
+- **childIds:** rc-kira-thorne, rc-darek-thorne
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: broad-shouldered with close-cropped dark hair; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Ilva Brandt; parent of Kira Thorne, Darek Thorne. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 59 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Konrad Weiss — `rc-konrad-weiss`
+- **id:** rc-konrad-weiss
+- **name:** Konrad Weiss
+- **ageLabel:** 42
+- **birthDate:** 6 First Light 63 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Ash-Hand Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-hilda-mertens
+- **childIds:** rc-ilse-weiss, rc-nils-weiss
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: broad-shouldered with close-cropped dark hair; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Hilda Mertens; parent of Ilse Weiss, Nils Weiss. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 63 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Freya Stahl — `rc-freya-stahl`
+- **id:** rc-freya-stahl
+- **name:** Freya Stahl
+- **ageLabel:** 35
+- **birthDate:** 21 First Light 70 AW
+- **gender:** female
+- **familyBranch:** Hammer Branch
+- **generation:** V
+- **parents:** rc-parent-freya-a, rc-parent-freya-b
+- **siblings:** None recorded
+- **spouseIds:** rc-rainer-holt
+- **childIds:** rc-else-holt, rc-jann-holt
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Brown hair with a pale streak; blue-grey eyes; open stance; often wears a work apron over good clothing.
+- **voice:** Warm, unhurried, and practical; asks after people by name.
+- **temperament:** Steady, community-minded, avoids factional theatrics.
+- **habits:** Makes a note when someone misses a meal or family observance.
+- **ambitions:** Preserve common meals as a social anchor for the wider family.
+- **fears:** That household life becomes only schedules and rank.
+- **education:** Proposed domestic administration, event planning and food-service knowledge.
+- **dailyRoutine:** Meal coordination, children’s routines, elder visits and evening hall.
+- **attitudeToPlayer:** Friendly when they meet, but she does not seek private contact without a reason.
+- **relationships:** Former partner of Christian IV (proposed relationship 21 First Light 88 AW–15 Endmonth 88 AW; age 18). Current spouse: Rainer Holt. Children: Else Holt, Jann Holt. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Adult relationship known among their closest friends, with no public declaration. Current spouse knowledge: Rainer was told before marriage. Proposed attitude: relaxed, values the family’s current stability. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A family gathering becomes tense over whose customs should be served., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 21 First Light 70 AW; proposed adult historical relationship 21 First Light 88 AW through 15 Endmonth 88 AW at age 18. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-rainer-holt
+- **spouseAttitude:** Rainer was told before marriage. Proposed attitude: relaxed, values the family’s current stability.
+- **currentFamilyPriorities:** Preserve common meals as a social anchor for the wider family.
+- **Historical relationship (PROPOSED):**
+  - Dates: 21 First Light 88 AW – 15 Endmonth 88 AW; age at start: 18 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: known / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Brown hair with a pale streak; blue-grey eyes; open stance; often wears a work apron over good clothing. Movement: Makes a note when someone misses a meal or family observance.
+- **crisisResponse:** Notices who is left without a seat or a meal.
+- **interactionStyle:** Join a shared family setting rather than forcing a private encounter.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “There is room at the table. There is no need to make it a ceremony.”
+- **secrets:** She privately collects branch recipes.
+- **knownInformation:** A few close friends knew of the relationship; Rainer Holt was told before marriage.
+### Rainer Holt — `rc-rainer-holt`
+- **id:** rc-rainer-holt
+- **name:** Rainer Holt
+- **ageLabel:** 51
+- **birthDate:** 6 First Light 54 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Hammer Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-freya-stahl
+- **childIds:** rc-else-holt, rc-jann-holt
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: slender, neat posture and greying temples; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Freya Stahl; parent of Else Holt, Jann Holt. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 54 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Alrike Sattler — `rc-alrike-sattler`
+- **id:** rc-alrike-sattler
+- **name:** Alrike Sattler
+- **ageLabel:** 36
+- **birthDate:** 14 First Light 69 AW
+- **gender:** female
+- **familyBranch:** Gate Branch
+- **generation:** V
+- **parents:** rc-parent-alrike-a, rc-parent-alrike-b
+- **siblings:** None recorded
+- **spouseIds:** rc-martin-voss
+- **childIds:** rc-oda-voss, rc-hendrik-voss
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Dark hair braided close to the head; amber eyes; light, quick steps.
+- **voice:** Short sentences, observant phrasing; seldom uses ceremonial language.
+- **temperament:** Independent, pragmatic, alert to manipulation.
+- **habits:** Memorises faces and gate tokens; rarely writes names in an open notebook.
+- **ambitions:** Improve visitor verification and protect family members from impersonation.
+- **fears:** A rumour being promoted as intelligence.
+- **education:** Proposed signal protocols, gate records and identity verification.
+- **dailyRoutine:** Visitor desk rotations, route audits and family duties.
+- **attitudeToPlayer:** Courteous but strongly protective of privacy; she will correct factual errors without discussing intimate details.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 20). Current spouse: Martin Voss. Children: Oda Voss, Hendrik Voss. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: The relationship was real in this proposed reconstruction but never confirmed publicly. Household rumour exaggerated its duration and importance. Current spouse knowledge: Martin has heard a rumour, not a verified account. Proposed attitude: refuses to judge on gossip; the couple have agreed not to interrogate each other’s past. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A forged visitor token reuses a detail from the old rumour., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 14 First Light 69 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 20. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-martin-voss
+- **spouseAttitude:** Martin has heard a rumour, not a verified account. Proposed attitude: refuses to judge on gossip; the couple have agreed not to interrogate each other’s past.
+- **currentFamilyPriorities:** Improve visitor verification and protect family members from impersonation.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 20 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: rumour / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Dark hair braided close to the head; amber eyes; light, quick steps. Movement: Memorises faces and gate tokens; rarely writes names in an open notebook.
+- **crisisResponse:** Names the exact inconsistency and refuses to amplify a rumour.
+- **interactionStyle:** Use verified visitor records and do not ask her to repeat gossip.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “A rumour is not a record. Do not file it as one.”
+- **secrets:** She can identify the source of an old rumour but has not chosen to expose it.
+- **knownInformation:** The historic relationship was real in this proposal; the wider rumour was inaccurate.
+### Martin Voss — `rc-martin-voss`
+- **id:** rc-martin-voss
+- **name:** Martin Voss
+- **ageLabel:** 44
+- **birthDate:** 6 First Light 61 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Gate Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-alrike-sattler
+- **childIds:** rc-oda-voss, rc-hendrik-voss
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: broad-shouldered with close-cropped dark hair; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Alrike Sattler; parent of Oda Voss, Hendrik Voss. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 61 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Klara Hesse — `rc-klara-hesse`
+- **id:** rc-klara-hesse
+- **name:** Klara Hesse
+- **ageLabel:** 35
+- **birthDate:** 5 First Light 70 AW
+- **gender:** female
+- **familyBranch:** Karl Line
+- **generation:** V
+- **parents:** rc-parent-klara-a, rc-parent-klara-b
+- **siblings:** None recorded
+- **spouseIds:** rc-erwin-kroll
+- **childIds:** rc-tessa-kroll, rc-moritz-kroll
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Light brown hair, grey eyes, careful posture; usually wears neat, high-collared clothes.
+- **voice:** Clear and measured; often qualifies statements rather than overstating them.
+- **temperament:** Analytical, courteous, reserved, uncomfortable with social pressure.
+- **habits:** Keeps a list of questions before any difficult meeting.
+- **ambitions:** Secure reliable access to the family archive for non-political research.
+- **fears:** An archive becoming a tool for factional leverage rather than evidence.
+- **education:** Proposed literacy, history, correspondence and record appraisal.
+- **dailyRoutine:** Archive work; family tasks; evening reading.
+- **attitudeToPlayer:** Polite, somewhat formal; interested in family business, not private nostalgia.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 19). Current spouse: Erwin Kroll. Children: Tessa Kroll, Moritz Kroll. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Brief adult courtship; acknowledged to a few friends but never formally announced. Current spouse knowledge: Erwin knows the courtship occurred. Proposed attitude: no resentment; values agreed boundaries. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A marriage-register annotation is inconsistent with the public date., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 5 First Light 70 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-erwin-kroll
+- **spouseAttitude:** Erwin knows the courtship occurred. Proposed attitude: no resentment; values agreed boundaries.
+- **currentFamilyPriorities:** Secure reliable access to the family archive for non-political research.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: known / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Light brown hair, grey eyes, careful posture; usually wears neat, high-collared clothes. Movement: Keeps a list of questions before any difficult meeting.
+- **crisisResponse:** Prepares questions in writing and corrects an imprecise date.
+- **interactionStyle:** Provide a source reference and accept a careful answer.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “The register says what was entered, not necessarily what happened.”
+- **secrets:** She investigates a separate wedding-register discrepancy.
+- **knownInformation:** A few friends knew of a brief courtship; Erwin Kroll knows it occurred.
+### Erwin Kroll — `rc-erwin-kroll`
+- **id:** rc-erwin-kroll
+- **name:** Erwin Kroll
+- **ageLabel:** 43
+- **birthDate:** 6 First Light 62 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Karl Line
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-klara-hesse
+- **childIds:** rc-tessa-kroll, rc-moritz-kroll
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: slender, neat posture and greying temples; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Klara Hesse; parent of Tessa Kroll, Moritz Kroll. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 62 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Nora Weiss — `rc-nora-weiss`
+- **id:** rc-nora-weiss
+- **name:** Nora Weiss
+- **ageLabel:** 35
+- **birthDate:** 19 First Light 70 AW
+- **gender:** female
+- **familyBranch:** Ash-Hand Branch
+- **generation:** V
+- **parents:** rc-parent-nora-a, rc-parent-nora-b
+- **siblings:** None recorded
+- **spouseIds:** rc-johan-falk
+- **childIds:** rc-maja-falk, rc-soren-falk
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Black-brown hair, dark eyes, relaxed but attentive stance; practical dark clothing.
+- **voice:** Soft-spoken, very deliberate; does not answer a question she considers intrusive.
+- **temperament:** Private, observant, loyal to family, firm about boundaries.
+- **habits:** Keeps personal correspondence in date order and locks it away.
+- **ambitions:** Give her children a stable home without making their family a public subject.
+- **fears:** Loss of privacy through factional or household surveillance.
+- **education:** Proposed household literacy and practical medical-record keeping.
+- **dailyRoutine:** Children, family meals, small administrative duties and quiet reading.
+- **attitudeToPlayer:** Not hostile; she expects her privacy to be respected and does not seek a reunion.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 19). Current spouse: Johan Falk. Children: Maja Falk, Soren Falk. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Secret adult relationship; no outside witness is established. Current spouse knowledge: Johan is not recorded as knowing. Do not expose the history through household gossip. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** An incorrectly delivered letter tests the household’s mail privacy., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 19 First Light 70 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-johan-falk
+- **spouseAttitude:** Johan is not recorded as knowing. Do not expose the history through household gossip.
+- **currentFamilyPriorities:** Give her children a stable home without making their family a public subject.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: private / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Black-brown hair, dark eyes, relaxed but attentive stance; practical dark clothing. Movement: Keeps personal correspondence in date order and locks it away.
+- **crisisResponse:** Stops answering when the conversation becomes intrusive.
+- **interactionStyle:** Ask once, accept refusal, and use ordinary family channels.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “My family is not a public record.”
+- **secrets:** A private letter survives; neither its existence nor content is public.
+- **knownInformation:** No outside witness is established in this proposed secret relationship.
+### Johan Falk — `rc-johan-falk`
+- **id:** rc-johan-falk
+- **name:** Johan Falk
+- **ageLabel:** 47
+- **birthDate:** 6 First Light 58 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Ash-Hand Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-nora-weiss
+- **childIds:** rc-maja-falk, rc-soren-falk
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: broad-shouldered with close-cropped dark hair; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Nora Weiss; parent of Maja Falk, Soren Falk. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 58 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Greta Falk — `rc-greta-falk`
+- **id:** rc-greta-falk
+- **name:** Greta Falk
+- **ageLabel:** 35
+- **birthDate:** 7 First Light 70 AW
+- **gender:** female
+- **familyBranch:** Wilhelmina Branch
+- **generation:** V
+- **parents:** rc-parent-greta-a, rc-parent-greta-b
+- **siblings:** None recorded
+- **spouseIds:** rc-armin-dorn
+- **childIds:** rc-lotte-dorn, rc-klemens-dorn
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Dark blond hair, hazel eyes, relaxed shoulders; direct gaze.
+- **voice:** Dry humour and plain speech; warm when discussing children or history.
+- **temperament:** Independent, candid, fair-minded and socially perceptive.
+- **habits:** Uses small sketches to explain complex family connections.
+- **ambitions:** Help younger relatives understand the difference between blood, marriage and sworn kinship.
+- **fears:** A younger relative being misled about succession or family standing.
+- **education:** Proposed House history, kinship rules and teaching practice.
+- **dailyRoutine:** Family and education duties; elder interviews; informal tutorials.
+- **attitudeToPlayer:** Friendly and candid; she can discuss the past without treating it as unfinished.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 19). Current spouse: Armin Dorn. Children: Lotte Dorn, Klemens Dorn. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: Relationship known to several close friends; the details remained private. Current spouse knowledge: Armin knows the broad history. Proposed attitude: respectful; expects present commitments to be honoured. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A young relative asks whether marriage creates a blood claim., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 7 First Light 70 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 19. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-armin-dorn
+- **spouseAttitude:** Armin knows the broad history. Proposed attitude: respectful; expects present commitments to be honoured.
+- **currentFamilyPriorities:** Help younger relatives understand the difference between blood, marriage and sworn kinship.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 19 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: known / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Dark blond hair, hazel eyes, relaxed shoulders; direct gaze. Movement: Uses small sketches to explain complex family connections.
+- **crisisResponse:** Sketches a family connection to distinguish blood from marriage.
+- **interactionStyle:** Discuss kinship using the sealed ledger; do not make succession claims from memory.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “Marriage changes a branch. It does not rewrite a birth.”
+- **secrets:** She suspects a popular branch story is inaccurate but lacks evidence.
+- **knownInformation:** Close friends knew of the relationship; Armin Dorn knows its broad history.
+### Armin Dorn — `rc-armin-dorn`
+- **id:** rc-armin-dorn
+- **name:** Armin Dorn
+- **ageLabel:** 45
+- **birthDate:** 6 First Light 60 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Wilhelmina Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-greta-falk
+- **childIds:** rc-lotte-dorn, rc-klemens-dorn
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: slender, neat posture and greying temples; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Greta Falk; parent of Lotte Dorn, Klemens Dorn. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 60 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Tilda Rehn — `rc-tilda-rehn`
+- **id:** rc-tilda-rehn
+- **name:** Tilda Rehn
+- **ageLabel:** 36
+- **birthDate:** 12 First Light 69 AW
+- **gender:** female
+- **familyBranch:** Hammer Branch
+- **generation:** V
+- **parents:** rc-parent-tilda-a, rc-parent-tilda-b
+- **siblings:** None recorded
+- **spouseIds:** rc-dieter-hesse
+- **childIds:** rc-anika-hesse, rc-otto-hesse
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Red Claw family member; former adult partner of Christian IV; now married
+- **appearance:** Dark auburn hair tied back; brown eyes; deliberate gait; tool-scarred gloves when on duty.
+- **voice:** Calm, low, technical vocabulary when discussing maintenance.
+- **temperament:** Dependable, pragmatic, dislikes spectacle and rumour.
+- **habits:** Checks the hinges of doors she uses frequently.
+- **ambitions:** Improve repair reporting across the residential corridors.
+- **fears:** A preventable structural fault being ignored until it affects residents.
+- **education:** Proposed maintenance records, tools, basic structural inspection.
+- **dailyRoutine:** Morning maintenance walk; work orders; family and children later in day.
+- **attitudeToPlayer:** Neutral and purposeful; she will cooperate on household matters but will not validate rumours.
+- **relationships:** Former partner of Christian IV (proposed relationship 20 First Light 89 AW–15 Endmonth 89 AW; age 20). Current spouse: Dieter Hesse. Children: Anika Hesse, Otto Hesse. No child or pregnancy by Christian is recorded.
+- **knowledgeBoundaries:** History disposition: A real adult relationship in this proposal, but only a small trusted circle knew. Public rumours added false details. Current spouse knowledge: Dieter knows the broad truth and rejects the public exaggerations. Proposed attitude: protective of Tilda’s privacy, not possessive. Rumour is never upgraded to evidence without a sourced event.
+- **eventHooks:** A familiar door fails during a crowded family event., A family ceremony brings her and her household into the same public space as Christian; she chooses the level of contact.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New character/history requested by the task; age/date/branch/spouse/children and attitudes are proposals, not CP9 Canon.
+- **timelineNotes:** Proposed birth 12 First Light 69 AW; proposed adult historical relationship 20 First Light 89 AW through 15 Endmonth 89 AW at age 20. Proposed age and date only; proposed dating places this history before a later first-marriage event; that event remains UNKNOWN and must be reconciled against Konrad’s exact birth record.
+- **currentSpouseId:** rc-dieter-hesse
+- **spouseAttitude:** Dieter knows the broad truth and rejects the public exaggerations. Proposed attitude: protective of Tilda’s privacy, not possessive.
+- **currentFamilyPriorities:** Improve repair reporting across the residential corridors.
+- **Historical relationship (PROPOSED):**
+  - Dates: 20 First Light 89 AW – 15 Endmonth 89 AW; age at start: 20 (adult under proposed dates; not checked against Canon DOB).
+  - Disposition: rumour / former-partner; visibility: former-partner; pregnancy by Christian: False; children by Christian: None recorded.
+  - Current reconciliation interest: UNKNOWN — do not infer; request only if later system state explicitly permits.; current relationship eligibility: False.
+- **bodyMovement:** Dark auburn hair tied back; brown eyes; deliberate gait; tool-scarred gloves when on duty. Movement: Checks the hinges of doors she uses frequently.
+- **crisisResponse:** Checks doors and hinges while she talks about maintenance.
+- **interactionStyle:** Bring a maintenance request; do not seek a private audience as a pretext.
+- **boundaries:** Current marriage and personal boundaries take precedence. No present affection, consent, reconciliation interest or willingness is inferred from past history. Conversation only unless a future, separately validated system rule establishes otherwise.
+- **dialogueSamples:** “If the hinge is failing, log it before the crowd arrives.”
+- **secrets:** She maintains a private list of recurring latch faults.
+- **knownInformation:** A small trusted circle knew the relationship; Dieter Hesse knows the broad truth.
+### Dieter Hesse — `rc-dieter-hesse`
+- **id:** rc-dieter-hesse
+- **name:** Dieter Hesse
+- **ageLabel:** 44
+- **birthDate:** 6 First Light 61 AW
+- **gender:** male
+- **familyBranch:** Marriage Kin / Hammer Branch
+- **generation:** V
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** rc-tilda-rehn
+- **childIds:** rc-anika-hesse, rc-otto-hesse
+- **status:** alive
+- **residenceStatus:** permanent
+- **currentLocation:** Floor 6 — proposed Cadet Family Apartments
+- **occupation:** Current spouse; Red Claw family member
+- **appearance:** Proposed: broad-shouldered with close-cropped dark hair; no measurements assigned.
+- **voice:** Measured, grounded speech; particular register is distinct to his profession.
+- **temperament:** Independent household priorities; not defined solely by the previous relationship.
+- **habits:** Keeps a practical list of work and family obligations.
+- **ambitions:** Maintain a stable home and a useful role in the wider House.
+- **fears:** Being reduced to a comparison with Christian or used as a political prop.
+- **education:** Proposed role-based House education; detailed credentials UNKNOWN.
+- **dailyRoutine:** Work-specific schedule; family meal; children’s care shared with spouse.
+- **attitudeToPlayer:** Individual and state-dependent; no automatic hostility or deference.
+- **relationships:** Spouse of Tilda Rehn; parent of Anika Hesse, Otto Hesse. No shared parents are recorded in the roster, but complete degree-of-kinship clearance requires the sealed Floor 7 ledger.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** A work duty conflicts with a family ceremony., A child needs a parent to attend an education or medical meeting.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New spouse requested by task; name, biography and marriage are proposed. Kinship degree remains ledger-verification pending.
+- **timelineNotes:** Proposed birth 6 First Light 61 AW; no exact wedding date assigned.
+- **kinshipAudit:** No shared parent is encoded in this roster; full five-degree sealed-ledger check remains BLOCKED.
+### Eberhard Stahl — `rc-parent-freya-a`
+- **id:** rc-parent-freya-a
+- **name:** Eberhard Stahl
+- **ageLabel:** 71
+- **birthDate:** 6 First Light 34 AW
+- **gender:** male
+- **familyBranch:** Hammer Branch
+- **generation:** IV
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** rc-freya-stahl
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Branch quarters; exact residential assignment UNKNOWN
+- **occupation:** Former communal-meal coordinator.
+- **appearance:** Proposed elder appearance consistent with work history; no physical measurements assigned.
+- **voice:** Practical, clear speech; individual habits distinguish the person.
+- **temperament:** Patient, duty-conscious, sometimes inflexible about their specialist work.
+- **habits:** Knows serving quantities by memory; values a shared table.
+- **ambitions:** Wants family meals to remain open to branch members.
+- **fears:** That the next generation will lose the practical knowledge their branch relies on.
+- **education:** Proposed role-based training; exact formal schooling UNKNOWN.
+- **dailyRoutine:** Branch work, family visits, records or workshop activity.
+- **attitudeToPlayer:** Respectful but not automatically deferential to the Fist.
+- **relationships:** Parent of Freya Stahl; spouse identity and additional children are UNKNOWN.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Eberhard Stahl is asked to verify a branch record about Freya Stahl., An old work ledger becomes relevant to a household dispute.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New parents introduced solely to give the twelve proposed former-partner families a traceable immediate family origin.
+- **timelineNotes:** Proposed birth year consistent with parent age at partner birth; exact birthday is a placeholder proposal.
+### Lotte Stahl — `rc-parent-freya-b`
+- **id:** rc-parent-freya-b
+- **name:** Lotte Stahl
+- **ageLabel:** 68
+- **birthDate:** 6 First Light 37 AW
+- **gender:** female
+- **familyBranch:** Hammer Branch
+- **generation:** IV
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** rc-freya-stahl
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Branch quarters; exact residential assignment UNKNOWN
+- **occupation:** Former family host and festival organiser.
+- **appearance:** Proposed elder appearance consistent with work history; no physical measurements assigned.
+- **voice:** Practical, clear speech; individual habits distinguish the person.
+- **temperament:** Patient, duty-conscious, sometimes inflexible about their specialist work.
+- **habits:** Keeps a list of guests and their dietary needs.
+- **ambitions:** Wants ceremonies to feel welcoming rather than competitive.
+- **fears:** That the next generation will lose the practical knowledge their branch relies on.
+- **education:** Proposed role-based training; exact formal schooling UNKNOWN.
+- **dailyRoutine:** Branch work, family visits, records or workshop activity.
+- **attitudeToPlayer:** Respectful but not automatically deferential to the Fist.
+- **relationships:** Parent of Freya Stahl; spouse identity and additional children are UNKNOWN.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Lotte Stahl is asked to verify a branch record about Freya Stahl., An old work ledger becomes relevant to a household dispute.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New parents introduced solely to give the twelve proposed former-partner families a traceable immediate family origin.
+- **timelineNotes:** Proposed birth year consistent with parent age at partner birth; exact birthday is a placeholder proposal.
+### Gerhard Sattler — `rc-parent-alrike-a`
+- **id:** rc-parent-alrike-a
+- **name:** Gerhard Sattler
+- **ageLabel:** 70
+- **birthDate:** 6 First Light 35 AW
+- **gender:** male
+- **familyBranch:** Gate Branch
+- **generation:** IV
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** rc-alrike-sattler
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Branch quarters; exact residential assignment UNKNOWN
+- **occupation:** Former signal operator.
+- **appearance:** Proposed elder appearance consistent with work history; no physical measurements assigned.
+- **voice:** Practical, clear speech; individual habits distinguish the person.
+- **temperament:** Patient, duty-conscious, sometimes inflexible about their specialist work.
+- **habits:** Uses hand signals while explaining a problem.
+- **ambitions:** Wants reliable authentication of messages.
+- **fears:** That the next generation will lose the practical knowledge their branch relies on.
+- **education:** Proposed role-based training; exact formal schooling UNKNOWN.
+- **dailyRoutine:** Branch work, family visits, records or workshop activity.
+- **attitudeToPlayer:** Respectful but not automatically deferential to the Fist.
+- **relationships:** Parent of Alrike Sattler; spouse identity and additional children are UNKNOWN.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Gerhard Sattler is asked to verify a branch record about Alrike Sattler., An old work ledger becomes relevant to a household dispute.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New parents introduced solely to give the twelve proposed former-partner families a traceable immediate family origin.
+- **timelineNotes:** Proposed birth year consistent with parent age at partner birth; exact birthday is a placeholder proposal.
+### Ruth Sattler — `rc-parent-alrike-b`
+- **id:** rc-parent-alrike-b
+- **name:** Ruth Sattler
+- **ageLabel:** 66
+- **birthDate:** 6 First Light 39 AW
+- **gender:** female
+- **familyBranch:** Gate Branch
+- **generation:** IV
+- **parents:** None recorded
+- **siblings:** None recorded
+- **spouseIds:** None recorded
+- **childIds:** rc-alrike-sattler
+- **status:** alive
+- **residenceStatus:** not-counted
+- **currentLocation:** Branch quarters; exact residential assignment UNKNOWN
+- **occupation:** Former visitor registrar.
+- **appearance:** Proposed elder appearance consistent with work history; no physical measurements assigned.
+- **voice:** Practical, clear speech; individual habits distinguish the person.
+- **temperament:** Patient, duty-conscious, sometimes inflexible about their specialist work.
+- **habits:** Notices inconsistencies in names and dates.
+- **ambitions:** Wants privacy rules to apply equally to powerful people.
+- **fears:** That the next generation will lose the practical knowledge their branch relies on.
+- **education:** Proposed role-based training; exact formal schooling UNKNOWN.
+- **dailyRoutine:** Branch work, family visits, records or workshop activity.
+- **attitudeToPlayer:** Respectful but not automatically deferential to the Fist.
+- **relationships:** Parent of Alrike Sattler; spouse identity and additional children are UNKNOWN.
+- **knowledgeBoundaries:** Knows only what their role, direct experience and documented sources permit; private facts are not shared automatically.
+- **eventHooks:** Ruth Sattler is asked to verify a branch record about Alrike Sattler., An old work ledger becomes relevant to a household dispute.
+- **interactionCategories:** conversation, household, family, event
+- **sourceStatus:** PROPOSED_EXPANSION
+- **sourceEvidence:** New parents introduced solely to give the twelve proposed former-partner families a traceable immediate family origin.
+- **timelineNotes:** Proposed birth year consistent with parent age at partner birth; exact birthday is a placeholder proposal.
+## Tier C — 50 general family NPCs
+
+- **Edda Brand** (`rc-edda-brand`), age 10; Steward Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Keeps an orderly list of household errands and remembers exact promises. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-lenna-falkner, rc-oskar-brand. Spouse(s): None recorded. Children: None recorded. Hook: Edda Brand asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Rolf Brand** (`rc-rolf-brand`), age 7; Steward Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Builds small paper models and asks how each household office works. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-lenna-falkner, rc-oskar-brand. Spouse(s): None recorded. Children: None recorded. Hook: Rolf Brand asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Marta Kessel** (`rc-marta-kessel`), age 8; Gate Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Enjoys learning gate signals and draws maps from memory. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-mara-venn, rc-jost-kessel. Spouse(s): None recorded. Children: None recorded. Hook: Marta Kessel asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Arvid Kessel** (`rc-arvid-kessel`), age 5; Gate Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Quietly observant; collects smooth pieces of scrap metal. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-mara-venn, rc-jost-kessel. Spouse(s): None recorded. Children: None recorded. Hook: Arvid Kessel asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Greta Hesse** (`rc-greta-hesse`), age 9; Wilhelmina Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Debates household history and dislikes being given incomplete answers. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-sanna-kroll, rc-leif-hesse. Spouse(s): None recorded. Children: None recorded. Hook: Greta Hesse asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Tomas Hesse** (`rc-tomas-hesse`), age 4; Wilhelmina Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Loves rhythmic work songs and counting stair flights. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-sanna-kroll, rc-leif-hesse. Spouse(s): None recorded. Children: None recorded. Hook: Tomas Hesse asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Hanne Brandt** (`rc-hanne-brandt`), age 11; Main Red Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Disciplined, interested in the mechanics of watch changes. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-rika-dorn, rc-ulric-brandt. Spouse(s): None recorded. Children: None recorded. Hook: Hanne Brandt asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Emil Brandt** (`rc-emil-brandt`), age 6; Main Red Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Invents rules for courtyard games and expects adults to follow them. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-rika-dorn, rc-ulric-brandt. Spouse(s): None recorded. Children: None recorded. Hook: Emil Brandt asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Kira Thorne** (`rc-kira-thorne`), age 8; Steward Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Studies practical medicine and carefully labels jars. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-ilva-brandt, rc-pavel-thorne. Spouse(s): None recorded. Children: None recorded. Hook: Kira Thorne asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Darek Thorne** (`rc-darek-thorne`), age 3; Steward Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Energetic, fascinated by handcarts and wheels. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-ilva-brandt, rc-pavel-thorne. Spouse(s): None recorded. Children: None recorded. Hook: Darek Thorne asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Ilse Weiss** (`rc-ilse-weiss`), age 10; Ash-Hand Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Patient reader, enjoys sorting household records by subject. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-hilda-mertens, rc-konrad-weiss. Spouse(s): None recorded. Children: None recorded. Hook: Ilse Weiss asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Nils Weiss** (`rc-nils-weiss`), age 6; Ash-Hand Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Asks how relic quarantine works and draws imaginary machines. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-hilda-mertens, rc-konrad-weiss. Spouse(s): None recorded. Children: None recorded. Hook: Nils Weiss asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Else Holt** (`rc-else-holt`), age 7; Hammer Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Keeps a small calendar of family birthdays and ceremony days. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-freya-stahl, rc-rainer-holt. Spouse(s): None recorded. Children: None recorded. Hook: Else Holt asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Jann Holt** (`rc-jann-holt`), age 2; Hammer Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Toddler; likes the echo in the dining passage. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-freya-stahl, rc-rainer-holt. Spouse(s): None recorded. Children: None recorded. Hook: Jann Holt asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Oda Voss** (`rc-oda-voss`), age 9; Gate Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Notices patterns in visitor routes and likes drawing maps. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-alrike-sattler, rc-martin-voss. Spouse(s): None recorded. Children: None recorded. Hook: Oda Voss asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Hendrik Voss** (`rc-hendrik-voss`), age 4; Gate Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Cheerful, likes counting watch bells. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-alrike-sattler, rc-martin-voss. Spouse(s): None recorded. Children: None recorded. Hook: Hendrik Voss asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Tessa Kroll** (`rc-tessa-kroll`), age 8; Karl Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Likes formal invitations and correct family titles. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-klara-hesse, rc-erwin-kroll. Spouse(s): None recorded. Children: None recorded. Hook: Tessa Kroll asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Moritz Kroll** (`rc-moritz-kroll`), age 3; Karl Line; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Young child; follows the sound of carts through the hall. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-klara-hesse, rc-erwin-kroll. Spouse(s): None recorded. Children: None recorded. Hook: Moritz Kroll asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Maja Falk** (`rc-maja-falk`), age 10; Ash-Hand Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Interested in family stories and asks who recorded them. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-nora-weiss, rc-johan-falk. Spouse(s): None recorded. Children: None recorded. Hook: Maja Falk asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Soren Falk** (`rc-soren-falk`), age 5; Ash-Hand Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Likes rhythm, bells and simple mechanical puzzles. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-nora-weiss, rc-johan-falk. Spouse(s): None recorded. Children: None recorded. Hook: Soren Falk asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Lotte Dorn** (`rc-lotte-dorn`), age 7; Wilhelmina Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Careful with ceremony details; wants to learn the family archive system. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-greta-falk, rc-armin-dorn. Spouse(s): None recorded. Children: None recorded. Hook: Lotte Dorn asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Klemens Dorn** (`rc-klemens-dorn`), age 2; Wilhelmina Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Toddler; attached to a small wooden sorting toy. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-greta-falk, rc-armin-dorn. Spouse(s): None recorded. Children: None recorded. Hook: Klemens Dorn asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Anika Hesse** (`rc-anika-hesse`), age 9; Hammer Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Enjoys mechanical drawings and orderly projects. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-tilda-rehn, rc-dieter-hesse. Spouse(s): None recorded. Children: None recorded. Hook: Anika Hesse asks a question about a family custom., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Otto Hesse** (`rc-otto-hesse`), age 4; Hammer Branch; Child of current married Red Claw household. Age-appropriate non-sexual description: individual clothing and expression vary by scene; no anatomical measurements. Temperament: Energetic; remembers routes by counting doors. At home: Floor 6 — proposed Cadet Family Apartments / learning wing. Parents: rc-tilda-rehn, rc-dieter-hesse. Spouse(s): None recorded. Children: None recorded. Hook: Otto Hesse asks a question about a daily routine., A lesson or family meal creates a small personal event.. Provenance: PROPOSED_EXPANSION.
+- **Gottfried Falkner** (`rc-parent-lenna-a`), age 70; Steward Line; Former stores auditor; values a clean chain of custody.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-lenna-falkner. Hook: Gottfried Falkner is asked to verify a branch record about Lenna Falkner., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Marta Falkner** (`rc-parent-lenna-b`), age 67; Steward Line; Retired household organiser; former scheduler.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-lenna-falkner. Hook: Marta Falkner is asked to verify a branch record about Lenna Falkner., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Rudolf Venn** (`rc-parent-mara-a`), age 69; Gate Branch; Retired outer-gate watch clerk.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-mara-venn. Hook: Rudolf Venn is asked to verify a branch record about Mara Venn., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Elise Venn** (`rc-parent-mara-b`), age 65; Gate Branch; Former gate quartermaster.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-mara-venn. Hook: Elise Venn is asked to verify a branch record about Mara Venn., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Hermann Kroll** (`rc-parent-sanna-a`), age 72; Wilhelmina Branch; Family oral historian and ceremony caller.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-sanna-kroll. Hook: Hermann Kroll is asked to verify a branch record about Sanna Kroll., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Berta Kroll** (`rc-parent-sanna-b`), age 68; Wilhelmina Branch; Rite organiser and family mediator.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-sanna-kroll. Hook: Berta Kroll is asked to verify a branch record about Sanna Kroll., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Alfred Dorn** (`rc-parent-rika-a`), age 72; Main Red Line; Former property clerk.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-rika-dorn. Hook: Alfred Dorn is asked to verify a branch record about Rika Dorn., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Helene Dorn** (`rc-parent-rika-b`), age 70; Main Red Line; Family mediator and clothing steward.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-rika-dorn. Hook: Helene Dorn is asked to verify a branch record about Rika Dorn., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Martin Brandt** (`rc-parent-ilva-a`), age 70; Steward Line; Supply-route accountant.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-ilva-brandt. Hook: Martin Brandt is asked to verify a branch record about Ilva Brandt., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Anneliese Brandt** (`rc-parent-ilva-b`), age 67; Steward Line; Former inventory custodian.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-ilva-brandt. Hook: Anneliese Brandt is asked to verify a branch record about Ilva Brandt., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Oswin Mertens** (`rc-parent-hilda-a`), age 73; Ash-Hand Branch; Retired repair foreman.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-hilda-mertens. Hook: Oswin Mertens is asked to verify a branch record about Hilda Mertens., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Grete Mertens** (`rc-parent-hilda-b`), age 69; Ash-Hand Branch; Former workshop tutor.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-hilda-mertens. Hook: Grete Mertens is asked to verify a branch record about Hilda Mertens., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Joachim Hesse** (`rc-parent-klara-a`), age 71; Karl Line; Retired archive copyist.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-klara-hesse. Hook: Joachim Hesse is asked to verify a branch record about Klara Hesse., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Sabine Hesse** (`rc-parent-klara-b`), age 68; Karl Line; History tutor.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-klara-hesse. Hook: Sabine Hesse is asked to verify a branch record about Klara Hesse., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Ernst Weiss** (`rc-parent-nora-a`), age 72; Ash-Hand Branch; Former medical supply clerk.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-nora-weiss. Hook: Ernst Weiss is asked to verify a branch record about Nora Weiss., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Mina Weiss** (`rc-parent-nora-b`), age 69; Ash-Hand Branch; Retired family caregiver.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-nora-weiss. Hook: Mina Weiss is asked to verify a branch record about Nora Weiss., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Rolf Falk** (`rc-parent-greta-a`), age 70; Wilhelmina Branch; Former House herald and record witness.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-greta-falk. Hook: Rolf Falk is asked to verify a branch record about Greta Falk., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Edith Falk** (`rc-parent-greta-b`), age 67; Wilhelmina Branch; Former schoolroom instructor.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-greta-falk. Hook: Edith Falk is asked to verify a branch record about Greta Falk., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Dieter Rehn** (`rc-parent-tilda-a`), age 73; Hammer Branch; Retired maintenance scheduler.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-tilda-rehn. Hook: Dieter Rehn is asked to verify a branch record about Tilda Rehn., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Agnes Rehn** (`rc-parent-tilda-b`), age 70; Hammer Branch; Former household linen keeper.. Proposed elder appearance consistent with work history; no physical measurements assigned. Temperament: Patient, duty-conscious, sometimes inflexible about their specialist work. At home: Branch quarters; exact residential assignment UNKNOWN. Parents: None recorded. Spouse(s): None recorded. Children: rc-tilda-rehn. Hook: Agnes Rehn is asked to verify a branch record about Tilda Rehn., An old work ledger becomes relevant to a household dispute.. Provenance: PROPOSED_EXPANSION.
+- **Aldric Red** (`rc-elder-aldric`), age 74; Wilhelmina Branch; Retired kinship witness. Proposed: ageing features and practical clothing; no precise anatomy or measurements. Temperament: Patient, institutionally minded, not interchangeable with the other elders. At home: Floor 6 — proposed elder rooms. Parents: None recorded. Spouse(s): None recorded. Children: None recorded. Hook: Verify a disputed branch entry before the next Kin Council.. Provenance: PROPOSED_EXPANSION.
+- **Birgit Red** (`rc-elder-birgit`), age 71; Karl Line; Former schoolroom keeper. Proposed: ageing features and practical clothing; no precise anatomy or measurements. Temperament: Patient, institutionally minded, not interchangeable with the other elders. At home: Floor 6 — proposed elder rooms. Parents: None recorded. Spouse(s): None recorded. Children: None recorded. Hook: Reopen a family-history lesson after a contradictory story spreads.. Provenance: PROPOSED_EXPANSION.
+- **Marten Red** (`rc-elder-marten`), age 76; Gate Branch; Retired gate engineer. Proposed: ageing features and practical clothing; no precise anatomy or measurements. Temperament: Patient, institutionally minded, not interchangeable with the other elders. At home: Floor 6 — proposed elder rooms. Parents: None recorded. Spouse(s): None recorded. Children: None recorded. Hook: Identify a route closure remembered differently by two witnesses.. Provenance: PROPOSED_EXPANSION.
+- **Ursula Red** (`rc-elder-ursula`), age 69; Ash-Hand Branch; Former medical stores custodian. Proposed: ageing features and practical clothing; no precise anatomy or measurements. Temperament: Patient, institutionally minded, not interchangeable with the other elders. At home: Floor 6 — proposed elder rooms. Parents: None recorded. Spouse(s): None recorded. Children: None recorded. Hook: Audit the medical store before a crowded ceremony.. Provenance: PROPOSED_EXPANSION.
+- **Berthold Red** (`rc-elder-berthold`), age 73; Hammer Branch; Former Tunnel 7 latch keeper. Proposed: ageing features and practical clothing; no precise anatomy or measurements. Temperament: Patient, institutionally minded, not interchangeable with the other elders. At home: Floor 6 — proposed elder rooms. Parents: None recorded. Spouse(s): None recorded. Children: None recorded. Hook: A key in the sealed archive does not match the current ward.. Provenance: PROPOSED_EXPANSION.
+- **Elsa Red** (`rc-elder-elsa`), age 70; Steward Line; Retired household adjudicator. Proposed: ageing features and practical clothing; no precise anatomy or measurements. Temperament: Patient, institutionally minded, not interchangeable with the other elders. At home: Floor 6 — proposed elder rooms. Parents: None recorded. Spouse(s): None recorded. Children: None recorded. Hook: A domestic dispute is referred to her for mediation.. Provenance: PROPOSED_EXPANSION.

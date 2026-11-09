@@ -1,0 +1,202 @@
+[
+ {
+  "id": "SEED-V15-01",
+  "line": 8757,
+  "text": "SEED-V15-01 — The Third-Row Blight. TYPE: resource. ANCHORS: Ilona Brandt, Lenka. TRIGGER: Ilona's message in [01]. HOOK: the mushroom hall on the third row has blight; may she burn it? STAKES: visible — food stock; hidden — whether the blight is natural. BRANCHES: burn it all; burn part and quarantine; investigate first (risk spread). LINKS: C-ILONA, [21], [22]."
+ },
+ {
+  "id": "SEED-V15-02",
+  "line": 8759,
+  "text": "SEED-V15-02 — The West Cistern. TYPE: crisis. ANCHORS: Tomas Hesse. TRIGGER: cistern below 20%. HOOK: Tomas reports 18%. STAKES: visible — tomorrow's supply; hidden — his padded margin. BRANCHES: ration now; open reserve; find the leak. LINKS: C-TOMAS, [21]."
+ },
+ {
+  "id": "SEED-V15-03",
+  "line": 8761,
+  "text": "SEED-V15-03 — The Rites at the Ash. TYPE: family / political. ANCHORS: Wilhelmina, Dagmar. TRIGGER: Uncle Albrecht has died. HOOK: who stands at the Ash, and who is absent. STAKES: visible — House unity; hidden — a rival claim on his armor. BRANCHES: grand rite; quiet rite; a dispute at the rite. LINKS: [17], [05]."
+ },
+ {
+  "id": "SEED-V15-04",
+  "line": 8763,
+  "text": "SEED-V15-04 — Rifles for Water. TYPE: diplomatic. ANCHORS: Anton Dreyer, Vera. TRIGGER: Dreyer's proposal. HOOK: the Dominion offers an exchange. STAKES: visible — water and arms; hidden — what Dreyer wants from Vera. BRANCHES: accept; counter; refuse. LINKS: C-VERA, [16]."
+ },
+ {
+  "id": "SEED-V15-05",
+  "line": 8765,
+  "text": "SEED-V15-05 — The Treason of Ewald Red. TYPE: investigation / legal. ANCHORS: Otto Klein, Wilhelmina. TRIGGER: Case 105-042. HOOK: Evidence 1 exists; nobody knows the man. STAKES: visible — a House verdict; hidden — who benefits. BRANCHES: convict; acquit; reveal a larger plot. LINKS: [04], [23]."
+ },
+ {
+  "id": "SEED-V15-06",
+  "line": 8767,
+  "text": "SEED-V15-06 — The Moved Chair. TYPE: security mystery. ANCHORS: Sigrid Falk, Elara. TRIGGER: Sigrid's report. HOOK: a chair moved two hand-widths. STAKES: visible — the household's safety; hidden — whether it is a test. BRANCHES: ignore; investigate quietly; lock down. LINKS: C-ANJA."
+ },
+ {
+  "id": "SEED-V15-07",
+  "line": 8769,
+  "text": "SEED-V15-07 — The Ledger That Does Not Balance. TYPE: security. ANCHORS: Mira Voss. TRIGGER: a missing handful of rounds. HOOK: Mira's ledger. STAKES: visible — a small shortage; hidden — who took them. BRANCHES: audit; quiet watch; accuse. LINKS: C-MIRA."
+ },
+ {
+  "id": "SEED-V15-08",
+  "line": 8771,
+  "text": "SEED-V15-08 — Konrad Asks to Ride. TYPE: family / military. ANCHORS: Konrad, Dagmar. TRIGGER: Konrad's request. HOOK: he wants a real patrol. STAKES: visible — his safety; hidden — his rivals. BRANCHES: allow with escort; refuse; set a trial. LINKS: 7.V15.9."
+ },
+ {
+  "id": "SEED-V15-09",
+  "line": 8773,
+  "text": "SEED-V15-09 — The Humming Relic. TYPE: research. ANCHORS: Tobiah Red, Emmerich Kolb. TRIGGER: a find that hums. HOOK: \"It still hums.\" STAKES: visible — a tool; hidden — a danger. BRANCHES: study; quarantine longer; destroy. LINKS: C-KOLB, [35]."
+ },
+ {
+  "id": "SEED-V15-10",
+  "line": 8775,
+  "text": "SEED-V15-10 — Seraphine's Audience. TYPE: intrigue. ANCHORS: Seraphine von Aschen, Adelheid, Samer. TRIGGER: a request for a private audience. HOOK: what does she want from Adelheid? STAKES: visible — a courtesy; hidden — a secret trade. BRANCHES: grant; delay; set a watcher. LINKS: C-ADELHEID."
+ },
+ {
+  "id": "SEED-V15-11",
+  "line": 8777,
+  "text": "SEED-V15-11 — The Sealed Letter. TYPE: diplomatic / family. ANCHORS: Adelheid, Bettina. TRIGGER: a letter from Lord Rainer through an irregular channel. HOOK: who opened it? STAKES: visible — a family letter; hidden — Rainer's intent. BRANCHES: read; return unopened; investigate the channel. LINKS: C-ADELHEID."
+ },
+ {
+  "id": "SEED-V15-12",
+  "line": 8779,
+  "text": "SEED-V15-12 — The Pump Knows. TYPE: labor. ANCHORS: Piotr, Tobias. TRIGGER: a pump fault with an odd pattern. HOOK: Piotr knows more than he says. STAKES: visible — water in the Works; hidden — the Underrows organization. BRANCHES: support; suppress; negotiate. LINKS: C-TOBIAS."
+ },
+ {
+  "id": "SEED-V15-13",
+  "line": 8781,
+  "text": "SEED-V15-13 — The Stairwell Door. TYPE: mystery. ANCHORS: Liese, Jana, Anselm Frey. TRIGGER: Liese finds a door nobody has opened. HOOK: where does it lead? STAKES: visible — a child's curiosity; hidden — an old shaft. BRANCHES: seal it; explore with guards; leave it. LINKS: 7.V15.9."
+ },
+ {
+  "id": "SEED-V15-14",
+  "line": 8783,
+  "text": "SEED-V15-14 — Fevers in the Fourth Quarter. TYPE: medical. ANCHORS: Sabine Lorenz, Ruth. TRIGGER: a pattern of minor illnesses. HOOK: Ruth notices the pattern. STAKES: visible — a small outbreak; hidden — its source. BRANCHES: quarantine; investigate; wait. LINKS: [21], [23]."
+ },
+ {
+  "id": "SEED-V15-15",
+  "line": 8785,
+  "text": "SEED-V15-15 — Tracks at the Latch. TYPE: surface / monster. ANCHORS: Ansgar Red, Ilka Red. TRIGGER: fresh tracks near the Latch. HOOK: Ansgar requests a sortie. STAKES: visible — a safe Latch; hidden — what made the tracks. BRANCHES: sortie; wait; reinforce. LINKS: 6.18, [15]."
+ },
+ {
+  "id": "SEED-V15-16",
+  "line": 8787,
+  "text": "SEED-V15-16 — The Weak Door. TYPE: security. ANCHORS: Anja Keller, Elara. TRIGGER: a Dome door opens when it should not. HOOK: Anja's night test. STAKES: visible — a lock; hidden — who else knows. BRANCHES: fix quietly; announce; set a trap. LINKS: C-ANJA."
+ },
+ {
+  "id": "SEED-V15-17",
+  "line": 8789,
+  "text": "SEED-V15-17 — The Cadet Challenge. TYPE: social / military. ANCHORS: Konrad, Rask, Karin Voss. TRIGGER: a cadet asks to challenge another formally. HOOK: Konrad is drawn in as a second. STAKES: visible — a cadet's honor; hidden — a rivalry that predates both. BRANCHES: allow with rules; forbid; turn it into a drill. LINKS: 7.V15.9, [23]."
+ },
+ {
+  "id": "SEED-V15-18",
+  "line": 8791,
+  "text": "SEED-V15-18 — The Opened Message. TYPE: intrigue. ANCHORS: Jana, Hanne, Samer. TRIGGER: a message arrives opened. HOOK: who opened it, and why? STAKES: visible — a breach of trust; hidden — a spy in the household. BRANCHES: investigate openly; investigate quietly; ignore. LINKS: C-JANA, [02], [31]."
+ },
+ {
+  "id": "SEED-V15-19",
+  "line": 8793,
+  "text": "SEED-V15-19 — Grandmother's Tea. TYPE: family. ANCHORS: Wilhelmina, Christian. TRIGGER: Wilhelmina summons Christian to hear a complaint about himself. HOOK: the cane taps twice. STAKES: visible — House respect; hidden — an old promise. BRANCHES: listen; deflect; challenge her. LINKS: C-WILHELMINA, [17]."
+ },
+ {
+  "id": "SEED-V15-20",
+  "line": 8795,
+  "text": "SEED-V15-20 — The Singing Elevator. TYPE: mystery. ANCHORS: Anselm Frey, Liese. TRIGGER: staff report singing in the shaft. HOOK: Anselm hums to it. STAKES: visible — a rumor; hidden — an old shaft. BRANCHES: investigate; seal; ignore. LINKS: R-20, R-30."
+ },
+ {
+  "id": "SEED-V15-21",
+  "line": 8797,
+  "text": "SEED-V15-21 — The Foreign Wife's Letter. TYPE: diplomatic. ANCHORS: Vera, Katya, Dreyer. TRIGGER: a Dominion courier arrives. HOOK: Dreyer asks for her father's news. STAKES: visible — a family letter; hidden — an espionage ask. BRANCHES: let her answer; shield her; intercept. LINKS: C-VERA, [16]."
+ },
+ {
+  "id": "SEED-V15-22",
+  "line": 8799,
+  "text": "SEED-V15-22 — The Hum in the Annex. TYPE: research. ANCHORS: Emmerich Kolb, Tobiah. TRIGGER: a relic hums at night. HOOK: Kolb has heard it. STAKES: visible — a relic; hidden — a danger. BRANCHES: study; seal; destroy. LINKS: R-02, [35]."
+ },
+ {
+  "id": "SEED-V15-23",
+  "line": 8801,
+  "text": "SEED-V15-23 — Short Rations. TYPE: resource. ANCHORS: Ilona, Lenka, Alena. TRIGGER: allocations tighten. HOOK: Ilona rounds a number down. STAKES: visible — hunger; hidden — Ilona's quiet routing. BRANCHES: audit; ignore; formalize it. LINKS: C-ILONA, [22]."
+ },
+ {
+  "id": "SEED-V15-24",
+  "line": 8803,
+  "text": "SEED-V15-24 — The Overseer's Registry. TYPE: labor / legal. ANCHORS: Brun Maurer, Tobias, Otto Klein. TRIGGER: a work slowdown. HOOK: names in a ledger. STAKES: visible — quotas; hidden — the Underrows organization. BRANCHES: crack down; negotiate; reform. LINKS: C-TOBIAS, [04]."
+ },
+ {
+  "id": "SEED-V15-25",
+  "line": 8805,
+  "text": "SEED-V15-25 — A Suit That Sounds Wrong. TYPE: military / technical. ANCHORS: Hans Kessler, Florian, Konrad. TRIGGER: a cadet notices a suit that sounds wrong. HOOK: Hans covers a plate. STAKES: visible — a suit; hidden — a failing legacy component. BRANCHES: replace; repair; hide. LINKS: C-HANS, [23]."
+ },
+ {
+  "id": "SEED-V15-26",
+  "line": 8807,
+  "text": "SEED-V15-26 — The Dosimeter Chirp. TYPE: surface / medical. ANCHORS: Maren, Ansgar. TRIGGER: a stalker returns hot. HOOK: Maren hides her own dose. STAKES: visible — a returning stalker; hidden — Maren's exposure. BRANCHES: quarantine; clear; investigate the find. LINKS: 6.18, [15]."
+ },
+ {
+  "id": "SEED-V15-27",
+  "line": 8809,
+  "text": "SEED-V15-27 — The Map That Overlaps. TYPE: research / political. ANCHORS: Ulrich Venn, Ilka, Jarek. TRIGGER: two maps do not match. HOOK: Venn pins a map face down. STAKES: visible — a route; hidden — a surface/underground gap. BRANCHES: survey; accept; suppress. LINKS: C-ULRICH, [10]."
+ },
+ {
+  "id": "SEED-V15-28",
+  "line": 8811,
+  "text": "SEED-V15-28 — The Countess's Gift. TYPE: intrigue. ANCHORS: Seraphine, Alena, Samer. TRIGGER: a gift to the household. HOOK: \"A gift is a question.\" STAKES: visible — a courtesy; hidden — a bought favor. BRANCHES: accept; return; trace it. LINKS: R-04, [16]."
+ },
+ {
+  "id": "SEED-V15-29",
+  "line": 8813,
+  "text": "SEED-V15-29 — The Delegate's Draft. TYPE: diplomatic. ANCHORS: Weiss, Adelheid, Vera. TRIGGER: a treaty clause. HOOK: Weiss knocks over a cup and apologizes to it. STAKES: visible — a treaty; hidden — Demos's divided council. BRANCHES: sign; amend; stall. LINKS: [16]."
+ },
+ {
+  "id": "SEED-V15-30",
+  "line": 8815,
+  "text": "SEED-V15-30 — The Survivors' Warning. TYPE: diplomatic / military. ANCHORS: Bohdan, Ansgar. TRIGGER: Bohdan asks to see the wall. HOOK: \"Is the man behind it?\" STAKES: visible — a courtesy visit; hidden — a warning. BRANCHES: show the wall; deflect; counter-test. LINKS: [18]."
+ },
+ {
+  "id": "SEED-V15-31",
+  "line": 8817,
+  "text": "SEED-V15-31 — The Gate That Opened. TYPE: security. ANCHORS: Dagmar, Mira. TRIGGER: a gate log shows an unscheduled opening. HOOK: Mira says \"Something changed.\" STAKES: visible — a log entry; hidden — a gate-keeper's loyalty. BRANCHES: audit; trap; ignore. LINKS: F-05, [18]."
+ },
+ {
+  "id": "SEED-V15-32",
+  "line": 8819,
+  "text": "SEED-V15-32 — The Singing Wire. TYPE: technical. ANCHORS: Ludek, Florian, Ilse Wern. TRIGGER: a coil hums in the draft. HOOK: Ilse hears a voice. STAKES: visible — a relic; hidden — a signal. BRANCHES: study; disconnect; listen. LINKS: RLC-18."
+ },
+ {
+  "id": "SEED-V15-33",
+  "line": 8821,
+  "text": "SEED-V15-33 — The Child's Drawing. TYPE: mystery / emotional. ANCHORS: Liese, Emmerich Kolb. TRIGGER: a drawing is found. HOOK: Liese asks about the black rectangle. STAKES: visible — a relic; hidden — the child's meaning. BRANCHES: answer honestly; protect her; investigate. LINKS: F-04."
+ },
+ {
+  "id": "SEED-V15-34",
+  "line": 8823,
+  "text": "SEED-V15-34 — The Unsent Letter. TYPE: emotional / mystery. ANCHORS: Emmerich Kolb, Wilhelmina. TRIGGER: a letter is found. HOOK: \"We were told it was a drill.\" STAKES: visible — a relic; hidden — a pre-war lie. BRANCHES: read aloud; keep private; destroy. LINKS: F-06."
+ },
+ {
+  "id": "SEED-V15-35",
+  "line": 8825,
+  "text": "SEED-V15-35 — The Tunnel East of the Latch. TYPE: surface / exploration. ANCHORS: Jarek Novak, Ansgar. TRIGGER: scouts report a new tunnel. HOOK: unmapped branch. STAKES: visible — a route; hidden — a monster den. BRANCHES: explore; seal; watch. LINKS: R-16, [10]."
+ },
+ {
+  "id": "SEED-V15-36",
+  "line": 8827,
+  "text": "SEED-V15-36 — The Wolf's Teeth. TYPE: military. ANCHORS: Matthias Red, Greta Red. TRIGGER: a cadet drill goes wrong. HOOK: Matthias volunteers. STAKES: visible — a drill; hidden — a hidden rivalry. BRANCHES: continue; stop; reform. LINKS: [23]."
+ },
+ {
+  "id": "SEED-V15-37",
+  "line": 8829,
+  "text": "SEED-V15-37 — The Cousin's Letters. TYPE: diplomatic / family. ANCHORS: Hedda Red, Rolf Kessel, Vera. TRIGGER: Hedda arrives with letters. HOOK: a Grotsen seal. STAKES: visible — a visit; hidden — dual loyalty. BRANCHES: welcome; screen; refuse. LINKS: C-HEDDA."
+ },
+ {
+  "id": "SEED-V15-38",
+  "line": 8831,
+  "text": "SEED-V15-38 — The Fever Pattern. TYPE: medical. ANCHORS: Ruth, Sabine. TRIGGER: a pattern of minor fevers. HOOK: Ruth says she saw it twice. STAKES: visible — an outbreak; hidden — a source. BRANCHES: quarantine; investigate; wait. LINKS: [21]."
+ },
+ {
+  "id": "SEED-V15-39",
+  "line": 8833,
+  "text": "SEED-V15-39 — The Last Round. TYPE: security. ANCHORS: Mira, Sigrid. TRIGGER: a round is found in the wrong place. HOOK: Mira counts twice. STAKES: visible — a missing round; hidden — who took it. BRANCHES: audit; trap; confide in Elara. LINKS: C-MIRA."
+ },
+ {
+  "id": "SEED-V15-40",
+  "line": 8835,
+  "text": "SEED-V15-40 — The Names of the Dead. TYPE: family / ritual. ANCHORS: Wilhelmina, Hanne, Samer. TRIGGER: the year's dead are named. HOOK: a name is missing. STAKES: visible — a ritual; hidden — a forgotten person. BRANCHES: add the name; ask who; leave it. LINKS: [05]."
+ }
+]

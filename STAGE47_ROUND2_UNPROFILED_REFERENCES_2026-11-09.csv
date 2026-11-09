@@ -1,0 +1,5 @@
+﻿name,source,age,classification,detail
+Tessa Brun,"STALKER TESSA BRUN, 27 card",27 (card label),Gender not explicit in own card fields; excluded from adult-women count,Do not infer sex/gender from name or occupation.
+Cassandra Red,excerpts.json / kinship,UNKNOWN,Named as current representative of Steward Line; no compiled character card found,"No biography, DOB, family links beyond branch representation, or profile; do not synthesize."
+Marta,excerpts.json / v41-household,UNKNOWN,Historical-only reference; not active wife,Do not equate with proposal-only Marta Kessel.
+Anneliese Voigt,Johanna Weiss card relationship reference,UNKNOWN,Named as an ally/reference; no compiled character card found,No full identity/profile established in available roster.

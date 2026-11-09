@@ -1,0 +1,36 @@
+ROUND 6 PART 2 PREFLIGHT VERIFICATION — 2026-11-10
+Parent CP23 ZIP SHA-256: 9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb
+
+PASS
+- ZIP integrity: 956 entries, testzip PASS.
+- Round 6 Part 1 inventory: 875/875 paths, sizes and SHA-256 values match.
+- package-lock SHA-256 matches continuation prompt.
+- package.json direct dependency ranges: 71/71 match lockfile.
+- Canon verifier PASS.
+- Round 6 Part 1 focused tests: 5/5 PASS.
+- Combined focused suite: 62/62 PASS.
+- 57 runnable script test files excluding scripts/game.test.mjs: 467/467 PASS.
+- Red Claw Household verifier PASS; 14 warnings retained.
+- Art structure verifier PASS; 23 groups not yet filled with real art.
+- Temporary .grok/app-env.json removed after tests.
+
+BLOCKED
+- DNS registry.npmjs.org: Temporary failure in name resolution.
+- HTTPS https://registry.npmjs.org/-/ping: same DNS failure.
+- npm ci: NOT ATTEMPTED because registry preflight failed.
+- npm test: 467 pass / one suite load failure; zod missing from src/lib/game/delta.ts.
+- npm run typecheck: TS2688 missing node and vite/client type definitions.
+- npm run lint: eslint Permission denied.
+- npm run build: spawn vite EACCES.
+- check-auth-invariant: could not read dev server's resolved VITE_AUTH_ENABLED.
+
+NOT RUN
+- AL compactState runtime projection and live provider.
+- Persistent PostgreSQL Store/Event Ledger/save/reload/restart integration.
+- Browser/responsive QA.
+- Production verification.
+- Visual Asset Pack CP14 integration (separate pack not supplied in this turn).
+
+NO SOURCE IMPLEMENTATION
+No game, Canon, schema, migration, package, dependency, DB/auth, economy, Political Capital, or art files changed.
+Round 6 remains PARTIAL; Gate 2 remains PARTIAL/BLOCKED; Round 7 not started.

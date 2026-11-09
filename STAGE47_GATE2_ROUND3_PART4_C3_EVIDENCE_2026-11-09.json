@@ -1,0 +1,113 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": "47",
+  "gate": "2",
+  "round": "3",
+  "part": "4",
+  "date": "2026-11-09",
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP14-ROUND3-PART4-RECEIPT-RECONSTRUCTION-PARTIAL-CP15-2026-11-09.zip",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP13-ROUND3-PART3-C3-SOURCE-AUDIT-PARTIAL-CP14-2026-11-09.zip",
+  "parent_sha256": "733e5e649337948fde0e2b069eddfa86246b308272f8b377038550a51b1722f9",
+  "scope": "source-level C3.8 Receipt reconstruction",
+  "status": {
+    "receipt_reconstruction": "implemented_unit_tested",
+    "c3_integration": "blocked_partial",
+    "browser": "not_run",
+    "production": "not_run",
+    "gate2": "partial"
+  },
+  "source_changes": {
+    "modified": [
+      "src/lib/game/p4-simulation.ts",
+      "src/lib/game/store.ts",
+      "src/lib/game/play.ts",
+      "src/components/game/GameShell.tsx",
+      "src/components/game/CommandDeck.tsx",
+      "src/components/game/V45PanelBody.tsx",
+      "src/components/platform/Receipt.tsx",
+      "scripts/save-autosave.test.mjs"
+    ],
+    "added": [
+      "src/lib/game/receipt-persistence.mjs",
+      "src/lib/game/receipt-persistence.d.mts",
+      "scripts/receipt-persistence.test.mjs"
+    ],
+    "deleted": []
+  },
+  "tests": {
+    "focused_persistence_and_receipt": {
+      "passed": 66,
+      "failed": 0
+    },
+    "runnable_scripts_excluding_game_test": {
+      "passed": 457,
+      "failed": 0
+    },
+    "full_npm_test": {
+      "passed": 457,
+      "blocked_files": 1,
+      "blocked_file": "scripts/game.test.mjs",
+      "error": "ERR_MODULE_NOT_FOUND: Cannot find package 'zod' imported from src/lib/game/delta.ts"
+    },
+    "typescript_tsx_transpile": {
+      "passed": 7,
+      "failed": 0,
+      "semantic_typecheck": false
+    },
+    "declaration_parse": {
+      "passed": 1,
+      "failed": 0
+    },
+    "canon_verifier": "pass",
+    "red_claw_verifier": {
+      "status": "pass_with_warnings",
+      "warnings": 14
+    },
+    "art_verifier": {
+      "status": "fail_incomplete",
+      "assets": 167,
+      "generated_raster": 0,
+      "code_drawn": 150,
+      "preserved": 17,
+      "incomplete_groups": 23
+    },
+    "typecheck": {
+      "status": "blocked",
+      "reason": "missing @types/node and vite/client"
+    },
+    "build": {
+      "status": "blocked",
+      "reason": "spawn vite EACCES"
+    },
+    "lint": {
+      "status": "blocked",
+      "reason": "eslint Permission denied"
+    }
+  },
+  "runtime": {
+    "node": "v22.16.0",
+    "database_url_configured": false,
+    "better_auth_secret_configured": false,
+    "pglite_ephemeral_flag_configured": false,
+    "node_modules_present": false,
+    "temporary_app_env_removed": true,
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b"
+  },
+  "integration": {
+    "database_migration": "not_run",
+    "command_to_commit": "not_run",
+    "server_restart": "not_run",
+    "reload": "not_run",
+    "browser_receipt_match": "not_run",
+    "failure_injection": "not_run",
+    "network_retry_idempotency": "not_run",
+    "two_session_concurrency": "not_run",
+    "legacy_save_roundtrip": "not_run"
+  },
+  "decisions": [
+    "ReceiptPersistence is runtime-only; not part of GameSnapshot or browser persistKeys.",
+    "Account-committed status is derived only from confirmed persistent storage classification.",
+    "No Canon, Save schema, migration, package manifest or lockfile changes.",
+    "Do not start C4 until C3.1-C3.10 integration acceptance is evidenced."
+  ]
+}

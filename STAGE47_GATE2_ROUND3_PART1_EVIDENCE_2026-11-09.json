@@ -1,0 +1,208 @@
+{
+  "schemaVersion": "1.0",
+  "date": "2026-11-09",
+  "round": "Round 3 — Gate 2, Part 1",
+  "parentCheckpoint": {
+    "name": "CP11",
+    "archive": "EGUNSENTIA-STAGE47-POST-CP10-ROUND2-CANON-AND-GENEALOGY-AUDIT-CP11-2026-11-09.zip",
+    "sha256": "e5e15022b23da13436997dc7facdd4f4bce16ced022fcacc0727a6262a13f946",
+    "fileCount": 730
+  },
+  "scope": [
+    "C1 Council typed-effect adapter",
+    "C1 resource reservation preflight and no-partial-mutation safeguards",
+    "C2 Political Capital source/design-contract audit"
+  ],
+  "implementation": {
+    "councilAdapter": "Implemented",
+    "resourceReservation": "Implemented",
+    "councilStoreWiring": "Implemented; runtime Store integration not verified because dependencies are absent",
+    "receiptStockDelta": "Implemented; numeric Stock changes are included in Receipt text",
+    "politicalCapital": "Blocked / unresolved design contract; no balance, ledger, accrual, recovery, cap or spending rule was invented",
+    "gate2Overall": "PARTIAL"
+  },
+  "catalogAudit": {
+    "totalOptions": 403,
+    "positivePoliticalCapitalCosts": 182,
+    "waitOptions": 26,
+    "waitOptionsWithPositivePoliticalCapital": 26,
+    "negativeTypedStockEffects": 91,
+    "explicitResourceCostOptions": 0,
+    "personnelCostOptions": 0,
+    "councilOption": {
+      "id": "24-OPT-02",
+      "title": "Stamp a bounded council decree",
+      "marks": 60,
+      "hours": 1,
+      "politicalCapital": 1,
+      "requires": [
+        "Physician Sabine Lorenz available"
+      ],
+      "effects": [
+        {
+          "type": "stock",
+          "good": "food",
+          "delta": -5
+        },
+        {
+          "type": "queue",
+          "afterHours": 48,
+          "consequenceId": "cq-24-OPT-02",
+          "becauseOf": "24-OPT-02"
+        },
+        {
+          "type": "note",
+          "channel": "news",
+          "templateId": "note-24-OPT-02"
+        },
+        {
+          "type": "npc",
+          "id": "Physician Sabine Lorenz",
+          "busyHours": 6,
+          "mood": "strained"
+        }
+      ]
+    }
+  },
+  "politicalCapitalPolicy": {
+    "authoritativeBalanceOrLedgerFound": false,
+    "inventedRules": false,
+    "deductedOrMarkedPaid": false,
+    "blanketWaitBlockIntroduced": false,
+    "preservedPriorDecision": "CP8 documented no arbitrary balance and no blanket block because every Wait option carries a positive Political Capital field; disclose the uncharged catalog field and keep the economy/design contract open."
+  },
+  "tests": {
+    "focusedGate2CouncilIdentity": {
+      "passed": 27,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "relatedGate2SavePrivateRelations": {
+      "passed": 96,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "allScriptTests": {
+      "total": 444,
+      "passed": 443,
+      "failed": 1,
+      "blockedSuite": "scripts/game.test.mjs",
+      "blocker": "ERR_MODULE_NOT_FOUND: zod",
+      "status": "PARTIAL"
+    },
+    "canonVerifier": {
+      "status": "PASS"
+    },
+    "redClawVerifier": {
+      "status": "PASS_WITH_WARNINGS"
+    },
+    "changedFileSyntaxTranspile": {
+      "passed": 9,
+      "total": 9,
+      "status": "PASS"
+    },
+    "changedMjsNodeCheck": {
+      "passed": 4,
+      "total": 4,
+      "status": "PASS"
+    },
+    "appDataAuthSuites": {
+      "passedTests": 6,
+      "blockedSuites": 2,
+      "missingPackages": [
+        "@tanstack/react-start",
+        "jose"
+      ],
+      "status": "PARTIAL"
+    },
+    "typecheck": {
+      "status": "BLOCKED",
+      "command": "npm run typecheck",
+      "errors": [
+        "TS2688: Cannot find type definition file for node",
+        "TS2688: Cannot find type definition file for vite/client"
+      ]
+    },
+    "build": {
+      "status": "BLOCKED",
+      "command": "npm run build",
+      "error": "spawn vite ENOENT"
+    },
+    "lint": {
+      "status": "BLOCKED",
+      "command": "npm run lint",
+      "error": "eslint: not found"
+    }
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "nodeModulesPresent": false,
+    "packageJsonChanged": false,
+    "packageLockChanged": false,
+    "temporaryAppEnv": {
+      "createdForTests": true,
+      "contents": {
+        "VITE_AUTH_ENABLED": "true"
+      },
+      "removedAfterTests": true,
+      "packaged": false
+    },
+    "secretsDetected": false
+  },
+  "integrationAndRelease": {
+    "databaseTransactionTest": "NOT_RUN",
+    "persistentFlushAndReload": "NOT_RUN",
+    "backendRestart": "NOT_RUN",
+    "browserVerification": "NOT_RUN",
+    "responsiveUiVerification": "NOT_RUN",
+    "productionVerification": "NOT_RUN",
+    "releaseReady": false
+  },
+  "canon": {
+    "canonFilesChanged": 0,
+    "saveSchemaChanged": false,
+    "databaseSchemaChanged": false,
+    "newCanonFacts": 0,
+    "proposalsPromoted": 0
+  },
+  "changeSummary": {
+    "modifiedImplementationAndTestFiles": [
+      "src/lib/game/sim/council.ts",
+      "src/lib/game/p4-simulation.ts",
+      "src/lib/platform/options/execute.ts",
+      "src/lib/game/sim/npc.ts",
+      "src/lib/game/store.ts",
+      "src/components/game/V45PanelBody.tsx",
+      "scripts/gate2-round3.test.mjs",
+      "scripts/gate2-round4.test.mjs",
+      "scripts/council-queue-identity.test.mjs",
+      "scripts/game.test.mjs"
+    ],
+    "deletedFiles": 0,
+    "dependencyChanges": 0,
+    "modifiedProjectDocumentation": [
+      "README.md",
+      "RECOVERY_PROGRESS.md",
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+    ],
+    "addedAuditFiles": [
+      "STAGE47_GATE2_ROUND3_PART1_COUNCIL_TYPED_EFFECTS_AND_RESERVATIONS_REPORT_2026-11-09.md",
+      "STAGE47_GATE2_ROUND3_PART1_EVIDENCE_2026-11-09.json",
+      "STAGE47_GATE2_ROUND3_PART1_HANDOFF_2026-11-09.md",
+      "STAGE47_GATE2_ROUND3_PART1_VERIFICATION_LOG_2026-11-09.txt",
+      "STAGE47_ROUND3_PART1_SYNTAX_CHECKS_2026-11-09.txt",
+      "WORKLOG-59.md",
+      "STAGE47_GATE2_ROUND3_PART1_CHANGE_MANIFEST_2026-11-09.csv",
+      "STAGE47_GATE2_ROUND3_PART1_FILE_INVENTORY_2026-11-09.csv",
+      "STAGE47_GATE2_ROUND3_PART1_SHA256SUMS_2026-11-09.txt"
+    ],
+    "parentFileCount": 730,
+    "childFileCount": 739,
+    "addedFiles": 9,
+    "modifiedFiles": 13
+  },
+  "verificationLog": "STAGE47_GATE2_ROUND3_PART1_VERIFICATION_LOG_2026-11-09.txt",
+  "report": "STAGE47_GATE2_ROUND3_PART1_COUNCIL_TYPED_EFFECTS_AND_RESERVATIONS_REPORT_2026-11-09.md",
+  "handoff": "STAGE47_GATE2_ROUND3_PART1_HANDOFF_2026-11-09.md"
+}

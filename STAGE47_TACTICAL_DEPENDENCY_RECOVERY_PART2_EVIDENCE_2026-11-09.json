@@ -1,0 +1,81 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": 47,
+  "round": 3,
+  "part": "Tactical Dependency Recovery Part 2",
+  "date": "2026-11-09",
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP17-TACTICAL-DEPENDENCY-RETRY-PERMISSION-DNS-AUDIT-PARTIAL-CP18-2026-11-09.zip",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP16-TACTICAL-DEPENDENCY-AUDIT-PARTIAL-CP17-2026-11-09.zip",
+  "parent_sha256": "733e5e649337948fde0e2b069eddfa86246b308272f8b377038550a51b1722f9",
+  "status": {
+    "D1": "complete",
+    "D2": "blocked_runtime_dns",
+    "Zod": "declared_lock_pinned_not_installed",
+    "C3": "blocked_partial",
+    "Gate2": "partial",
+    "C4": "not_started"
+  },
+  "package": {
+    "dependencies": 57,
+    "devDependencies": 14,
+    "root_declarations_match_lock": 71,
+    "zod_range": "^4.4.0",
+    "zod_locked": "4.6.5",
+    "package_json_sha256": "f33db47e9c69f1919406896834b860721e8f3042bd362cffbd4f3d29fd063103",
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b"
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "registry": "https://registry.npmjs.org/",
+    "offline": false,
+    "default_cache": "EACCES_root_owned",
+    "isolated_cache": "/mnt/data/egunsentia_npm_cache",
+    "isolated_cache_verify": "pass_empty",
+    "old_working_copy": "root_owned_not_writable",
+    "new_working_copy": "uid_1000_writable",
+    "dns": "EAI_AGAIN",
+    "proxy_config": "null",
+    "node_modules": "absent_after_cleanup",
+    "temporary_app_env": "removed"
+  },
+  "npm_ci": {
+    "command": "npm ci --no-audit --no-fund --fetch-retries=0 --fetch-timeout=12000 --cache /mnt/data/egunsentia_npm_cache",
+    "result": "blocked",
+    "root_cause": "registry.npmjs.org DNS temporary failure",
+    "secondary_error": "npm Exit handler never called!",
+    "debug_log": "external isolated npm cache _logs; not packaged"
+  },
+  "tests": {
+    "focused_persistence_receipt_db_migration": {
+      "passed": 70,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "runnable_scripts_excluding_game_test": {
+      "passed": 461,
+      "failed": 0,
+      "files": 56,
+      "status": "PASS"
+    },
+    "canon": "PASS",
+    "full_npm_test": "461 passed; game suite blocked before import due missing zod",
+    "typecheck": "BLOCKED",
+    "build": "BLOCKED",
+    "lint": "BLOCKED"
+  },
+  "web_checks": {
+    "npm_status": "All Systems Operational; Package installation Operational",
+    "zod_4_6_5": "Listed in official npm version history"
+  },
+  "project_changes": {
+    "source_code": false,
+    "package_manifest": false,
+    "package_lock": false,
+    "Canon": false,
+    "save_schema_migrations": false,
+    "economic_rules": false,
+    "secrets": false
+  },
+  "files_deleted": 0
+}

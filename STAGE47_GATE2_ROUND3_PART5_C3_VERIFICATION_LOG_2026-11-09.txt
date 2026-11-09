@@ -1,0 +1,82 @@
+EGUNSENTIA — Stage 47 / Gate 2 / Round 3 Part 5 verification log
+Date: 2026-11-09
+Parent: CP15 (immutable)
+Working copy: CP15_WORKING_COPY
+Scope: C3 migration transaction failure-path and Save auth-boundary source-contract tests.
+
+1) Parent checkpoint integrity
+- CP15 SHA-256: c61c1d6675147a173af6cf6998ccf576e666374ca6fd57f98645139c5920d47a
+- `unzip -tq`: PASS; no compressed-data errors.
+- CP15 contains 771 files.
+- CP15 working copy extracted from this archive; CP15 itself unchanged.
+- package-lock SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b.
+
+2) New source-contract tests
+Command:
+node --experimental-strip-types --test scripts/migration-transaction.test.mjs
+Result: PASS — 6/6.
+New tests:
+- a COMMIT failure triggers rollback and preserves the commit error
+- an advisory-lock failure prevents migration work and rolls back
+
+Command:
+node --experimental-strip-types --test scripts/save-revision.test.mjs
+Result: PASS — 13/13.
+New tests:
+- all save endpoints scope access to the authenticated middleware context
+- persistSave does not accept a caller-selected account identity
+
+3) Focused persistence/Receipt/DB/migration tests
+Command:
+node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+Result: PASS — 70 tests, 70 pass, 0 fail.
+
+4) Runnable script suite excluding the Zod-dependent game suite
+Command:
+mapfile -t tests < <(find scripts -maxdepth 1 -name '*.test.mjs' ! -name 'game.test.mjs' -print | sort)
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test "${tests[@]}"
+Result: PASS — 461 tests, 461 pass, 0 fail; 56 test files.
+
+5) Full npm test
+Command: npm test
+Result: FAIL / BLOCKED — 462 discovered; 461 pass; one test file fails before assertions load.
+Blocked file: scripts/game.test.mjs.
+Exact error: ERR_MODULE_NOT_FOUND: Cannot find package 'zod' imported from src/lib/game/delta.ts.
+
+6) Separate app-data/auth test group
+Command:
+node --experimental-strip-types --test src/lib/app-data/app-data.test.ts src/lib/app-data/readiness-schedule.test.ts src/lib/auth/gate-identity.test.ts src/lib/auth/sign-in-gate.test.ts
+Result: 8 discovered; 6 pass; 2 blocked at import because @tanstack/react-start and jose are absent.
+
+7) Canon, Red Claw, art
+- `node scripts/verify-canon.mjs`: PASS — 65-panel registry, invariants, 167 assets and option catalogs.
+- `node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs`: PASS with 14 warnings (12 proposed age/date warnings; missing sealed Floor 7 genealogy ledger; Elara/Luka/Christian chronology).
+- `node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-art.mjs`: FAIL / INCOMPLETE — 167 assets; 0 generated raster, 150 code-drawn, 17 preserved; 23 incomplete groups.
+
+8) Full project tooling
+- `npm run typecheck`: BLOCKED; TS2688 missing type definition file for `node` and `vite/client`.
+- `npm run build`: BLOCKED; `[with-app-env] failed to run vite: spawn vite ENOENT`.
+- `npm run lint`: BLOCKED; `eslint: not found`.
+- `npm run check:auth`: BLOCKED; `[auth-invariant] could not read the dev server's resolved VITE_AUTH_ENABLED` (no running dev server/dependency tree).
+- `node_modules` absent; npm cache has no zod package.
+- Prior CP14 `npm ci --no-audit --no-fund` timeout at 180 seconds retained as known blocker; not retried in this Part.
+
+9) Persistence/runtime environment
+- DATABASE_URL: unset.
+- BETTER_AUTH_SECRET: unset.
+- PGLITE_ALLOW_EPHEMERAL: unset.
+- psql/postgres/pg_isready/docker: unavailable.
+- No migration, SQL transaction, command commit, account reload, server restart, two-session DB test or browser session ran.
+- PGlite is not used as evidence of durable persistence.
+
+10) Legacy-save fixture search
+- No independent historical player Save/snapshot JSON fixture was found by filename in CP15 archive.
+- Existing legacy compatibility tests use synthetic legacy-shaped objects; parser-level defaults are tested only.
+
+11) Package hygiene
+- No Save schema/migration, Canon, economy rule, package manifest or lockfile changed.
+- No secrets added. A workspace-local `.grok/app-env.json` with only VITE_AUTH_ENABLED=true was absent from the CP15 parent and removed before packaging.
+- No files deleted.
+- Working tree is a separate extraction of CP15; parent archive is immutable.
+
+C3 remains BLOCKED/PARTIAL. Gate 2 remains PARTIAL.

@@ -1,0 +1,152 @@
+{
+  "checkpoint": "CP21",
+  "date": "2026-11-09",
+  "round_status": "PARTIAL_BLOCKED",
+  "parent": {
+    "file": "EGUNSENTIA-STAGE47-ROUND3-FINAL-CLOSEOUT-PARTIAL-CP20-2026-11-09.zip",
+    "sha256": "3a83f37ac755f6cee175ee1797e081d9308ba0cf3d81d1982a814b27008d87c9",
+    "zip_integrity": "PASS"
+  },
+  "workstreams": {
+    "D1": "PASS",
+    "D2": "BLOCKED_DNS_EGRESS",
+    "D3": "PARTIAL",
+    "C3": "BLOCKED_FOR_REAL_DB_INTEGRATION",
+    "C7": "BLOCKED_NOT_RUN"
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "registry": "https://registry.npmjs.org/",
+    "offline": false,
+    "node_modules": "absent",
+    "lockfileVersion": 3,
+    "directDependencies": 57,
+    "directDevDependencies": 14,
+    "directRangesMatchLock": true,
+    "lockedPackageRecords": 471,
+    "packageLockSha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+    "packageManagerField": null,
+    "enginesField": null,
+    "projectNpmrc": false,
+    "projectNvmrc": false
+  },
+  "lockedVersions": {
+    "zod": "4.6.5",
+    "vite": "8.3.2",
+    "@tanstack/react-start": "1.168.60",
+    "jose": "6.2.9",
+    "@types/node": "22.20.4",
+    "eslint": "9.39.5",
+    "playwright": "1.63.0",
+    "typescript": "5.9.3"
+  },
+  "verification": [
+    {
+      "id": "focused_gate2",
+      "command": "node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/gate2-round3.test.mjs scripts/gate2-round4.test.mjs scripts/council-queue-identity.test.mjs",
+      "result": "27/27 PASS",
+      "class": "unit/source"
+    },
+    {
+      "id": "focused_persistence",
+      "command": "node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs",
+      "result": "70/70 PASS",
+      "class": "unit only"
+    },
+    {
+      "id": "runnable_scripts",
+      "command": "node --experimental-strip-types --import ./scripts/register-ts.mjs --test --test-concurrency=4 <56 script test files excluding scripts/game.test.mjs>",
+      "result": "461/461 PASS",
+      "class": "unit only; temporary VITE_AUTH_ENABLED=true app-env removed"
+    },
+    {
+      "id": "npm_test",
+      "command": "npm test",
+      "result": "script phase reports 461 pass / 1 suite-load failure (zod); second phase not reached; command did not return cleanly under timeout",
+      "class": "blocked/incomplete"
+    },
+    {
+      "id": "app_auth",
+      "command": "node --experimental-strip-types --test src/lib/app-data/app-data.test.ts src/lib/app-data/readiness-schedule.test.ts src/lib/auth/gate-identity.test.ts src/lib/auth/sign-in-gate.test.ts",
+      "result": "6 PASS / 2 suite-load failures (@tanstack/react-start, jose)",
+      "class": "partial/blocked"
+    },
+    {
+      "id": "typecheck",
+      "command": "npm run typecheck",
+      "result": "BLOCKED: missing node and vite/client type definitions",
+      "class": "blocked"
+    },
+    {
+      "id": "build",
+      "command": "npm run build",
+      "result": "BLOCKED: spawn vite ENOENT",
+      "class": "blocked"
+    },
+    {
+      "id": "lint",
+      "command": "npm run lint",
+      "result": "BLOCKED: eslint not found",
+      "class": "blocked"
+    },
+    {
+      "id": "canon",
+      "command": "node scripts/verify-canon.mjs",
+      "result": "PASS: 65 panels, invariants, 167 assets, option catalogs",
+      "class": "verified"
+    },
+    {
+      "id": "red_claw",
+      "command": "node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs",
+      "result": "PASS with 14 warnings",
+      "class": "verified_with_warnings"
+    },
+    {
+      "id": "art",
+      "command": "node scripts/verify-art.mjs",
+      "result": "FAIL/INCOMPLETE: 167 assets; 0 generated raster, 150 code-drawn, 17 preserved; 23 incomplete groups",
+      "class": "incomplete"
+    },
+    {
+      "id": "auth_invariant",
+      "command": "node scripts/check-auth-invariant.mjs",
+      "result": "BLOCKED: no Vite dev server to expose resolved VITE_AUTH_ENABLED",
+      "class": "blocked"
+    },
+    {
+      "id": "registry",
+      "command": "getent ahosts registry.npmjs.org; npm ping --fetch-retries=0 --fetch-timeout=8000; curl -I https://registry.npmjs.org/",
+      "result": "DNS absent; npm EAI_AGAIN; curl could not resolve host",
+      "class": "blocked"
+    },
+    {
+      "id": "database",
+      "command": "DB URL names; Postgres/Docker tools; ss -ltn",
+      "result": "No DB URL; no PostgreSQL tools; no Docker/Podman; no listener on 5432",
+      "class": "blocked"
+    },
+    {
+      "id": "browser",
+      "command": "chromium --version; python -m playwright --version; curl -I http://127.0.0.1:8080/",
+      "result": "Chromium 144; Python Playwright 1.57 vs locked Playwright 1.63; port 8080 is Jupyter uvicorn 404, no game app",
+      "class": "tools_present_app_unavailable"
+    }
+  ],
+  "non_claims": [
+    "not dependency-recovered",
+    "not full-test-green",
+    "not typecheck-verified",
+    "not build-verified",
+    "not lint-verified",
+    "not Integration-tested",
+    "not Browser-verified",
+    "not Production-verified",
+    "not Release Candidate"
+  ],
+  "source_changes": [],
+  "manifest_or_lock_changes": [],
+  "deletions": [],
+  "secrets_included": false,
+  "temporary_app_env_present_at_close": false
+}

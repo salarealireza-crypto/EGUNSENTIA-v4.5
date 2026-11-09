@@ -1,0 +1,6 @@
+EGUNSENTIA V4.1 SUPER LORE — canon anchors used by verify:canon.
+The full master manuscript was not in this archive. These lines are the V4.1 invariants already enforced by the simulation and the boot hotset.
+
+960 ready + 40 in repair = 1,000
+total known population baseline: 60,000
+15 lost + 27 used/active tracked tunnels = 42

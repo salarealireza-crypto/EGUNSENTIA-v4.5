@@ -1,0 +1,78 @@
+{
+  "date": "2026-11-10",
+  "checkpoint": "CP23-R6P2-INDEPENDENT-VERIFICATION-PARTIAL",
+  "immediate_parent": {
+    "file": "EGUNSENTIA-STAGE47-CP23-ROUND6-PART2-FOLLOWUP-RECHECK-PARTIAL-2026-11-10.zip",
+    "sha256": "0c121c3c30d1977b2ee44cbb4938995428a43274127ae2ba398c784886026887"
+  },
+  "source_ancestor": {
+    "checkpoint": "CP23-Round6-Part1",
+    "sha256": "9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb"
+  },
+  "archive": {
+    "zip_test": "PASS",
+    "entries": 989,
+    "file_entries": 907,
+    "uncompressed_bytes": 16190394,
+    "all_extracted_parent_file_hashes_match": true
+  },
+  "registry": {
+    "dns": "BLOCKED_EAI_AGAIN",
+    "https_ping": "BLOCKED_CURL_EXIT_6",
+    "npm_ci": "NOT_ATTEMPTED"
+  },
+  "dependencies": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "dependencies": 57,
+    "devDependencies": 14,
+    "direct_ranges_matched": 71,
+    "lockfile_version": 3,
+    "package_records_including_root": 472,
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+    "node_modules": false,
+    "missing_runtime_packages": [
+      "zod",
+      "zustand",
+      "@tanstack/react-start",
+      "jose",
+      "vite",
+      "@types/node",
+      "eslint"
+    ]
+  },
+  "tests": {
+    "round6_focused": "PASS_5_OF_5",
+    "combined_focused": "PASS_62_OF_62",
+    "runnable_script_suite_excluding_game_test": "PASS_467_OF_467_ACROSS_57_FILES",
+    "game_test": "BLOCKED_MISSING_ZOD",
+    "direct_leak_scanner_smoke": "PASS_LIMITED",
+    "canon": "PASS",
+    "red_claw": "PASS_WITH_14_WARNINGS",
+    "art_structure": "PASS_23_GROUPS_UNFILLED"
+  },
+  "integration": {
+    "al_runtime": "BLOCKED_MISSING_TANSTACK_REACT_START",
+    "al_provider": "NOT_RUN_XAI_API_KEY_ABSENT",
+    "database_url_present": false,
+    "postgres_tools_available": false,
+    "browser_qa": "NOT_RUN_BUILD_BLOCKED",
+    "chromium_available": true,
+    "production": "NOT_RUN",
+    "visual_asset_pack_cp14": "NOT_SUPPLIED_NOT_ATTEMPTED"
+  },
+  "scope": {
+    "source_code_changed": false,
+    "package_json_changed": false,
+    "package_lock_changed": false,
+    "schema_or_migrations_changed": false,
+    "existing_art_changed": false,
+    "files_deleted": 0,
+    "temporary_app_env_removed": true,
+    "gate2": "PARTIAL_BLOCKED",
+    "round6": "PARTIAL",
+    "round7_started": false,
+    "political_capital_contract": "UNRESOLVED"
+  },
+  "next_action": "Retry official npm registry DNS/HTTPS; only after success run npm ci --no-audit --no-fund in a fresh writable copy."
+}

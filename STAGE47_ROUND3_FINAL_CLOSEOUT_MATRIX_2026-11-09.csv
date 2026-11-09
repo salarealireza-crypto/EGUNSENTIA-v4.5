@@ -1,0 +1,18 @@
+﻿ID,Criterion,Source finding,Current verification,Status,Blocker / limitation
+C1,Council typed-effect adapter / reservations,Implemented source path; authoritative RichOption + shared runner; idempotency and preflight,27/27 Council/Gate2 unit tests PASS,PARTIAL,No DB/browser command integration
+C2,Political Capital source and design contract,403 options audited; 182 positive; all 26 Wait options positive; no authoritative ledger,Catalog/source tests PASS,BLOCKED,No Canon/design contract; no invented balance or Wait exception
+C3.1,Real backend,Neon/PostgreSQL adapter exists; PGlite is ephemeral; DATABASE_URL absent,Environment audit; no DB service/tools,BLOCKED,No real or production-equivalent persistent backend configured
+C3.2,Successful commands,Source/unit paths only,No command-to-DB commit/reload run,BLOCKED,Persistent backend unavailable
+C3.3,Rejected commands,Preflight/resource rejection unit coverage,Covered by C1 tests; DB persistence not tested,PARTIAL,No DB no-mutation verification
+C3.4,Repeats/idempotency,Campaign command identity stored in snapshot,JSON round-trip/unit coverage,PARTIAL,No network retry/replay after restart or backend idempotency
+C3.5,Atomicity/failure paths,Transaction helper and rollback logic present,Unit failure-path tests included in 70/70,PARTIAL,No actual PostgreSQL commit/rollback fault injection
+C3.6,Legacy save compatibility,Parser accepts legacy shapes; synthetic tests,Validation tests in 70/70,PARTIAL,No genuine historical player Save fixture in bundle
+C3.7,Commit/restart persistence,Not executed,No DB or DATABASE_URL,BLOCKED,"No persistent commit, restart, new-session reload"
+C3.8,UI Receipts,Receipt reconstruction implemented from persisted p4.lastReceipt,Receipt/persistence unit tests in 70/70,PARTIAL,No browser reload against persisted DB
+C3.9,Concurrency,Queue and expectedRevision/CAS source logic,Source/unit-level only,PARTIAL,No multi-session database concurrency test
+C3.10,Evidence/acceptance,Acceptance matrix present,All evidence status recorded,BLOCKED,Integration-tested threshold not met
+C4,NPC availability consistency,Prior shared CAST projection in applicable panels; complete consistency not accepted,No C4 connected matrix run in this closeout,NOT ACCEPTED,C3 acceptance gate not met
+C5,Missing-person integration,Manual player-supplied inquiry with mandatory reference; unverified provenance,Source contract only,PARTIAL,No authoritative disappearance/missing-person record source
+C6,Legacy panel aliases,65 canonical IDs; 11 historical redirects; panel 24 identity preserved,27/27 resolver/source tests include alias coverage,PARTIAL,"No browser routing, saved-reference restore or history navigation"
+C7,Connected gameplay/browser QA,No connected app session executed,Chromium/Playwright present; Vite/backend unavailable,BLOCKED,No browser workflow evidence
+RUNTIME,Dependency and DB prerequisites,Zod declared ^4.4.0 / lock 4.6.5; lock hash unchanged,npm ping EAI_AGAIN; DB URL and PG tools absent,BLOCKED,Environmental/configuration; npm ci not repeated after failed DNS preflight

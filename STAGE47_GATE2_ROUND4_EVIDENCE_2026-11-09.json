@@ -1,0 +1,43 @@
+{
+  "checkpoint": "CP8",
+  "date": "2026-11-09",
+  "base": "EGUNSENTIA-STAGE47-GATE2-ROUND3-CP7-2026-11-09.zip",
+  "status": "source-checkpoint-complete; full integration partially blocked",
+  "tests": {
+    "focused_gate2_round4": { "passed": 8, "failed": 0, "status": "PASS" },
+    "runnable_script_suite_excluding_game_test": { "passed": 408, "failed": 0, "status": "PASS" },
+    "scripts_game_test": { "status": "BLOCKED", "reason": "Missing package zod" },
+    "separate_typescript_test_group": { "passed": 6, "blocked_suites": 2, "status": "PARTIAL", "reasons": ["Missing @tanstack/react-start", "Missing jose"] },
+    "canon_verification": { "status": "PASS", "panels": 65, "registered_art_assets": 167 },
+    "mjs_syntax": { "passed": 89, "status": "PASS" },
+    "changed_ts_syntax": { "passed": 4, "status": "PASS" },
+    "focused_strict_typescript": { "status": "PASS", "files": ["src/lib/game/sim/option-command.ts", "src/lib/platform/desks.ts", "src/lib/platform/registry.ts"] },
+    "full_typecheck": { "status": "BLOCKED", "reason": "Missing @types/node and vite/client" },
+    "production_build": { "status": "BLOCKED", "reason": "Vite executable not installed" },
+    "browser_qa": { "status": "NOT_RUN" },
+    "live_database_auth_ai": { "status": "NOT_RUN" }
+  },
+  "catalog_audit": {
+    "options": 403,
+    "positive_political_capital_costs": 182,
+    "wait_category_options_with_positive_political_capital": 26,
+    "decision": "No new balance/ledger invented; keep as a documented economy/design blocker"
+  },
+  "panel_audit": {
+    "canonical_panels": 65,
+    "legacy_redirects": 11,
+    "legacy_sources_collide_with_canonical_ids": 11,
+    "canonical_resolver_passes_all_ids": true,
+    "legacy_targets_are_registered": true,
+    "old_resolver_behavior_preserved": true
+  },
+  "save_persistence": {
+    "option_identity_round_trip": "PASS",
+    "p4_retention_limit": 500,
+    "older_save_default": "empty list"
+  },
+  "security": {
+    "temporary_app_env_file_removed": true,
+    "credentials_included": false
+  }
+}

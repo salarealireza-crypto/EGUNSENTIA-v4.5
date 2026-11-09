@@ -1,0 +1,49 @@
+ROUND 6 PART 2 FOLLOW-UP VERIFICATION LOG — 2026-11-10
+Parent: CP23 Round 6 Part 2 preflight checkpoint
+Parent SHA-256: f9f36d0aa2d7a43351c5da42796133ed7645a7ee58b8d3088bd4fc0eb1d0b38a
+Underlying CP23 source ZIP SHA-256: 9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb
+
+PRECHECK
+- Immediate parent ZIP sidecar: PASS.
+- Immediate parent ZIP integrity: PASS.
+- Parent file inventory: 882/882 path, byte-size and SHA-256 matches.
+- package-lock SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b.
+- Direct package declarations: 71/71 match lock root (57 dependencies + 14 devDependencies).
+- Runtime: Node v22.16.0 / npm 10.9.2; node_modules absent.
+
+REGISTRY PREFLIGHT
+- getent ahosts registry.npmjs.org: DNS_LOOKUP_FAILED.
+- node dns.lookup: EAI_AGAIN.
+- curl https://registry.npmjs.org/-/ping: exit 6, could not resolve host.
+- npm ci --no-audit --no-fund: NOT ATTEMPTED per instruction after DNS failure.
+
+PASS
+1. Round 6 focused tests: 5/5.
+2. Combined Round 6 + Private Relations + Household + Gate 2 + Gameplay tests: 62/62.
+3. All scripts/**/*.test.mjs except scripts/game.test.mjs: 467/467 across 57 files.
+4. Canon verifier: PASS.
+5. Red Claw Household verifier: PASS; 14 warnings retained.
+6. Art structural verifier: PASS; 167 assets, 150 code-drawn, 17 preserved, 0 generated raster, 23 groups unfilled.
+7. Temporary .grok/app-env.json removed and absence verified.
+
+BLOCKED / INCOMPLETE
+8. Isolated scripts/game.test.mjs: ERR_MODULE_NOT_FOUND, package zod absent from src/lib/game/delta.ts import path.
+9. npm test: execution window reached 180 seconds; no final TAP summary. INCOMPLETE/TIMEOUT, not PASS.
+10. npm run typecheck: exit 2; TS2688 missing node and vite/client type definitions.
+11. npm run lint: exit 127; eslint not found.
+12. npm run build: exit 127; spawn vite ENOENT.
+13. node scripts/check-auth-invariant.mjs: exit 2; resolved VITE_AUTH_ENABLED unavailable without running dev server.
+14. Direct play.ts runtime import: ERR_MODULE_NOT_FOUND for @tanstack/react-start from src/lib/game/gm.ts.
+
+INFRASTRUCTURE NOT RUN
+- DATABASE_URL absent; psql, pg_isready, Docker and Podman unavailable.
+- XAI_API_KEY absent; no live provider integration.
+- Chromium present, but app build blocked; browser/responsive QA NOT RUN.
+- PostgreSQL persistence, production verification NOT RUN.
+- Visual Asset Pack CP14 ZIP absent; no art integration attempted.
+
+CLEANUP / SCOPE
+- No gameplay/source code, package files, lockfile, schema, migration, Canon, economy, or existing art modified.
+- No files deleted. Temporary .grok/app-env.json removed.
+- No node_modules, .env, credentials or secrets added.
+- Gate 2 remains PARTIAL/BLOCKED; Round 7 not started.

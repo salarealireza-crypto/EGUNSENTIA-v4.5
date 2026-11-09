@@ -1,0 +1,29 @@
+area,count,identities,authority,decision
+Core Private Relations female roster,25,WOMEN constant in private-relations.ts,CANON roster,Keep separate from proposal-only runtime entries.
+Additional canonical female cards outside core PR,2,Countess Seraphine von Aschen; Delegate Johanna Weiss,CANON character cards,Not household members and not in core PR roster.
+Canonical female profile scope audited in B1,27,25 core PR + 2 external canon card profiles,CANON cards,Do not present the two external envoys as household/PR members.
+Proposal-only former-partner entries in PR runtime,12,Historical profiles appended to Private Relations,PROPOSED_EXPANSION / READ-ONLY,Not Canon; not romantically eligible; no relationship or marriage event auto-created.
+Private Relations runtime roster total,37,25 canonical core entries + 12 proposed-only entries,MIXED RUNTIME VIEW,37 is not a count of Canon women.
+Current Dome household attendants,5,Jana; Mila; Alena; Bettina; Katya,CANON V14/V15 household detail,Attendants; not Iron Guard.
+Hanne Brauer,1,Senior staff for five attendants,CANON / APPROVED V15 DETAIL,Retired from active attendant roster; not a sixth attendant.
+Named permanent subordinate Iron Guard profiles,4,Sigrid Falk; Mira Voss; Anja Keller; Freja Dorn,CANON cards / PR roster,Elara commands; Captain Karin is separately described as reserve officer. Count convention remains unresolved.
+Iron Guard detail count wording,UNRESOLVED,Hotset: five women; Elara card: four guards; Karin card: five guards,CONFLICTING CANON SOURCE WORDING,Do not add unknown fifth identity or assume whether commander is included.
+Extended household registry total,100,Tier A/B/C registry; test requires unique cards,MIXED SOURCE STATUS,Not a single authoritative live census.
+Extended registry — CANON records,11,11 records,CANON,"9 permanent, 1 duty-based, 1 deceased."
+Extended registry — CANON_IDENTITY_WITH_PROPOSED_BIOGRAPHY,2,Christian Red III; Mirelda Grotsen,IDENTITY / relationship anchor Canon; biography and some graph edges proposed,Do not treat embedded proposed child/spouse edges as Canon.
+Extended registry — CANON_RECORD_WITH_UNRESOLVED_GENEALOGY,8,Ansgar; Ilka; Tobiah; Maren; Matthias; Greta; Hedda; Ewald,CANON RECORD / branch UNKNOWN,Do not assign family branch or exact genealogical degree.
+Extended registry — PROPOSED_EXPANSION,79,Proposal cards,PROPOSAL ONLY,Not Canon until owner approval and edge provenance.
+Residence labels — permanent,71,71 cards,MIXED,62/71 are proposals; only 9 are CANON permanent. Not an authoritative census.
+Residence labels — not-counted,24,24 cards,MIXED,8 Canon records with unresolved genealogy + 16 proposals.
+Residence labels — duty-based,1,Elara Red,CANON,Do not count as ordinary permanent resident.
+Father-generation household personnel,8,3 proposed male domestic staff + 5 proposed female Iron Guard,PROPOSED_EXPANSION ONLY,"Separate historical proposal; not current CAST, not Elara’s current guard unit."
+Raw sourceStatus subtotal,11,CANON,REGISTRY LABEL,Interpret only with edge-level provenance and proposal status.
+Raw sourceStatus subtotal,2,CANON_IDENTITY_WITH_PROPOSED_BIOGRAPHY,REGISTRY LABEL,Interpret only with edge-level provenance and proposal status.
+Raw sourceStatus subtotal,79,PROPOSED_EXPANSION,REGISTRY LABEL,Interpret only with edge-level provenance and proposal status.
+Raw sourceStatus subtotal,8,CANON_RECORD_WITH_UNRESOLVED_GENEALOGY,REGISTRY LABEL,Interpret only with edge-level provenance and proposal status.
+Raw residenceStatus subtotal,71,permanent,REGISTRY LABEL,Residence label is not proof of Canon status.
+Raw residenceStatus subtotal,2,deceased,REGISTRY LABEL,Residence label is not proof of Canon status.
+Raw residenceStatus subtotal,2,departed,REGISTRY LABEL,Residence label is not proof of Canon status.
+Raw residenceStatus subtotal,1,duty-based,REGISTRY LABEL,Residence label is not proof of Canon status.
+Raw residenceStatus subtotal,24,not-counted,REGISTRY LABEL,Residence label is not proof of Canon status.
+Verifier-reported active CAST entries in mixed registry,72,71 permanent-labeled + 1 duty-based,MIXED REGISTRY / INCLUDES PROPOSALS,Not a Canon-only current-household count; 62 of 71 permanent labels are PROPOSED_EXPANSION.

@@ -1,0 +1,101 @@
+{
+  "checkpoint": "CP13 partial",
+  "date": "2026-11-09",
+  "workstream": "C3 persistence integration — bounded source wiring slice",
+  "parent_checkpoint": "CP12",
+  "parent_sha256": "4bcce80dd5676714e0987c114b8cb649963a90a5856ead99019a38b21ac5ace6",
+  "status": {
+    "autosave_wiring": "Implemented",
+    "focused_persistence_tests": "Unit-tested",
+    "real_database_integration": "Blocked / Not Integration-tested",
+    "browser_verification": "Not run",
+    "production_verification": "Not run",
+    "gate2": "Partial"
+  },
+  "test_results": {
+    "focused_persistence": {
+      "total": 58,
+      "passed": 58,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "scripts_excluding_game_suite": {
+      "total": 449,
+      "passed": 449,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "full_npm_test": {
+      "total": 450,
+      "passed": 449,
+      "blocked": 1,
+      "status": "BLOCKED",
+      "blocker": "scripts/game.test.mjs cannot import missing zod"
+    },
+    "app_data_auth_separate": {
+      "total": 8,
+      "passed": 6,
+      "blocked": 2,
+      "blockers": [
+        "@tanstack/react-start missing",
+        "jose missing"
+      ]
+    },
+    "changed_ts_tsx_transpile": {
+      "total": 9,
+      "passed": 9,
+      "failed": 0,
+      "note": "Syntax/transpilation only; not semantic typecheck"
+    },
+    "canon_verifier": "PASS",
+    "red_claw_verifier": "PASS with existing provenance/chronology warnings",
+    "art_verifier": "FAIL / INCOMPLETE: 167 assets; 0 generated raster; 23 incomplete groups",
+    "typecheck": "BLOCKED: missing @types/node and vite/client",
+    "build": "BLOCKED: vite executable missing",
+    "lint": "BLOCKED: eslint executable missing"
+  },
+  "persistence_environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "node_modules_present": false,
+    "DATABASE_URL_present": false,
+    "BETTER_AUTH_SECRET_present": false,
+    "PGLITE_ALLOW_EPHEMERAL_present": false,
+    "postgres_tools_available": false,
+    "database_operations_run": false,
+    "browser_workflows_run": false
+  },
+  "implemented": [
+    "Central 400 ms debounced subscription to canonical Zustand GameSnapshot after hydration/reconciliation",
+    "Ignore changes outside canonical snapshot, including notice-only UI state",
+    "Coalesce concurrent flushes for identical serialized snapshots",
+    "Keep existing latest-save queue and expected-revision compare-and-swap protection",
+    "Return explicit persistent/ephemeral/unchanged/superseded/blocked/failed flush outcomes",
+    "Classify PostgreSQL/Neon as persistent and PGlite as ephemeral in server save responses",
+    "Preserve storage classification through save-conflict account/device choice",
+    "Do not mark an empty account with no row as already containing local seed snapshot",
+    "Show pending/account-committed/ephemeral/device-only statuses on Command Deck and Council receipts"
+  ],
+  "parent_discrepancy": {
+    "cp12_zip_integrity": "PASS",
+    "cp12_zip_sha256_matches_sidecar": true,
+    "cp12_archive_files": 739,
+    "initial_working_copy_files": 741,
+    "working_copy_only_prior_edits": [
+      "src/lib/game/store.ts — Council local-pending notice wording",
+      "scripts/game.test.mjs — matching expected notice text"
+    ],
+    "resolution": "Both prior edits explicitly carried forward into CP13; immutable CP12 archive not changed."
+  },
+  "security": {
+    "temporary_app_env_used_for_tests": true,
+    "temporary_app_env_removed": true,
+    "credentials_added": false,
+    "package_manifests_changed": false,
+    "lockfile_changed": false
+  },
+  "integration_matrix": "STAGE47_GATE2_ROUND3_PART2_PERSISTENCE_MATRIX_2026-11-09.csv",
+  "verification_log": "STAGE47_GATE2_ROUND3_PART2_VERIFICATION_LOG_2026-11-09.txt",
+  "report": "STAGE47_GATE2_ROUND3_PART2_PERSISTENCE_AUTOSAVE_REPORT_2026-11-09.md",
+  "handoff": "STAGE47_GATE2_ROUND3_PART2_HANDOFF_2026-11-09.md"
+}

@@ -1,0 +1,23 @@
+Area,Command / evidence,Result,Classification,Notes
+Archive,SHA-256 + ZipFile.testzip + fresh extraction,PASS,Integrity,Parent hash verified; 927 parent file entries extracted and size-checked
+Dependency consistency,package.json vs package-lock root,71/71 match,PASS,57 dependencies + 14 devDependencies; lockfile v3; 472 package records
+Registry,getent / Node DNS / curl official registry,EAI_AGAIN / exit 6,BLOCKED,npm ci not attempted
+Round 6 focused,round6-character-integration.test.mjs,5/5,PASS,Source/unit verification only
+Combined focused,Round 6 + Private Relations + Household + Gate 2 Round 3 + Gameplay,62/62,PASS,Source/unit verification only
+Script suite,57 scripts test files excluding game.test.mjs,467/467,PASS,No skipped or todo tests
+Canon,scripts/verify-canon.mjs,PASS,PASS,65-panel registry and source invariants
+Red Claw,scripts/verify-red-claw-household.mjs,PASS + 14 warnings,PASS WITH WARNINGS,Warnings retained; no Canon promotion
+Art structure,scripts/verify-art.mjs --structure,PASS; 23 groups unfilled,PARTIAL,"167 existing assets, no generated raster art"
+Leak scanner,Direct leak.ts smoke,2 caught / 3 benign accepted,LIMITED PASS,Not full auditWorld or 30-day simulation
+TS App Data/Auth batch,4 TypeScript test files,6 pass / 2 import blocked,PARTIAL,Missing @tanstack/react-start and jose
+Game suite,npm run test:game,exit 1,BLOCKED,Missing zod imported by src/lib/game/delta.ts
+Typecheck,npm run typecheck,exit 2,BLOCKED,Missing node and vite/client type definitions
+Lint,npm run lint,exit 127,BLOCKED,eslint not found
+Build,npm run build,exit 127,BLOCKED,Vite spawn ENOENT
+AL runtime/provider,runtime import / provider,NOT RUN,NOT RUN,Missing runtime package; no XAI_API_KEY
+PostgreSQL,commit/reload/restart,NOT RUN,NOT RUN,No DATABASE_URL or PostgreSQL backend/tools
+Browser QA,desktop/mobile interaction,NOT RUN,NOT RUN,No build or running app
+Production,production verification,NOT RUN,NOT RUN,No production verification
+Visual pack,CP14 asset package,NOT ATTEMPTED,NOT SUPPLIED,Separate asset workstream
+Gate 2 / Round 6,acceptance status,PARTIAL / BLOCKED,NOT ACCEPTED,Political Capital contract unresolved
+Round 7,scope gate,NOT STARTED,GATED,Do not begin

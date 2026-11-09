@@ -1,0 +1,104 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": "47",
+  "gate": "2",
+  "round": "3",
+  "part": "3",
+  "date": "2026-11-09",
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP13-ROUND3-PART3-C3-SOURCE-AUDIT-PARTIAL-CP14-2026-11-09.zip",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP12-ROUND3-PART2-PARTIAL-CP13-2026-11-09.zip",
+  "parent_sha256": "7589cde965aee8681f1afec552ce6f3c45214f681acc23ecc87cfd5d4ca24fc8",
+  "status": {
+    "source_audit": "completed",
+    "unit_tests": "pass",
+    "integration": "blocked",
+    "browser": "not_started",
+    "production": "not_run",
+    "gate2": "partial"
+  },
+  "tests": {
+    "focused_persistence": {
+      "passed": 58,
+      "failed": 0
+    },
+    "runnable_scripts_excluding_game_test": {
+      "passed": 449,
+      "failed": 0
+    },
+    "canon_verifier": "pass"
+  },
+  "dependency_install": {
+    "command": "npm ci --no-audit --no-fund",
+    "result": "timed_out_at_180_seconds",
+    "diagnostic_output": "not_captured_completely",
+    "cleanup": "partial node_modules removed; no npm process remained",
+    "lockfile_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b"
+  },
+  "environment": {
+    "DATABASE_URL": "unset",
+    "BETTER_AUTH_SECRET": "unset",
+    "PGLITE_ALLOW_EPHEMERAL": "unset",
+    "postgres_tools": "not_found",
+    "node_modules": "absent",
+    "temporary_app_env": "removed"
+  },
+  "source_findings": [
+    {
+      "id": "F-C3-01",
+      "finding": "persistSave uses authenticated context.userId and expectedRevision CTE update/insert; DB execution not observed.",
+      "files": [
+        "src/lib/game/save.ts",
+        "src/lib/auth/middleware.ts"
+      ],
+      "classification": "source-audited"
+    },
+    {
+      "id": "F-C3-02",
+      "finding": "Production DB policy requires DATABASE_URL; PGlite is ephemeral preview/local only.",
+      "files": [
+        "src/lib/db-runtime-policy.mjs",
+        "src/lib/db.ts"
+      ],
+      "classification": "source-audited"
+    },
+    {
+      "id": "F-C3-03",
+      "finding": "Migration runner wraps each migration in BEGIN/advisory lock/COMMIT and ROLLBACK on error; real migration not run.",
+      "files": [
+        "scripts/migrate.mjs",
+        "scripts/migration-transaction.mjs"
+      ],
+      "classification": "source-audited"
+    },
+    {
+      "id": "F-C3-04",
+      "finding": "Option/Council command identities exist in campaign snapshot; timeout/replay/multi-session behavior remains unverified.",
+      "files": [
+        "src/lib/game/store.ts",
+        "src/lib/game/sim/option-command.ts",
+        "src/lib/game/sim/council.ts"
+      ],
+      "classification": "source-audited"
+    },
+    {
+      "id": "F-C3-05",
+      "finding": "lastReceipt is normalized in P4 snapshot, but receiptOpen/receiptPersistence are component-local and are not restored by these UI paths on reload.",
+      "files": [
+        "src/lib/game/p4-simulation.ts",
+        "src/components/game/CommandDeck.tsx",
+        "src/components/game/V45PanelBody.tsx"
+      ],
+      "classification": "source-level-gap"
+    }
+  ],
+  "no_changes": {
+    "game_source": true,
+    "canon": true,
+    "save_schema": true,
+    "migrations": true,
+    "package_manifest": true,
+    "package_lock": true,
+    "deleted_files": 0
+  },
+  "next_step": "Configure a real isolated PostgreSQL test environment via protected provider settings, install exact lockfile dependencies, address receipt reconstruction, then run C3.1-C3.10 through actual authenticated command paths before proceeding to C4."
+}

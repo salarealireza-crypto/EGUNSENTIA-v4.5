@@ -1,0 +1,73 @@
+EGUNSENTIA — Stage 47 Round 3 Part 2 verification log
+Date: 2026-11-09
+Working copy: EGUNSENTIA_ROUND3_WORKING_COPY
+Parent: CP12 (immutable)
+
+1) Parent checkpoint integrity
+Command: sha256sum /mnt/data/EGUNSENTIA-STAGE47-POST-CP11-ROUND3-PART1-PARTIAL-CP12-2026-11-09.zip
+Result: 4bcce80dd5676714e0987c114b8cb649963a90a5856ead99019a38b21ac5ace6
+Sidecar content matched exactly.
+Command: unzip -tq /mnt/data/EGUNSENTIA-STAGE47-POST-CP11-ROUND3-PART1-PARTIAL-CP12-2026-11-09.zip
+Result: PASS — no errors detected in compressed data.
+Direct parent ZIP vs initial working-copy comparison: 739 parent files; 741 working-copy files; 2 present only in working copy; 9 modified; 0 deleted. The two pre-existing Part 1 edits were store.ts Council notice wording and matching scripts/game.test.mjs expectation; both are carried forward explicitly in CP13.
+
+2) Focused persistence/save tests
+Command:
+node --experimental-strip-types --test scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+Result: PASS — 58 tests, 58 pass, 0 fail.
+Coverage: debounce/coalescing, notice-only state ignored, listener cleanup, in-flight duplicate flush dedupe, different snapshot separation, empty-account no-row baseline, receipt persistence wording, save queue, revision CAS policy, serialization validation, error classification, lifecycle retry policy and migration transaction helper.
+
+3) Repository script tests excluding the one dependency-blocked game suite
+Temporary non-secret test-only config (removed after run): .grok/app-env.json with {"VITE_AUTH_ENABLED":"true"}.
+Command:
+mapfile -t tests < <(find scripts -maxdepth 1 -name '*.test.mjs' ! -name 'game.test.mjs' -print | sort)
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test "${tests[@]}"
+Result: PASS — 449 tests, 449 pass, 0 fail.
+
+4) Full npm test
+Command: npm test (same temporary non-secret app-env config, removed after run)
+Result: 450 discovered; 449 pass; 1 blocked test file. scripts/game.test.mjs fails before tests load because Node cannot import package 'zod' from src/lib/game/delta.ts (ERR_MODULE_NOT_FOUND). This is an environment/dependency blocker, not a test assertion failure.
+
+5) Separate app-data/auth TypeScript test group
+Command:
+node --experimental-strip-types --test src/lib/app-data/app-data.test.ts src/lib/app-data/readiness-schedule.test.ts src/lib/auth/gate-identity.test.ts src/lib/auth/sign-in-gate.test.ts
+Result: 8 tests; 6 pass; 2 blocked at module import because @tanstack/react-start and jose are absent. No dependency installation was attempted.
+
+6) Changed TypeScript/TSX syntax/transpilation
+Method: TypeScript 5.8.3 global transpileModule with ES2022 / ESNext / React JSX / isolatedModules for:
+src/lib/game/save.ts
+src/lib/game/play.ts
+src/lib/game/save-autosave.ts
+src/components/game/GameShell.tsx
+src/components/game/CommandDeck.tsx
+src/components/game/V45PanelBody.tsx
+src/components/platform/Receipt.tsx
+src/components/game/SaveConflictBanner.tsx
+src/lib/game/store.ts
+Result: PASS 9/9. This is syntax/transpilation only, not semantic typecheck.
+
+7) Canon and art verification
+Command: npm run verify:canon
+Result: PASS — 65-panel canon registry, invariants, 167 assets, preserved art and all option catalogs verified.
+Command: npm run verify:red-claw
+Result: PASS with warnings — 100 cards; 71 proposed residents; 72 active CAST entries; 12 former partners read-only. Warnings for 12 proposed relationship birth-date ages and the unresolved Floor 7 genealogy / Elara-Luka-Christian chronology remain.
+Command: node scripts/verify-art.mjs
+Result: FAIL / INCOMPLETE — 167 assets; 0 generated raster; 150 code-drawn; 17 preserved; 23 incomplete asset groups.
+
+8) Typecheck/build/lint
+Command: npm run typecheck
+Result: BLOCKED — TS2688 missing type definition file 'node' and 'vite/client'.
+Command: npm run build
+Result: BLOCKED — with-app-env cannot spawn vite: ENOENT.
+Command: npm run lint
+Result: BLOCKED — eslint executable not found.
+Command: npm run test:game
+Result: BLOCKED — ERR_MODULE_NOT_FOUND: package 'zod' absent.
+
+9) Persistence environment
+Observed: Node v22.16.0; npm 10.9.2; node_modules absent; DATABASE_URL unset; BETTER_AUTH_SECRET unset; PGLITE_ALLOW_EPHEMERAL unset; psql/postgres/pg_isready/docker commands unavailable. No real DB migration or SQL operation was executed. No browser app was started. No database commit, reload, backend restart, UI persisted-state verification, Production test, or backup restoration was performed.
+
+10) Security/package checks
+Temporary .grok/app-env.json was deleted after tests. No .env file other than .env.example was found. No credentials were added. package.json and package-lock.json were not changed. node_modules and build outputs are not included.
+
+Overall status: autosave/persistence wiring IMPLEMENTED and UNIT-TESTED; C3 real backend integration remains BLOCKED / NOT Integration-tested; Browser-verified and Production-verified remain NOT RUN. Gate 2 remains PARTIAL.

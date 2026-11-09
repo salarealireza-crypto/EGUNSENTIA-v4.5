@@ -1,0 +1,24 @@
+path,change_type,reason
+STAGE47_ROUND4_LOCKED_DEPENDENCY_INVENTORY_2026-11-09.csv,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+STAGE47_ROUND4_ENVIRONMENT_AND_ACCEPTANCE_MATRIX_2026-11-09.csv,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+STAGE47_ROUND4_DEPENDENCY_RECOVERY_REPORT_2026-11-09.md,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+STAGE47_ROUND4_DEPENDENCY_RECOVERY_HANDOFF_2026-11-09.md,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+STAGE47_ROUND4_ACCEPTANCE_MATRIX_2026-11-09.csv,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+STAGE47_ROUND4_EVIDENCE_2026-11-09.json,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+STAGE47_ROUND4_VERIFICATION_LOG_2026-11-09.txt,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+WORKLOG-68.md,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/focused-g2.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/runnable-scripts-concurrency4.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/persistence-focused.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/npm-test.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/app-auth-tests.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/typecheck.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/build.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/lint.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/canon.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/art.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/red-claw.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+docs/round4-dependency-recovery/auth-invariant.log,ADDED,"Round 4 dependency recovery, verification evidence and handoff"
+RECOVERY_PROGRESS.md,MODIFIED,Round 4 status and next-step documentation
+STAGE47_REPAIR_ROADMAP_2026-11-09.md,MODIFIED,Round 4 status and next-step documentation
+EGUNSENTIA_RELEASE_CHECKPOINTS.md,MODIFIED,Round 4 status and next-step documentation

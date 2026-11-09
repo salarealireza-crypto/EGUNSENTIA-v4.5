@@ -1,0 +1,61 @@
+EGUNSENTIA — Tactical Dependency Recovery Verification Log
+Date: 2026-11-09
+Parent: CP16 (immutable)
+Working copy: egunsentia_cp16_resume/working
+Scope: D1 environment/package audit; Zod install remains blocked by execution-runtime DNS.
+
+1) Parent archive
+SHA-256: 1bd3504c1b5fce7fdb3538b9c4014ed80bdae936429ae94f72cc5824ee5d1f8c
+unzip -tq: PASS
+
+2) Package manifest and lockfile
+Node: v22.16.0
+npm: 10.9.2
+Registry: https://registry.npmjs.org/
+Lockfile version: 3
+Direct dependencies: 57
+Direct devDependencies: 14
+Root direct declaration-to-lock comparison: 71/71 match; zero mismatches.
+Zod manifest range: ^4.4.0
+Zod lock version: 4.6.5
+Zod lock tarball: https://registry.npmjs.org/zod/-/zod-4.6.5.tgz
+package.json SHA-256: f33db47e9c69f1919406896834b860721e8f3042bd362cffbd4f3d29fd063103
+package-lock.json SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b
+
+3) Zod availability
+src/lib/game/delta.ts:1 imports { z } from "zod".
+npm cache ls zod: no cached entries.
+npm ls zod after cleanup: (empty).
+ESM smoke import: BLOCKED, ERR_MODULE_NOT_FOUND resolving node_modules/zod/index.js.
+npm run test:game: BLOCKED before assertions load; scripts/game.test.mjs imports src/lib/game/delta.ts.
+
+4) Registry connectivity
+npm ping --fetch-retries=0 --fetch-timeout=15000: BLOCKED, EAI_AGAIN getaddrinfo registry.npmjs.org.
+curl -I https://registry.npmjs.org/: BLOCKED, Could not resolve host.
+curl --noproxy '*' -I https://registry.npmjs.org/: BLOCKED, same DNS resolution failure.
+Proxy variables HTTP_PROXY / HTTPS_PROXY / ALL_PROXY are unset.
+Official npm status page reported all systems operational on 2026-11-09 (package installation Operational); no general npm outage is established.
+
+5) Test runs after removal of incomplete node_modules
+Focused suite command:
+node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+Result: 70/70 PASS.
+
+Runnable scripts command (temporary app-env only for test run; removed immediately):
+mapfile -t tests < <(find scripts -maxdepth 1 -name '*.test.mjs' ! -name 'game.test.mjs' -print | sort)
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test "${tests[@]}"
+Result: 461/461 PASS, 56 files.
+
+Full npm test: 462 discovered; 461 PASS; 1 FAIL at import because zod is absent. No other failing assertions.
+npm run typecheck: BLOCKED, TS2688 missing type definition files node and vite/client.
+npm run build: BLOCKED, spawn vite ENOENT.
+npm run lint: BLOCKED, eslint not found.
+node scripts/verify-canon.mjs: PASS.
+node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs: PASS with 14 warnings.
+
+6) Cleanup and integrity
+The incomplete node_modules tree from prior failed installation was removed; no partial package tree retained.
+Temporary .grok/app-env.json containing only VITE_AUTH_ENABLED=true was removed.
+No npm process remained running.
+package.json and package-lock.json hashes unchanged.
+No code, Canon, Save schema, migrations, package files, secrets or economy rules changed.

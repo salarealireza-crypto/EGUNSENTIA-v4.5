@@ -1,0 +1,37 @@
+{
+  "checkpoint": "CP7",
+  "stage": 47,
+  "gate": 2,
+  "round": 3,
+  "date": "2026-11-09",
+  "parent_archive": "EGUNSENTIA-STAGE47-GATE2-ROUND2-CP6-2026-11-09.zip",
+  "parent_sha256": "7c8fc661ff7ea21c4871e6c1aaa632c3d946321484c87c9f87b0a114005cbc3b",
+  "tests": {
+    "focused_gate2_round3_and_related": {"passed": 29, "failed": 0},
+    "runnable_script_suite_excluding_game_test": {"passed": 400, "failed": 0, "excluded": "scripts/game.test.mjs", "reason": "Cannot load: package zod is not installed."},
+    "strict_typescript_subset": {"status": "PASS", "files": ["src/lib/game/p4-simulation.ts", "src/lib/game/sim/council.ts", "src/lib/game/sim/investigation-cases.ts", "src/lib/platform/options/execute.ts"], "note": "Resolved dependency graph included."},
+    "changed_typescript_transpile": {"passed": 8, "failed": 0},
+    "mjs_syntax": {"passed": 74, "failed": 0},
+    "canon_verification": {"status": "PASS", "panels": 65, "assets": 167, "option_catalogs": "verified"},
+    "full_project_typecheck": {"status": "BLOCKED", "reason": "Dependency installation is incomplete."},
+    "production_build": {"status": "BLOCKED", "reason": "Local Vite dependency is unavailable."},
+    "browser_and_live_integrations": {"status": "NOT RUN"}
+  },
+  "catalog_audit": {
+    "options": 403,
+    "positive_political_capital_costs": 182,
+    "wait_category_options": 26,
+    "nonempty_resource_costs": 0,
+    "personnel_cost_options": 0,
+    "unresolved": "No authoritative political-capital balance/ledger exists; do not invent a balance or treat the cost as paid."
+  },
+  "preservation": {
+    "parent_file_count": 620,
+    "all_parent_files_preserved": true,
+    "expected_modified_parent_files": 11,
+    "new_files": 6,
+    "final_project_file_count": 626,
+    "inventory_self_row_excluded": true
+  },
+  "release_status": "NOT A RELEASE CANDIDATE; GATE 2 REMAINS PARTIAL"
+}

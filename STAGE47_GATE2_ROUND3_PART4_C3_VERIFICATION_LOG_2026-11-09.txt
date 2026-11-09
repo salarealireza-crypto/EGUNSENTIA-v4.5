@@ -1,0 +1,71 @@
+EGUNSENTIA — Stage 47 / Gate 2 / Round 3 Part 4 verification log
+Date: 2026-11-09
+Parent: CP14 (immutable)
+Working copy: CP14_WORKING_COPY
+Scope: source-level C3.8 Receipt reconstruction; no DB integration claim.
+
+1) CP14 parent integrity
+- Parent archive SHA-256: 733e5e649337948fde0e2b069eddfa86246b308272f8b377038550a51b1722f9
+- Sidecar matched; `unzip -tq` PASS; 759 members.
+- Parent package-lock SHA-256 matched its inventory: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b.
+- CP14 remains unchanged; CP15 work occurred in a separate extracted directory.
+
+2) Receipt helper and focused persistence tests
+Command:
+node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+Result: PASS — 66 tests, 66 pass, 0 fail.
+New helper tests: 5. New source-contract regression tests in save-autosave.test.mjs: 3.
+Coverage: stable Receipt fingerprint, changed content fingerprint, invalid/circular slip handling, only server-classified persistent/ephemeral mapping, missing Receipt -> device-only, GameShell restore path, transient state excluded from snapshot/persist allowlist, and navigation does not downgrade the confirmed Receipt status.
+
+3) Runnable script suite excluding the Zod-dependent test file
+Temporary non-secret local config created for the run:
+.grok/app-env.json = {"VITE_AUTH_ENABLED":"true"}
+Command:
+mapfile -t tests < <(find scripts -maxdepth 1 -name '*.test.mjs' ! -name 'game.test.mjs' -print | sort)
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test "${tests[@]}"
+Result: PASS — 457 tests, 457 pass, 0 fail.
+Temporary `.grok/app-env.json` removed immediately after the run. No secret value was present.
+
+4) Full npm test
+Same temporary non-secret config used and removed after run.
+Command: npm test
+Result: 458 discovered; 457 pass; 1 blocked file.
+Blocked file: scripts/game.test.mjs.
+Exact error: ERR_MODULE_NOT_FOUND: Cannot find package 'zod' imported from src/lib/game/delta.ts.
+This is an import/dependency blocker before assertions load; full npm test is not PASS.
+
+5) Canon and Red Claw
+- Command: node scripts/verify-canon.mjs
+  Result: PASS — 65-panel Canon registry, invariants, 167 registered assets and option catalogs verified.
+- Command: node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs
+  Result: PASS with 14 warnings: 12 proposed relationship-age/birth-date warnings, missing sealed Floor 7 genealogy ledger warning, Elara/Luka/Christian chronology warning.
+- Command: node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-art.mjs
+  Result: FAIL / INCOMPLETE — 167 assets total; 0 generated raster, 150 code-drawn, 17 preserved; 23 incomplete groups.
+
+6) TS/TSX syntax/transpilation
+- TypeScript transpileModule: 7/7 changed TS/TSX files PASS.
+- `receipt-persistence.d.mts`: parser check PASS.
+- This is syntax/transpilation only, NOT semantic typecheck.
+
+7) Full project verification attempts
+- `npm run typecheck`: BLOCKED; TS2688: missing type definition file for `node` and `vite/client`.
+- `npm run build`: BLOCKED; `scripts/with-app-env.mjs` reports `spawn vite EACCES`.
+- `npm run lint`: BLOCKED; `eslint: Permission denied`.
+- `npm ci --no-audit --no-fund`: not retried in Part 4; CP14 logged a 180-second timeout and removed partial node_modules.
+- No `node_modules` remains. package-lock unchanged.
+
+8) Persistence integration environment
+- DATABASE_URL: unset.
+- BETTER_AUTH_SECRET: unset.
+- PGLITE_ALLOW_EPHEMERAL: unset.
+- PostgreSQL / psql / pg_isready / Docker: unavailable in runtime.
+- No migration, DB transaction, command commit, server restart, account reload, browser session, or Production verification ran.
+- C3 remains BLOCKED / PARTIAL; Gate 2 remains PARTIAL.
+
+9) Package hygiene (pre-packaging)
+- Temporary `.grok/app-env.json`: removed.
+- node_modules: absent.
+- package manifest / lockfile: unchanged.
+- Save schema / migrations: unchanged.
+- Canon: unchanged.
+- Deleted files: 0.

@@ -1,0 +1,25 @@
+# Dependencies and build output
+node_modules/
+dist/
+build/
+coverage/
+playwright-report/
+test-results/
+.turbo/
+.vercel/
+
+# Local secrets and environment files
+.env
+.env.*
+!.env.example
+!.env.sample
+
+# Local databases and runtime artifacts
+*.db
+*.sqlite
+*.sqlite3
+*.log
+.DS_Store
+
+# Workspace-injected runtime configuration (regenerate locally)
+.grok/app-env.json

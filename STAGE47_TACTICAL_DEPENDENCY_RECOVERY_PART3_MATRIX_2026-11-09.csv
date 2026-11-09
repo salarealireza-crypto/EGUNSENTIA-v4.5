@@ -1,0 +1,21 @@
+id,area,observed,expected,actual,status,evidence
+D2-CP18,Checkpoint integrity,CP18 archive + sidecar,Hash and ZIP valid,78149d2064419ff1c3e5d6d44b4a7617a2ac4b9dded089e4df776ab328f32ab7; 798 entries; unzip pass,PASS,CP18 archive and sidecar
+D2-REGISTRY,DNS to npm registry,registry.npmjs.org,Hostname resolves,EAI_AGAIN; getent returns no address; npm ping fail,BLOCKED,CP19 verification log
+D2-CURL,HTTPS npm registry,registry.npmjs.org:443,HTTPS response,Could not resolve host,BLOCKED,CP19 verification log
+D2-DOH-CF,Direct Cloudflare DNS HTTPS,1.1.1.1:443,DoH JSON response,Connection failed immediately; curl exit 7,BLOCKED,CP19 verification log
+D2-DOH-GOOGLE,Direct Google DNS HTTPS,8.8.8.8:443,DoH JSON response,Connection failed immediately; curl exit 7,BLOCKED,CP19 verification log
+D2-ZOD,Local Zod package/cache,Lock 4.6.5,Package or tarball available locally,No npm cache entry and no local package found,BLOCKED,package-lock; npm cache ls; filesystem search
+D2-NPMCI,Exact lock install,CP18 lock unchanged,Install exact tree,Not retried after DNS preflight failed; prior CP18 install failed on EAI_AGAIN,Blocked by network; not retried by design,CP18 handoff; CP19 DNS probes
+D2-FOCUSED,Focused persistence suite,70 known focused tests,All pass,70/70 PASS,Unit-tested,CP18 working copy test log
+D2-SCRIPTS,Runnable scripts excluding game.test,56 files,All runnable assertions pass,461/461 PASS,Unit-tested,CP18 working copy test log
+D2-CANON,Canon verifier,CP18 project,Canonical registry passes,PASS: 65 panels, 167 assets, option catalogs,Unit-tested,CP18 canon log
+D2-GAME,Game test import,src/lib/game/delta.ts imports zod,Game suite loads,ERR_MODULE_NOT_FOUND zod before assertions,Blocked,CP18 game test log
+D2-APP-AUTH,App-data/auth tests,Required dependencies installed,All tests load,6 pass / 2 import blocked: @tanstack/react-start and jose,Partial / Blocked,CP18 app-auth log
+D2-FULL-NPM,Full npm test,All test suites,Full final summary,Timeout at 120s; last observed subtest #346; no final summary,Timeout / Incomplete,CP18 npm test log
+D2-TYPECHECK,Semantic TS typecheck,Dependencies installed,tsc exits 0,TS2688 missing node and vite/client,Blocked,CP18 typecheck log
+D2-BUILD,Vite production build,Vite installed,Build succeeds,spawn vite ENOENT,Blocked,CP18 build log
+D2-LINT,ESLint,ESLint installed,Lint exits 0,eslint not found,Blocked,CP18 lint log
+D2-LOCK,Lockfile integrity,CP18 lockfile,Hash unchanged,72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b,PASS,sha256sum package-lock.json
+D2-CLEANUP,Temporary artifacts,Test run files,No temporary env or partial install,.grok/app-env.json absent; node_modules absent; no npm process,PASS,Post-run filesystem/process checks
+C3,Persistence integration,No DATABASE_URL or PG backend,Real command commit reload matrix,Not run,Blocked,CP18 C3 handoff
+GATE2,Gate 2,C3 not accepted,C3 before C4,PARTIAL; C4 not started,Partial,Master Prompt and CP19 handoff

@@ -1,0 +1,37 @@
+ROUND 6 PART 1 VERIFICATION LOG — 2026-11-09
+Parent CP22 SHA-256: 656c2352bcadf7a6597fb7c857a6e9804541691f82d517df930b9531262140a3
+
+PASS
+1) node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/round6-character-integration.test.mjs
+   5 tests, 5 pass, 0 fail.
+2) node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/round6-character-integration.test.mjs scripts/private-relations.test.mjs scripts/red-claw-household.test.mjs scripts/gate2-round3.test.mjs scripts/gameplay-integration.test.mjs
+   62 tests, 62 pass, 0 fail.
+3) node --experimental-strip-types --import ./scripts/register-ts.mjs --test [all scripts/**/*.test.mjs except scripts/game.test.mjs]
+   57 files; 467 tests, 467 pass, 0 fail. A temporary non-secret .grok/app-env.json containing only VITE_AUTH_ENABLED=true was present for the run and removed immediately afterward.
+4) node scripts/verify-canon.mjs
+   PASS: 65-panel registry, invariants, 167 assets, preserved art, all option catalogs.
+5) node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs
+   PASS; 100 cards A20/B30/C50; 72 mixed active CAST entries; 12 former-partner proposals; 14 warnings retained.
+
+BLOCKED / FAIL TO LOAD (environment/dependency, not assertion failures)
+6) npm test
+   467 pass / 1 suite load failure. scripts/game.test.mjs cannot import zod from src/lib/game/delta.ts: ERR_MODULE_NOT_FOUND.
+7) npm run typecheck
+   TS2688: Cannot find type definition file for 'node' and 'vite/client'.
+8) npm run build
+   spawn vite ENOENT.
+9) npm run lint
+   eslint: not found.
+10) Direct runtime import of src/lib/game/play.ts for compactState probe
+    ERR_MODULE_NOT_FOUND: @tanstack/react-start imported by src/lib/game/gm.ts.
+
+NOT RUN
+- PostgreSQL / persistent DB integration, real Store action-to-commit-to-reload path.
+- Browser UI and responsive QA.
+- Production deployment verification.
+
+CLEANUP
+- .grok/app-env.json absent after test run.
+- node_modules absent.
+- No .env, credentials or secrets added.
+- package.json and package-lock.json unchanged.

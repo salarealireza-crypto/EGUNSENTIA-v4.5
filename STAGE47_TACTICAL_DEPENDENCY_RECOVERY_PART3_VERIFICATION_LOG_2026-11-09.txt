@@ -1,0 +1,56 @@
+EGUNSENTIA — Stage 47 / Tactical Dependency Recovery Part 3 verification log
+Date: 2026-11-09
+Parent: CP18 (immutable)
+Working copy: EGUNSENTIA_CP18_CONTINUATION_WORKING_COPY
+Scope: D2 DNS/egress recheck and CP18 test re-verification; no dependency or source changes.
+
+1) Parent integrity
+- sha256sum CP18 ZIP: 78149d2064419ff1c3e5d6d44b4a7617a2ac4b9dded089e4df776ab328f32ab7
+- Sidecar content matched.
+- unzip -tq: PASS; no compressed-data errors.
+- Parent archive entries: 798.
+- Fresh extraction contains 798 files.
+
+2) Runtime
+- Node: v22.16.0.
+- npm: 10.9.2.
+- npm registry: https://registry.npmjs.org/.
+- npm offline: false.
+- HTTP_PROXY / HTTPS_PROXY / ALL_PROXY empty; no_proxy contains localhost/127.0.0.1.
+- getent ahosts registry.npmjs.org: no records; exit 2.
+- npm ping --fetch-retries=0 --fetch-timeout=8000: EAI_AGAIN getaddrinfo registry.npmjs.org.
+- curl -I https://registry.npmjs.org/: curl (6), Could not resolve host.
+- HTTPS DoH attempt to https://1.1.1.1/dns-query: curl (7), could not connect.
+- HTTPS DoH attempt to https://8.8.8.8/resolve: curl (7), could not connect.
+- No resolver/routing/system config was changed.
+
+3) Manifest and Zod
+- package.json: 57 dependencies, 14 devDependencies.
+- Zod declaration: ^4.4.0.
+- package-lock version: 3; locked Zod: 4.6.5; tarball URL/integrity remain in lock.
+- src/lib/game/delta.ts imports zod.
+- package-lock SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b.
+- npm cache ls zod: no entries.
+- Local filesystem search under common global/local package roots and /mnt/data: no Zod package or zod-4.6.5.tgz.
+- npm ci was not retried after DNS preflight failed; CP18 Part 2 already attempted exact-lock install and documented tarball EAI_AGAIN failures.
+
+4) Tests
+- Focused command: node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+- Result: 70/70 PASS.
+- Runnable scripts (excluding scripts/game.test.mjs): 461/461 PASS across 56 top-level files.
+- node scripts/verify-canon.mjs: PASS; 65-panel registry, invariants, 167 assets and option catalogs.
+- Direct game suite import: ERR_MODULE_NOT_FOUND; cannot find package zod imported from src/lib/game/delta.ts; assertions did not load.
+- App-data/auth batch: 8 discovered; 6 pass; 2 import-blocked because @tanstack/react-start and jose are absent.
+- Full npm test was attempted with temporary non-secret .grok/app-env.json containing only VITE_AUTH_ENABLED=true. Command exceeded 120-second tool timeout. Log ends after observed subtest #346; no final test summary exists. This attempt is TIMEOUT/INCOMPLETE, not PASS. Temporary app-env was removed afterward.
+- npm run typecheck: exit 2; TS2688 cannot find type definition files node and vite/client.
+- npm run build: exit 127; spawn vite ENOENT.
+- npm run lint: exit 127; eslint not found.
+
+5) Cleanup
+- .grok/app-env.json absent after run.
+- node_modules absent after run.
+- No npm install process remained.
+- package.json and package-lock.json hashes match CP18.
+
+6) Disposition
+D1 complete; D2 blocked by runtime DNS/egress. C3 and Gate 2 remain PARTIAL/BLOCKED. C4 not started. No source, manifest, lockfile, Canon, Save schema/migration, game economy or secret changed.

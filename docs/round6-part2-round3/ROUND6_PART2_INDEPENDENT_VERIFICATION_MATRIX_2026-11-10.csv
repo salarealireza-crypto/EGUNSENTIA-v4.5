@@ -1,0 +1,19 @@
+workstream,check,command_or_evidence,result,classification,limitation
+Integrity,Immediate parent archive,SHA-256 + zipfile.testzip + byte/size/hash compare,PASS; 989 entries / 907 files,PASS,Parent immutable
+Registry,Official npm DNS,getent + Node dns.lookup,EAI_AGAIN,BLOCKED,Do not run npm ci
+Registry,Official npm HTTPS,curl https://registry.npmjs.org/-/ping,curl exit 6; host unresolved,BLOCKED,Official registry only
+Dependencies,Lock consistency,package.json root vs package-lock.json,71/71; lock SHA unchanged,PASS,No install performed
+Round 6,Focused character integration,node --test round6-character-integration.test.mjs,5/5,PASS,Source/unit only
+Round 6,Combined focused regressions,five focused suites,62/62,PASS,Source/unit only
+Scripts,Runnable scripts excluding game suite,57 files; node --test,467/467,PASS,Excludes Zod-dependent scripts/game.test.mjs
+Leak scan,Direct scanner smoke,src/lib/platform/leak.ts,2 hidden examples caught; safe prose accepted,PASS_LIMITED,Not full 30-day simulation / game.test suite
+Game suite,Comprehensive hidden-value and simulation tests,scripts/game.test.mjs,Cannot import zod,BLOCKED,No assertions executed
+Canon,Canon verifier,node scripts/verify-canon.mjs,PASS,PASS,65-panel registry
+Household,Red Claw verifier,verify-red-claw-household.mjs,PASS; 14 warnings retained,PASS_WITH_WARNINGS,No proposal promoted to Canon
+Art,Structural verifier,node scripts/verify-art.mjs --structure,PASS; 167 assets; 23 groups unfilled,PASS_INCOMPLETE_COVERAGE,0 raster generated; CP14 pack absent
+AL,compactState runtime,direct play.ts runtime import,Missing @tanstack/react-start,BLOCKED,Static/source test only
+AL provider,Live provider,XAI_API_KEY presence check,Absent; not called,NOT_RUN,No fabricated response
+Persistence,Real PostgreSQL,DATABASE_URL + psql/pg_isready/docker/podman,Unavailable,NOT_RUN,No durable DB proof
+Browser,Desktop/mobile QA,Chromium + built app prerequisites,Chromium available; build deps missing,NOT_RUN,No app server / browser interaction
+Production,Production acceptance,deployment evidence,Not available,NOT_RUN,No deployment claimed
+Visual assets,CP14 pack integration,asset pack availability,ZIP not supplied,NOT_ATTEMPTED,Separate presentation-only track

@@ -1,0 +1,30 @@
+You are continuing the Egunsentia game project in this workspace. This is a BUILD task, not a discussion.
+
+Attached: the workspace zip exported from the previous session, including V45_PROGRESS.md and V45_HANDOFF.md (the current project; extract it over /workspace, keep everything; it contains attachments/EGUNSENTIA_V4.5_Update_Prompt.txt and the Super Lore file). If extraction fails, I will upload EGUNSENTIA_V4_5_Update_Prompt.txt and EGUNSENTIA_V4_1_SUPER_LORE_MASTER.txt separately.
+
+The master prompt is split across 13 small sessions, each run on a different account with its own usage limit. THIS IS SESSION 4 OF 13: P2.1 BORDERS + GATE ART.
+
+
+NO CHAT HISTORY (important): every session runs on a different account, so you have NO memory of earlier sessions or conversation. Everything you need is in files:
+- /workspace/V45_PROGRESS.md (ledger) and /workspace/V45_HANDOFF.md (handoff notes). If neither exists you are in Session 1.
+- The master prompt at /workspace/attachments/EGUNSENTIA_V4.5_Update_Prompt.txt and AGENTS.md.
+- Do not assume anything not written in those files or the code. Inspect the code (registries, src/lib/canon, public/art/ART_MANIFEST.json) to learn the current state.
+HANDOFF DUTY: keep /workspace/V45_HANDOFF.md updated at every gate and at the end: folder/file map of what you built, registry names and conventions (panel registry, option engine, manifest format), commands that work (build, typecheck, test:game, smoke), assumptions and decisions made, known issues, the exact NEXT ACTION. Write it so a brand-new session with zero context can continue.
+FINAL STEP of every session: make sure everything (code, art, ledger, handoff) is saved inside /workspace so I can export the whole workspace as a zip for the next account. Tell me in one line that it is ready to export.
+
+Global rules (all sessions):
+- Run A0 (runtime boot) first: startup.sh, app on 0.0.0.0:8080, check XAI_API_KEY. Never ask me to open localhost or a terminal.
+- Read /workspace/V45_PROGRESS.md first if it exists and RESUME from the first unfinished item. Do not re-audit finished work.
+- Do NOT read the whole prompt file. It is ~167 KB: PART A is lines 1-370, PART B (V4.1 spec) is the rest. Read ONLY the PART A sections listed below, in full. Consult PART B and the 1 MB lore file only by section number / grep, never whole.
+- Do not ask me questions. Decide using the prompt and the lore. State assumptions in the final report.
+- Follow A1: update /workspace/V45_PROGRESS.md after every finished item. My build time is very limited: stop cleanly at a green gate if time runs out (build, typecheck, test:game, browser smoke all pass).
+- Preserve everything that already works: existing panels, saves, NPC cards, and the existing artwork listed in A3.2. Do not recompress or move that art. Do not use any earlier knight artwork.
+- Never leave a panel registered but empty (A13 cutline).
+- Report in at most 10 lines at each gate. At the end of this session, give the A14 report and end with the exact line I should send next.
+
+SESSION 4 SCOPE: Item 2.1: Borders [18], the four gates x four states (16 images), gate animations, micro-sim.
+Also read: A6 entry [18], A8.6, A9.1-A9.3, A9.8-A9.11, A10 gate animations (gate.state.*, searchlight.sweep, alarm.pulse).
+Read in full: A0-A3 (lines 1-83), A5 skim (how panels/options plug in), A12, A13, A14, plus the items named here. Consult PART B and the lore only by section number or grep.
+Only the 16 gate images this session. Images: use the Imagine tools in the order of A9.5, issue independent generations together, verify each image ONCE (A9.11), never regenerate approved art, optimize per A9.10, register in public/art/ART_MANIFEST.json, wire into the panels, obey A9.8 safety rules. Show finals as one compact contact sheet. If the image budget runs out, stop at a green gate and record exactly which ids remain in the ledger.
+At the end, state the exact next session (Session 5 of 13) and the line I should send.
+Prior sessions should be done; verify via the ledger and fix any red gate first.

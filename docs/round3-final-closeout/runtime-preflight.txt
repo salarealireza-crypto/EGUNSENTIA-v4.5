@@ -1,0 +1,15 @@
+CP20 runtime preflight (2026-11-09)
+
+getent ahosts registry.npmjs.org
+Result: no records; exit 2.
+
+npm ping --fetch-retries=0 --fetch-timeout=8000
+Result: npm notice PING https://registry.npmjs.org/ ; npm error EAI_AGAIN getaddrinfo registry.npmjs.org; exit 1.
+
+PostgreSQL executables checked: psql, postgres, initdb, pg_ctl, createdb — absent.
+Container executables checked: docker, podman — absent.
+Local PostgreSQL listener check: no port 5432 or 6432 listener.
+Relevant environment variable presence check (values not read): DATABASE_URL, POSTGRES_URL, POSTGRES_PRISMA_URL, DIRECT_URL, NEON_DATABASE_URL — all absent.
+Browser tools: /usr/bin/chromium available (Chromium 1.57.0); Playwright CLI available (1.57.0). No app server/build/backend was available; no browser workflow was run.
+
+Cleanup verified: node_modules absent; .grok/app-env.json absent; package-lock SHA unchanged.

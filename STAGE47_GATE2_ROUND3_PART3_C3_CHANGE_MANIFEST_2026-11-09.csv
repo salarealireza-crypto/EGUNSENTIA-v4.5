@@ -1,0 +1,10 @@
+index,path,change_type,parent_size_bytes,working_size_bytes,parent_sha256,working_sha256,notes
+0,STAGE47_GATE2_ROUND3_PART3_C3_ACCEPTANCE_MATRIX_2026-11-09.csv,ADDED,,4603,,fdc5c0371cbc0c76027aa3939a13d362b6f5ccb44ee8d4ce2ada14f526fe5ea8,Substantive Round 3 Part 3 C3 source-audit addition
+1,STAGE47_GATE2_ROUND3_PART3_C3_EVIDENCE_2026-11-09.json,ADDED,,3509,,0bd0ffd115745251b38c3f6e24d6553d659166d078de000f7470bf9579eaff84,Substantive Round 3 Part 3 C3 source-audit addition
+2,STAGE47_GATE2_ROUND3_PART3_C3_INTEGRATION_HANDOFF_2026-11-09.md,ADDED,,5098,,84bbb6f0ac29dc7b3897ddc0d95944c35fff6f5adefac96618227103b065a8ce,Substantive Round 3 Part 3 C3 source-audit addition
+3,STAGE47_GATE2_ROUND3_PART3_C3_SOURCE_AUDIT_REPORT_2026-11-09.md,ADDED,,19188,,71792e04dc3feb8672e70f7eda4654508b5281ec030a17d34b4bcc311be66753,Substantive Round 3 Part 3 C3 source-audit addition
+4,STAGE47_GATE2_ROUND3_PART3_C3_VERIFICATION_LOG_2026-11-09.txt,ADDED,,3554,,ee4fc5a1ec3bd7737ab2858055eebaded044c8580117a1984331a6efcad71454,Substantive Round 3 Part 3 C3 source-audit addition
+5,WORKLOG-61.md,ADDED,,1681,,d5a63f4223f0f2ed2894b8bcb158fcf000e5e7eb13bf4d7c1d5fd3fa20286fec,Substantive Round 3 Part 3 C3 source-audit addition
+6,EGUNSENTIA_RELEASE_CHECKPOINTS.md,MODIFIED,36597,37332,11a475fa443105fc7fa9f2ae4fe9c8bbc125d33e9e3b5526f7a0e05770345f9e,b9ef5dc619ece3b94380b7a423920714e3e56b328b925b48d92a1d8f70541632,Append-only C3 status update; no source-code change
+7,RECOVERY_PROGRESS.md,MODIFIED,9618,11269,fc28172dcbd6bf056ccd6a3fcd73ea75efd9a8cdb276917c50699983557f0081,5b182b5a3dac398aa4e7b2989a2b256dba2891375f599dac6493f251f0c37a8c,Append-only C3 status update; no source-code change
+8,STAGE47_REPAIR_ROADMAP_2026-11-09.md,MODIFIED,29835,31254,715d197bbe208b472c07c46252eb9c12acacb93aa58ae45421e72306259b9fde,32f53743f7eea632d61ac86ce0c7863ca552ca141e7775ff0c109e2ae14536e3,Append-only C3 status update; no source-code change

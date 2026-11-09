@@ -1,0 +1,88 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": 47,
+  "gate": 2,
+  "round": 1,
+  "checkpoint": "CP5",
+  "date": "2026-11-09",
+  "status": "PARTIAL_CHECKPOINT_GATE_2_IN_PROGRESS",
+  "base_checkpoint": "EGUNSENTIA-STAGE47-GATE1-CORE-SAFETY-CP4-2026-11-09.zip",
+  "implemented": [
+    "Planner panel routing corrected: panel 12 is Planner and panel 46 is World Time",
+    "Live CAST availability connected to P4 Planner scheduling",
+    "Appointment availability checked over the complete scheduled interval",
+    "Overlapping appointments for the same NPC prevented, including across locations",
+    "Gate crisis records retain affected Gate IDs",
+    "Invalid crisis choices rejected without clearing the active crisis",
+    "Crisis stock and provisional bounded Morale effects centralized by causal type",
+    "Gate crisis results applied only to affected Gate state through shared continuity paths",
+    "Crisis outcomes retained in crisisHistory and Chronicle notes"
+  ],
+  "verification": {
+    "targeted_gameplay_tests": {
+      "passed": 14,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "script_tests_excluding_zod_dependent_game_test": {
+      "passed": 376,
+      "failed": 0,
+      "test_files": 49,
+      "status": "PASS"
+    },
+    "mjs_syntax_files": {
+      "passed": 86,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "ts_tsx_syntax_transpile_files": {
+      "passed": 131,
+      "failed": 0,
+      "status": "PASS_NOT_SEMANTIC_TYPECHECK"
+    },
+    "canon_verification": "PASS",
+    "npm_ci": "BLOCKED: registry.npmjs.org DNS EAI_AGAIN and no complete local npm cache",
+    "scripts_game_test": "NOT_RUN: cannot load missing Zod dependency",
+    "typecheck": "BLOCKED: dependencies unavailable",
+    "production_build": "BLOCKED: dependencies unavailable",
+    "browser_verification": "NOT_RUN",
+    "live_database_oauth_al_provider": "NOT_RUN"
+  },
+  "preservation_vs_cp4": {
+    "base_files": 605,
+    "missing_base_files": 0,
+    "modified_existing_source_files": [
+      "src/components/game/V45PanelBody.tsx",
+      "src/lib/game/clock-continuity.ts",
+      "src/lib/game/p4-simulation.ts",
+      "src/lib/game/sim/crisis.ts",
+      "src/lib/game/sim/planner.ts",
+      "src/lib/game/store.ts"
+    ],
+    "new_test_file": "scripts/gameplay-integration.test.mjs",
+    "canon_or_art_intentionally_rewritten": false,
+    "modified_existing_documentation_files": [
+      "README.md",
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+    ],
+    "new_checkpoint_documents": 5,
+    "total_base_files_with_intentional_hash_changes": 8
+  },
+  "open_items": [
+    "Independent Event Ledger integration with stable event IDs and duplicate-application prevention",
+    "Ceremony scheduling, attendance, costs and consequences",
+    "Missing-person investigation lifecycle without inventing canon resolutions",
+    "Immutable read-only Day Replay built from timeline events",
+    "Council typed-effect adapter and no-double-spend guarantees",
+    "Legacy panel alias audit",
+    "Cross-panel NPC availability consistency",
+    "End-to-end command to state to persistence to UI receipt tests",
+    "Full dependency install, semantic typecheck, lint and production build",
+    "Browser, Neon, OAuth and live AL provider verification"
+  ],
+  "security_notes": [
+    "No API keys, database URLs, OAuth secrets or provider credentials added",
+    "Local .grok/app-env.json excluded from checkpoint archive",
+    "Morale values are provisional gameplay tuning and do not amend canon"
+  ]
+}

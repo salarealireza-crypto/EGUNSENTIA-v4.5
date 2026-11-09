@@ -1,0 +1,26 @@
+id,area,command_or_evidence,expected,observed,status
+D1-01,manifest+lockfile,package.json + package-lock.json,71 direct ranges match; lockfile v3; 471 locked package records,57 dependencies + 14 devDependencies; 0 range mismatches,PASS
+D1-02,runtime,node --version; npm --version,Node v22.16.0; npm 10.9.2,Exact runtime recorded,PASS
+D1-03,npm config,npm config get registry/offline/cache; project config files,official registry; online mode,registry.npmjs.org; offline=false; no .npmrc/.nvmrc/.node-version; no packageManager/engines fields,PASS
+D1-04,install state,node_modules; npm cache ls,installed/cache status,node_modules absent; critical package cache entries empty,PASS
+D2-01,registry DNS,getent ahosts registry.npmjs.org,DNS resolution,No DNS answer,BLOCKED
+D2-02,registry HTTPS,npm ping; curl -I registry,Official registry reachable,npm EAI_AGAIN; curl Could not resolve host,BLOCKED
+D2-03,exact package fetch,package-lock package entries,Exact lockfile packages retrievable,471 registry.npmjs.org tarballs cannot be reached,BLOCKED
+D2-04,exact install,npm ci --no-audit --no-fund,Reproducible locked install,Not retried after failed preflight; CP18 prior exact install failed fetching zod/Vite,BLOCKED
+D2-05,lock integrity,sha256sum package-lock.json,Lockfile unchanged,72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b,PASS
+D3-01,Gate2 focused tests,focused G2 trio,27/27,27/27 PASS,PASS
+D3-02,persistence focused tests,9 focused test files,70/70,70/70 PASS; unit only,PASS_UNIT_ONLY
+D3-03,runnable script tests,"56 files, exclude game.test.mjs",461/461,461/461 PASS; unit only,PASS_UNIT_ONLY
+D3-04,full npm test,npm test,Full test phases green,461 pass / 1 game suite load failure due Zod; second phase not reached,BLOCKED
+D3-05,app/auth tests,separate app-data/auth command,8 tests load/pass,6 pass / 2 suite-load failures: TanStack Start and jose,PARTIAL_BLOCKED
+D3-06,typecheck,npm run typecheck,No TS errors,missing node and vite/client type definitions,BLOCKED
+D3-07,build,npm run build,Vite build succeeds,Vite executable absent,BLOCKED
+D3-08,lint,npm run lint,ESLint succeeds,eslint not found,BLOCKED
+D3-09,Canon,verify-canon.mjs,Canon invariants pass,"65 panels, 167 assets, option catalogs",PASS
+D3-10,Red Claw,verify-red-claw-household.mjs,Household validation,PASS with 14 warnings,PASS_WITH_WARNINGS
+D3-11,art,verify-art.mjs,Art groups complete,167 assets; 0 generated raster; 23 incomplete groups,FAIL_INCOMPLETE
+D3-12,auth invariant,check-auth-invariant.mjs,Resolved auth setting verified,No Vite dev server; resolved value unavailable,BLOCKED
+C3-01,persistent DB,"env, command availability, port 5432",Isolated persistent DB reachable,No DB URL; no Postgres binaries/client; no Docker/Podman; no listener,BLOCKED
+C7-01,browser runtime,Chromium/Python Playwright versions,Project browser testing available,Chromium 144; Python Playwright 1.57 vs locked Node Playwright 1.63; no app,PARTIAL_TOOLING_ONLY
+C7-02,app server,8080 process + curl,Game app server is live,"8080 is Jupyter Uvicorn, HTTP 404; no Vite app",BLOCKED
+C7-03,browser workflows,connected gameplay + responsive QA,Real UI and persistence verified,Not run; app/backend prerequisites absent,BLOCKED

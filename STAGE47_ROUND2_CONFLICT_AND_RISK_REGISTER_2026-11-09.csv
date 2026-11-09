@@ -1,0 +1,9 @@
+﻿severity,item,evidence,required_handling
+HIGH,Katharina Red ↔ Christian Red III spouse edge,Both registry records encode spouseIds; the cited source evidence establishes mother/son only and does not establish a marriage record.,Do not use this marriage edge as confirmed until primary source/ledger is produced.
+HIGH,Christian Red III → Helena; Mirelda → Helena; Helena sibling edge,Proposed relations are nested in mixed Canon/proposed registry cards; Christian IV node carries Helena in siblings.,Need edge-level provenance and separate Canon/proposal subgraphs before any stateful use.
+HIGH,Mirelda Grotsen spouse/child edges,"Mirelda identity is canon as stepmother, but spouse-to-Christian-III and maternity of Helena are explicitly proposal.",Keep stepmother fact; segregate formal spouse/Helena child edges as PROPOSED.
+MEDIUM,Hedda Red → Ivo Grotsen / Rolf Kessel,Card says husband and “link” but registry has no spouse node/edge for Ivo and no meaning for Rolf.,Preserve prose evidence; no guessed edge type or degree.
+MEDIUM,Matthias Red ↔ Greta Red cousin relation,"Mutual card descriptions say cousin; exact ancestor, degree and branch are unknown.",Record relation at text level only; genealogy remains unresolved.
+MEDIUM,Elara Red ↔ Christian Red IV distant kin,Degree is explicitly UNKNOWN.,No close-kin rule certification possible without Floor 7 Ledger.
+MEDIUM,Cassandra Red / Steward Line,Kinship excerpt names Cassandra as representative; no card/node or family detail.,"No inferred age, parents or branch connections."
+MEDIUM,12 former-partner histories,Rows are read-only PROPOSED_EXPANSION; proposed chronology not validated against canonical DOBs.,Do not include them in the Canon former-partner count; Elara is the established former partner.

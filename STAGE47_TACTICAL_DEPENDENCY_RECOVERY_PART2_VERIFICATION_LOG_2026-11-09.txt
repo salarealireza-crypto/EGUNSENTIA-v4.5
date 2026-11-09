@@ -1,0 +1,56 @@
+EGUNSENTIA — Stage 47 / Tactical Dependency Recovery Part 2 Verification Log
+Date: 2026-11-09
+Parent: CP17 (immutable)
+Scope: D2 retry; local permission isolation; DNS diagnosis; no runtime source changes.
+
+1) Parent archive
+- CP17 SHA-256: c308f2c00ab1fc11b2cbfb81cd0770d7dfc98eff26b208c020c9e316a3583ee0
+- ZIP integrity: PASS; 789 members; no unsafe absolute/traversal paths.
+- package-lock SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b.
+
+2) Working-copy permissions
+- Previous CP17 working path owner: UID 0; current process UID: 1000; mkdir node_modules failed EACCES.
+- Fresh working copy extracted to /mnt/data/EGUNSENTIA_CP17_WRITABLE_WORKING_COPY; owner UID 1000.
+- Write probe: PASS.
+- CP17 files extracted: 789; package-lock hash matches parent.
+- Original root-owned working directory was not modified.
+
+3) npm cache
+- Default npm cache verify: BLOCKED, EACCES creating /home/oai/.npm/_cacache; npm reports root-owned files.
+- Separate cache: /mnt/data/egunsentia_npm_cache.
+- Command: npm cache verify --cache /mnt/data/egunsentia_npm_cache
+- Result: PASS; content verified 0 bytes, 0 index entries.
+- npm config registry: https://registry.npmjs.org/
+- npm config offline: false.
+- npm config proxy/https-proxy: null; HTTP_PROXY, HTTPS_PROXY and ALL_PROXY unset.
+- No .npmrc at project, user or system locations.
+
+4) Network/DNS and install attempt
+- DNS getaddrinfo registry.npmjs.org: Temporary failure in name resolution.
+- npm ping (no retries): EAI_AGAIN for registry.npmjs.org.
+- npm ci command:
+  npm ci --no-audit --no-fund --fetch-retries=0 --fetch-timeout=12000 --cache /mnt/data/egunsentia_npm_cache
+- Result: return code 1; npm emitted "Exit handler never called!".
+- Debug log records EAI_AGAIN for zod-4.6.5.tgz, vite-8.3.2.tgz, zustand and other registry tarballs.
+- npm cache verify after failure: PASS; cache remains valid but empty.
+- Partial node_modules removed; node_modules absent.
+- No npm install process remained.
+- No registry outage inferred; official npm status page was All Systems Operational / Package installation Operational when checked.
+
+5) Tests on fresh CP17 working copy
+- Focused command:
+  node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+- Result: 70/70 PASS.
+- Script suite excluding game.test:
+  node --experimental-strip-types --import ./scripts/register-ts.mjs --test [all scripts/*.test.mjs except game.test.mjs]
+- Result: 461/461 PASS across 56 files. Temporary .grok/app-env.json contained only VITE_AUTH_ENABLED=true and was removed.
+- node scripts/verify-canon.mjs: PASS (65-panel registry, invariants, 167 assets, option catalogs).
+
+6) Integrity / cleanup
+- package.json SHA-256 unchanged: f33db47e9c69f1919406896834b860721e8f3042bd362cffbd4f3d29fd063103.
+- package-lock SHA-256 unchanged: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b.
+- No package manifest/lock changes, no code/schema/migration/Canon/economic changes.
+- No node_modules or .grok/app-env.json in final working copy.
+- npm cache is outside project and excluded from package.
+
+Disposition: D1 complete; D2 blocked by runtime DNS. C3/Gate 2 remain PARTIAL. C4 not started.

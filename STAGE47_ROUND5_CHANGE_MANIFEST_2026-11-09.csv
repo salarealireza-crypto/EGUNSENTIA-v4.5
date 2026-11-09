@@ -1,0 +1,21 @@
+change_type,path,sha256,description
+ADDED,WORKLOG-69.md,3b06c833d1be18c7b2f13c7813a906446e59b3a66f16a66e3703081b3ccaf189,Round 5 worklog and status record.
+ADDED,docs/round5-character-lore/README.md,694d33527782bb4bad74e39521fb56ff11c0e80f4fce964a50d45f32fef8d0c7,Navigation for Round 5 character-lore audit package.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_CANON_LORE_AUDIT_REPORT_2026-11-09.md,a888a684646d6deed6cad31da047f886cc9e5ec7c386075ef0d0f209361b9443,Owner-facing Round 5 findings and decisions.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_HANDOFF_2026-11-09.md,80026819d2c71b7fa26e7ee26af69e0899c6d4ab0bf5a1aa4f2120c097bc87da,Handoff and carry-forward requirements.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_NPC_ROSTER_AND_HOUSEHOLD_AUDIT_2026-11-09.csv,c8269cbd430e104e1dc2865b931523c5c4c86273a5a395b8b8a8bb8949a160c8,"100-card registry, canonical/proposal counts, attendance and Guard scope."
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_RELATIONSHIP_EDGE_PROVENANCE_AUDIT_2026-11-09.csv,3f16e4c54cbc3d88e76a838159d8ebe0497fb6049afffbc8a485a4ef6c075e2b,Existing genealogy edges plus Round 5 relationship additions and unresolved status.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_SOURCE_REGISTER_2026-11-09.csv,360824b277bc1c898535a2a71b03c9724083494180324503da3c8fe6bb2c9c70,Source hierarchy and limitations.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_TIMELINE_PROVENANCE_AUDIT_2026-11-09.csv,d6b05c7b9fde7c75971f236e1aa66544a7ac905b9242d6b5ff7d09bf053555e2,"Campaign date, age labels, proposed and unknown events."
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_UNRESOLVED_ITEMS_2026-11-09.csv,aa07ac12e36bd56539622faf670a2b481d7cc0b08855d3ec7d7b7e32d149557c,Actionable unresolved Canon/source items.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_VERIFICATION_LOG_2026-11-09.txt,45916965c4595bdacc096eedbe449e5823a847bc3197f3012034e84cad0f54d5,Commands and results; claims boundaries.
+ADDED,docs/round5-character-lore/STAGE47_ROUND5_WOMEN_19_FIELD_COVERAGE_2026-11-09.csv,794553a045ada78b593edf408b0ff391f6d9b4dcad5089193ca04f12c530a77c,Per-character 19-field coverage with field-level flags and card line references.
+ADDED,docs/round5-character-lore/evidence/canon-verifier.log,5682e17b826f7a014a6c53dacc842f6c23bb7047d36c9186742b042a6e232218,Raw Canon verifier output.
+ADDED,docs/round5-character-lore/evidence/focused-private-relations-household-tests.log,fa5e1de065aae5d801f630300bc3661c5d18144ab39fdf7225d868ef65782993,Raw output of 32 focused tests.
+ADDED,docs/round5-character-lore/evidence/red-claw-household-verifier.log,fc0a1e66e2304ebc71a67131aa7ef83f5a60614d2b624d79a3c2ec712e584fee,Raw Red Claw Household verifier output and 14 warnings.
+MODIFIED,EGUNSENTIA_RELEASE_CHECKPOINTS.md,059da8abe521bb828d56e2f0309bccfe9e455d1eba787e7e236385159c1819a6,Registers CP22 Round 5 partial completion; Round 6 not started.
+MODIFIED,RECOVERY_PROGRESS.md,44acdd9b8714ea225ab4261d755cebb1e2afff0bc6191d8da0badfe169e053e2,Adds Round 5 completion and unresolved-source status.
+MODIFIED,STAGE47_REPAIR_ROADMAP_2026-11-09.md,9e00e78f5524896f411630b642c4a953b5465cd4aff3d151da6bb9b037c60126,Adds Round 5 closeout and remaining source requirements.
+MODIFIED,scripts/private-relations.test.mjs,6075d41db8b4bf8a4f71d500830f32b61171220c03b12f525669c0c48eb42861,Adds regression test for six source-backed RELATIONS fields and unresolved Iron Guard count.
+MODIFIED,src/lib/canon/cards.json,f2407f0540c571de790a25109b7340ffd393aaa8547c2454ba0307e0d12a9bf4,"Adds only RELATIONS fields for Dagmar, Adelheid, Vera, Elara, Wilhelmina and Hanne."
+MODIFIED,src/lib/game/sim/private-relations.ts,c4a9e5e20e1e2ad5b42282d19fc5c9f63323ba9d08bba68eacc7f563f184ca9d,Replaces unsupported fifth-subordinate assertion with source-conflict warning and no-invention constraint.

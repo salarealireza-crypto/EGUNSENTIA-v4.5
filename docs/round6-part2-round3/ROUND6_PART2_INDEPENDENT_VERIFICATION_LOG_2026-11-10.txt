@@ -1,0 +1,39 @@
+ROUND 6 PART 2 — INDEPENDENT VERIFICATION LOG — 2026-11-10
+Parent ZIP SHA-256: 0c121c3c30d1977b2ee44cbb4938995428a43274127ae2ba398c784886026887
+Underlying CP23 source ZIP SHA-256: 9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb
+package-lock SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b
+
+INTEGRITY
+- Parent ZIP SHA matches sidecar; zip test PASS; 989 entries, 907 file entries.
+- All 907 extracted parent files match byte size and SHA-256.
+- Fresh working child copy used.
+
+REGISTRY / DEPENDENCIES
+- getent: no registry address.
+- Node DNS: EAI_AGAIN.
+- curl official HTTPS ping: exit 6 / Could not resolve host.
+- npm ci --no-audit --no-fund: NOT ATTEMPTED after failed DNS/HTTPS preflight.
+- Lockfile v3; 472 package records including root; 57 dependencies + 14 devDependencies; direct ranges 71/71 match.
+
+PASS
+- Round6-character integration: 5/5.
+- Combined Round6 + Private Relations + Household + Gate2 Round3 + Gameplay: 62/62.
+- Runnable scripts excluding scripts/game.test.mjs: 467/467 across 57 files.
+- Canon verifier PASS.
+- Red Claw Household verifier PASS; 14 warnings retained.
+- Art structural verifier PASS; 167 assets (150 code-drawn, 17 preserved, 0 generated raster); 23 groups unfilled.
+- Direct leak scanner smoke PASS; explicitly limited, not comprehensive simulation/audit.
+
+BLOCKED / NOT RUN
+- scripts/game.test.mjs: missing zod before assertions; comprehensive leak/simulation checks blocked.
+- AL compactState runtime: missing @tanstack/react-start.
+- AL provider: XAI_API_KEY absent; no call.
+- PostgreSQL: DATABASE_URL and CLI/backend tools absent; NOT RUN.
+- Browser/responsive: Chromium available but no built/running app; NOT RUN.
+- Production verification: NOT RUN.
+- CP14 visual pack: not supplied; NOT ATTEMPTED.
+
+SCOPE
+- No source/gameplay, Canon, relationship state, schemas, migrations, package manifests/lockfile, database/auth, economy or art changed.
+- No deletion. Temporary .grok/app-env.json removed and verified absent. node_modules absent.
+- Gate2 and Round6 remain PARTIAL/BLOCKED. Political Capital contract unresolved. Round7 not started.

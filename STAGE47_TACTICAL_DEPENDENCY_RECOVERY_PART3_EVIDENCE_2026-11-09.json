@@ -1,0 +1,60 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": 47,
+  "round": 3,
+  "part": "Tactical Dependency Recovery Part 3",
+  "date": "2026-11-09",
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP18-TACTICAL-DEPENDENCY-RECHECK-PART3-PARTIAL-CP19-2026-11-09.zip",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP17-TACTICAL-DEPENDENCY-RETRY-PERMISSION-DNS-AUDIT-PARTIAL-CP18-2026-11-09.zip",
+  "parent_sha256": "78149d2064419ff1c3e5d6d44b4a7617a2ac4b9dded089e4df776ab328f32ab7",
+  "status": {
+    "D1": "complete",
+    "D2": "blocked_runtime_dns_and_egress",
+    "C3": "blocked_partial",
+    "gate2": "partial",
+    "C4": "not_started"
+  },
+  "package": {
+    "dependencies": 57,
+    "devDependencies": 14,
+    "zod_range": "^4.4.0",
+    "zod_locked": "4.6.5",
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b"
+  },
+  "network": {
+    "registry": "https://registry.npmjs.org/",
+    "dns_getent": "no_records_exit_2",
+    "npm_ping": "EAI_AGAIN",
+    "curl_registry": "could_not_resolve_host",
+    "cloudflare_doh_ip_https": "curl_exit_7_connection_failed",
+    "google_doh_ip_https": "curl_exit_7_connection_failed",
+    "npm_ci": "not_retried_after_dns_preflight; prior CP18 attempt failed tarball fetch"
+  },
+  "tests": {
+    "focused_persistence_receipt_db_migration": {"passed": 70, "failed": 0, "status": "pass"},
+    "runnable_scripts_excluding_game_test": {"passed": 461, "failed": 0, "files": 56, "status": "pass"},
+    "canon": "pass",
+    "game_test": {"status": "blocked", "reason": "ERR_MODULE_NOT_FOUND zod from src/lib/game/delta.ts"},
+    "app_data_auth": {"discovered": 8, "passed": 6, "blocked": 2, "missing": ["@tanstack/react-start", "jose"]},
+    "full_npm_test": {"status": "timeout_incomplete", "timeout_seconds": 120, "last_observed_subtest": 346, "final_summary": false},
+    "typecheck": {"status": "blocked", "reason": "missing @types/node and vite/client"},
+    "build": {"status": "blocked", "reason": "vite executable missing; spawn vite ENOENT"},
+    "lint": {"status": "blocked", "reason": "eslint not found"}
+  },
+  "cleanup": {
+    "temporary_app_env": "removed",
+    "node_modules": "absent",
+    "npm_process": "none",
+    "parent_immutable": true
+  },
+  "project_changes": {
+    "source": 0,
+    "manifest": 0,
+    "lockfile": 0,
+    "canon": 0,
+    "save_schema_or_migration": 0,
+    "economic_rules": 0,
+    "secrets": 0,
+    "files_deleted": 0
+  }
+}

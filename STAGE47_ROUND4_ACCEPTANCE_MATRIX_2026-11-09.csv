@@ -1,0 +1,20 @@
+criterion,description,evidence,status,acceptance_note
+D1,Environment and manifest audit,ENVIRONMENT_AND_ACCEPTANCE_MATRIX; package.json; package-lock.json,PASS,71 direct dependency ranges match lockfile; Node/npm versions recorded
+D2,Reproducible exact-lock dependency install,locked dependency inventory; registry DNS/npm ping/curl logs,BLOCKED,official npm registry DNS fails with EAI_AGAIN; exact npm ci not retried after failed preflight
+D3,Full test/typecheck/build/lint and project validation,Round4 verification logs,PARTIAL,unit suites pass but full test/typecheck/build/lint not green
+C3.1,Real persistent backend available,DB environment/tool audit,BLOCKED,no database URL PostgreSQL server/client Docker or Podman
+C3.2,Successful player command through persistent commit,No DB integration evidence,NOT_RUN,no real command-to-commit path
+C3.3,Rejected command leaves persistent state unchanged,70 focused unit tests,UNIT_ONLY,no persistent database assertions
+C3.4,Retry/idempotency survives backend reconnect or restart,source/unit evidence only,PARTIAL,no actual post-timeout network retry or restart replay test
+C3.5,Atomic transaction and DB failure injection,Migration transaction unit tests,UNIT_ONLY,no real PostgreSQL commit/rollback failure injection
+C3.6,Legacy save compatibility,save-validation tests,PARTIAL,synthetic legacy fixture without privateRelations passes; no historical owner save fixture
+C3.7,Commit survives app/backend restart and reload,No DB/service available,NOT_RUN,no persistent commit/restart/reload performed
+C3.8,Receipt reconstruction matches restored authoritative state,Receipt unit/source tests,UNIT_ONLY,no real browser/database reload
+C3.9,Two-session concurrency and conflict handling,source/CAS/queue unit evidence,PARTIAL,no concurrent sessions against persistent DB
+C3.10,Complete integration acceptance matrix,CP20 and CP21 evidence,BLOCKED,acceptance documented but required real backend integration evidence absent
+C7.1,Minimum panel routes open in real browser,No game app server,BLOCKED,panels 05 17 19 24 34 not browser tested
+C7.2,Connected ceremony/private-relations/investigation/schedule/council workflows,No app or backend,BLOCKED,no real gameplay workflow interaction or persistence evidence
+C7.3,Desktop tablet mobile responsive and accessibility QA,No app or backend,BLOCKED,no viewports inspected
+C7.4,Authoritative UI state and persistence proof,No app/backend,BLOCKED,no visual-only or mocked pass claimed
+C7.5,Per-workflow browser evidence package,No workflow executed,BLOCKED,no screenshots or recordings claimed as workflow proof
+Round4,Overall Round 4 acceptance,CP21 report and verification log,PARTIAL_BLOCKED,D1 PASS; D2 BLOCKED; D3 PARTIAL; C3 integration and C7 browser QA remain not accepted

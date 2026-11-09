@@ -1,0 +1,23 @@
+EGUNSENTIA ROUND 5 VERIFICATION LOG — 2026-11-09
+
+Working copy: /mnt/data/EGUNSENTIA_ROUND5_CP21_WORKING_COPY
+Parent checkpoint: CP21 (immutable)
+
+PASS — node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/private-relations.test.mjs scripts/red-claw-household.test.mjs
+Result: 32 tests; 32 pass; 0 fail; 0 skipped; 0 todo.
+
+PASS — node scripts/verify-canon.mjs
+Result: 65-panel Canon registry, invariants, 167 assets, preserved art, and all option catalogs verified.
+
+PASS — node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs
+Result: 100 cards (A20/B30/C50); 71 permanent-labeled family-linked records; 72 active CAST entries in the mixed registry; 8 proposed historical personnel (3 male servants + 5 female Iron Guard); 12 former adult partners remain read-only. 14 warnings are recorded for 12 proposed-date/DOB cases, the absent Floor 7 genealogy ledger, and Elara/Luka/Christian chronology. These are warnings, not Canon facts.
+
+SOURCE AUDIT — 25 core Private Relations WOMEN plus 2 canonical female cards outside that core scope; 12 proposal-only former partners remain separate.
+SOURCE AUDIT — 100 extended household records; 79 PROPOSED_EXPANSION; 71 permanent residence labels include 62 proposal records.
+SOURCE AUDIT — 8 father-generation historical staff all explicitly PROPOSED_EXPANSION (3 domestic servants + 5 Iron Guard); not transferred to current CAST.
+SOURCE AUDIT — Iron Guard count wording conflicts; only four permanent subordinate profiles are named. No fifth NPC added.
+
+NOT RUN / NOT CLAIMED — Full npm test, TypeScript typecheck, build, lint, database integration, Browser QA, responsive UI, production verification. Round 4 dependency blockers remain documented in CP21.
+
+Diff boundary — changes limited to six cards.json RELATIONS fields, one PRIVATE_RELATIONS_ROSTER_GAPS text correction, one private-relations regression test, Round 5 audit docs, and progress/checkpoint/worklog records.
+Secrets/temp files — no credentials or .grok temporary configuration included; node_modules not added.

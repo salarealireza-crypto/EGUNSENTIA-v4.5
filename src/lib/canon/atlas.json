@@ -1,0 +1,210 @@
+[
+  {
+    "id": "W-WORLD",
+    "domain": "WORLD",
+    "title": "Egunsentia",
+    "state": "KNOWN",
+    "summary": "Post-war underground civilization in the inherited metro of the Republic of Herria. Year 105 AW. Population known ~60,000. The surface is radioactive, cold, and monster-haunted. The metro is city, farm, archive, border and family memory.",
+    "evidence": "Master Lore SL-01"
+  },
+  {
+    "id": "W-CATASTROPHE",
+    "domain": "WORLD",
+    "title": "The Catastrophe",
+    "state": "KNOWN",
+    "summary": "Nuclear bombardment at Year 0. About 200,000 reached the giant underground system. Factions formed later through scarcity, geography and civil wars, not on Day One.",
+    "evidence": "SL-01"
+  },
+  {
+    "id": "W-TUNNELS",
+    "domain": "WORLD",
+    "title": "Forty-two lines",
+    "state": "KNOWN",
+    "summary": "Original metro: 42 four-lane lines. 27 active/used, 15 Lost Lines. Lost does not mean empty. Tunnel 18 incident and burial of 17–22 remain UNKNOWN. Tunnel 19 (the Gate) stayed whole inside the collapse zone.",
+    "evidence": "SL-01; C-01"
+  },
+  {
+    "id": "W-TIMELINE",
+    "domain": "WORLD",
+    "title": "Historical periodization",
+    "state": "KNOWN",
+    "summary": "Pre-war Herria → Year 0 rupture → Foundation → First Monster War (Y22) → Civil War I (29–46) → Civil War II / Demos independence (46) → Great Famine → Great Separation (~70) → Civil War III and Armistice of 75 (75–77, expires end of 110) → fragile peace, Year 105 AW.",
+    "evidence": "SL-01; 3.44"
+  },
+  {
+    "id": "F-MONARCHIA",
+    "domain": "FACTIONS",
+    "title": "Monarchia — Concord of Houses",
+    "state": "KNOWN",
+    "summary": "Institutional continuity through lineage. High Seat: Lord Rainer von Moren. Founding houses Ardan, Veyr, Khar, Eld, Moren, Ravan. Water, ceremony, diplomacy. Adelheid is the marriage bridge to Red Claws.",
+    "evidence": "SL-02"
+  },
+  {
+    "id": "F-REDCLAWS",
+    "domain": "FACTIONS",
+    "title": "Red Claws — House of the Fist",
+    "state": "KNOWN",
+    "summary": "Militarized defensive civilization under Christian Red IV. 12,500 people. Mark IV 960 ready + 40 repair. Three internal blocs: Old Guard, Banners, Works. Bound labor remains a moral fault line.",
+    "evidence": "SL-02"
+  },
+  {
+    "id": "F-GROTSEN",
+    "domain": "FACTIONS",
+    "title": "Grotsen Dominion",
+    "state": "KNOWN",
+    "summary": "Centralized order under Lord Viktor Grotsen. Succession unsettled between Ivo and Anselm. Mass rifles, discipline, Revolution Day. Vera is the marriage bridge. Hostile with Survivors.",
+    "evidence": "SL-02"
+  },
+  {
+    "id": "F-DEMOS",
+    "domain": "FACTIONS",
+    "title": "The Demos — the Forum",
+    "state": "KNOWN",
+    "summary": "Participatory government under President Mirela Hartmann. Archives, education, technical argument. Limited military. Tension over the hidden Archive. Tunnel 37 breach is an INITIAL REPORT only.",
+    "evidence": "SL-02"
+  },
+  {
+    "id": "F-SURVIVORS",
+    "domain": "FACTIONS",
+    "title": "Survivors — Great Alliance",
+    "state": "KNOWN",
+    "summary": "Coalition under Great Unifier Vojtech Greywolf. Mobility, ecological knowledge, Pathwalkers. Envoy Bohdan presses union. Distrust of Grotsen; conflict with Red Claws over bonded labor.",
+    "evidence": "SL-02"
+  },
+  {
+    "id": "A-MARKIV",
+    "domain": "ARMS",
+    "title": "Mark IV heritage armor",
+    "state": "KNOWN",
+    "summary": "~2.1 m worn, ~90 kg, radioisotope heart cell, hydraulic assist, magnetic anti-contamination layer not fully understood. 1,000 House suits; no manufacturing of true replacements from ordinary production.",
+    "evidence": "SL-03"
+  },
+  {
+    "id": "A-WATER",
+    "domain": "ARMS",
+    "title": "Water as leverage",
+    "state": "KNOWN",
+    "summary": "Springs, pumps, reservoirs, condensation, filtration. West cistern currently reported at 18% — INITIAL REPORT from Warden Tomas, not yet a confirmed failure.",
+    "evidence": "Day-one state; SL-03"
+  },
+  {
+    "id": "N-CHRISTIAN",
+    "domain": "NPCS",
+    "title": "Christian Red IV",
+    "state": "KNOWN",
+    "summary": "Age 35. Fist of the Red Claws. Player character. Son of Christian III and Katharina Red; raised in part by Mirelda Grotsen after Katharina's death. The AI never chooses his speech, feelings, consent or decisions.",
+    "evidence": "SL-07"
+  },
+  {
+    "id": "N-DAGMAR",
+    "domain": "NPCS",
+    "title": "Dagmar Red",
+    "state": "KNOWN",
+    "summary": "First Wife, 37. Frontier and border command. Mother of Konrad and Liese. Watchful, scar through left eyebrow.",
+    "evidence": "V4.1 household"
+  },
+  {
+    "id": "N-ADELHEID",
+    "domain": "NPCS",
+    "title": "Adelheid von Moren",
+    "state": "KNOWN",
+    "summary": "Second Wife, 24. Monarchian diplomatic bridge. Mother of Emil. Ash-blond, formal, lavender and silk against iron.",
+    "evidence": "V4.1 household correction"
+  },
+  {
+    "id": "N-VERA",
+    "domain": "NPCS",
+    "title": "Vera Grotsen",
+    "state": "KNOWN",
+    "summary": "Third Wife, 19. Grotsen political bride. Compact, stern, watches doors. Anselm still expects information; she is increasingly unwilling.",
+    "evidence": "V4.1 household correction"
+  },
+  {
+    "id": "N-ELARA",
+    "domain": "NPCS",
+    "title": "Elara Red",
+    "state": "KNOWN",
+    "summary": "Iron Guard commander. Former lover. Mother of Luka. Secret leader of the unnamed black-layer intelligence organization — existence known to her and Christian only.",
+    "evidence": "SL-04; SL-08"
+  },
+  {
+    "id": "M-HARAGI",
+    "domain": "MONSTERS",
+    "title": "Haragi-Jalea",
+    "state": "KNOWN",
+    "summary": "First major species, Year 22, First Monster War.",
+    "evidence": "SL-05"
+  },
+  {
+    "id": "M-AZKEN",
+    "domain": "MONSTERS",
+    "title": "Azken-Gizona",
+    "state": "UNKNOWN",
+    "summary": "Unresolved entity associated with fragmented human-looking reports. Human-face reports are not proof of intelligence, mimicry, origin or the supernatural. Mystery M6.",
+    "evidence": "SL-05"
+  },
+  {
+    "id": "R-CISTERN",
+    "domain": "RUMORS",
+    "title": "West cistern failure",
+    "state": "RUMOR",
+    "summary": "Tomas reports 18%. Truth status: UNVERIFIED / INITIAL REPORT. Secret Clock SC-cistern tracks risk without proving collapse.",
+    "evidence": "Day-one; rumor archive"
+  },
+  {
+    "id": "R-SIXTH",
+    "domain": "RUMORS",
+    "title": "Sixth Carrier answers questions",
+    "state": "RUMOR",
+    "summary": "A child claims the radio can answer questions on 108.0. Truth: UNVERIFIED. The tone itself is OBSERVED after midnight.",
+    "evidence": "SL-06; 3.326"
+  },
+  {
+    "id": "H-WIVES",
+    "domain": "HOUSE",
+    "title": "Official household",
+    "state": "KNOWN",
+    "summary": "Three wives only: Dagmar First, Adelheid Second, Vera Third. Older V14 numbering (Adelheid Third / Vera Fourth) is superseded. No fourth wife.",
+    "evidence": "V4.1 Super Lore Critical Household Normalization"
+  },
+  {
+    "id": "G-NORTH",
+    "domain": "WORLD",
+    "title": "North Gate",
+    "state": "KNOWN",
+    "summary": "Principal controlled opening for visitors, Survivors and northern external rail. Current visual state: NORMAL.",
+    "evidence": "AF.1"
+  },
+  {
+    "id": "G-EAST",
+    "domain": "WORLD",
+    "title": "East Gate",
+    "state": "KNOWN",
+    "summary": "Monster-facing. Founder monument. Current alert elevated; Thread A. Visual state: NORMAL with heightened watch, not combat.",
+    "evidence": "AF.2"
+  },
+  {
+    "id": "G-WEST",
+    "domain": "WORLD",
+    "title": "West Gate",
+    "state": "KNOWN",
+    "summary": "Monarchia and internal/military traffic. Visual state: NORMAL.",
+    "evidence": "AF.3"
+  },
+  {
+    "id": "G-SOUTH",
+    "domain": "WORLD",
+    "title": "South Gate",
+    "state": "KNOWN",
+    "summary": "Industrial and southern logistics. Southern rail domestic only. Visual state: NORMAL.",
+    "evidence": "AF.4"
+  },
+  {
+    "id": "C-FILM",
+    "domain": "WORLD",
+    "title": "Where the pre-war film was shot",
+    "state": "UNKNOWN",
+    "summary": "A skyline reel exists in the Hall projector. Location of the shoot is unresolved Mystery M3. A film cannot settle the mystery by suggestion.",
+    "evidence": "Great Mysteries"
+  }
+]

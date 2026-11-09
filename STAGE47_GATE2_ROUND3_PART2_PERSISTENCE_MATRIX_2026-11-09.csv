@@ -1,0 +1,14 @@
+test_id,area,initial_state,expected,actual,real_backend,commit_confirmed,reload_performed,receipt_matches_restored_state,status,evidence
+C3-UNIT-01,Snapshot autosave,Snapshot changes rapidly,One debounced flush of latest snapshot,Passed unit test,No,No,No,Not applicable,Unit-tested,scripts/save-autosave.test.mjs
+C3-UNIT-02,Snapshot autosave,Notice-only change,No snapshot write,Passed unit test,No,No,No,Not applicable,Unit-tested,scripts/save-autosave.test.mjs
+C3-UNIT-03,Autosave lifecycle,Pending debounce then cleanup,Timer cancelled and listener removed,Passed unit test,No,No,No,Not applicable,Unit-tested,scripts/save-autosave.test.mjs
+C3-UNIT-04,Flush deduplication,Two callers request same serialized snapshot,One writer and shared result,Passed unit test,No,No,No,Not applicable,Unit-tested,scripts/save-autosave.test.mjs
+C3-UNIT-05,Flush deduplication,Two different snapshot keys,Do not coalesce,Passed unit test,No,No,No,Not applicable,Unit-tested,scripts/save-autosave.test.mjs
+C3-UNIT-06,Initial account load,No account save row and no local progress,Do not mark device seed as remotely committed,Passed contract regression test,No,No,No,Not applicable,Unit-tested-contract,scripts/save-autosave.test.mjs
+C3-UNIT-07,Receipt status,PostgreSQL vs PGlite vs device-only,Show distinct honest persistence labels,Passed contract regression test,No,No,No,Not applicable,Unit-tested-contract,scripts/save-autosave.test.mjs
+C3-INT-01,Command to DB,Valid campaign command,Validator to SQL commit to revision,Not run: DATABASE_URL unset,No,No,No,No,Blocked,Environment inventory
+C3-INT-02,Reload,Commit a command and reload,Restored snapshot equals committed payload,Not run: no DB driver/server,No,No,No,No,Blocked,Environment inventory
+C3-INT-03,Restart,Commit then restart backend,State remains after restart,Not run: no PostgreSQL service,No,No,No,No,Blocked,Environment inventory
+C3-INT-04,Failure atomicity,Inject failure around transaction/commit,No partial mutation and safe retry,Not run: no DB service,No,No,No,No,Blocked,Environment inventory
+C3-INT-05,Concurrency,Two sessions update same revision,One commit and explicit conflict,Not run: no real backend/two sessions,No,No,No,No,Blocked,Environment inventory
+C3-BRW-01,Receipt browser path,Real command and authoritative save,Receipt matches restored persistent state,Not run: browser app unavailable,No,No,No,No,Blocked,Environment inventory

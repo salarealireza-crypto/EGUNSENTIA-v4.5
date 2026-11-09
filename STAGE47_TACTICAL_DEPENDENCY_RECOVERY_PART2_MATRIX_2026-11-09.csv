@@ -1,0 +1,15 @@
+id,area,observed,expected,actual,status,evidence
+D2-PARENT,Checkpoint integrity,CP17 archive,Archive matches sidecar and is valid,SHA-256 matched; unzip test PASS; 789 members,PASS,CP17 ZIP; parent sidecar
+D2-WORKINGCOPY,Working copy permissions,Previous extraction root-owned,User-owned writable independent extraction,UID 1000; write probe PASS; 789 files extracted,PASS,filesystem stat; extraction verification
+D2-CACHE-DEFAULT,Default npm cache,/home/oai/.npm,Cache usable,EACCES creating _cacache due root-owned files,BLOCKED,npm cache verify default output
+D2-CACHE-ISOLATED,Isolated npm cache,/mnt/data/egunsentia_npm_cache,Writable cache verifies,PASS; 0 bytes; 0 index entries,PASS,npm cache verify --cache ...
+D2-REGISTRY-DNS,Registry DNS,registry.npmjs.org,Hostname resolves,getaddrinfo temporary failure; npm ping EAI_AGAIN,BLOCKED,socket DNS; npm ping
+D2-NPM-CI,Exact lockfile install,Fresh writable copy + isolated cache,npm ci exits 0 and installs all packages,Tarball fetches fail EAI_AGAIN; secondary Exit handler never called,BLOCKED,custom-cache npm ci debug log
+D2-ZOD,Zod package,package.json ^4.4.0; lock 4.6.5,Install Zod 4.6.5; ESM import works,Not installed; cache empty; test suite import blocked,BLOCKED,package.json; package-lock; delta.ts
+D2-FOCUSED,Focused tests,CP17 fresh source,All focused tests pass,70/70 PASS,Unit-tested,focused test run
+D2-SCRIPTS,Runnable scripts,All scripts except game.test.mjs,All runnable tests pass,461/461 PASS across 56 files,Unit-tested,all script suite run
+D2-CANON,Canon verifier,CP17 source,Registry/invariants pass,"PASS: 65 panels, 167 assets, option catalogs",Unit-tested,node scripts/verify-canon.mjs
+D2-CLEANUP,Temporary artifacts,Failed install attempt,No partial node_modules or app-env left,node_modules absent; app-env absent; no npm process,PASS,filesystem checks; ps
+D2-LOCK,Lockfile integrity,CP17 exact lock,No lockfile modification,SHA-256 unchanged,PASS,SHA-256 verification
+C3,Persistence integration,No DATABASE_URL / PG backend,Real command → commit → reload matrix,Not run; remains blocked,BLOCKED,CP17 C3 handoff
+GATE2,Gate 2,C3 incomplete,C3 accepted before C4,PARTIAL; C4 not started,PARTIAL,Master Prompt and handoff

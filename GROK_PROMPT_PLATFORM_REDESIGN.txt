@@ -1,0 +1,159 @@
+You are continuing the Egunsentia project in this workspace (the zip is already extracted here). This is a BUILD task, not a discussion. Do not ask questions; decide from this brief and list assumptions in the final report.
+
+SCOPE (owner decision, still in force): NO image generation, NO new animation, NO video, NO music/audio. Keep the existing SVG placeholders and existing CSS motion untouched. Everything below is achievable with typography, colour, layout, components, content tables and code-drawn SVG diagrams (a UI diagram is code, not generated art). Respect prefers-reduced-motion. Any new transition is optional, opacity only, <=150 ms.
+
+RESUME STATE (this workspace is not a fresh start - read V45_PROGRESS.md):
+- Step A (baseline) is already done: npm ci, build, typecheck, test:game (58 pass), verify:art, verify:canon were reported green. Do NOT redo it beyond a quick re-run before you finish.
+- Step B foundation was started: src/lib/platform/desks.ts, gauges.ts, voice.ts and src/lib/platform/options/effects.ts, execute.ts exist. voice.ts and execute.ts appear not to be imported anywhere yet. Read them, reuse what fits the brief, do not create duplicates, and wire them in.
+- attachments/EGUNSENTIA_V4.1_SUPER_LORE_MASTER.txt is a 3-line STUB written only so verify:canon passes. It is not the lore. A green verify:canon does not prove lore fidelity; the working lore source is src/lib/canon/*.json.
+- GROK_PROMPT_REMAINING.txt is the older task. Where it overlaps this brief, this brief wins; use the old one only as background.
+
+READ FIRST (in this order, nothing else up front): V45_PROGRESS.md, V45_HANDOFF.md, AGENTS.md, then this file.
+
+RULES (unchanged): preserve V4.1 code, canon, saves and preserved art; keep all manifest ids/paths. Saves stay additive (always pass loaded p4 through normalizeP4). Never mutate state in place. Secret Clock / Relation numbers never appear in player-visible strings (leak scan in src/lib/platform/leak.ts). Keep A5.4 option safety (no player-state tampering, atomic execution, confirm step, no retcon). Data-driven: content as TS/JSON tables, not hand-written components per panel. Never report a command green unless you ran it and saw it pass. Update V45_PROGRESS.md after each finished step. Gate reports max 10 lines. Work in small verified steps; the previous runs ran out of budget mid-task, so finish and verify each step before starting the next.
+
+=====================================================================
+1. WHY THE PLATFORM FEELS DEAD (measured on this archive, not guessed)
+=====================================================================
+- One skin for 65 panels: same green CRT card, same ▣ icon (65/65), same hero-banner slot, same four tabs (Overview / Options / Records / Intel), same Advisor / Status / Next strip.
+- Text is 8-11px mono uppercase almost everywhere (53 occurrences of text-[8..11px] in CommandDeck.tsx + V45PanelBody.tsx).
+- 32 of 65 panels have no real body. They fall through to DefaultPanelContent, which prints "This cumulative V4.5 demo exposes the panel through the shared Command Deck shell..." plus Day/Hour counters.
+- Options sit in a separate tab as a flat list. In catalog.ts all 403 options have effects: [] and requires: []; 221 forecast only "Downstream reaction"; every summary starts "Prerequisite:". Pressing Execute mostly writes a log line, so nothing visibly changes. That is why it feels like it does not work.
+- The lore voice exists ("a mark is not a repair", advisor lines) but is buried in 11px small print.
+- The eight wings are eight 9px buttons ("1. C 11"), not places. The base game is candle-and-stone, serif, warm-dark; the platform is cold green CRT for everything.
+
+=====================================================================
+2. DESIGN PILLARS
+=====================================================================
+P1 Places, not forms. Each wing is a room with its own light, material and name. Depth in the metro = secrecy.
+P2 One desk = one object. Panels share a shell, but body layout comes from one of 8 archetypes (ledger, map, dossier, post...), not one card list.
+P3 Every action leaves a trace: stamp -> receipt -> gauge moves -> delayed message arrives "because of" the order.
+P4 Voice first. The advisor speaks at the top of every desk, in character, reacting to state.
+P5 Readable. Min 13px, body 15px, lead 17px, desk title 22px display serif. Mono only for numbers, IDs, times. Tap targets >=44px. Mobile-first at 390x844.
+P6 Words, not numbers, for anything hidden (keep existing credibility tags and qualitative bands).
+
+=====================================================================
+3. INFORMATION ARCHITECTURE
+=====================================================================
+Platform = Home -> Wing Room -> Desk.
+Keep from the current deck: "/" search palette, favorites, "Wait 1 hour" (must always work), time-advance buttons, confirm modal for medium/high risk, Custom Verdict, crisis banner with tier colour and hours left.
+
+3.1 Home ("The Cutaway") - see section 5.
+3.2 Wing Room: a short page per wing = place name + one-line mood + its desks as large slips (icon, title, one live status line from state, attention badge). No more 9px tab row.
+3.3 Desk shell (DeskShell): header = [wing place eyebrow] [desk title, display serif] [VoiceLine] [GaugeRow 2-3 gauges relevant to the desk]; body = archetype template; "Orders" drawer for unattached options; footer = existing time controls.
+
+=====================================================================
+4. VISUAL SYSTEM
+=====================================================================
+Use only fonts already in the project (Cormorant Garamond display, Source Sans 3 body, IBM Plex Mono numbers). No new font downloads.
+Implement as CSS variables set by data-wing="<WING>" on the desk root: --wing-accent, --wing-surface, --wing-line, --wing-ink, --wing-motif. New components read ONLY these tokens (no hard-coded green "term-*" classes).
+
+Wing | place name | mood | accent | surface | CSS-only motif
+COMMAND  | War Table        | amber lamp on dark iron  | #f0b429 | #14100c | brass corner brackets, stamped IDs
+CITY     | The Works        | blueprint / steel        | #3ec8e0 | #0b1418 | faint 24px grid lines
+SHADOWS  | Black Layer      | crimson/magenta on black | #e879f9 + #ff5a4e | #07050a | redaction bars, typewriter caps
+HOUSE    | Evening Hall     | rose lamplight, parchment| #fb7185 | #1d1512 | italic serif voice lines, warm vignette
+SURFACE  | The Latch        | sulfur on cold grey      | #f5d76e | #0f1210 | hazard-stripe hairline, stencil caps
+WORLD    | Hall of Envoys   | blue and gold vellum     | #60a5fa + #d4b483 | #0c1118 | wax-seal badge on faction tags
+MEDIA    | The Booth        | KEEP green phosphor CRT  | #3ee07a | existing term-bg | existing look (the one place it is correct)
+ARCHIVE  | The Stacks       | violet / ash paper       | #c084fc | #12101a | index-card tabs
+SYSTEM (29, 63) | neutral utility, out of fiction, no theme.
+
+Shared primitives (new folder src/components/platform/):
+- DeskShell, DeskHeader, WingRoom, Cutaway (section 5)
+- VoiceLine: advisor name + one in-character line (section 8)
+- Gauge: WORD + arrow, never raw hidden numbers. Bands: Plenty / Steady / Thin / Short / Failing; arrow = change since yesterday. A changed gauge keeps a static highlight ring until the player has looked at it.
+- Slip: one card component with variants (paper slip, ledger row, dossier tab, telegram, evidence pin)
+- Stamp: the action button (bordered caps label); medium/high risk opens the existing confirm step
+- Chip: cost / risk / delay as icon + short value (lucide-react), not text soup
+- Receipt: see section 6.3
+- EmptyState with voice ("Nothing on this desk. Hesse says the cistern is quiet.") instead of "No X yet."
+Give each of the 65 panels a real lucide icon (registry field icon) instead of ▣.
+
+=====================================================================
+5. HOME - "THE CUTAWAY"
+=====================================================================
+Replace the wing button grid with a code-drawn SVG vertical cross-section of the underground (depth = secrecy): Surface/Latch at the top, then Command + House, Works/City, Archive, Black Layer at the bottom; Media and World as side branches. Eight hotspot buttons, each showing place name, attention badge (count of items needing the player), and a tint when a crisis touches it. On narrow screens, if the SVG is cramped, fall back to a stacked list of 8 room cards in the same top-to-bottom order (decide, note in assumptions).
+Above it: PULSE row - Water, Food, Energy, Treasury (+ Order/Morale if the state has them) as Gauge words.
+Below it: ON YOUR DESK - max 5 slips ranked by urgency, merged from: open crisis (tier colour, hours left), letters awaiting a verdict, NPC requests/absences, next planner item, consequences due within 24 sim-hours, market bottleneck rumors. Each deep-links to its desk with the item pre-selected.
+Below that: SINCE YOU LAST LOOKED - last <=6 lines from Event Ledger / News / Whispers with a source tag.
+
+=====================================================================
+6. ACTION MODEL (this is what fixes "it does not work")
+=====================================================================
+6.1 Orders live next to what they act on.
+A petition shows [Grant] [Defer] [Refuse] stamps inline. An NPC dossier shows its own options in its Orders section. A ledger row offers that good's options. Add optional field attachTo on catalog options: "desk" | "npc:<id>" | "good:<id>" | "faction:<id>" | "clue:*" | "letter:*" | "site:<id>". Render inline where it matches; the remaining options go in the desk's Orders drawer grouped by category (Investigate / Order / Delegate / Invest / Wait / Negotiate). catalog.ts stays the single source. Do not rename existing ids; keep locked titles (18-OPT-02, 45-OPT-01, 24-OPT-02 behaviour).
+
+6.2 Typed effects (extend the schema, keep it small).
+ - stock { good, delta }                    (goods only from the lore list in sim/economy.ts)
+ - relation { faction | npc, step: -2..+2 }  (stored as numbers, SHOWN as words)
+ - queue { afterHours, consequenceId, becauseOf: optionId }
+ - note { channel: ledger | news | rumor | chronicle, templateId }  (hooks already exist)
+ - flag { set | clear, key }                 (unlocks / locks)
+ - npc { id, busyHours | mood band }
+Fill the 403 options FROM TEMPLATES, not by hand: a default effect recipe per category plus a per-panel parameter table (primary good, primary NPC, primary faction, ledger/news line templates). Targets: >=90% of options have >=1 effect; every Order/Invest option has >=1 stock, relation or queue effect; Investigate options reveal or upgrade a clue/record; Wait options advance time and surface what arrived. Give >=60% of options a real `requires` (NPC available, stock >= cost, flag set, relation band) and show a human reason when locked ("Locked: Hesse is below on the west stair until 18:00."). Replace the generic "Downstream reaction" unknown with a specific unknown taken from the effect's queue template.
+
+6.3 Receipt. After any option runs, show a Receipt slip (sheet or inline expand):
+ - DONE: what changed now (gauge words with arrows)
+ - SPENT: marks, hours, who is now busy
+ - YOU WILL HEAR: delayed items with a rough time band ("by tomorrow's Evening Hall"), never exact hidden numbers
+ - WRITTEN TO: Ledger / News / Rumor / Chronicle tags that actually fired
+6.4 Delayed consequences arrive as slips in Messages and On-your-desk with a "Because of: <order title>" line, so cause -> effect is traceable.
+6.5 Safety unchanged: confirm for medium/high, atomic execution, no retcon, "Wait 1 hour" always available.
+
+=====================================================================
+7. DESK ARCHETYPES (the framework)
+=====================================================================
+Add to each registry entry: archetype, place (wing place name), views (archetype-specific tab names replacing the generic four), icon. Panel -> archetype map (verified 65/65, no overlap):
+
+MINISTRY  : 04 14 20 21 23 24 25 28 50 51 52 53
+LEDGER    : 06 11 22 32 44 45 54 64
+SCHEMATIC : 10 15 18 27 30 55 56 57 61
+DOSSIER   : 17 26 33 36 38 48 49 58 59
+POST      : 01 02 03 16 42 43
+EVIDENCE  : 07 13 19 31 47
+CLOCKFACE : 05 08 09 12 34 37 46
+CODEX     : 35 39 40 41 60 62 65
+SYSTEM    : 29 63
+
+MINISTRY - views: Today / Petitions / Orders / Record. Header: minister voice + 2-3 gauges. Petitions = slips built from the desk's options, seeds.json, NPC requests, each with Grant/Defer/Refuse stamps. Work-in-progress queue shows hours left. Signature: Grant spends marks and opens a Receipt.
+LEDGER - views: Books / Prices / Bottlenecks / Record. Table: good | held | quote with breakdown chips (scarcity / transit / hazard / political) from priceOf; bottleneck list from p4.rumors. Tap a row -> breakdown sheet + that good's attached orders. Sort/filter.
+SCHEMATIC - views: Map / Layers / Sites / Record. Code-drawn SVG: 42 tunnel lines (27 active, 15 Lost), districts, rail, gates N/E, the Latch, expedition routes (data: canon atlas.json, cards.json places, gates state, crisis). Layer toggles; tap node -> sheet with status in words and attached orders; crisis tints affected nodes.
+DOSSIER - views: Now / Memory / Web / Orders. Roster with availability dot (here / elsewhere / absent) from npcNow -> dossier: current place + activity, last 5 memory lines (panel 48), relation words, attached orders. Web = simple SVG relation graph with bands as stroke styles. Evening Hall [33] and Banquet [59] use a "room" variant: seat ring / long table SVG, tap-to-seat (keep the existing ordered-seating logic and rules).
+POST - views: Inbox / Read / Reply / Record. Letters keep the existing five checks as a checklist with seal / route / handwriting; news and radio as dated bulletins with credibility tag and reliability band; reply = stamps.
+EVIDENCE - views: Board / Leads / Contradictions / Theories. Pins and strings as SVG lines; contradiction flags; "Hold as theory" kept; rumors and provenance as pin variants.
+CLOCKFACE - views: Today / Week / Rules / Record. 24h strip: fixed rhythms, planned items, NPC-blocked slots, missed items; Chronicle / Night Chronicle as day-by-day scroll.
+CODEX - views: Index / Entry / See also / Unlocks. Index -> entry -> "see also" chips from canon JSON; locked entries shown as sealed, with the unlock condition in words.
+SYSTEM - plain utility layout, no wing theme (Audit, Saves & Settings).
+
+=====================================================================
+8. VOICE LAYER
+=====================================================================
+New data table src/lib/platform/voice.ts: for each advisorId used in the registry, 6-10 lines keyed by state band (calm / strained / crisis) and context (a gauge is low, crisis open, nothing pending, order just executed). Source tone from the lore voice already in catalog summaries and src/lib/canon/cards.json. VoiceLine picks deterministically from state (no randomness that breaks tests). Max 140 characters. No hidden numbers. The VoiceLine always renders at the top of the desk.
+
+=====================================================================
+9. WORK ORDER
+=====================================================================
+A. Baseline: npm ci, typecheck, build, test:game, verify:canon, verify:art -- --structure. Fix what is red. Record real results.
+B. Foundation: wing tokens + type scale in styles.css; primitives from section 4; tests (token map complete for all 8 wings; grep test that new components contain no text smaller than 13px).
+C. Shell + Home: DeskShell, WingRoom, Cutaway, Pulse, On-your-desk, Since-you-looked; registry gets archetype / place / views / icon; keep palette, favorites, time controls, crisis banner.
+D. PILOT: build MINISTRY, LEDGER and DOSSIER end-to-end, INCLUDING effects + attachTo + Receipt for the options of their panels. Browser smoke + screenshots. Write the pilot result in V45_PROGRESS.md (max 10 lines) and continue.
+E. Remaining archetypes: POST, EVIDENCE, CLOCKFACE, SCHEMATIC, CODEX, SYSTEM.
+F. Effects fill for all 403 options (section 6.2) + tests: schema validation, every effect references an existing good / NPC / faction, leak scan passes, title-uniqueness test stays enforced.
+G. Delete the filler: DefaultPanelContent must not be reachable (add a test that fails if any of the 65 panels renders it).
+H. Final QA.
+
+=====================================================================
+10. ACCEPTANCE (each item must be shown by a real run)
+=====================================================================
+- typecheck, build, test:game, verify:canon, verify:art all pass (give real counts).
+- No panel renders DefaultPanelContent (test).
+- No text under 13px in new components (test/grep).
+- >=90% of options have >=1 effect; 0 duplicate titles; every locked option shows a reason.
+- Executing one option per archetype writes a Receipt and visibly changes >=1 gauge or record (screenshot evidence).
+- Playwright: Home + one desk per archetype + SYSTEM at 390x844 and 1280x800; zero console errors; no horizontal overflow.
+- The 8 wings are visibly distinct (tokens differ; produce a contact sheet screenshot).
+- Keyboard navigation and aria-labels on Cutaway hotspots; prefers-reduced-motion respected.
+- A V4.1-shaped save fixture still loads; hidden numbers never appear in player-visible strings.
+
+FINAL REPORT (plain language, max 15 lines): real command results with test counts; which steps A-H are done; panels still not on an archetype (count); share of options with effects and with requires; what was skipped and the exact reason; the exact next action if work remains; one line saying the workspace is ready to export.

@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-10",
+  "checkpoint": "CP23-R6P2-FOLLOWUP-RECHECK-PARTIAL",
+  "immediate_parent": {
+    "file": "EGUNSENTIA-STAGE47-CP23-ROUND6-PART2-PREFLIGHT-2026-11-10.zip",
+    "sha256": "f9f36d0aa2d7a43351c5da42796133ed7645a7ee58b8d3088bd4fc0eb1d0b38a"
+  },
+  "source_parent": {
+    "checkpoint": "CP23-Round6-Part1",
+    "sha256": "9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb"
+  },
+  "registry": {
+    "dns": "BLOCKED_EAI_AGAIN",
+    "https_ping": "BLOCKED_CURL_EXIT_6",
+    "npm_ci": "NOT_ATTEMPTED"
+  },
+  "dependencies": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "dependencies": 57,
+    "devDependencies": 14,
+    "direct_ranges_matched": 71,
+    "lockfile_version": 3,
+    "non_root_package_records": 471,
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+    "node_modules": false
+  },
+  "tests": {
+    "round6_focused": "PASS_5_OF_5",
+    "combined_focused": "PASS_62_OF_62",
+    "runnable_script_suite_excluding_game_test": "PASS_467_OF_467",
+    "game_test": "BLOCKED_MISSING_ZOD",
+    "npm_test": "INCOMPLETE_TIMEOUT_180_SECONDS_NO_TAP_SUMMARY",
+    "canon": "PASS",
+    "red_claw": "PASS_WITH_14_WARNINGS",
+    "art_structure": "PASS_23_GROUPS_UNFILLED"
+  },
+  "tooling": {
+    "typecheck": "BLOCKED_TS2688_NODE_AND_VITE_CLIENT_TYPES",
+    "lint": "BLOCKED_ESLINT_NOT_FOUND",
+    "build": "BLOCKED_VITE_NOT_FOUND",
+    "auth_invariant": "BLOCKED_NO_RESOLVED_DEV_SERVER_CONFIG",
+    "al_runtime": "BLOCKED_MISSING_TANSTACK_REACT_START"
+  },
+  "integration": {
+    "database_url_present": false,
+    "postgres_cli_available": false,
+    "docker_available": false,
+    "podman_available": false,
+    "al_provider_credential_present": false,
+    "chromium_available": true,
+    "browser_qa": "NOT_RUN_BUILD_BLOCKED",
+    "persistent_postgres": "NOT_RUN",
+    "production": "NOT_RUN",
+    "visual_asset_pack_cp14": "NOT_SUPPLIED_NOT_ATTEMPTED"
+  },
+  "scope": {
+    "source_code_changed": false,
+    "package_json_changed": false,
+    "package_lock_changed": false,
+    "files_deleted": 0,
+    "temporary_app_env_removed": true,
+    "gate2": "PARTIAL_BLOCKED",
+    "round6": "PARTIAL",
+    "round7_started": false,
+    "political_capital_contract": "UNRESOLVED"
+  },
+  "next_action": "Restore official npm registry DNS/HTTPS; run exact npm ci; then full verification and AL runtime projection."
+}

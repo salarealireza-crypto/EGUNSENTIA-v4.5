@@ -1,0 +1,43 @@
+You are continuing the Egunsentia game project in this workspace (the zip is already extracted here). This is a BUILD task, not a discussion. Do not ask questions; decide from the master prompt and lore and list assumptions in the final report.
+
+SCOPE (owner decision, final): NO image generation, NO new animation, NO video, NO music/audio beds. Keep the existing SVG placeholders and CSS motion untouched. Everything else - code, systems, content, correctness - must be complete. Do not spend credits on Imagine tools or video tools.
+
+READ FIRST (in this order, nothing else up front): V45_PROGRESS.md, V45_HANDOFF.md, AGENTS.md. Consult attachments/EGUNSENTIA_V4.5_Update_Prompt.txt PART A only by section (A3 canon, A4.5 audit, A5.4 option safety, A6 panel list, A7/A8 systems) and the lore (attachments/EGUNSENTIA_V4.1_SUPER_LORE_MASTER.txt) only by grep / section number. Never read either file whole.
+
+GROUND TRUTH (verified, trust over any old status text)
+- The simulation was rewritten last session: src/lib/game/p4-simulation.ts + pure modules src/lib/game/sim/{core,npc,crisis,letters,planner,banquet,council,investigation,factions,economy}.ts. 50/50 tests pass: `npm run test:game` (1 todo = option-title uniqueness).
+- NEVER been run with registry access: npm ci, `npm run typecheck`, `npm run build`, browser smoke. The UI edits made last session (store.ts runClockAdvance/advanceUntil/worldInputsOf, CommandDeck.tsx target buttons, V45PanelBody.tsx Council/Investigation/Letters/Banquet/Planner bodies) were only syntax-checked.
+- Still weak: `src/lib/platform/options/catalog.ts` has ~403 options but only 25 distinct titles; ~35 of 65 panels use the generic body in V45PanelBody.tsx; the new engine data (NPC schedules, faction reports, economy prices, crisis backlog/history, chronicleNotes, rumors, newsFeed, redLedger, relations) is stored in p4 state but mostly NOT shown in any panel; crisis resolution does not change world stocks.
+
+RULES
+- Preserve V4.1 code, canon, saves and preserved art. Keep all manifest ids/paths. Saves must stay additive: always pass loaded p4 through normalizeP4. Never mutate state in place. Hidden Secret Clock / Relation numbers must never appear in player-visible strings (leak scan in src/lib/platform/leak.ts runs in audit and tests).
+- Data-driven: content as TS/JSON tables, not hand-written components. Keep A5.4 option safety (no player-state tampering, atomic execution, confirm step, no retcon). Use only goods named in the lore (see sim/economy.ts).
+- Never report a command green unless you ran it and saw it pass. Update V45_PROGRESS.md after each finished item. Gate reports max 10 lines.
+
+WORK ORDER
+
+STEP A - REAL ENVIRONMENT (do first)
+A1. `npm ci`, `npm run typecheck`, `npm run build`, `npm run test:game`, `npm run verify:canon`, `npm run verify:art -- --structure`. Fix every red item (expect type errors in store.ts / V45PanelBody.tsx / CommandDeck.tsx from last session's unverified edits). Then a browser smoke with Playwright: Title -> Play -> Platform, open every one of the 65 panels, zero console errors. Record real results in V45_PROGRESS.md.
+A2. Add tests for anything you fix. Keep the suite green.
+
+STEP B - WIRE THE ENGINE INTO THE UI (data already exists, show it)
+B1. NPC Life Engine: Personnel [26], Messages [01], Evening Hall [33], Cast [36]: build each cast member's current place/activity/availability with sim/npc.ts (buildSchedule from src/lib/canon/cards.json DAY lines; npcNow; rollNpcDay once per new day from the store; absentees feed Messages/Evening Hall notes). Planner [12/Day Planner]: pass an npcAvailable callback built from npcNow so NPC availability really blocks slots.
+B2. Crisis: show the open crisis banner in the Command Deck status strip with tier colour and hours left; tier-based interruption already stops advances (advanceClock). Apply crisis outcomes to the world: on resolveCrisis / failure adjust water/food/energy stocks, gate state or morale by the crisis kind (define a table next to CRISIS_DEFS, apply in the store, log to Event Ledger + Chronicle using chronicleNotes). Add a "wait 1 hour (deliberate pause)" button that always works.
+B3. Factions [58] / Faction Dossiers / Diplomatic Desk [16]: render p4.reports (credibility-tagged text only, never raw numbers), treaty status, blocs as qualitative bands. Banquet [59]: show relations, rumors, news and Red Ledger lines written by the banquet; ordered seating UI already exists.
+B4. Economy: Markets & Rations [54], Trade & Logistics [22], Foreign Trade [45]: show priceOf per good with scarcity / transit / hazard / political discount breakdown from p4.economy; run economyTick+cascade each simulated day (currently weekly) and surface bottlenecks as rumors.
+B5. Investigation [Special Reports / Quest board]: show contradictions, source reliability bands, "Hold as theory" results. Letters: show per-check notes (already) and diplomatic consequence when a forged letter is believed (queue a consequence + faction relation hit).
+B6. Council [24]: decree should add real effects through the option engine (cost, delay, consequence) rather than only a queue line.
+
+STEP C - CONTENT PASS (largest remaining work)
+C1. Replace the generic option catalog with bespoke, lore-specific options for all 65 panels: distinct titles, lore-specific costs, prerequisites, risks, consequences, forecasts, faction/NPC links, canon-specific advisor lines. Target: no option title repeated more than twice across the catalog; then remove the `todo` flag from the uniqueness test in scripts/game.test.mjs so it enforces it. Source from the lore by panel (Appendix X ministries, trade sections 3.58-3.67, 3.250-3.253 factions, Surface/Latch, Radio, Projector, Household, etc.).
+C2. Give every panel that still uses the generic body a real authored body: ministry workflows, Personnel interaction graph, project dependency network, faction dossiers, NPC memory histories, reputation histories, district overlays, Year Book/Legacy, Archive cross-links. Keep them data-driven.
+C3. Deep lore wiring: remaining canon entities and historical events, cross-reference graph, conditional unlocks, lore tables from A4.2 as executable data; `npm run verify:canon` must keep passing (extend it for what you add).
+
+STEP D - OPTIONAL CODE-ONLY (only if everything above is green and time remains)
+D1. Server-side xAI TTS function for Radio news and Chapter Cards: authenticated, user-initiated, short passages, cached, capped per user per day, key server-only; if XAI_API_KEY is missing ship the code path and a clear disabled state. Off by default; cost notice in [63].
+D2. Mixer state (master/effects/voice, persisted, always-visible mute) in sound.ts using only the existing procedural engine and captions for critical cues. No audio files.
+
+STEP E - FINAL QA
+Boot, Title, new game, briefing, every wing, every registered panel, one option per wing, ledger/news/chronicle writes, advance 1h / 1d / 7d / "to 20:00" / "next scheduled item", reload and compare state, V4.1 save migration (use a V4.1-shaped save fixture), reduced-motion toggle, mobile viewport, keyboard navigation + ARIA, no console errors, audit all PASS, production bundle builds.
+
+FINAL REPORT (plain language, short): real command results with actual test counts; which of B1-B6, C1-C3, D1-D2 are done; option-title uniqueness figure; panels still on the generic body (count); anything skipped with the exact reason; the exact next action if work remains. Make sure everything is saved in the workspace and say in one line that it is ready to export.

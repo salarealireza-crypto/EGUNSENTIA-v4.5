@@ -1,0 +1,205 @@
+{
+  "audit_date": "2026-11-09",
+  "round": 0,
+  "status": "COMPLETE_FOR_SUPPLIED_STAGED_CP9_EXTENSION; ORIGINAL_CP9_ARCHIVE_NOT_SUPPLIED",
+  "prompt": {
+    "file": "EGUNSENTIA_Master_Prompt_Optimized.txt",
+    "sha256": "eb3d0747ffa9bdda99929740e29de20b4183d0dfe3e996350b1aa44c2f8fb4f3",
+    "lines": 484
+  },
+  "expected_baseline": {
+    "archive": "EGUNSENTIA-STAGE47-PRIVATE-RELATIONS-ROUND1-CP9-2026-11-09.zip",
+    "sha256": "a43bf92240b98dc17cff02b91adf7c7016ca4ae8d51e9ca2a229d5499e734eb1",
+    "files": 640,
+    "supplied_as_exact_archive": false
+  },
+  "actual_input": {
+    "archive": "EGUNSENTIA-RED-CLAW-HOUSEHOLD-EXPANSION-CP9-STAGED-2026-11-09.zip",
+    "sha256": "096929f9bc35575b8c9c19b311a7fef17c9e4623b073c50ac84403807c56e690",
+    "zip_entries": 670,
+    "all_entries_are_files": true,
+    "duplicate_names": 0,
+    "unsafe_paths": 0,
+    "symlinks": 0,
+    "zip_integrity": "PASS"
+  },
+  "staged_extension_inventory": {
+    "manifest": "docs/red-claw-household-expansion/15_FILE_INVENTORY.csv",
+    "manifest_rows_excluding_self": 669,
+    "status_counts": {
+      "unchanged": 632,
+      "new": 29,
+      "changed": 8
+    },
+    "manifest_path_size_sha_matches": 669,
+    "mismatches": 0,
+    "cp9_inventory_rows_excluding_self": 639,
+    "cp9_paths_missing_from_staged_extension": 0,
+    "cp9_hashes_changed": 8,
+    "new_files_including_manifest": 30,
+    "removed_files": 0,
+    "modified_paths": [
+      "package.json",
+      "scripts/private-relations.test.mjs",
+      "src/components/game/CastPanel.tsx",
+      "src/components/game/V45PanelBody.tsx",
+      "src/lib/game/kernel.ts",
+      "src/lib/game/sim/npc.ts",
+      "src/lib/game/sim/private-relations.ts",
+      "src/lib/game/types.ts"
+    ]
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "lockfile_version": 3,
+    "package_engines_declared": false,
+    "node_modules_present": false,
+    "local_app_env_present": false,
+    "git_metadata_present": false,
+    "github_workflows_present": false,
+    "env_files_found": [
+      ".env.example"
+    ],
+    "npm_ci_run": false,
+    "secret_pattern_scan_text_files": 659,
+    "secret_pattern_matches": 0,
+    "secret_scan_limitation": "Heuristic pattern scan only; not a comprehensive secrets audit."
+  },
+  "canonical_sources": {
+    "v41_master": {
+      "path": "attachments/EGUNSENTIA_V4.1_SUPER_LORE_MASTER.txt",
+      "bytes": 331,
+      "lines": 6,
+      "status": "PLACEHOLDER_ANCHOR_ONLY"
+    },
+    "v45_update_prompt": {
+      "path": "attachments/EGUNSENTIA_V4.5_Update_Prompt.txt",
+      "status": "MISSING"
+    },
+    "sealed_floor7_genealogy": "MISSING_OR_NOT_SUPPLIED_IN_SEARCHABLE_COMPLETE_FORM",
+    "red_claw_proposed_records": 79,
+    "approval_status": "AWAITING_OWNER_APPROVAL"
+  },
+  "verification": {
+    "npm_test": {
+      "status": "FAIL",
+      "exit_code": 1,
+      "passed": 431,
+      "failed": 4,
+      "details": "One test file did not load because zod was missing; three with-app-env assertions expected local VITE_AUTH_ENABLED=true from absent .grok/app-env.json.",
+      "evidence": "docs/round0-evidence/npm_test.log"
+    },
+    "test_game": {
+      "status": "BLOCKED",
+      "exit_code": 1,
+      "details": "ERR_MODULE_NOT_FOUND: zod imported by src/lib/game/delta.ts; suite assertions did not execute.",
+      "evidence": "docs/round0-evidence/test_game.log"
+    },
+    "private_relations_and_save_focused": {
+      "status": "PASS",
+      "passed": 33,
+      "failed": 0,
+      "evidence": "docs/round0-evidence/private_relations_focused.log"
+    },
+    "red_claw_focused": {
+      "status": "PASS",
+      "passed": 10,
+      "failed": 0,
+      "evidence": "docs/round0-evidence/red_claw_focused.log"
+    },
+    "verify_canon": {
+      "status": "PASS",
+      "evidence": "docs/round0-evidence/verify_canon.log"
+    },
+    "verify_red_claw": {
+      "status": "PASS_WITH_WARNINGS",
+      "evidence": "docs/round0-evidence/verify_red_claw.log"
+    },
+    "verify_art": {
+      "status": "FAIL_INCOMPLETE",
+      "assets": 167,
+      "generated_raster": 0,
+      "code_drawn": 150,
+      "preserved": 17,
+      "incomplete_groups": 23,
+      "evidence": "docs/round0-evidence/verify_art.log"
+    },
+    "mjs_syntax": {
+      "status": "PASS",
+      "checked": 92,
+      "failed": 0,
+      "evidence": "docs/round0-evidence/mjs_syntax.log"
+    },
+    "typecheck": {
+      "status": "BLOCKED",
+      "exit_code": 2,
+      "details": "TS2688 missing type definitions for node and vite/client.",
+      "evidence": "docs/round0-evidence/typecheck.log"
+    },
+    "lint": {
+      "status": "BLOCKED",
+      "exit_code": 127,
+      "details": "eslint executable not found.",
+      "evidence": "docs/round0-evidence/lint.log"
+    },
+    "build": {
+      "status": "BLOCKED",
+      "exit_code": 127,
+      "details": "spawn vite ENOENT.",
+      "evidence": "docs/round0-evidence/build.log"
+    },
+    "browser_qa": {
+      "status": "NOT_RUN"
+    },
+    "database_oauth_al_production": {
+      "status": "NOT_RUN"
+    }
+  },
+  "round0_changes": {
+    "source_code_modified": false,
+    "canon_data_modified": false,
+    "existing_tests_modified": false,
+    "documentation_files_modified": [
+      "README.md",
+      "RECOVERY_PROGRESS.md",
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+    ],
+    "audit_deliverables_added": [
+      "STAGE47_ROUND0_INTAKE_AUDIT_2026-11-09.md",
+      "STAGE47_ROUND0_HANDOFF_2026-11-09.md",
+      "STAGE47_ROUND0_EVIDENCE_2026-11-09.json",
+      "STAGE47_ROUND0_FILE_INVENTORY_2026-11-09.csv",
+      "WORKLOG-56.md",
+      "docs/round0-evidence/ (17 command/evidence logs)"
+    ],
+    "packaging_change_counts": {
+      "parent_files": 670,
+      "unchanged_files": 667,
+      "modified_existing_files": 3,
+      "added_files_including_inventory": 22,
+      "removed_files": 0,
+      "final_checkpoint_files": 692,
+      "inventory_rows_excluding_itself": 691
+    },
+    "modified_existing_files": [
+      "README.md",
+      "RECOVERY_PROGRESS.md",
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+    ]
+  },
+  "next_round": "Round 1 — Private Relations audit and hardening; extend only verified gaps, do not reimplement.",
+  "round0_packaging_inventory": {
+    "file": "STAGE47_ROUND0_FILE_INVENTORY_2026-11-09.csv",
+    "rows_excluding_self": 691,
+    "status_counts": {
+      "UNCHANGED": 667,
+      "MODIFIED": 3,
+      "ADDED": 21
+    },
+    "final_file_count_including_inventory": 692,
+    "parent_files": 670,
+    "removed_files": 0,
+    "self_hash_omitted": true
+  }
+}

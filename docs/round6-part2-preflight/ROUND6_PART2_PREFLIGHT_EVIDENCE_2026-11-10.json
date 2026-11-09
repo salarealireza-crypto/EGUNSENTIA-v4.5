@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-10",
+  "parent_checkpoint": "CP23",
+  "parent_archive": "EGUNSENTIA-STAGE47-POST-CP22-ROUND6-INTEGRATION-PART1-PARTIAL-CP23-2026-11-09.zip",
+  "parent_archive_sha256": "9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb",
+  "zip_integrity": "PASS",
+  "zip_entries": 956,
+  "uncompressed_bytes": 15621863,
+  "round6_part1_inventory": {
+    "rows": 875,
+    "verified": 875,
+    "mismatches": 0
+  },
+  "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+  "direct_dependencies": 71,
+  "direct_dependency_range_mismatches": 0,
+  "lockfile_version": 3,
+  "lockfile_package_records": 472,
+  "registry_dns": "BLOCKED: Temporary failure in name resolution",
+  "npm_ci": "NOT_ATTEMPTED",
+  "tests": {
+    "round6_focused": "5/5 PASS",
+    "combined_focused": "62/62 PASS",
+    "runnable_scripts_excluding_game": "467/467 PASS",
+    "npm_test": "467 PASS / 1 suite load failure (missing zod)"
+  },
+  "checks": {
+    "canon": "PASS",
+    "red_claw": "PASS; 14 warnings retained",
+    "art_structure": "PASS; 23 groups not filled",
+    "typecheck": "BLOCKED: missing node and vite/client types",
+    "lint": "BLOCKED: eslint Permission denied",
+    "build": "BLOCKED: vite spawn EACCES",
+    "auth_invariant": "BLOCKED: unresolved VITE_AUTH_ENABLED"
+  },
+  "integration": {
+    "AL_runtime": "NOT RUN",
+    "postgresql_persistence": "NOT RUN",
+    "browser_responsive": "NOT RUN",
+    "production": "NOT RUN",
+    "visual_asset_pack": "NOT ATTEMPTED; separate pack not supplied"
+  },
+  "source_changes": 0,
+  "deletions": 0,
+  "round6": "PARTIAL",
+  "gate2": "PARTIAL/BLOCKED",
+  "round7": "NOT STARTED",
+  "next_action": "Restore official npm registry DNS/HTTPS, then run npm ci --no-audit --no-fund."
+}

@@ -1,0 +1,72 @@
+{
+  "date": "2026-11-10",
+  "checkpoint": "CP23-R6P2-FOLLOWUP-RECHECK-4-PARTIAL",
+  "immediate_parent": {
+    "file": "EGUNSENTIA-STAGE47-CP23-ROUND6-PART2-INDEPENDENT-VERIFICATION-PARTIAL-2026-11-10.zip",
+    "sha256": "0115229c3f0486a53d094ce047221c96b8857fafba9b797b776fe1618c622ed7"
+  },
+  "source_ancestor": {
+    "checkpoint": "CP23-Round6-Part1",
+    "sha256": "9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb"
+  },
+  "package_lock": {
+    "sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+    "lockfile_version": 3,
+    "package_records_including_root": 472,
+    "dependencies": 57,
+    "dev_dependencies": 14,
+    "direct_ranges_matched": 71
+  },
+  "registry": {
+    "getent_exit": 2,
+    "node_dns": "EAI_AGAIN",
+    "https_curl_exit": 6,
+    "npm_ci": "NOT_ATTEMPTED"
+  },
+  "tests": {
+    "round6_focused": "PASS_5_OF_5",
+    "combined_focused": "PASS_62_OF_62",
+    "runnable_scripts_excluding_game_test": "PASS_467_OF_467_ACROSS_57_FILES",
+    "canon": "PASS",
+    "red_claw": "PASS_WITH_14_WARNINGS",
+    "art_structure": "PASS_23_GROUPS_UNFILLED",
+    "leak_scanner_direct": "LIMITED_PASS_2_DETECTED_3_BENIGN",
+    "typescript_app_auth_batch": "6_PASS_2_IMPORT_BLOCKED",
+    "game_test": "BLOCKED_MISSING_ZOD",
+    "typecheck": "BLOCKED_MISSING_NODE_AND_VITE_CLIENT_TYPES",
+    "lint": "BLOCKED_ESLINT_NOT_FOUND",
+    "build": "BLOCKED_VITE_ENOENT"
+  },
+  "integration": {
+    "al_runtime": "BLOCKED_MISSING_TANSTACK_REACT_START",
+    "al_provider": "NOT_RUN_XAI_API_KEY_ABSENT",
+    "postgres": "NOT_RUN_NO_DATABASE_URL_OR_POSTGRES_TOOLS",
+    "browser": "NOT_RUN_BUILD_BLOCKED",
+    "production": "NOT_RUN",
+    "cp14_visual_pack": "NOT_SUPPLIED_NOT_ATTEMPTED",
+    "database_url_present": false,
+    "xai_api_key_present": false,
+    "postgres_tools_available": false,
+    "container_tools_available": false,
+    "chromium_available": true
+  },
+  "scope": {
+    "game_source_changed": false,
+    "canon_changed": false,
+    "relationship_state_changed": false,
+    "save_schema_or_migrations_changed": false,
+    "db_auth_changed": false,
+    "package_manifest_changed": false,
+    "package_lock_changed": false,
+    "economy_changed": false,
+    "existing_art_changed": false,
+    "deletions": 0,
+    "temp_app_env_removed": true,
+    "node_modules_absent": true,
+    "gate2": "PARTIAL_BLOCKED",
+    "round6": "PARTIAL",
+    "round7_started": false,
+    "political_capital_contract": "UNRESOLVED"
+  },
+  "next_action": "Retry official npm Registry DNS/HTTPS; only after success run npm ci --no-audit --no-fund in a fresh writable child copy."
+}

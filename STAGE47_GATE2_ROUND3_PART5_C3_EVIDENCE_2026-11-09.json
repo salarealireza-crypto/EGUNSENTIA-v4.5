@@ -1,0 +1,183 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": 47,
+  "gate": 2,
+  "round": 3,
+  "part": 5,
+  "date": "2026-11-09",
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP15-ROUND3-PART5-C3-FAILURE-PATH-AUTH-TESTS-PARTIAL-CP16-2026-11-09.zip",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP14-ROUND3-PART4-RECEIPT-RECONSTRUCTION-PARTIAL-CP15-2026-11-09.zip",
+  "parent_sha256": "c61c1d6675147a173af6cf6998ccf576e666374ca6fd57f98645139c5920d47a",
+  "scope": "C3 migration transaction failure-path and save authorization source-contract tests",
+  "status": {
+    "source_test_hardening": "completed",
+    "focused_tests": "pass",
+    "runnable_scripts": "pass",
+    "integration": "blocked_partial",
+    "browser": "not_run",
+    "production": "not_run",
+    "gate2": "partial"
+  },
+  "new_tests": [
+    {
+      "file": "scripts/migration-transaction.test.mjs",
+      "test": "a COMMIT failure triggers rollback and preserves the commit error",
+      "status": "pass"
+    },
+    {
+      "file": "scripts/migration-transaction.test.mjs",
+      "test": "an advisory-lock failure prevents migration work and rolls back",
+      "status": "pass"
+    },
+    {
+      "file": "scripts/save-revision.test.mjs",
+      "test": "all save endpoints scope access to the authenticated middleware context",
+      "status": "pass"
+    },
+    {
+      "file": "scripts/save-revision.test.mjs",
+      "test": "persistSave does not accept a caller-selected account identity",
+      "status": "pass"
+    }
+  ],
+  "tests": {
+    "focused_persistence_receipt_db_migration": {
+      "passed": 70,
+      "failed": 0
+    },
+    "runnable_scripts_excluding_game_test": {
+      "passed": 461,
+      "failed": 0,
+      "test_files": 56
+    },
+    "full_npm_test": {
+      "passed": 461,
+      "blocked_files": 1,
+      "discovered": 462,
+      "blocked_file": "scripts/game.test.mjs",
+      "error": "ERR_MODULE_NOT_FOUND: zod imported from src/lib/game/delta.ts"
+    },
+    "app_data_auth_separate": {
+      "passed": 6,
+      "blocked": 2,
+      "missing": [
+        "@tanstack/react-start",
+        "jose"
+      ]
+    },
+    "canon": "pass",
+    "red_claw": {
+      "status": "pass_with_warnings",
+      "warnings": 14
+    },
+    "art": {
+      "status": "fail_incomplete",
+      "assets": 167,
+      "generated_raster": 0,
+      "code_drawn": 150,
+      "preserved": 17,
+      "incomplete_groups": 23
+    },
+    "typecheck": {
+      "status": "blocked",
+      "reason": "missing @types/node and vite/client"
+    },
+    "build": {
+      "status": "blocked",
+      "reason": "spawn vite ENOENT"
+    },
+    "lint": {
+      "status": "blocked",
+      "reason": "eslint not found"
+    },
+    "auth_invariant": {
+      "status": "blocked",
+      "reason": "dev server resolved VITE_AUTH_ENABLED unavailable"
+    }
+  },
+  "environment": {
+    "DATABASE_URL": "unset",
+    "BETTER_AUTH_SECRET": "unset",
+    "PGLITE_ALLOW_EPHEMERAL": "unset",
+    "node_modules": "absent",
+    "npm_cache_zod": "not cached",
+    "postgres_tools": "missing",
+    "docker": "missing",
+    "npm_ci": "not retried in Part 5; CP14 recorded timeout at 180 seconds",
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b"
+  },
+  "source_findings": [
+    {
+      "id": "F-C3-05A",
+      "finding": "Migration transaction helper now has unit coverage for COMMIT failure and advisory-lock failure; no real SQL transaction executed.",
+      "files": [
+        "scripts/migration-transaction.mjs",
+        "scripts/migration-transaction.test.mjs"
+      ],
+      "classification": "unit-tested"
+    },
+    {
+      "id": "F-C3-01A",
+      "finding": "Save endpoints source-contract tests assert authMiddleware and context.userId scoping; no HTTP/auth integration executed.",
+      "files": [
+        "src/lib/game/save.ts",
+        "scripts/save-revision.test.mjs"
+      ],
+      "classification": "unit-tested"
+    },
+    {
+      "id": "F-C3-04",
+      "finding": "Command identities survive normalization/serialization in existing tests; actual post-commit lost-response replay remains unverified.",
+      "files": [
+        "src/lib/game/sim/option-command.ts",
+        "src/lib/game/p4-simulation.ts",
+        "scripts/gate2-round3.test.mjs",
+        "scripts/gate2-round4.test.mjs"
+      ],
+      "classification": "source-audited_unit-tested"
+    },
+    {
+      "id": "F-C3-06",
+      "finding": "No independent historical player-save fixture found in CP15 archive; current legacy-shape tests are synthetic parser tests.",
+      "files": [
+        "scripts/save-validation.test.mjs"
+      ],
+      "classification": "fixture-gap"
+    }
+  ],
+  "c3": {
+    "C3.1": "blocked",
+    "C3.2": "blocked",
+    "C3.3": "blocked",
+    "C3.4": "unit-tested_network-replay-blocked",
+    "C3.5": "unit-tested_real-db-failure-injection-blocked",
+    "C3.6": "partial_synthetic-fixtures-only",
+    "C3.7": "blocked",
+    "C3.8": "implemented_unit-tested_browser-blocked",
+    "C3.9": "unit-tested_multi-session-blocked",
+    "C3.10": "matrix-updated_integration-acceptance-blocked"
+  },
+  "changes": {
+    "added": [
+      "STAGE47_GATE2_ROUND3_PART5_C3_FAILURE_AND_AUTH_TESTS_REPORT_2026-11-09.md",
+      "STAGE47_GATE2_ROUND3_PART5_C3_HANDOFF_2026-11-09.md",
+      "STAGE47_GATE2_ROUND3_PART5_C3_ACCEPTANCE_MATRIX_2026-11-09.csv",
+      "STAGE47_GATE2_ROUND3_PART5_C3_VERIFICATION_LOG_2026-11-09.txt",
+      "STAGE47_GATE2_ROUND3_PART5_C3_EVIDENCE_2026-11-09.json",
+      "WORKLOG-63.md"
+    ],
+    "modified": [
+      "scripts/migration-transaction.test.mjs",
+      "scripts/save-revision.test.mjs",
+      "EGUNSENTIA_RELEASE_CHECKPOINTS.md",
+      "RECOVERY_PROGRESS.md",
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+    ],
+    "deleted": [],
+    "canon_changes": 0,
+    "save_schema_changes": 0,
+    "migration_changes": 0,
+    "package_manifest_changes": 0,
+    "lockfile_changes": 0
+  }
+}

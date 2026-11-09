@@ -1,0 +1,119 @@
+{
+  "checkpoint": "CP20",
+  "stage": 47,
+  "gate": 2,
+  "execution_round": 3,
+  "date": "2026-11-09",
+  "parent_archive": "EGUNSENTIA-STAGE47-POST-CP18-TACTICAL-DEPENDENCY-RECHECK-PART3-PARTIAL-CP19-2026-11-09.zip",
+  "parent_sha256": "efeedea8a5dcec891f98ad0e9f893831efea9b376bf0372a0da412cd0ecba15d",
+  "scope": "Final owner-directed attempt to close Round 3 only; no Round 4 or later work started.",
+  "status": {
+    "round3": "PARTIAL_BLOCKED",
+    "gate2": "PARTIAL",
+    "release_candidate": false,
+    "integration_tested": false,
+    "browser_verified": false,
+    "production_verified": false
+  },
+  "tests": {
+    "focused_persistence_receipt_db_migration": {
+      "passed": 70,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "runnable_scripts_excluding_game_test": {
+      "passed": 461,
+      "failed": 0,
+      "files": 56,
+      "status": "PASS",
+      "excluded": "scripts/game.test.mjs"
+    },
+    "council_gate2_panel": {
+      "passed": 27,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "canon_verifier": {
+      "status": "PASS",
+      "panels": 65,
+      "assets": 167,
+      "catalogs": "verified"
+    },
+    "game_test": {
+      "status": "BLOCKED",
+      "error": "ERR_MODULE_NOT_FOUND: zod"
+    },
+    "full_npm_test": {
+      "status": "TIMEOUT_INCOMPLETE",
+      "prior_attempt_seconds": 120,
+      "final_summary": false
+    },
+    "typecheck": {
+      "status": "BLOCKED",
+      "exit": 2,
+      "errors": [
+        "TS2688 node",
+        "TS2688 vite/client"
+      ]
+    },
+    "build": {
+      "status": "BLOCKED",
+      "exit": 127,
+      "error": "spawn vite EACCES"
+    },
+    "lint": {
+      "status": "BLOCKED",
+      "exit": 127,
+      "error": "eslint: Permission denied"
+    },
+    "npm_registry": {
+      "status": "BLOCKED",
+      "error": "EAI_AGAIN getaddrinfo registry.npmjs.org"
+    },
+    "postgres": {
+      "status": "NOT_AVAILABLE",
+      "database_url_present": false,
+      "tools": [
+        "psql",
+        "postgres",
+        "initdb",
+        "pg_ctl",
+        "docker",
+        "podman"
+      ],
+      "available": false
+    },
+    "browser": {
+      "status": "NOT_RUN",
+      "chromium": "1.57.0",
+      "playwright": "1.57.0",
+      "reason": "application build/server/backend unavailable"
+    }
+  },
+  "catalog_audit": {
+    "options": 403,
+    "positive_political_capital": 182,
+    "wait_options": 26,
+    "wait_options_with_positive_political_capital": 26,
+    "authoritative_balance_or_ledger": false
+  },
+  "lockfile": {
+    "sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+    "changed": false
+  },
+  "cleanup": {
+    "node_modules_present": false,
+    "temporary_app_env_present": false,
+    "secrets_included": false,
+    "project_files_deleted": 0
+  },
+  "source_changes": 0,
+  "remaining_round3_acceptance": [
+    "C2 authoritative Political Capital contract absent",
+    "C3 persistent PostgreSQL command/commit/reload and concurrency acceptance not run",
+    "C4 connected NPC availability consistency not accepted",
+    "C5 authoritative missing-person source integration absent",
+    "C6 browser navigation/save restoration not verified",
+    "C7 connected gameplay/browser workflows not run"
+  ]
+}

@@ -1,0 +1,45 @@
+$ python scripts/stage47-round2-audit.py
+compiled_cards=55
+private_relations_rows=37 core=25 proposed=12
+female_adult_cards_in_audit_scope=27 (25 core + 2 outside core roster)
+core_15_field_complete=17/25 body_present=19/25
+audited_27_15_field_complete=19/27 body_present=21/27
+red_claw_registry_cards=100 unique_ids=100 unique_names=100
+source_status={'CANON': 11, 'CANON_IDENTITY_WITH_PROPOSED_BIOGRAPHY': 2, 'PROPOSED_EXPANSION': 79, 'CANON_RECORD_WITH_UNRESOLVED_GENEALOGY': 8}
+graph_dangling_references=0
+graph_reciprocity_mismatches=0
+ROUND2_READ_ONLY_AUDIT=PASS (structural checks only; not Canon-edge verification)
+
+$ node scripts/verify-canon.mjs
+PASS: 65-panel canon registry, invariants, 167 assets, preserved art, and all option catalogs verified.
+
+$ npm run verify:red-claw
+
+> verify:red-claw
+> node --experimental-strip-types --import ./scripts/register-ts.mjs scripts/verify-red-claw-household.mjs
+
+(node:21511) ExperimentalWarning: Type Stripping is an experimental feature and might change at any time
+(Use `node --trace-warnings ...` to show where the warning was created)
+RED CLAW HOUSEHOLD VERIFY: PASS
+Cards: 100 (A20/B30/C50)
+Proposed permanent family-linked residents: 71; active CAST entries: 72
+Historical personnel: 3 male servants + 5 female Iron Guard (all proposed)
+Former adult partners: 12 (read-only, no current romantic eligibility)
+WARN: Lenna Falkner: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Mara Venn: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Sanna Kroll: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Rika Dorn: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Ilva Brandt: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Hilda Mertens: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Freya Stahl: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Alrike Sattler: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Klara Hesse: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Nora Weiss: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Greta Falk: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: Tilda Rehn: relationship age is valid under proposed dates but not verified against a canonical birth date.
+WARN: The sealed Floor 7 genealogy ledger was not supplied in a complete searchable form; spouse degrees-of-kinship are not certified.
+WARN: Elara/Luka/Christian parent-age chronology requires exact canonical birth dates; no romantic-history age is certified for that relationship.
+
+$ node --version && npm --version
+v22.16.0
+10.9.2

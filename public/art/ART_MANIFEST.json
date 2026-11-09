@@ -1,0 +1,2009 @@
+{
+  "version": "4.5-demo",
+  "assets": [
+    {
+      "id": "hero.messages",
+      "path": "/art/v45/hero.messages.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "01"
+      ],
+      "altText": "Demo industrial illustration for panel 01 Messages"
+    },
+    {
+      "id": "hero.news",
+      "path": "/art/v45/hero.news.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "02"
+      ],
+      "altText": "Demo industrial illustration for panel 02 Internal News"
+    },
+    {
+      "id": "hero.worldnews",
+      "path": "/art/v45/hero.worldnews.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "03"
+      ],
+      "altText": "Demo industrial illustration for panel 03 External News / World Report"
+    },
+    {
+      "id": "hero.law",
+      "path": "/art/v45/hero.law.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "04"
+      ],
+      "altText": "Demo industrial illustration for panel 04 Edicts & Legal Affairs"
+    },
+    {
+      "id": "hero.ceremonies",
+      "path": "/art/v45/hero.ceremonies.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "05"
+      ],
+      "altText": "Demo industrial illustration for panel 05 Ceremonies & Calendar"
+    },
+    {
+      "id": "hero.status",
+      "path": "/art/v45/hero.status.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "06"
+      ],
+      "altText": "Demo industrial illustration for panel 06 Management Status"
+    },
+    {
+      "id": "hero.special",
+      "path": "/art/v45/hero.special.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "07"
+      ],
+      "altText": "Demo industrial illustration for panel 07 Special Reports"
+    },
+    {
+      "id": "hero.command",
+      "path": "/art/v45/hero.command.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "08"
+      ],
+      "altText": "Demo industrial illustration for panel 08 Command Log"
+    },
+    {
+      "id": "hero.chronicle",
+      "path": "/art/v45/hero.chronicle.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "09"
+      ],
+      "altText": "Demo industrial illustration for panel 09 Chronicle"
+    },
+    {
+      "id": "hero.tunnels",
+      "path": "/art/v45/hero.tunnels.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "10"
+      ],
+      "altText": "Demo industrial illustration for panel 10 Tunnels"
+    },
+    {
+      "id": "hero.projects",
+      "path": "/art/v45/hero.projects.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "11"
+      ],
+      "altText": "Demo industrial illustration for panel 11 Projects & Trade"
+    },
+    {
+      "id": "hero.orders",
+      "path": "/art/v45/hero.orders.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "12"
+      ],
+      "altText": "Demo industrial illustration for panel 12 Standing Orders & Plans"
+    },
+    {
+      "id": "hero.blacklayer",
+      "path": "/art/v45/hero.blacklayer.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "13"
+      ],
+      "altText": "Demo industrial illustration for panel 13 Intelligence"
+    },
+    {
+      "id": "hero.tech",
+      "path": "/art/v45/hero.tech.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "14"
+      ],
+      "altText": "Demo industrial illustration for panel 14 Technology & Engineering"
+    },
+    {
+      "id": "surface.latch",
+      "path": "/art/v45/surface.latch.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "15"
+      ],
+      "altText": "Demo industrial illustration for panel 15 Surface Watch"
+    },
+    {
+      "id": "hero.diplomacy",
+      "path": "/art/v45/hero.diplomacy.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "16"
+      ],
+      "altText": "Demo industrial illustration for panel 16 Diplomatic Desk"
+    },
+    {
+      "id": "hero.house",
+      "path": "/art/v45/hero.house.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "17"
+      ],
+      "altText": "Demo industrial illustration for panel 17 House & Kin"
+    },
+    {
+      "id": "hero.borders",
+      "path": "/art/v45/hero.borders.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "Demo industrial illustration for panel 18 Borders"
+    },
+    {
+      "id": "hero.quests",
+      "path": "/art/v45/hero.quests.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "19"
+      ],
+      "altText": "Demo industrial illustration for panel 19 Quest Engine"
+    },
+    {
+      "id": "hero.population",
+      "path": "/art/v45/hero.population.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "20"
+      ],
+      "altText": "Demo industrial illustration for panel 20 Population & Training"
+    },
+    {
+      "id": "hero.water",
+      "path": "/art/v45/hero.water.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "21"
+      ],
+      "altText": "Demo industrial illustration for panel 21 Water / Air / Sanitation"
+    },
+    {
+      "id": "hero.logistics",
+      "path": "/art/v45/hero.logistics.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "22"
+      ],
+      "altText": "Demo industrial illustration for panel 22 Trade & Logistics"
+    },
+    {
+      "id": "hero.military",
+      "path": "/art/v45/hero.military.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "23"
+      ],
+      "altText": "Demo industrial illustration for panel 23 Military & Law"
+    },
+    {
+      "id": "ministry.war",
+      "path": "/art/v45/ministry.war.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "24"
+      ],
+      "altText": "Demo industrial illustration for panel 24 Ministry Operations"
+    },
+    {
+      "id": "hero.housing",
+      "path": "/art/v45/hero.housing.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "25"
+      ],
+      "altText": "Demo industrial illustration for panel 25 Housing & Utilities"
+    },
+    {
+      "id": "hero.personnel",
+      "path": "/art/v45/hero.personnel.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "26"
+      ],
+      "altText": "Demo industrial illustration for panel 26 Personnel & Relationships"
+    },
+    {
+      "id": "hero.dependencies",
+      "path": "/art/v45/hero.dependencies.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "27"
+      ],
+      "altText": "Demo industrial illustration for panel 27 Projects & Dependencies"
+    },
+    {
+      "id": "hero.infrastructure",
+      "path": "/art/v45/hero.infrastructure.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "28"
+      ],
+      "altText": "Demo industrial illustration for panel 28 Infrastructure & Maintenance"
+    },
+    {
+      "id": "hero.audit",
+      "path": "/art/v45/hero.audit.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "29"
+      ],
+      "altText": "Demo industrial illustration for panel 29 System Diagnostics (Audit)"
+    },
+    {
+      "id": "hero.dome",
+      "path": "/art/v45/hero.dome.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "30"
+      ],
+      "altText": "Demo industrial illustration for panel 30 Dome Pulse"
+    },
+    {
+      "id": "hero.whispers",
+      "path": "/art/v45/hero.whispers.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "31"
+      ],
+      "altText": "Demo industrial illustration for panel 31 Whispers"
+    },
+    {
+      "id": "hero.redledger",
+      "path": "/art/v45/hero.redledger.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "32"
+      ],
+      "altText": "Demo industrial illustration for panel 32 Red Ledger"
+    },
+    {
+      "id": "hero.hall",
+      "path": "/art/v45/hero.hall.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo industrial illustration for panel 33 Evening Hall"
+    },
+    {
+      "id": "hero.night",
+      "path": "/art/v45/hero.night.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "34"
+      ],
+      "altText": "Demo industrial illustration for panel 34 Night Chronicle"
+    },
+    {
+      "id": "hero.relic",
+      "path": "/art/v45/hero.relic.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo industrial illustration for panel 35 Relic Archive"
+    },
+    {
+      "id": "hero.cast",
+      "path": "/art/v45/hero.cast.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "36"
+      ],
+      "altText": "Demo industrial illustration for panel 36 Cast"
+    },
+    {
+      "id": "hero.clocks",
+      "path": "/art/v45/hero.clocks.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "37"
+      ],
+      "altText": "Demo industrial illustration for panel 37 Clocks"
+    },
+    {
+      "id": "hero.household",
+      "path": "/art/v45/hero.household.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "38"
+      ],
+      "altText": "Demo industrial illustration for panel 38 Household Affection & Attention"
+    },
+    {
+      "id": "vault.personal",
+      "path": "/art/v45/vault.personal.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "39"
+      ],
+      "altText": "Demo industrial illustration for panel 39 Personal Vault"
+    },
+    {
+      "id": "vault.faction",
+      "path": "/art/v45/vault.faction.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "40"
+      ],
+      "altText": "Demo industrial illustration for panel 40 Faction Vault"
+    },
+    {
+      "id": "hero.atlas",
+      "path": "/art/v45/hero.atlas.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "41"
+      ],
+      "altText": "Demo industrial illustration for panel 41 Lore Atlas"
+    },
+    {
+      "id": "radio.booth",
+      "path": "/art/v45/radio.booth.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "42"
+      ],
+      "altText": "Demo industrial illustration for panel 42 Radio"
+    },
+    {
+      "id": "hero.projector",
+      "path": "/art/v45/hero.projector.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "43"
+      ],
+      "altText": "Demo industrial illustration for panel 43 Projector & Film Archive"
+    },
+    {
+      "id": "hero.ledger",
+      "path": "/art/v45/hero.ledger.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "44"
+      ],
+      "altText": "Demo industrial illustration for panel 44 Event Ledger"
+    },
+    {
+      "id": "hero.trade",
+      "path": "/art/v45/hero.trade.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "45"
+      ],
+      "altText": "Demo industrial illustration for panel 45 Foreign Trade Desk"
+    },
+    {
+      "id": "hero.time",
+      "path": "/art/v45/hero.time.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "46"
+      ],
+      "altText": "Demo industrial illustration for panel 46 World Time"
+    },
+    {
+      "id": "hero.provenance",
+      "path": "/art/v45/hero.provenance.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "47"
+      ],
+      "altText": "Demo industrial illustration for panel 47 Provenance Viewer"
+    },
+    {
+      "id": "hero.memory",
+      "path": "/art/v45/hero.memory.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "48"
+      ],
+      "altText": "Demo industrial illustration for panel 48 NPC Memory"
+    },
+    {
+      "id": "hero.reputation",
+      "path": "/art/v45/hero.reputation.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "49"
+      ],
+      "altText": "Demo industrial illustration for panel 49 Reputation"
+    },
+    {
+      "id": "hero.audience",
+      "path": "/art/v45/hero.audience.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "50"
+      ],
+      "altText": "Demo industrial illustration for panel 50 Audience Hall"
+    },
+    {
+      "id": "hero.prison",
+      "path": "/art/v45/hero.prison.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "51"
+      ],
+      "altText": "Demo industrial illustration for panel 51 Justice & Prison"
+    },
+    {
+      "id": "hero.medical",
+      "path": "/art/v45/hero.medical.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "52"
+      ],
+      "altText": "Demo industrial illustration for panel 52 Medical Wing"
+    },
+    {
+      "id": "hero.education",
+      "path": "/art/v45/hero.education.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "53"
+      ],
+      "altText": "Demo industrial illustration for panel 53 Education & Nursery"
+    },
+    {
+      "id": "hero.market",
+      "path": "/art/v45/hero.market.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "54"
+      ],
+      "altText": "Demo industrial illustration for panel 54 Markets & Rations"
+    },
+    {
+      "id": "hero.rail",
+      "path": "/art/v45/hero.rail.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "55"
+      ],
+      "altText": "Demo industrial illustration for panel 55 Rail Network"
+    },
+    {
+      "id": "hero.expeditions",
+      "path": "/art/v45/hero.expeditions.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "56"
+      ],
+      "altText": "Demo industrial illustration for panel 56 Expeditions"
+    },
+    {
+      "id": "hero.bestiary",
+      "path": "/art/v45/hero.bestiary.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "57"
+      ],
+      "altText": "Demo industrial illustration for panel 57 Bestiary & Monster Pressure"
+    },
+    {
+      "id": "hero.factions",
+      "path": "/art/v45/hero.factions.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo industrial illustration for panel 58 Faction Dossiers"
+    },
+    {
+      "id": "set.banquet",
+      "path": "/art/v45/set.banquet.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "59"
+      ],
+      "altText": "Demo industrial illustration for panel 59 Treaty & Banquet Table"
+    },
+    {
+      "id": "hero.culture",
+      "path": "/art/v45/hero.culture.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "60"
+      ],
+      "altText": "Demo industrial illustration for panel 60 Culture Codex"
+    },
+    {
+      "id": "map.districts",
+      "path": "/art/v45/map.districts.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo industrial illustration for panel 61 City Districts Map"
+    },
+    {
+      "id": "hero.album",
+      "path": "/art/v45/hero.album.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Demo industrial illustration for panel 62 House Album"
+    },
+    {
+      "id": "hero.settings",
+      "path": "/art/v45/hero.settings.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "63"
+      ],
+      "altText": "Demo industrial illustration for panel 63 Saves & Settings"
+    },
+    {
+      "id": "hero.marks",
+      "path": "/art/v45/hero.marks.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "64"
+      ],
+      "altText": "Demo industrial illustration for panel 64 Marks of the Fist"
+    },
+    {
+      "id": "hero.legacy",
+      "path": "/art/v45/hero.legacy.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo industrial illustration for panel 65 Year Book & Legacy"
+    },
+    {
+      "id": "gate.north.normal",
+      "path": "/art/v45/gate-north-normal.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "North gate normal demo state"
+    },
+    {
+      "id": "gate.north.combat",
+      "path": "/art/v45/gate-north-combat.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "North gate combat demo state"
+    },
+    {
+      "id": "gate.north.breach",
+      "path": "/art/v45/gate-north-breach.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "North gate breach demo state"
+    },
+    {
+      "id": "gate.north.destroyed",
+      "path": "/art/v45/gate-north-destroyed.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "North gate destroyed demo state"
+    },
+    {
+      "id": "gate.east.normal",
+      "path": "/art/v45/gate-east-normal.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "East gate normal demo state"
+    },
+    {
+      "id": "gate.east.combat",
+      "path": "/art/v45/gate-east-combat.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "East gate combat demo state"
+    },
+    {
+      "id": "gate.east.breach",
+      "path": "/art/v45/gate-east-breach.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "East gate breach demo state"
+    },
+    {
+      "id": "gate.east.destroyed",
+      "path": "/art/v45/gate-east-destroyed.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "East gate destroyed demo state"
+    },
+    {
+      "id": "gate.west.normal",
+      "path": "/art/v45/gate-west-normal.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "West gate normal demo state"
+    },
+    {
+      "id": "gate.west.combat",
+      "path": "/art/v45/gate-west-combat.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "West gate combat demo state"
+    },
+    {
+      "id": "gate.west.breach",
+      "path": "/art/v45/gate-west-breach.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "West gate breach demo state"
+    },
+    {
+      "id": "gate.west.destroyed",
+      "path": "/art/v45/gate-west-destroyed.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "West gate destroyed demo state"
+    },
+    {
+      "id": "gate.south.normal",
+      "path": "/art/v45/gate-south-normal.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "South gate normal demo state"
+    },
+    {
+      "id": "gate.south.combat",
+      "path": "/art/v45/gate-south-combat.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "South gate combat demo state"
+    },
+    {
+      "id": "gate.south.breach",
+      "path": "/art/v45/gate-south-breach.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "South gate breach demo state"
+    },
+    {
+      "id": "gate.south.destroyed",
+      "path": "/art/v45/gate-south-destroyed.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "state predicate",
+      "usedByPanels": [
+        "18"
+      ],
+      "altText": "South gate destroyed demo state"
+    },
+    {
+      "id": "moment.01",
+      "path": "/art/v45/moment-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 01"
+    },
+    {
+      "id": "moment.02",
+      "path": "/art/v45/moment-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 02"
+    },
+    {
+      "id": "moment.03",
+      "path": "/art/v45/moment-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 03"
+    },
+    {
+      "id": "moment.04",
+      "path": "/art/v45/moment-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 04"
+    },
+    {
+      "id": "moment.05",
+      "path": "/art/v45/moment-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 05"
+    },
+    {
+      "id": "moment.06",
+      "path": "/art/v45/moment-06.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 06"
+    },
+    {
+      "id": "moment.07",
+      "path": "/art/v45/moment-07.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 07"
+    },
+    {
+      "id": "moment.08",
+      "path": "/art/v45/moment-08.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 08"
+    },
+    {
+      "id": "moment.09",
+      "path": "/art/v45/moment-09.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 09"
+    },
+    {
+      "id": "moment.10",
+      "path": "/art/v45/moment-10.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 10"
+    },
+    {
+      "id": "moment.11",
+      "path": "/art/v45/moment-11.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 11"
+    },
+    {
+      "id": "moment.12",
+      "path": "/art/v45/moment-12.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "33"
+      ],
+      "altText": "Demo illustrated moment 12"
+    },
+    {
+      "id": "chapter.01",
+      "path": "/art/v45/chapter-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 01"
+    },
+    {
+      "id": "chapter.02",
+      "path": "/art/v45/chapter-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 02"
+    },
+    {
+      "id": "chapter.03",
+      "path": "/art/v45/chapter-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 03"
+    },
+    {
+      "id": "chapter.04",
+      "path": "/art/v45/chapter-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 04"
+    },
+    {
+      "id": "chapter.05",
+      "path": "/art/v45/chapter-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 05"
+    },
+    {
+      "id": "chapter.06",
+      "path": "/art/v45/chapter-06.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 06"
+    },
+    {
+      "id": "chapter.07",
+      "path": "/art/v45/chapter-07.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 07"
+    },
+    {
+      "id": "chapter.08",
+      "path": "/art/v45/chapter-08.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 08"
+    },
+    {
+      "id": "chapter.09",
+      "path": "/art/v45/chapter-09.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 09"
+    },
+    {
+      "id": "chapter.10",
+      "path": "/art/v45/chapter-10.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 10"
+    },
+    {
+      "id": "chapter.11",
+      "path": "/art/v45/chapter-11.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 11"
+    },
+    {
+      "id": "chapter.12",
+      "path": "/art/v45/chapter-12.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "65"
+      ],
+      "altText": "Demo illustrated chapter 12"
+    },
+    {
+      "id": "faction.flag.01",
+      "path": "/art/v45/faction-flag-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction flag 01"
+    },
+    {
+      "id": "faction.flag.02",
+      "path": "/art/v45/faction-flag-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction flag 02"
+    },
+    {
+      "id": "faction.flag.03",
+      "path": "/art/v45/faction-flag-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction flag 03"
+    },
+    {
+      "id": "faction.flag.04",
+      "path": "/art/v45/faction-flag-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction flag 04"
+    },
+    {
+      "id": "faction.flag.05",
+      "path": "/art/v45/faction-flag-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction flag 05"
+    },
+    {
+      "id": "faction.seal.01",
+      "path": "/art/v45/faction-seal-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction seal 01"
+    },
+    {
+      "id": "faction.seal.02",
+      "path": "/art/v45/faction-seal-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction seal 02"
+    },
+    {
+      "id": "faction.seal.03",
+      "path": "/art/v45/faction-seal-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction seal 03"
+    },
+    {
+      "id": "faction.seal.04",
+      "path": "/art/v45/faction-seal-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction seal 04"
+    },
+    {
+      "id": "faction.seal.05",
+      "path": "/art/v45/faction-seal-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "58"
+      ],
+      "altText": "Demo illustrated faction seal 05"
+    },
+    {
+      "id": "envoy.01",
+      "path": "/art/v45/envoy-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "45"
+      ],
+      "altText": "Demo illustrated envoy 01"
+    },
+    {
+      "id": "envoy.02",
+      "path": "/art/v45/envoy-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "45"
+      ],
+      "altText": "Demo illustrated envoy 02"
+    },
+    {
+      "id": "envoy.03",
+      "path": "/art/v45/envoy-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "45"
+      ],
+      "altText": "Demo illustrated envoy 03"
+    },
+    {
+      "id": "envoy.04",
+      "path": "/art/v45/envoy-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "45"
+      ],
+      "altText": "Demo illustrated envoy 04"
+    },
+    {
+      "id": "bestiary.01",
+      "path": "/art/v45/bestiary-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "57"
+      ],
+      "altText": "Demo illustrated bestiary 01"
+    },
+    {
+      "id": "bestiary.02",
+      "path": "/art/v45/bestiary-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "57"
+      ],
+      "altText": "Demo illustrated bestiary 02"
+    },
+    {
+      "id": "bestiary.03",
+      "path": "/art/v45/bestiary-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "57"
+      ],
+      "altText": "Demo illustrated bestiary 03"
+    },
+    {
+      "id": "bestiary.04",
+      "path": "/art/v45/bestiary-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "57"
+      ],
+      "altText": "Demo illustrated bestiary 04"
+    },
+    {
+      "id": "bestiary.05",
+      "path": "/art/v45/bestiary-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "57"
+      ],
+      "altText": "Demo illustrated bestiary 05"
+    },
+    {
+      "id": "expedition.01",
+      "path": "/art/v45/expedition-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "56"
+      ],
+      "altText": "Demo illustrated expedition 01"
+    },
+    {
+      "id": "expedition.02",
+      "path": "/art/v45/expedition-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "56"
+      ],
+      "altText": "Demo illustrated expedition 02"
+    },
+    {
+      "id": "expedition.03",
+      "path": "/art/v45/expedition-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "56"
+      ],
+      "altText": "Demo illustrated expedition 03"
+    },
+    {
+      "id": "expedition.04",
+      "path": "/art/v45/expedition-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "56"
+      ],
+      "altText": "Demo illustrated expedition 04"
+    },
+    {
+      "id": "district.01",
+      "path": "/art/v45/district-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 01"
+    },
+    {
+      "id": "district.02",
+      "path": "/art/v45/district-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 02"
+    },
+    {
+      "id": "district.03",
+      "path": "/art/v45/district-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 03"
+    },
+    {
+      "id": "district.04",
+      "path": "/art/v45/district-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 04"
+    },
+    {
+      "id": "district.05",
+      "path": "/art/v45/district-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 05"
+    },
+    {
+      "id": "district.06",
+      "path": "/art/v45/district-06.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 06"
+    },
+    {
+      "id": "district.07",
+      "path": "/art/v45/district-07.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 07"
+    },
+    {
+      "id": "district.08",
+      "path": "/art/v45/district-08.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 08"
+    },
+    {
+      "id": "district.09",
+      "path": "/art/v45/district-09.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 09"
+    },
+    {
+      "id": "district.10",
+      "path": "/art/v45/district-10.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "61"
+      ],
+      "altText": "Demo illustrated district 10"
+    },
+    {
+      "id": "fragment.01",
+      "path": "/art/v45/fragment-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 01"
+    },
+    {
+      "id": "fragment.02",
+      "path": "/art/v45/fragment-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 02"
+    },
+    {
+      "id": "fragment.03",
+      "path": "/art/v45/fragment-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 03"
+    },
+    {
+      "id": "fragment.04",
+      "path": "/art/v45/fragment-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 04"
+    },
+    {
+      "id": "fragment.05",
+      "path": "/art/v45/fragment-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 05"
+    },
+    {
+      "id": "fragment.06",
+      "path": "/art/v45/fragment-06.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 06"
+    },
+    {
+      "id": "fragment.07",
+      "path": "/art/v45/fragment-07.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "35"
+      ],
+      "altText": "Demo illustrated fragment 07"
+    },
+    {
+      "id": "ceremony.01",
+      "path": "/art/v45/ceremony-01.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "05"
+      ],
+      "altText": "Demo illustrated ceremony 01"
+    },
+    {
+      "id": "ceremony.02",
+      "path": "/art/v45/ceremony-02.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "05"
+      ],
+      "altText": "Demo illustrated ceremony 02"
+    },
+    {
+      "id": "ceremony.03",
+      "path": "/art/v45/ceremony-03.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "05"
+      ],
+      "altText": "Demo illustrated ceremony 03"
+    },
+    {
+      "id": "ceremony.04",
+      "path": "/art/v45/ceremony-04.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "05"
+      ],
+      "altText": "Demo illustrated ceremony 04"
+    },
+    {
+      "id": "ceremony.05",
+      "path": "/art/v45/ceremony-05.svg",
+      "aspect": "1200x520",
+      "source": "code",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "05"
+      ],
+      "altText": "Demo illustrated ceremony 05"
+    },
+    {
+      "id": "hall",
+      "path": "/art/hall.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "House hall reference"
+    },
+    {
+      "id": "chamber",
+      "path": "/art/chamber.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "House chamber reference"
+    },
+    {
+      "id": "og",
+      "path": "/og.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Open Graph artwork"
+    },
+    {
+      "id": "x-banner",
+      "path": "/x-banner.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Banner artwork"
+    },
+    {
+      "id": "icon-192",
+      "path": "/icon-192.png",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Application icon"
+    },
+    {
+      "id": "icon-512",
+      "path": "/icon-512.png",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Application icon"
+    },
+    {
+      "id": "favicon",
+      "path": "/favicon.svg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Application favicon"
+    },
+    {
+      "id": "title-a",
+      "path": "/.grok/title-a.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Title art A"
+    },
+    {
+      "id": "title-b",
+      "path": "/.grok/title-b.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Title art B"
+    },
+    {
+      "id": "banner-c-full",
+      "path": "/.grok/banner-c-full.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Banner reference"
+    },
+    {
+      "id": "banner-d-guide",
+      "path": "/.grok/banner-d-guide.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Guide banner"
+    },
+    {
+      "id": "banner-d-lockup",
+      "path": "/.grok/banner-d-lockup.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Lockup banner"
+    },
+    {
+      "id": "banner-title-crop",
+      "path": "/.grok/banner-title-crop.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Title crop"
+    },
+    {
+      "id": "hall-ref",
+      "path": "/.grok/hall-ref.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Hall style reference"
+    },
+    {
+      "id": "og-title-crop",
+      "path": "/.grok/og-title-crop.jpg",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "OG crop"
+    },
+    {
+      "id": "favicon-16",
+      "path": "/.grok/favicon-16.png",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Small favicon"
+    },
+    {
+      "id": "favicon-32",
+      "path": "/.grok/favicon-32.png",
+      "aspect": "preserved",
+      "source": "preserved",
+      "promptHash": null,
+      "unlockRule": "always",
+      "usedByPanels": [
+        "62"
+      ],
+      "altText": "Favicon"
+    }
+  ]
+}

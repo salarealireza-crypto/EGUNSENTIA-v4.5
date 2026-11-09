@@ -1,0 +1,79 @@
+{
+  "project": "EGUNSENTIA",
+  "stage": 47,
+  "gate": 2,
+  "workstream": "D1 tactical dependency/environment audit",
+  "date": "2026-11-09",
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP16-TACTICAL-DEPENDENCY-AUDIT-PARTIAL-CP17-2026-11-09.zip",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-POST-CP15-ROUND3-PART5-C3-FAILURE-PATH-AUTH-TESTS-PARTIAL-CP16-2026-11-09.zip",
+  "parent_sha256": "1bd3504c1b5fce7fdb3538b9c4014ed80bdae936429ae94f72cc5824ee5d1f8c",
+  "status": {
+    "d1_environment_audit": "completed",
+    "d2_dependency_install": "blocked_dns_egress",
+    "c3": "blocked_partial",
+    "gate2": "partial",
+    "browser": "not_run",
+    "production": "not_run"
+  },
+  "manifest_audit": {
+    "package_json_dependencies": 57,
+    "package_json_dev_dependencies": 14,
+    "lockfile_version": 3,
+    "root_direct_declarations_compared": 71,
+    "root_direct_declarations_matching": 71,
+    "mismatches": 0,
+    "zod_declared_range": "^4.4.0",
+    "zod_locked_version": "4.6.5",
+    "zod_resolved": "https://registry.npmjs.org/zod/-/zod-4.6.5.tgz",
+    "zod_integrity": "sha512-v5l/aFXZQeai4awLbOpSoHecE9UiMrnfx75tEXLjNonXVARxQ5mOeipTjROUchszUNCqnE+hqAMujRsRHsut2Q==",
+    "zod_import": "src/lib/game/delta.ts:1"
+  },
+  "environment": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "registry": "https://registry.npmjs.org/",
+    "offline_mode": false,
+    "zod_in_npm_cache": false,
+    "node_modules_after_cleanup": false,
+    "database_url_configured": false,
+    "better_auth_secret_configured": false,
+    "postgres_tools_or_docker_available": false
+  },
+  "network": {
+    "npm_ping": "EAI_AGAIN getaddrinfo registry.npmjs.org",
+    "curl_via_configured_path": "Could not resolve host: registry.npmjs.org",
+    "curl_direct_no_proxy": "Could not resolve host: registry.npmjs.org",
+    "proxy_environment": "HTTP_PROXY/HTTPS_PROXY/ALL_PROXY unset",
+    "official_npm_status": "All Systems Operational; package installation Operational on 2026-11-09",
+    "classification": "execution-environment DNS/egress blocker; no evidence of a general npm outage"
+  },
+  "tests": {
+    "focused_persistence_receipt_db_migration": {"passed": 70, "failed": 0},
+    "runnable_script_tests_excluding_game_test": {"passed": 461, "failed": 0, "files": 56},
+    "full_npm_test": {"passed": 461, "failed": 1, "discovered": 462, "failure": "ERR_MODULE_NOT_FOUND: zod imported from src/lib/game/delta.ts before game.test assertions load"},
+    "typecheck": "blocked_missing_@types/node_and_vite/client",
+    "build": "blocked_vite_executable_not_found",
+    "lint": "blocked_eslint_executable_not_found",
+    "canon_verifier": "pass",
+    "red_claw_verifier": {"status": "pass_with_warnings", "warnings": 14}
+  },
+  "integrity": {
+    "package_json_sha256": "f33db47e9c69f1919406896834b860721e8f3042bd362cffbd4f3d29fd063103",
+    "package_lock_sha256": "72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b",
+    "package_manifest_or_lock_changed": false,
+    "source_code_changed": false,
+    "canon_changed": false,
+    "save_schema_or_migration_changed": false,
+    "temporary_app_env_removed": true,
+    "incomplete_node_modules_removed": true,
+    "secrets_added": false,
+    "deleted_files": 0
+  },
+  "next_actions": [
+    "Run npm ci --no-audit --no-fund in a runtime with working DNS/HTTPS to registry.npmjs.org",
+    "Verify zod 4.6.5 with npm ls zod and an ESM smoke import",
+    "Run npm run test:game and the complete npm test command",
+    "Run typecheck, lint and build after the exact lockfile dependency tree is installed",
+    "Return to C3.1-C3.10 real backend integration; do not start C4 before C3 acceptance"
+  ]
+}

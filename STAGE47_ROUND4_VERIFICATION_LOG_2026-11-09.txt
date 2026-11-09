@@ -1,0 +1,38 @@
+EGUNSENTIA CP21 — ROUND 4 VERIFICATION LOG
+Date: 2026-11-09
+Parent: CP20 SHA256 3a83f37ac755f6cee175ee1797e081d9308ba0cf3d81d1982a814b27008d87c9
+Working copy: /mnt/data/EGUNSENTIA_ROUND4_CP20_WORKING_COPY
+
+PARENT
+- CP20 sidecar SHA check: PASS
+- CP20 ZIP integrity: PASS
+- Extracted to a new separate working copy; parent ZIP unchanged.
+
+PASS
+1) Focused Gate 2 command using scripts/register-ts.mjs: 27 tests, 27 pass, 0 fail.
+2) Focused persistence/Receipt/DB/migration command: 70 tests, 70 pass, 0 fail.
+3) Runnable scripts suite (56 files, excluding scripts/game.test.mjs), command used --test --test-concurrency=4 and temporary .grok/app-env.json containing only {"VITE_AUTH_ENABLED":"true"}: 461 tests, 461 pass, 0 fail. Temporary file removed.
+4) node scripts/verify-canon.mjs: PASS — 65 panels, 167 registered assets, option catalog invariants.
+5) verify-red-claw-household.mjs: PASS with 14 warnings.
+6) Manifest/lock audit: all 71 direct dependency ranges match; lockfile v3; 471 package records; lock SHA unchanged.
+
+BLOCKED / PARTIAL
+7) npm test: script phase emitted 462 total = 461 pass / 1 suite-load failure; scripts/game.test.mjs fails before assertions with ERR_MODULE_NOT_FOUND for zod. The second TS app/auth phase was not reached. The top-level command did not return cleanly under the runtime timeout.
+8) Separate app/auth group: 8 tests = 6 pass / 2 suite-load failures; missing @tanstack/react-start and jose.
+9) npm run typecheck: TS2688 missing type definition files node and vite/client.
+10) npm run build: spawn vite ENOENT.
+11) npm run lint: eslint not found.
+12) node scripts/verify-art.mjs: FAIL/INCOMPLETE; 167 assets, 0 generated raster, 150 code-drawn, 17 preserved, 23 incomplete groups.
+13) node scripts/check-auth-invariant.mjs: cannot read dev server's resolved VITE_AUTH_ENABLED; no game dev server.
+14) Registry preflight: getent returns no DNS; npm ping EAI_AGAIN; curl cannot resolve registry.npmjs.org. npm ci not retried after failed preflight; CP18 exact npm ci fetch already failed.
+15) Database: no DB URL variables, no PostgreSQL binaries/client, no Docker/Podman, no listener on 5432.
+16) Browser: Chromium 144 and Python Playwright 1.57 present; project lock expects Playwright 1.63 and no node_modules; no Vite app server. Port 8080 is Jupyter uvicorn returning 404. No browser gameplay or responsive tests run.
+
+LOCK / CLEANUP
+- package-lock SHA256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b (unchanged).
+- No source/package/Canon/Save schema/migration changes.
+- .grok/app-env.json absent after tests; no node_modules, local npm cache or build output packaged.
+- No secrets or credentials read/requested/packaged.
+
+DECISION
+Round 4 = PARTIAL / BLOCKED. D1 PASS; D2 BLOCKED; D3 PARTIAL; C3 live DB integration BLOCKED; C7 browser QA NOT RUN. No Round 5 or later scope started. Not a release candidate.

@@ -1,0 +1,60 @@
+EGUNSENTIA CP20 — ROUND 3 FINAL VERIFICATION LOG
+Date: 2026-11-09
+Parent: CP19 SHA256 efeedea8a5dcec891f98ad0e9f893831efea9b376bf0372a0da412cd0ecba15d
+Working copy: /mnt/data/EGUNSENTIA_ROUND3_FINAL_WORKING_COPY
+
+PARENT
+- sha256sum -c CP19 sidecar: PASS
+- unzip -tq CP19: PASS
+- Extracted to a separate working copy; CP19 archive untouched.
+
+PASS COMMANDS
+1) node --experimental-strip-types --test scripts/receipt-persistence.test.mjs scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+   Result: 70 tests, 70 pass, 0 fail.
+2) mapfile -t tests < <(find scripts -maxdepth 1 -name '*.test.mjs' ! -name 'game.test.mjs' -print | sort)
+   node --experimental-strip-types --import ./scripts/register-ts.mjs --test "${tests[@]}"
+   Result: 461 tests, 461 pass, 0 fail, 56 test files. Explicitly excludes scripts/game.test.mjs.
+3) node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/gate2-round3.test.mjs scripts/gate2-round4.test.mjs scripts/council-queue-identity.test.mjs
+   Result: 27 tests, 27 pass, 0 fail.
+4) node scripts/verify-canon.mjs
+   Result: PASS — 65-panel registry, invariants, 167 assets, option catalogs.
+
+BLOCKED COMMANDS / RUNTIME EVIDENCE
+5) node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/game.test.mjs
+   Result: ERR_MODULE_NOT_FOUND: package 'zod' imported from src/lib/game/delta.ts; fail before assertions.
+6) npm run typecheck
+   Result: exit 2; TS2688 missing type definition files 'node' and 'vite/client'.
+7) npm run build
+   Result: exit 127; [with-app-env] failed to run vite: spawn vite EACCES.
+8) npm run lint
+   Result: exit 127; shell reports 'eslint: Permission denied'.
+9) getent ahosts registry.npmjs.org
+   Result: no DNS records; exit 2.
+10) npm ping --fetch-retries=0 --fetch-timeout=8000
+    Result: EAI_AGAIN getaddrinfo registry.npmjs.org; exit 1.
+11) DB tooling/config check
+    psql/postgres/initdb/pg_ctl/docker/podman: absent; DATABASE_URL and other Postgres URL environment variables: absent; no listener on local 5432; no PostgreSQL process.
+12) Browser tooling check
+    Chromium 1.57.0 and Playwright 1.57.0 are present, but no app server/build/backend was available; no browser workflow run.
+
+HARNESS INVOCATION NOTES
+- First runnable-suite attempt wrote VITE_AUTH_ENABLED as JSON boolean true. parseAppEnv accepts only VITE_ string values, so three with-app-env tests failed. Re-ran with the correct string value "true": 461/461 pass. Temporary .grok/app-env.json removed.
+- First direct Council trio omitted the project's TS resolver and failed module resolution; re-ran with --import ./scripts/register-ts.mjs: 27/27 pass.
+- These first-run errors are test invocation mistakes, not source changes. Final counts use only corrected invocations.
+
+INSTALLATION
+- CP18 already recorded exact-lockfile npm ci failing at tarball download with EAI_AGAIN (including zod-4.6.5 and Vite).
+- CP20 rechecked DNS/npm ping and did not repeat npm ci after preflight failed; no unknown registry mirror or unverified tarball used.
+- package-lock.json SHA256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b (unchanged).
+- node_modules absent; .grok/app-env.json absent at closeout.
+
+NOT RUN / NOT CLAIMED
+- Full npm test: CP19 attempt timed out at 120 seconds without final summary; not PASS.
+- PostgreSQL migration/command commit/reload/restart.
+- Post-commit lost-response retry; real two-session concurrency; DB failure injection; historical save fixtures.
+- Browser UI, responsive, navigation, event workflows, Production.
+
+CLEANLINESS
+- No source, package manifest, package lock, Canon, Save schema/migration, or economy rule changed.
+- No secrets/credentials included; zero project files deleted.
+- Round 4 and later rounds not started.

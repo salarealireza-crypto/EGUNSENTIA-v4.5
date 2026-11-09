@@ -1,0 +1,15 @@
+﻿source,type,availability_or_status,supports,limitations_or_notes
+src/lib/canon/cards.json,compiled character cards,FOUND — 55 cards,"Canonical profile names, card ages, roles, 15 descriptive fields where present",Card-age labels are not exact DOBs; field absence remains a gap.
+src/lib/canon/atlas.json,entity atlas,FOUND — 26 entries,"Christian IV, family/faction anchors including N-CHRISTIAN",Not a full genealogy; some detail only summarized.
+src/lib/canon/excerpts.json,compiled Canon excerpts,FOUND — 28 excerpts,"Authority hierarchy, kinship, timeline, household, roster and card excerpts",Extracts are compiled anchors; full source manuscript absent.
+src/lib/canon/red-claw-household.json,household expansion registry,FOUND — 100 cards,"Provenance labels, proposed/Canon mix, relationship references",Mixed source statuses on records; edge-level provenance not separately expressed.
+src/lib/game/sim/private-relations.ts,Private Relations roster and integration,FOUND — 25 core + 12 appended proposed,Core 25 adult-woman roster and 12 read-only proposal rows,The 12 appended proposals are not Canon and do not expand the Canon roster.
+src/lib/game/v41-data.ts,V4.1 initial game data,FOUND,Day-one household/child data and simulation state,Runtime seed is not full genealogical source text.
+docs/red-claw-household-expansion/00_SOURCE_AUDIT_AND_CONFLICT_REPORT.md,Red Claw source audit,FOUND,"Records provenance categories, known gaps and conflict warnings",Created for the expansion; not itself canonical lore.
+docs/red-claw-household-expansion/06_NPC_ROSTER_AND_FAMILY_TREE.md,Expansion roster/family tree,FOUND,Describes 100-card roster and proposed family branches,79 proposed; some mixed status and edge provenance risks.
+docs/red-claw-household-expansion/07_HISTORICAL_AND_CURRENT_FAMILY_TIMELINE.md,Expansion timeline,FOUND,Separates supplied Canon anchors from proposed chronology,Candidate dates are not Canon.
+attachments/EGUNSENTIA_V4.1_SUPER_LORE_MASTER.txt,claimed full Canon manuscript,NOT FOUND IN FULL; 331-byte pointer/notice only,"Three compact invariants: 960+40, population 60,000, tunnel counts 42",Not the full V4.1 master; does not support reconstruction of missing details.
+EGUNSENTIA_V4.5_Update_Prompt.txt,official V4.5 update prompt,NOT FOUND,No complete file found in project copy,"13 session-prompt fragments are present but are workflow/session instructions, not the requested complete update prompt."
+references/V45_SESSION_PROMPTS/EGUNSENTIA_V45_SESSION_01_of_13.txt … 13_of_13.txt,V4.5 session prompt fragments,FOUND — 13 fragments,Session/workflow instruction fragments,Do not treat as complete V4.5 lore/update authority.
+"Red House Ledger, Floor 7, beside Relic Cabinet",in-world authoritative genealogy source,REFERRED TO; LEDGER CONTENT NOT PROVIDED,"Kinship model states births, deaths, marriages, adoptions, branch names, offices, ash",Cannot certify exact degrees/branch edges without actual record contents.
+CP10 parent archive,verified prior checkpoint,FOUND; SHA-256 matched sidecar; ZIP integrity passed,Parent state for this audit-only child checkpoint,Original parent ZIP kept immutable.

@@ -1,0 +1,57 @@
+{
+  "project": "EGUNSENTIA",
+  "checkpoint": "Stage 47 Gate 2 Round 2 CP6",
+  "date": "2026-11-09",
+  "status": "ROUND_DELIVERED_GATE_2_REMAINS_PARTIAL",
+  "base_archive": "EGUNSENTIA-STAGE47-GATE2-GAMEPLAY-CP5-2026-11-09.zip",
+  "base_archive_sha256": "9c6a1ba3d5c185cad174c3efe78d106eaf7ccf7904207e293fa9e30d6d267bdc",
+  "base_file_count": 611,
+  "preservation": {
+    "missing_base_files": 0,
+    "added_files_before_evidence_and_inventory": [
+      "STAGE47_GATE2_ROUND2_HANDOFF_2026-11-09.md",
+      "STAGE47_GATE2_ROUND2_REPORT_2026-11-09.md",
+      "WORKLOG-51.md",
+      "scripts/gate2-round2.test.mjs",
+      "src/lib/game/sim/ceremony.ts",
+      "src/lib/game/sim/event-ledger.ts",
+      "src/lib/game/sim/investigation-cases.ts"
+    ],
+    "changed_existing_files": [
+      "STAGE47_REPAIR_ROADMAP_2026-11-09.md",
+      "src/components/game/V45PanelBody.tsx",
+      "src/lib/game/delta.ts",
+      "src/lib/game/p4-simulation.ts",
+      "src/lib/game/store.ts",
+      "src/lib/game/time.ts",
+      "src/lib/game/types.ts",
+      "src/lib/game/v41-data.ts",
+      "src/lib/platform/options/execute.ts"
+    ],
+    "original_archives_modified": false,
+    "canon_or_original_art_deleted": false,
+    "local_only_file_excluded": ".grok/app-env.json"
+  },
+  "verification": {
+    "targeted_gate2_round2_tests": "11/11 PASS",
+    "runnable_script_suite": "387/387 PASS; scripts/game.test.mjs excluded because zod is unavailable (ERR_MODULE_NOT_FOUND)",
+    "canon": "PASS: 65 panel registry, 167 registered assets and catalog invariants",
+    "focused_strict_typescript": "PASS: 6 relevant modules and resolved local dependencies",
+    "mjs_syntax": "PASS: 87 files",
+    "ts_tsx_transpile": "PASS: 132 files, 0 syntax diagnostics; not full semantic typecheck",
+    "additional_in_source_ts_tests": "6/8 tests PASS; two test files blocked at module load by missing @tanstack/react-start and jose",
+    "art": "INCOMPLETE: 167 registered assets (150 code-drawn, 17 preserved), 0 generated Raster assets, 23 asset groups incomplete",
+    "full_typecheck": "BLOCKED: missing @types/node and vite/client type definitions",
+    "production_build": "BLOCKED: Vite executable absent (spawn vite ENOENT)",
+    "browser_database_oauth_live_al_providers_production": "NOT RUN"
+  },
+  "remaining_gate2": [
+    "Council typed-effect adapter and atomic/no-double-spend behavior",
+    "Command to state to persistent save to reload to UI receipt integration tests",
+    "Cross-panel NPC availability consistency across Planner, Personnel, Message, CAST and Evening Hall",
+    "Automatic missing-person case generation after locating an authoritative source record contract",
+    "Legacy panel alias audit, preserving panel 24 Ministry Operations",
+    "Browser QA for panels 05, 19 and 34"
+  ],
+  "release_note": "This checkpoint is not a release candidate. No browser, persistent database, OAuth provider, live AL provider or production deployment was verified."
+}

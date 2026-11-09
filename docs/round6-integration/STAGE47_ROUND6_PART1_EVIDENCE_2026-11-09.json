@@ -1,0 +1,32 @@
+{
+  "round": 6,
+  "part": 1,
+  "date": "2026-11-09",
+  "parentCheckpoint": "CP22",
+  "parentSha256": "656c2352bcadf7a6597fb7c857a6e9804541691f82d517df930b9531262140a3",
+  "status": "PARTIAL",
+  "tests": {
+    "round6Focused": {"files": 1, "passed": 5, "failed": 0},
+    "combinedFocused": {"files": 5, "passed": 62, "failed": 0},
+    "runnableScriptsExcludingGameTest": {"files": 57, "passed": 467, "failed": 0},
+    "npmTest": {"passed": 467, "blockedSuites": 1, "blockedBy": "ERR_MODULE_NOT_FOUND: zod"},
+    "canonVerifier": "PASS",
+    "redClawVerifier": {"status": "PASS", "warnings": 14}
+  },
+  "build": {
+    "typecheck": "BLOCKED: missing @types/node and vite/client",
+    "build": "BLOCKED: vite executable missing",
+    "lint": "BLOCKED: eslint executable missing",
+    "alRuntime": "BLOCKED: @tanstack/react-start missing"
+  },
+  "notRun": ["persistent PostgreSQL integration", "save commit/reload/restart", "browser QA", "responsive QA", "production verification"],
+  "changes": [
+    "CastCard relationship-note projection",
+    "CastPanel relationship display and search",
+    "Household roster relationship display and caveat",
+    "AL compact-state relationship-note context for six Round 5 profiles",
+    "Round 6 integration tests for Cast, presence, Household, Event Ledger and Day Replay"
+  ],
+  "unchanged": ["Save schema", "migrations", "package manifest", "package lock", "Canon identities", "relationship state transitions", "consent rules", "resource economy", "secrets"],
+  "cleanup": {"temporaryAppEnvRemoved": true, "nodeModulesPresent": false, "secretsAdded": false}
+}

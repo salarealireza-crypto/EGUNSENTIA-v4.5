@@ -1,0 +1,55 @@
+EGUNSENTIA — Stage 47 / Gate 2 / Round 3 Part 3 verification log
+Date: 2026-11-09
+Parent: CP13 immutable archive
+Working copy: /mnt/data/egunsentia_research/CP13_WORKING_COPY
+
+1) CP13 archive
+- sha256sum: 7589cde965aee8681f1afec552ce6f3c45214f681acc23ecc87cfd5d4ca24fc8
+- sidecar: exact match
+- unzip -tq: PASS, no compressed-data errors
+- package lineage: 750 members; CP13 report records 8 substantive additions, 13 modifications and 0 deletions relative to CP12 ZIP (plus 3 index metadata files)
+
+2) Source audit
+- Reviewed src/lib/db-runtime-policy.mjs, src/lib/db.ts, src/lib/game/save.ts, src/lib/game/play.ts, src/lib/game/save-autosave.ts, src/lib/game/save-queue.ts, src/lib/game/save-revision.mjs, src/lib/game/save-validation.mjs, src/lib/game/store.ts, src/lib/game/sim/option-command.ts, src/lib/game/p4-simulation.ts, src/components/game/CommandDeck.tsx, src/components/game/V45PanelBody.tsx, scripts/migrate.mjs, scripts/migration-transaction.mjs, migrations/0002_saves.sql and migrations/0003_save_revisions.sql.
+- Finding: persistence adapter and revision-CAS exist in source; no actual DB request/commit/reload occurred.
+- Finding: lastReceipt is normalized into P4 snapshot; receiptOpen and receiptPersistence are React-local state; receipt is not reconstructed by these components after reload.
+- Finding: command identities are campaign-state keys; true network timeout replay and multi-session idempotency were not exercised.
+
+3) Focused persistence/save tests
+Command:
+node --experimental-strip-types --test scripts/save-autosave.test.mjs scripts/save-queue.test.mjs scripts/save-lifecycle.test.mjs scripts/save-errors.test.mjs scripts/save-revision.test.mjs scripts/save-validation.test.mjs scripts/db-runtime-policy.test.mjs scripts/migration-transaction.test.mjs
+Result: PASS — 58 tests, 58 pass, 0 fail, 0 skipped.
+
+4) Script test suite (excluding dependency-blocked game.test.mjs)
+Temporary config: .grok/app-env.json containing only {"VITE_AUTH_ENABLED":"true"}; removed immediately after run.
+Command:
+mapfile -t tests < <(find scripts -maxdepth 1 -name '*.test.mjs' ! -name 'game.test.mjs' -print | sort)
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test "${tests[@]}"
+Result: PASS — 449 tests, 449 pass, 0 fail, 0 skipped.
+
+5) Canon verifier
+Command: node scripts/verify-canon.mjs
+Result: PASS — 65-panel canon registry, invariants, 167 assets, preserved art and all option catalogs.
+
+6) Dependency recovery attempt
+Command: npm ci --no-audit --no-fund
+Result: timed out at 180 seconds; no complete diagnostic output was captured. A partial node_modules directory created by the interrupted attempt was removed. No npm process remained. package-lock.json was not modified.
+package-lock SHA-256 after attempt: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b (matches CP13 inventory).
+
+7) Environment blockers
+- DATABASE_URL unset.
+- BETTER_AUTH_SECRET unset.
+- PGLITE_ALLOW_EPHEMERAL unset.
+- docker / postgres / psql / pg_isready not found in PATH.
+- node_modules absent after cleanup.
+- .grok/app-env.json absent after tests.
+- No migrations applied; no game_saves row inserted/updated/read; no commit, restart, reload or browser workflow run.
+
+8) Verification verdict
+- Source audit: completed.
+- Unit-tested: focused 58/58; runnable script suite 449/449; Canon verifier PASS.
+- Integration-tested: NOT achieved / BLOCKED.
+- Build-verified: BLOCKED (dependencies unavailable).
+- Browser-verified: NOT STARTED / BLOCKED.
+- Production-verified: NOT RUN.
+- Gate 2: PARTIAL.

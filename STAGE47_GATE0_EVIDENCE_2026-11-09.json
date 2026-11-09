@@ -1,0 +1,144 @@
+{
+  "gate": "Gate 0 — Freeze / baseline",
+  "date": "2026-11-09",
+  "source_archive": "EGUNSENTIA-STAGE47-COMPREHENSIVE-AUDIT-CP2-2026-11-09.zip",
+  "source_archive_sha256": "595adfebaa737d8aba37ea9b29fcc6891006c39fe5ec0e876918ff97f033c0b6",
+  "source_archive_integrity": "PASS",
+  "source_archive_file_count": 586,
+  "runtime": {
+    "node": "v22.16.0",
+    "npm": "10.9.2",
+    "lockfile_version": 3,
+    "os": "Linux"
+  },
+  "working_copy": {
+    "isolated_from_source_archive": true,
+    "source_game_code_modified": false,
+    "canon_modified": false,
+    "art_modified": false,
+    "save_data_modified": false,
+    "ignored_local_app_env_recreated": true,
+    "local_app_env_value": {
+      "VITE_AUTH_ENABLED": "true"
+    },
+    "local_app_env_included_in_checkpoint": false,
+    "base_comparison": {
+      "base_file_count": 586,
+      "missing_original_files": 0,
+      "modified_original_files": [
+        "STAGE47_REPAIR_ROADMAP_2026-11-09.md"
+      ],
+      "modified_original_file_reason": "Updated planning checklist to record verified Gate 0 results and blockers; no executable source/data/canon/art files modified.",
+      "added_files": [
+        ".env.example",
+        "DEPLOYMENT.md",
+        "README.md",
+        "STAGE47_GATE0_EVIDENCE_2026-11-09.json",
+        "STAGE47_GATE0_REPORT_2026-11-09.md",
+        "WORKLOG-48.md",
+        "STAGE47_GATE0_FILE_INVENTORY_2026-11-09.csv"
+      ]
+    }
+  },
+  "static_checks": {
+    "mjs_node_check": {
+      "status": "PASS",
+      "checked": 67,
+      "failed": 0
+    },
+    "ts_tsx_syntax_transpile": {
+      "status": "PASS_SYNTAX_ONLY",
+      "checked": 130,
+      "syntax_diagnostics": 0,
+      "exceptions": 0,
+      "semantic_typecheck": false
+    },
+    "root_json_manifests": {
+      "status": "PASS",
+      "files": [
+        "package.json",
+        "package-lock.json",
+        "vercel.json"
+      ]
+    },
+    "verify_canon": {
+      "status": "PASS",
+      "note": "65-panel canon registry, invariants, 167 assets, preserved art, and all option catalogues verified."
+    },
+    "verify_art": {
+      "status": "INCOMPLETE",
+      "incomplete_groups": 23,
+      "real_generated_assets": 0,
+      "note": "No placeholder assets were generated to bypass this check."
+    }
+  },
+  "dependency_install": {
+    "status": "BLOCKED",
+    "command": "npm ci --no-audit --no-fund",
+    "reason": "Command timed out; npm ping returned EAI_AGAIN resolving registry.npmjs.org; local npm cache had zero package content."
+  },
+  "tests": {
+    "npm_test": {
+      "status": "BLOCKED_BY_MISSING_DEPENDENCIES",
+      "discovered": 348,
+      "passed": 347,
+      "suite_load_failures": 1,
+      "missing": [
+        "zod"
+      ],
+      "note": "The script test leg runs first. Due to the && chain, the configured TypeScript test leg did not execute."
+    },
+    "separate_app_data_auth_tests": {
+      "status": "BLOCKED_BY_MISSING_DEPENDENCIES",
+      "discovered": 8,
+      "passed": 6,
+      "suite_load_failures": 2,
+      "missing": [
+        "@tanstack/react-start/server",
+        "jose"
+      ]
+    },
+    "test_game": {
+      "status": "BLOCKED",
+      "reason": "scripts/game.test.mjs could not import zod; suite did not execute."
+    }
+  },
+  "engineering_commands": {
+    "typecheck": {
+      "status": "BLOCKED",
+      "reason": "Missing @types/node and vite/client type definitions."
+    },
+    "lint": {
+      "status": "BLOCKED",
+      "reason": "eslint executable is not installed."
+    },
+    "build": {
+      "status": "BLOCKED",
+      "reason": "vite executable is not installed."
+    },
+    "auth_invariant": {
+      "status": "BLOCKED",
+      "reason": "Requires the running dev server's resolved VITE_AUTH_ENABLED endpoint; the dev server could not start without Vite."
+    },
+    "browser_smoke": {
+      "status": "NOT_RUN",
+      "reason": "No dev or production build could be started."
+    },
+    "production_integration": {
+      "status": "NOT_RUN"
+    }
+  },
+  "deliverables_added": [
+    "README.md",
+    ".env.example",
+    "DEPLOYMENT.md",
+    "STAGE47_GATE0_REPORT_2026-11-09.md",
+    "WORKLOG-48.md",
+    "STAGE47_GATE0_EVIDENCE_2026-11-09.json",
+    "STAGE47_GATE0_FILE_INVENTORY_2026-11-09.csv",
+    "STAGE47_REPAIR_ROADMAP_2026-11-09.md (status update)"
+  ],
+  "gate_decision": "PARTIALLY_COMPLETE_ENVIRONMENT_BLOCKED",
+  "next_step": "Restore npm registry/package installation, rerun dependency-backed Gate 0 checks, then proceed to Gate 1 production database/auth safety.",
+  "deliverable_file_count": 593
+}

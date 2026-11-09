@@ -1,0 +1,33 @@
+ROUND 6 PART 2 — FOLLOW-UP RECHECK 4 — 2026-11-10
+
+Immediate parent ZIP SHA-256: 0115229c3f0486a53d094ce047221c96b8857fafba9b797b776fe1618c622ed7
+Underlying CP23 source ancestor SHA-256: 9875a15787b3ba835f9eaadc7cc84f8f5ee030956f4dfb902c5e89d7dbcb11fb
+package-lock SHA-256: 72b88b98db67a9954c77d88b4415671d566298113e948cd03825a20049e5184b
+
+PASS
+- Parent SHA sidecar matched; ZIP integrity PASS; 1,011 entries / 927 file entries.
+- Fresh extraction: all 927 files passed size check.
+- package.json vs package-lock: 71/71 direct ranges match.
+- Round 6 focused: 5/5.
+- Combined focused: 62/62.
+- 57 script files excluding missing-Zod game.test.mjs: 467/467.
+- Canon PASS; Red Claw PASS with 14 warnings; art structure PASS with 23 groups unfilled.
+- Limited direct leak scanner smoke: two exposure samples caught, three benign samples accepted.
+- Readiness and Sign-in Gate tests passed; overall TypeScript batch 6 pass / 2 import-blocked.
+
+BLOCKED
+- Registry DNS EAI_AGAIN; official HTTPS curl exit 6. npm ci NOT ATTEMPTED.
+- npm run test:game exit 1: zod missing before assertions.
+- npm run typecheck exit 2: node and vite/client type definitions missing.
+- npm run lint exit 127: eslint not found.
+- npm run build exit 127: Vite spawn ENOENT.
+- AL runtime blocked by @tanstack/react-start.
+
+NOT RUN
+- AL provider, persistent PostgreSQL, browser/responsive QA, production verification.
+- CP14 visual asset integration (asset pack not supplied).
+
+SCOPE
+- No game source, Canon, relationship state, Save schema, migration, DB/auth, package manifest/lockfile, economy, or art files changed.
+- Zero deletions. Temporary .grok/app-env.json removed and verified absent. node_modules absent.
+- Gate 2 and Round 6 PARTIAL/BLOCKED; Political Capital unresolved; Round 7 NOT STARTED.

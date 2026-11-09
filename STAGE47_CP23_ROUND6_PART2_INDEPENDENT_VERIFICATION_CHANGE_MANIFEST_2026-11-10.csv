@@ -1,0 +1,21 @@
+path,change_type,reason
+RECOVERY_PROGRESS.md,MODIFIED,Added authoritative CP23 R6P2 current pointer; preserved historical sections
+STAGE47_REPAIR_ROADMAP_2026-11-09.md,MODIFIED,Added authoritative CP23 R6P2 current pointer; preserved historical sections
+EGUNSENTIA_RELEASE_CHECKPOINTS.md,MODIFIED,Added authoritative CP23 R6P2 current pointer; preserved historical sections
+WORKLOG-73.md,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/ROUND6_PART2_INDEPENDENT_VERIFICATION_EVIDENCE_2026-11-10.json,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/ROUND6_PART2_INDEPENDENT_VERIFICATION_HANDOFF_2026-11-10.md,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/ROUND6_PART2_INDEPENDENT_VERIFICATION_LOG_2026-11-10.txt,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/ROUND6_PART2_INDEPENDENT_VERIFICATION_MATRIX_2026-11-10.csv,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/ROUND6_PART2_INDEPENDENT_VERIFICATION_REPORT_2026-11-10.md,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/all-scripts-except-game.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/art-structure.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/canon.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/dependency-consistency.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/integration-prerequisites.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/leak-scanner-direct.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/red-claw.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/registry-preflight.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/round6-combined.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/round6-focused.log,ADDED,Round 6 Part 2 independent verification evidence / handoff
+docs/round6-part2-round3/evidence/runtime-package-resolution.log,ADDED,Round 6 Part 2 independent verification evidence / handoff

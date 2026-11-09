@@ -1,0 +1,92 @@
+{
+  "checkpoint": "Stage 47 Gate 1 partial",
+  "date": "2026-11-09",
+  "starting_checkpoint": "EGUNSENTIA-STAGE47-GATE0-PARTIAL-CP3-2026-11-09.zip",
+  "starting_checkpoint_sha256": "e3dffa17613b22e989c704c64e68255a3c7282ccf50a371e96f15bf0f651e1ba",
+  "decision": "PARTIALLY_COMPLETE_EXTERNAL_INTEGRATION_BLOCKED",
+  "implementation": {
+    "database_fail_closed": "implemented_and_unit_tested",
+    "pglite_scope": "local_default_and_explicit_vercel_nonproduction_opt_in",
+    "migration_build_boundary": "implemented_and_unit_tested",
+    "deployed_auth_config_validation": "implemented_and_unit_tested",
+    "creator_allowlist": "implemented_and_unit_tested",
+    "server_function_auth": "static_contract_tests_pass_live_session_test_not_run",
+    "llm_model_defaults": {
+      "groq": "openai/gpt-oss-120b",
+      "xai": "grok-4.7",
+      "implicit_fallbacks": []
+    }
+  },
+  "tests": {
+    "gate1_focused": {
+      "passed": 41,
+      "failed": 0,
+      "status": "PASS"
+    },
+    "script_tests_excluding_zod_blocked_game_suite": {
+      "passed": 367,
+      "failed": 0,
+      "files": 48,
+      "status": "PASS"
+    },
+    "full_script_discovery": {
+      "passed": 366,
+      "blocked_suites": [
+        "scripts/game.test.mjs"
+      ],
+      "blocker": "Cannot find package zod because npm ci is blocked",
+      "status": "PARTIAL"
+    },
+    "mjs_syntax": {
+      "checked": 84,
+      "errors": 0,
+      "status": "PASS"
+    },
+    "ts_tsx_syntax_transpile": {
+      "checked": 129,
+      "diagnostics": 0,
+      "semantic_typecheck": false,
+      "status": "SYNTAX_ONLY_PASS"
+    },
+    "canon": {
+      "status": "PASS"
+    },
+    "art": {
+      "status": "INCOMPLETE",
+      "registered_assets": 167,
+      "generated_raster": 0,
+      "incomplete_groups": 23
+    }
+  },
+  "blocked_or_not_run": {
+    "npm_ci": "BLOCKED: registry.npmjs.org DNS EAI_AGAIN and empty npm cache",
+    "game_tests": "BLOCKED: zod missing",
+    "typescript_typecheck": "BLOCKED: locked dependencies/types not installed",
+    "lint": "BLOCKED: eslint unavailable",
+    "production_build": "BLOCKED: vite unavailable",
+    "neon_integration": "NOT_RUN: no real database connection was provisioned",
+    "oauth_integration": "NOT_RUN: no app-specific OAuth client/callback was provisioned",
+    "al_provider_request": "NOT_RUN: no provider key was exposed to the execution environment",
+    "browser_and_production": "NOT_RUN: no deployment was created"
+  },
+  "excluded_local_only_files": [
+    ".grok/app-env.json",
+    "node_modules/",
+    ".git/"
+  ],
+  "secrets_added": false,
+  "gameplay_canon_art_changed": false,
+  "production_verified": false,
+  "baseline_preservation": {
+    "cp3_files": 593,
+    "preserved": 593,
+    "new_files": 12,
+    "intentionally_modified_existing_files": 17,
+    "missing_or_removed_baseline_files": 0,
+    "local_only_excluded": [
+      ".grok/app-env.json",
+      "node_modules/",
+      ".git/"
+    ]
+  }
+}

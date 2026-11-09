@@ -1,0 +1,111 @@
+{
+  "checkpoint": "EGUNSENTIA-STAGE47-POST-CP9-PRIVATE-RELATIONS-ROUND1-PARTIAL-CP10-2026-11-09.zip",
+  "date": "2026-11-09",
+  "round": "Round 1 — Private Relations audit and hardening",
+  "status": "PARTIAL source hardening delivered; Workstream A not complete",
+  "parent_checkpoint": "EGUNSENTIA-STAGE47-RED-CLAW-STAGED-CP9-ROUND0-AUDIT-2026-11-09.zip",
+  "parent_sha256": "c973eb743d6dc321d9aaf6d0d07da3d79945dca2af5c5fedd01556a3089aebfd",
+  "changed_files": [
+    "src/lib/game/sim/private-relations.ts",
+    "src/lib/game/types.ts",
+    "src/lib/game/store.ts",
+    "src/lib/game/delta.ts",
+    "src/lib/game/play.ts",
+    "src/lib/game/retrieve.ts",
+    "src/components/game/V45PanelBody.tsx",
+    "scripts/private-relations.test.mjs"
+  ],
+  "tests": [
+    {
+      "id": "PR-SAVE-FOCUSED",
+      "command": "node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/private-relations.test.mjs scripts/save-validation.test.mjs",
+      "result": "PASS",
+      "passed": 39,
+      "failed": 0,
+      "status": "Unit-tested"
+    },
+    {
+      "id": "SCRIPT-SUITE",
+      "command": "node --experimental-strip-types --import ./scripts/register-ts.mjs --test 'scripts/**/*.test.mjs'",
+      "result": "PARTIAL",
+      "total": 441,
+      "passed": 437,
+      "failed": 4,
+      "blocked_or_failing": [
+        "scripts/game.test.mjs could not load: ERR_MODULE_NOT_FOUND for package zod imported from src/lib/game/delta.ts",
+        "scripts/with-app-env.test.mjs: project workspace env assertion failed; .grok/app-env.json is absent",
+        "scripts/with-app-env.test.mjs: wrapped command expected VITE_AUTH_ENABLED=true but received undefined",
+        "scripts/with-app-env.test.mjs: symlink CLI expected VITE_AUTH_ENABLED=true but received undefined"
+      ],
+      "status": "Blocked by missing dependency/local environment; no tests skipped"
+    },
+    {
+      "id": "CANON-VERIFIER",
+      "command": "npm run verify:canon",
+      "result": "PASS",
+      "details": "65-panel registry, invariants, 167 registered assets, preserved artwork and option catalogs"
+    },
+    {
+      "id": "RED-CLAW-VERIFIER",
+      "command": "npm run verify:red-claw",
+      "result": "PASS_WITH_WARNINGS",
+      "details": "100 cards A20/B30/C50; 71 proposed permanent family-linked residents; 72 active CAST; 12 former-adult-partner dossiers remain read-only for romance",
+      "warnings": [
+        "12 proposed former-partner birth dates are not verified against canonical birth dates",
+        "complete searchable Floor 7 genealogy ledger was not supplied",
+        "Elara/Luka/Christian parent-age chronology lacks exact canonical birth dates"
+      ]
+    },
+    {
+      "id": "TS-SYNTAX",
+      "command": "TypeScript transpileModule with diagnostics over seven changed TS/TSX files",
+      "result": "PASS",
+      "files": 7,
+      "syntax_errors": 0,
+      "qualification": "Syntax only; not semantic typecheck"
+    },
+    {
+      "id": "MJS-SYNTAX",
+      "command": "node --check scripts/private-relations.test.mjs",
+      "result": "PASS"
+    },
+    {
+      "id": "TYPECHECK",
+      "command": "npm run typecheck",
+      "result": "BLOCKED",
+      "error": "TS2688: Cannot find type definition file for node and vite/client"
+    },
+    {
+      "id": "BUILD",
+      "command": "npm run build",
+      "result": "BLOCKED",
+      "error": "[with-app-env] failed to run vite: spawn vite ENOENT"
+    },
+    {
+      "id": "LINT",
+      "command": "npm run lint",
+      "result": "BLOCKED",
+      "error": "sh: 1: eslint: not found"
+    }
+  ],
+  "not_run": [
+    "real AL provider request/response integration",
+    "production-equivalent database transaction and reload",
+    "browser QA of Panel 17 and connected workflows",
+    "staging or production deployment",
+    "backup restoration verification"
+  ],
+  "blockers": [
+    "No authoritative child/birth record creation pathway exists; new child/parentage data was not fabricated",
+    "Legacy pregnancy records without startedDay cannot be backfilled without source evidence",
+    "Missing zod, @types/node, vite/client, vite and eslint dependencies",
+    "Missing .grok/app-env.json expected by three local environment tests",
+    "No real persistence/browser environment exercised in this round"
+  ],
+  "canon_changes": 0,
+  "children_or_heirs_created": 0,
+  "dependency_installation_performed": false,
+  "lockfile_modified": false,
+  "deployment_performed": false,
+  "production_verified": false
+}

@@ -1,0 +1,19 @@
+workstream,check,command_or_evidence,result,classification,limitation
+Environment,Registry DNS,getent and node dns.lookup,EAI_AGAIN,BLOCKED,Do not attempt npm ci until DNS succeeds
+Dependencies,Manifest-lock consistency,Node JSON audit,71/71 direct ranges match,PASS,No package manifest or lockfile changes
+Round 6,Focused integration,node --test round6-character-integration,5/5,PASS,Source/unit only
+Round 6,Combined regression,node --test five focused suites,62/62,PASS,Source/unit only
+Scripts,All runnable script tests excluding game.test,node --test 57 files,467/467,PASS,Excludes Zod-dependent game suite
+Game suite,game.test import,node --test scripts/game.test.mjs,zod missing,BLOCKED,Import failure before assertions
+Full suite,npm test,180-second execution window,no final TAP summary,INCOMPLETE,Not counted as PASS
+Canon,Canon verifier,node scripts/verify-canon.mjs,PASS,PASS,65-panel registry
+Household,Red Claw verifier,verify-red-claw-household.mjs,PASS with 14 warnings,PASS,Warnings retained
+Art,Structural asset verifier,verify-art.mjs --structure,PASS / 23 groups unfilled,PASS,No raster art generated
+Typecheck,TypeScript, npm run typecheck,TS2688 node and vite/client,BLOCKED,Missing type packages
+Lint,ESLint,npm run lint,eslint not found,BLOCKED,Dependencies not installed
+Build,Vite,npm run build,spawn vite ENOENT,BLOCKED,Dependencies not installed
+AL runtime,play.ts import,Node TS import,@tanstack/react-start missing,BLOCKED,No AL runtime or provider call
+Persistence,PostgreSQL backend,environment/command availability,DATABASE_URL and CLI absent,NOT RUN,No persistent backend available
+Browser,Responsive UI,Chromium plus app build,Build blocked,NOT RUN,Chromium alone is insufficient
+Production,Production verification,Not available,Not run,NOT RUN,No production deployment verification
+Visual assets,CP14 asset integration,ZIP inventory,Package not supplied,NOT ATTEMPTED,Do not infer or substitute assets

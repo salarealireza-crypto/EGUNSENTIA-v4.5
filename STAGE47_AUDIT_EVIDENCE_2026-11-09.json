@@ -1,0 +1,86 @@
+{
+  "audit_date": "2026-11-09",
+  "base_archive": "EGUNSENTIA-STAGE47-CORE-RECOVERY-CP1-2026-11-08.zip",
+  "base_archive_sha256": "252ef2a83fbdf283d77fb34cdc797411daed911daf378a7df694443866ca670b",
+  "base_file_count_before_audit_docs": 581,
+  "empty_files": [
+    "screenshots/.gitkeep"
+  ],
+  "extension_counts": {
+    "[no extension]": 7,
+    ".jpg": 12,
+    ".png": 14,
+    ".md": 137,
+    ".py": 5,
+    ".txt": 18,
+    ".mjs": 78,
+    ".sql": 6,
+    ".json": 10,
+    ".svg": 155,
+    ".css": 2,
+    ".mts": 1,
+    ".html": 1,
+    ".ts": 90,
+    ".tsx": 44,
+    ".sh": 1
+  },
+  "source_code_modified": false,
+  "panel_count": 65,
+  "generic_panel_count": 24,
+  "dedicated_panel_count": 41,
+  "registry_panels_with_archetype": 0,
+  "registry_panels_with_place": 0,
+  "registry_placeholder_icon_count": 65,
+  "registry_panels_using_generic_views": 65,
+  "option_count": 403,
+  "unique_option_titles_observed": 403,
+  "options_with_generated_requirements": 316,
+  "options_without_requirements": 87,
+  "verification": {
+    "npm_test": {
+      "status": "FAIL",
+      "tests": 348,
+      "pass": 344,
+      "fail": 4,
+      "note": "Failures in with-app-env workspace configuration; .grok/app-env.json is intentionally gitignored and is not part of portable archive."
+    },
+    "test_game": {
+      "status": "BLOCKED",
+      "note": "ERR_MODULE_NOT_FOUND: zod; suite did not execute."
+    },
+    "typecheck": {
+      "status": "BLOCKED",
+      "note": "Missing @types/node and vite/client definitions; dependencies absent."
+    },
+    "verify_canon": {
+      "status": "PASS",
+      "note": "65-panel registry, invariants, 167 assets, preserved art and option catalogs."
+    },
+    "verify_art_structure": {
+      "status": "PASS_WITH_GAPS",
+      "incomplete_groups": 23,
+      "assets": 167,
+      "generated_raster": 0,
+      "code_drawn": 150,
+      "preserved": 17
+    },
+    "build": {
+      "status": "NOT_RUN",
+      "note": "Build dependencies not installed/verified."
+    },
+    "lint": {
+      "status": "NOT_RUN"
+    },
+    "browser_qa": {
+      "status": "NOT_RUN"
+    },
+    "production_qa": {
+      "status": "NOT_RUN"
+    }
+  },
+  "known_missing_inputs": [
+    "attachments/EGUNSENTIA_V4.5_Update_Prompt.txt"
+  ],
+  "lore_stub": "attachments/EGUNSENTIA_V4.1_SUPER_LORE_MASTER.txt",
+  "next_gate": "Gate 0 — reproducible baseline, then Gate 1 — online safety and persistence"
+}
