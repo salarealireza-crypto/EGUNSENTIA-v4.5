@@ -416,11 +416,16 @@ export async function submitAction(raw: string, opts?: { retry?: boolean }) {
   try {
     state = JSON.stringify(compactState());
     memory = buildMemory();
-  } catch {
+  } catch (err) {
+    console.error("[play] state preparation failed", err);
+    const message =
+      "The current campaign state could not be prepared for the archive. No AI request was sent; your saved campaign remains unchanged.";
     useGame.getState().setBusy(false);
-    useGame.getState().setError("The current campaign state could not be compressed safely. Your saved campaign remains unchanged.");
+    useGame.getState().setError(message);
     useGame.getState().setFailedAction(text);
     useGame.getState().markLastPlayerFailed(true);
+    useGame.getState().pushNote(message);
+    useGame.getState().setNotice(message);
     return;
   }
 
