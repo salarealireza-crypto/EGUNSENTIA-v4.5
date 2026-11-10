@@ -1,0 +1,14 @@
+EGUNSENTIA — Save validation hotfix verification
+Date: 2026-11-10
+
+Command 1:
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/private-relations.test.mjs
+Result: PASS — 23 tests, 23 pass, 0 fail.
+Key regression: defaultPrivateRelationsState() yields 37 relationship records; serializeSavePayload() accepts the full canonical state; a 65-record relationship array is rejected.
+
+Command 2:
+node --experimental-strip-types --import ./scripts/register-ts.mjs --test scripts/save-validation.test.mjs
+Result: PASS — 18 tests, 18 pass, 0 fail.
+
+Combined targeted verification: 41/41 tests passed, 0 failures.
+Scope note: this is focused regression evidence, not a claim that the complete project test suite, typecheck, lint, or full app build ran locally. Vercel production build remains a separate deployment gate.

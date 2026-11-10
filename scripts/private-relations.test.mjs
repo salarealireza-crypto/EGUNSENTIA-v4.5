@@ -17,6 +17,7 @@ import {
   PRIVATE_RELATIONS_ROSTER_GAPS,
 } from "../src/lib/game/sim/private-relations.ts";
 import { appendLedgerEvents } from "../src/lib/game/sim/event-ledger.ts";
+import { serializeSavePayload } from "../src/lib/game/save-validation.mjs";
 import { dayOneReputations, dayOnePregnancies, dayOneChildren } from "../src/lib/game/v41-data.ts";
 
 const time = "20:15";
@@ -351,3 +352,35 @@ test("a public relationship disclosure is evidence-backed and cannot be rolled b
   const rollback = recordPrivateRelationshipDisclosure(disclosure.state, "elara-red", "private", 8, "Attempted to hide the already public announcement.");
   assert.equal(rollback.ok, false);
 });
+
+test("the account save validator accepts the full default 37-profile relationship roster", () => {
+  const collections = [
+    "inbox", "news", "worldNews", "cases", "threads", "chronicle", "relations",
+    "secretClocks", "calendar", "edicts", "stalkers", "finds", "sorties", "mysteries",
+    "foreignReports", "kin", "log", "quickActions", "personalVault", "factionVault",
+    "events", "household", "gates", "trades", "radio", "films", "intel", "memories",
+    "reputations", "pregnancies", "children",
+  ];
+  const payload = {
+    version: "V4.5 Demo / Update 4.5",
+    world: {},
+    p4: {},
+    rollingSummary: "",
+    turnCount: 0,
+    ...Object.fromEntries(collections.map((key) => [key, []])),
+    privateRelations: defaultPrivateRelationsState(),
+  };
+
+  assert.equal(payload.privateRelations.relationships.length, 37);
+  assert.doesNotThrow(() => serializeSavePayload(payload));
+
+  const tooMany = {
+    ...payload,
+    privateRelations: {
+      ...payload.privateRelations,
+      relationships: Array(65).fill(payload.privateRelations.relationships[0]),
+    },
+  };
+  assert.throws(() => serializeSavePayload(tooMany), /privateRelations\.relationships/);
+});
+

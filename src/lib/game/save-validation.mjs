@@ -1,6 +1,8 @@
 const MAX_BYTES = 1_400_000;
 const MAX_DEPTH = 40;
 const MAX_NODES = 120_000;
+// The current Canon relationship roster contains 37 profiles; leave room for audited additions.
+const MAX_PRIVATE_RELATIONSHIP_RECORDS = 64;
 const REQUIRED_ARRAYS = [
   "inbox", "news", "worldNews", "cases", "threads", "chronicle", "relations",
   "secretClocks", "calendar", "edicts", "stalkers", "finds", "sorties", "mysteries",
@@ -120,7 +122,7 @@ function validatePrivateRelations(payload) {
   if (!isRecord(payload.privateRelations) || payload.privateRelations.schemaVersion !== 1) {
     throw new TypeError("Invalid campaign data: privateRelations.");
   }
-  for (const [key, limit] of [["relationships", 32], ["requests", 100], ["consequences", 200]]) {
+  for (const [key, limit] of [["relationships", MAX_PRIVATE_RELATIONSHIP_RECORDS], ["requests", 100], ["consequences", 200]]) {
     const rows = payload.privateRelations[key];
     if (!Array.isArray(rows) || rows.length > limit) {
       throw new TypeError(`Invalid campaign data: privateRelations.${key}.`);
