@@ -7,7 +7,7 @@ import { createInFlightSaveDeduper } from "./save-autosave";
 import { receiptPersistenceFromStorage } from "./receipt-persistence.mjs";
 import { describeSaveFailure, SAVE_FAILURE_NOTICE_INTERVAL_MS } from "./save-errors.mjs";
 import { buildRollingMemorySummary } from "./rolling-memory.mjs";
-import { getPlayerWomenCanonProfiles, PRIVATE_RELATIONS_ROSTER_GAPS } from "./sim/private-relations.ts";
+import { defaultPrivateRelationsState, getPlayerWomenCanonProfiles, PRIVATE_RELATIONS_ROSTER_GAPS } from "./sim/private-relations.ts";
 import { fitCompactStateBudget } from "./compact-state.mjs";
 import { playSfx } from "./sound";
 import { applyBriefing, localCommand, useGame } from "./store";
@@ -102,7 +102,9 @@ function compactText(value: unknown, max = 180): string {
 export function compactState() {
   const g = useGame.getState();
   const privateRoster = getPlayerWomenCanonProfiles();
-  const privateProfileById = new Map(privateRoster.map((person) => [person.id, person]));
+  const defaultRelationshipById = new Map(
+    defaultPrivateRelationsState().relationships.map((item) => [item.personId, item]),
+  );
   const compact = {
     clock: {
       weekday: compactText(g.world.clock.weekday, 40),
@@ -193,40 +195,77 @@ export function compactState() {
       chosenEvening: item.chosenEvening,
     })),
     privateRelations: {
-      roster: privateRoster.map((person) => ({
-        personId: person.id, name: person.name, ageYears: person.ageYears, category: person.category,
-        sourceStatus: person.sourceStatus, historyDisposition: person.historyDisposition ?? "UNKNOWN",
-        role: compactText(person.role, 140), relationshipEligible: person.relationshipEligible,
-        powerReviewRequired: person.powerReviewRequired, canonCoverage: `${person.coverage.present}/${person.coverage.total}`,
-      })),
-      // These six Round 5 notes are source-backed character-card facts, not live affection, consent, eligibility, or disclosure state.
+      // The roster is compact but complete; character-card details are retrieved when a person is named.
+      rosterFormat: "Each roster row: personId|name|ageYears|category|sourceStatus|relationshipEligible|powerReviewRequired|baseRelationshipStatus|baseVisibility; booleans are 1/0.",
+      roster: privateRoster.map((person) => {
+        const baseline = defaultRelationshipById.get(person.id);
+        return [
+          person.id,
+          person.name,
+          person.ageYears,
+          person.category,
+          person.sourceStatus ?? "UNKNOWN",
+          person.relationshipEligible ? 1 : 0,
+          person.powerReviewRequired ? 1 : 0,
+          person.relationshipStatus,
+          baseline?.visibility ?? "private",
+        ].join("|");
+      }),
+      relationshipPolicy: "Apply relationship override rows over each roster row's base status and visibility.",
+      relationshipFields: "personId|status|visibility|lastEventId|note",
+      // Source-backed facts are retained as lore only, never as live consent or relationship state.
       canonRelationshipNotes: privateRoster
         .filter((person) => ["dagmar-red", "adelheid-von-moren", "vera-grotsen", "elara-red", "hanne-brauer", "wilhelmina-red"].includes(person.id))
         .map((person) => ({
-          personId: person.id, name: person.name, sourceStatus: person.sourceStatus,
-          note: compactText(person.relationships, 260),
-          interpretation: "Reference lore only; never infer current feelings, consent, relationship state, or disclosure from this note.",
+          personId: person.id,
+          name: person.name,
+          note: compactText(person.relationships, 110),
+          interpretation: "Lore only; never evidence of present consent or relationship status.",
         })),
-      rosterGaps: [...PRIVATE_RELATIONS_ROSTER_GAPS],
-      relationships: g.privateRelations.relationships.map((item) => ({
-        personId: item.personId, personName: item.personName, category: item.category,
-        sourceStatus: privateProfileById.get(item.personId)?.sourceStatus ?? "UNKNOWN",
-        status: item.status, visibility: item.visibility, note: compactText(item.note, 160),
-      })),
-      requests: g.privateRelations.requests.slice(-12).map((item) => ({
-        id: item.id, personId: item.personId, personName: item.personName, kind: item.kind,
-        status: item.status, dayIndex: item.dayIndex, time: item.time,
-        responseNote: compactText(item.responseNote, 120),
-        consentEvidence: compactText(item.consentEvidence, 120),
+      rosterGaps: PRIVATE_RELATIONS_ROSTER_GAPS.map((gap) => compactText(gap, 110)),
+      // The roster carries baseline status/visibility; preserve every actual deviation compactly.
+      relationships: g.privateRelations.relationships
+        .filter((item) => {
+          const baseline = defaultRelationshipById.get(item.personId);
+          return !baseline
+            || item.status !== baseline.status
+            || item.visibility !== baseline.visibility
+            || item.lastEventId !== baseline.lastEventId
+            || item.note !== baseline.note;
+        })
+        .map((item) => [
+          item.personId,
+          item.status,
+          item.visibility,
+          item.lastEventId ?? "",
+          compactText(item.note, 90).replace(/[|\r\n]/g, " "),
+        ].join("|")),
+      requests: g.privateRelations.requests.slice(-8).map((item) => ({
+        id: compactText(item.id, 80),
+        personId: item.personId,
+        kind: item.kind,
+        status: item.status,
+        dayIndex: item.dayIndex,
+        time: compactText(item.time, 20),
+        responseNote: compactText(item.responseNote, 80),
+        consentEvidence: compactText(item.consentEvidence, 80),
         freeToDeclineConfirmed: item.freeToDeclineConfirmed,
         independentSafeguard: item.independentSafeguard,
-        independentSafeguardEvidence: compactText(item.independentSafeguardEvidence, 120),
+        independentSafeguardEvidence: compactText(item.independentSafeguardEvidence, 80),
       })),
-      consequences: g.privateRelations.consequences.filter((item) => item.status !== "resolved").slice(0, 12).map((item) => ({
-        id: item.id, kind: item.kind, title: item.title, detail: compactText(item.detail, 180),
-        dayIndex: item.dayIndex, status: item.status, audiences: item.audiences,
-        requiredReview: compactText(item.requiredReview, 140),
-      })),
+      consequences: g.privateRelations.consequences
+        .filter((item) => item.status !== "resolved")
+        .slice(0, 8)
+        .map((item) => ({
+          id: item.id,
+          kind: item.kind,
+          title: compactText(item.title, 90),
+          detail: compactText(item.detail, 130),
+          dayIndex: item.dayIndex,
+          status: item.status,
+          audiences: item.audiences.slice(0, 5),
+          requiredReview: compactText(item.requiredReview, 90),
+        })),
     },
     pregnancyRecords: g.pregnancies.filter((item) => item.state !== "inactive").slice(0, 12).map((item) => ({
       id: item.id, mother: item.mother, state: item.state, knowledge: item.knowledge,
@@ -418,14 +457,12 @@ export async function submitAction(raw: string, opts?: { retry?: boolean }) {
     memory = buildMemory();
   } catch (err) {
     console.error("[play] state preparation failed", err);
-    const message =
-      "The current campaign state could not be prepared for the archive. No AI request was sent; your saved campaign remains unchanged.";
+    const detail = err instanceof Error ? err.message.slice(0, 180) : "Unknown preparation error";
+    const message = `The campaign state could not be prepared for the archive (${detail}). No AI request was sent; your saved campaign remains unchanged.`;
     useGame.getState().setBusy(false);
     useGame.getState().setError(message);
     useGame.getState().setFailedAction(text);
     useGame.getState().markLastPlayerFailed(true);
-    useGame.getState().pushNote(message);
-    useGame.getState().setNotice(message);
     return;
   }
 
