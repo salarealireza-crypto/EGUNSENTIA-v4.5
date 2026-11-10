@@ -507,6 +507,10 @@ export async function submitAction(raw: string, opts?: { retry?: boolean }) {
     useGame.getState().setFailedAction(text);
     useGame.getState().markLastPlayerFailed(true);
     useGame.getState().pushNote("The line to the Hall went dead. Try the action again.");
+  } finally {
+    // Always release the composer after a failed provider/server request too.
+    // Otherwise busy stays true and the player cannot send or retry another action.
+    useGame.getState().setBusy(false);
   }
 }
 
